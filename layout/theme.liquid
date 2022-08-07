@@ -78,6 +78,16 @@
         --color-base-accent-1: {{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }};
         --color-base-accent-2: {{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }};
         --payment-terms-background-color: {{ settings.colors_background_1 }};
+        
+        --oe-color-black: #171717;
+        --oe-color-white: #ffffff;
+        --oe-color-red: #F02206;
+        --oe-color-copy: #3A3A3A;
+        --oe-color-copy-light: #666666;
+        --oe-color-copy-lighter: #888888;
+        --oe-color-grey-100: #F5F5F5;
+        --oe-color-grey-200: #EEEEEE;
+        --oe-color-grey-400: #BDBDBD;
 
         --gradient-base-background-1: {% if settings.gradient_background_1 != blank %}{{ settings.gradient_background_1 }}{% else %}{{ settings.colors_background_1 }}{% endif %};
         --gradient-base-background-2: {% if settings.gradient_background_2 != blank %}{{ settings.gradient_background_2 }}{% else %}{{ settings.colors_background_2 }}{% endif %};
