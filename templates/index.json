@@ -95,6 +95,12 @@
         "padding_bottom": 36
       }
     },
+    "oe-hero-banner": {
+      "type": "oe-hero-banner",
+      "settings": {
+        
+      }
+    },
     "collage": {
       "type": "collage",
       "blocks": {
@@ -201,6 +207,7 @@
     }
   },
   "order": [
+    "oe-hero-banner",
     "image_banner",
     "rich_text",
     "featured_collection",
