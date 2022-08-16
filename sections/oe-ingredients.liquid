@@ -1,0 +1,214 @@
+{%- style -%}
+
+  .oe-ingredients {
+    background-color: var(--oe-color-grey-100);
+    padding: 24px 0;
+  }
+  
+  .oe-ingredients__container {
+    padding: 0;
+  }
+
+  .oe-ingredients__title {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    line-height: 120%;
+    color: var(--oe-color-black);
+    padding-bottom: 34px;
+    margin: 0;
+  }
+
+  .oe-ingredients__title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background-color: var(--oe-color-grey-400);
+  }
+
+  .oe-ingredients__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid var(--oe-color-grey-400);
+  }
+  
+  .oe-ingredients__list-item {
+    width: 33%;
+    padding: 24px 12px;
+  }
+  
+  .oe-ingredients__list-item-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+  }
+  
+  .oe-ingredients__list-item-title {
+    text-align: center;
+    margin: 8px 0 0;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 120%;
+  }
+  
+  @media screen and (min-width: 750px) {
+    .oe-ingredients {
+      
+    }
+
+    .oe-ingredients__title {
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 120%;
+      background-color: var(--oe-color-grey-100);
+      margin-bottom: 8px;
+      padding-bottom: 0;
+    }
+    
+    .oe-ingredients__title span {
+      background-color: var(--oe-color-grey-100);
+      position: relative;
+      z-index: 2;
+      padding: 0 48px;
+    }
+    
+    .oe-ingredients__title::before {
+      width: 100%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .oe-ingredients__list-item {
+      width: calc(100% / 8);
+      padding: 32px 12px;
+    }
+
+    .oe-ingredients__list-item-title {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      text-transform: uppercase;
+      color: var(--oe-color-copy);
+      margin: 16px 0 0;
+    }
+  }
+{%- endstyle -%}
+
+<div class="oe-ingredients">
+  <div class="oe-ingredients__container container">
+    {%- if section.settings.headline != blank -%}
+    <h3 class="oe-ingredients__title"><span>{{ section.settings.headline }}</span></h3>
+    <div class="oe-ingredients__list">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'ingredients' -%}
+            <div class="oe-ingredients__list-item">
+              <div class="oe-ingredients__list-item-icon">
+                {% liquid 
+                  case block.settings.icon
+                   when 'soy-free' 
+                      render 'icon-soy-free' 
+                   when 'dairy-free' 
+                      render 'icon-dairy-free' 
+                   when 'egg' 
+                      render 'icon-egg' 
+                   when 'glutten-free' 
+                      render 'icon-glutten-free' 
+                   when 'no-palm-oil' 
+                      render 'icon-no-palm-oil' 
+                   when 'no-preservatives' 
+                      render 'icon-no-preservatives' 
+                   when 'oats' 
+                      render 'icon-oats' 
+                 endcase 
+                %}
+              </div>
+              <p class="oe-ingredients__list-item-title">{{ block.settings.heading }}</p>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "OE Ingredients",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "default": "Only the Best Ingredients",
+      "label": "Headline"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredients",
+      "name": "Ingredients",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "dairy-free",
+              "label": "Dairy free"
+            },
+            {
+              "value": "egg",
+              "label": "Egg"
+            },
+            {
+              "value": "no-palm-oil",
+              "label": "No palm oil"
+            },
+            {
+              "value": "no-preservatives",
+              "label": "No preservatives"
+            },
+            {
+              "value": "oats",
+              "label": "Oats"
+            },
+            {
+              "value": "soy-free",
+              "label": "Soy free"
+            },
+            {
+              "value": "glutten-free",
+              "label": "Glutten free"
+            }
+          ],
+          "default": "egg",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "ORGANIC OATS",
+          "label": "Heading"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE Ingredients",
+      "blocks": [
+        {
+          "type": "ingredients"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -2,6 +2,7 @@
   .banner {
     position: relative;
     min-height: 700px;
+    display: flex;
   }
 
   .banner__media {
@@ -18,6 +19,8 @@
     flex-direction: column;
     max-width: 1020px;
     display: flex;
+    position: relative;
+    z-index: 2;
   }
 
   .banner__content-wrapper {
@@ -29,8 +32,8 @@
     padding: 48px 16px;
   }
 
-  .banner--content-mobile-position-top .banner__content-wrapper {
-    justify-content: flex-start;
+  .banner--content-mobile-position-top {
+    align-items: flex-start;
   }
 
   .banner--content-align-mobile-left .banner__content-wrapper,
@@ -39,8 +42,8 @@
     text-align: left;
   }
 
-  .banner--content-mobile-position-center .banner__content-wrapper {
-    justify-content: center;
+  .banner--content-mobile-position-center {
+    align-items: center;
   }
   
   .banner--content-align-mobile-center .banner__content-wrapper,
@@ -48,8 +51,8 @@
     align-items: center;
     text-align: center;
   }
-  .banner--content-mobile-position-bottom .banner__content-wrapper {
-    justify-content: flex-end;
+  .banner--content-mobile-position-bottom {
+    align-items: flex-end;
   }
 
   .banner--content-align-mobile-right .banner__content-wrapper,
@@ -66,19 +69,6 @@
   }
   .banner__content.color-red {
     color: var(--oe-color-red);
-  }
-  
-  .banner__content.color-black .banner__buttons .button--primary {
-    background-color: var(--oe-color-black);
-    color: var(--oe-color-white);
-  }
-  .banner__content.color-white .banner__buttons .button--primary {
-    background-color: var(--oe-color-white);
-    color: var(--oe-color-black);
-  }
-  .banner__content.color-red .banner__buttons .button--primary {
-    background-color: var(--oe-color-red);
-    color: var(--oe-color-white);
   }
 
   .banner__heading {
@@ -97,19 +87,6 @@
 
   .banner__buttons .button {
     padding: 12px 80px;
-  }
-
-  .banner__buttons .button--secondary {
-    background-color: transparent;
-    color: inherit;
-    border: 1px solid currentColor;
-  }
-
-  .banner__buttons .button--primary::after,
-  .banner__buttons .button--primary::before,
-  .banner__buttons .button--secondary::after,
-  .banner__buttons .button--secondary::before {
-    display: none;
   }
 
   @media screen and (min-width: 750px) {
@@ -139,14 +116,14 @@
       justify-content: flex-start;
     }
 
-    .banner--content-position-top .banner__content-wrapper {
-      justify-content: flex-start;
+    .banner--content-position-top {
+      align-items: flex-start;
     }
-    .banner--content-position-center .banner__content-wrapper {
-      justify-content: center;
+    .banner--content-position-center {
+      align-items: center;
     }
-    .banner--content-position-bottom .banner__content-wrapper {
-      justify-content: flex-end;
+    .banner--content-position-bottom {
+      align-items: flex-end;
     }
 
     .banner--content-align-left .banner__content-wrapper,
@@ -195,10 +172,10 @@
           {%- when 'buttons' -%}
             <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}">
               {%- if block.settings.button_label_1 != blank -%}
-                <a{% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% endif %} class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
+                {% render 'button', href: block.settings.button_link_1 , variation: 'primary', color: section.settings.color_scheme , size: 'big', label: block.settings.button_label_1 %}
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
-                <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
+                {% render 'button', href: block.settings.button_link_2 , variation: 'primary', color: section.settings.color_scheme , size: 'big', label: block.settings.button_label_2 %}
               {%- endif -%}
             </div>
         {%- endcase -%}
@@ -362,12 +339,6 @@
           "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
         },
         {
-          "type": "checkbox",
-          "id": "button_style_secondary_1",
-          "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
-        },
-        {
           "type": "text",
           "id": "button_label_2",
           "default": "Button label",
@@ -378,12 +349,6 @@
           "type": "url",
           "id": "button_link_2",
           "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_2",
-          "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
         }
       ]
     }

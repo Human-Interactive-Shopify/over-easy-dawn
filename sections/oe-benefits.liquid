@@ -1,0 +1,203 @@
+{%- style -%}
+
+  .oe-benefits {
+    background-color: var(--oe-color-grey-100);
+  }
+  
+  .oe-benefits__container {
+    padding: 0;
+  }
+
+  .oe-benefits__title {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    line-height: 120%;
+    color: var(--oe-color-black);
+    padding: 16px 0;
+    margin: 0;
+  }
+
+  .oe-benefits__title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background-color: var(--oe-color-grey-400);
+  }
+
+  .oe-benefits__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .oe-benefits__list-item {
+    width: 50%;
+    padding: 24px 12px;
+  }
+
+  .oe-benefits__list-item:nth-of-type(2n - 1) {
+    border-right: 1px solid var(--oe-color-grey-200);
+  }
+  
+  .oe-benefits__list-item:nth-of-type(n + 2) {
+    border-top: 1px solid var(--oe-color-grey-200);
+  }
+  
+  .oe-benefits__list-item-icon {
+    width: 24px;
+    margin: 0 auto;
+  }
+  
+  .oe-benefits__list-item-title {
+    text-align: center;
+    margin: 20px 0 0;
+  }
+  
+  .oe-benefits__list-item-line,
+  .oe-benefits__list-item-text {
+    display: none;
+  }
+  
+  @media screen and (min-width: 750px) {
+    .oe-benefits {
+      
+    }
+
+    .oe-benefits__title {
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 120%;
+      background-color: var(--oe-color-grey-100);
+      margin-bottom: 32px;
+    }
+    
+    .oe-benefits__title span {
+      background-color: var(--oe-color-grey-100);
+      position: relative;
+      z-index: 2;
+      padding: 0 48px;
+    }
+    
+    .oe-benefits__title::before {
+      width: 100%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .oe-benefits__list-item {
+      width: 25%;
+      padding: 32px 12px;
+    }
+
+    .oe-benefits__list-item-line,
+    .oe-benefits__list-item-text {
+      display: block;
+    }
+
+    .oe-benefits__list-item-line {
+      margin: 24px auto;
+      width: 60px;
+    }
+
+    .oe-benefits__list-item-title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 160%;
+      text-transform: uppercase;
+    }
+
+    .oe-benefits__list-item-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      text-align: center;
+      color: var(--oe-color-copy-light);
+    }
+
+    .oe-benefits__list-item:nth-of-type(2n - 1) {
+      border-right: 0;
+    }
+    
+    .oe-benefits__list-item:nth-of-type(n + 2) {
+      border-top: 0;
+    }
+
+    .oe-benefits__list-item-icon {
+      width: 40px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="oe-benefits">
+  <div class="oe-benefits__container container">
+    {%- if section.settings.headline != blank -%}
+    <h3 class="oe-benefits__title"><span>{{ section.settings.headline }}</span></h3>
+    <div class="oe-benefits__list">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'benefits' -%}
+            <div class="oe-benefits__list-item">
+              <div class="oe-benefits__list-item-icon">
+                {% render 'icon-benefit-checkmark' %}
+              </div>
+              <hr class="oe-benefits__list-item-line">
+              <h4 class="oe-benefits__list-item-title">{{ block.settings.heading }}</h4>
+              <p class="oe-benefits__list-item-text">{{ block.settings.text }}</p>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "OE Benefits",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "default": "Benefits",
+      "label": "Headline"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefits",
+      "name": "Benefits",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "PROMOTES GUT HEALTH",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "In sit tortor eget sit iaculis a mauris volutpat enim. Pretium tellus mollis facilisis diam euismod tempor at ac.",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE Benefits",
+      "blocks": [
+        {
+          "type": "benefits"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
