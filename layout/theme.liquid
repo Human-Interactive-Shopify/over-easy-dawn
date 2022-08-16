@@ -87,7 +87,10 @@
         --oe-color-copy-lighter: #888888;
         --oe-color-grey-100: #F5F5F5;
         --oe-color-grey-200: #EEEEEE;
+        --oe-color-grey-300: #E0E0E0;;
         --oe-color-grey-400: #BDBDBD;
+
+        --oe-gutter: 16px;
 
         --gradient-base-background-1: {% if settings.gradient_background_1 != blank %}{{ settings.gradient_background_1 }}{% else %}{{ settings.colors_background_1 }}{% endif %};
         --gradient-base-background-2: {% if settings.gradient_background_2 != blank %}{{ settings.gradient_background_2 }}{% else %}{{ settings.colors_background_2 }}{% endif %};
@@ -163,7 +166,7 @@
         --buttons-shadow-blur-radius: {{ settings.buttons_shadow_blur }}px;
         --buttons-border-offset: {% if settings.buttons_radius > 0 or settings.buttons_shadow_opacity > 0 %}0.3{% else %}0{% endif %}px;
 
-        --inputs-radius: {{ settings.inputs_radius }}px;
+        --inputs-radius: 5px;
         --inputs-border-width: {{ settings.inputs_border_thickness }}px;
         --inputs-border-opacity: {{ settings.inputs_border_opacity | divided_by: 100.0 }};
         --inputs-shadow-opacity: {{ settings.inputs_shadow_opacity | divided_by: 100.0 }};
@@ -284,4 +287,5 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </html>

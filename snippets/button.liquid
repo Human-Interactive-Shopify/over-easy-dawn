@@ -1,0 +1,20 @@
+{% comment %}
+    Renders a button.
+
+    Accepts:
+    - classes: {String} The setting changes the aspect ratio of the article image, if shown
+    - href: {String} Url
+    - variation: {String} primary | secondary
+    - color: {String} black | white
+    - size: {String} big | small.
+    - label: {String} Text to show inside a button.
+    - targetBlank: {boolean} Text to show inside a button.
+
+    Usage:
+    {% render 'button' classes: 'js-button', href: 'https://example.com', variation: 'primary', color: 'black', size: 'big', label: 'Button' %}
+{% endcomment %}
+
+
+<{% if href != blank %}a href="{{ href }}"{% else %}button {% endif %} {%- if href != blank and targetBlank -%} target="_blank"{%- endif -%}  class="button button--{{ variation }} button-size--{{ size }} button-color--{{ color }} {{ classes }}">
+  {{ label }}
+</{%- if href != blank -%}a{%- else -%}button{%- endif -%}>

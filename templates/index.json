@@ -98,8 +98,57 @@
     "oe-hero-banner": {
       "type": "oe-hero-banner",
       "settings": {
-        
-      }
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ]
+    },
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
+      "settings": {}
+    },
+    "oe-benefits": {
+      "type": "oe-benefits",
+      "settings": {}
+    },
+    "oe-ingredients": {
+      "type": "oe-ingredients",
+      "settings": {}
+    },
+    "oe-testimonials": {
+      "type": "oe-testimonials",
+      "settings": {}
+    },
+    "oe-featured-collections": {
+      "type": "oe-featured-collections",
+      "settings": {}
     },
     "collage": {
       "type": "collage",
@@ -208,6 +257,11 @@
   },
   "order": [
     "oe-hero-banner",
+    "oe-jumbotron",
+    "oe-benefits",
+    "oe-ingredients",
+    "oe-testimonials",
+    "oe-featured-collections",
     "image_banner",
     "rich_text",
     "featured_collection",

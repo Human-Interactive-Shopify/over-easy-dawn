@@ -1,0 +1,332 @@
+{%- style -%}
+
+  .oe-testimonials {
+    background-color: var(--oe-color-red);
+    padding: 40px 0;
+    overflow-x: hidden;
+  }
+
+  .oe-testimonials__title {
+    position: relative;
+    text-align: left;
+    font-size: 25px;
+    line-height: 120%;
+    color: var(--oe-color-white);
+    padding-bottom: 34px;
+    margin: 0;
+  }
+
+  .oe-testimonials__list {
+    
+  }
+
+  .oe-testimonials__list-wrapper {
+    display: flex;
+  }
+  
+  .oe-testimonials__list-item {
+    max-width: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    margin-right: 24px;
+    filter: drop-shadow(19px 58px 25px rgba(0, 0, 0, 0.01)) drop-shadow(11px 33px 21px rgba(0, 0, 0, 0.05)) drop-shadow(5px 15px 15px rgba(0, 0, 0, 0.09)) drop-shadow(1px 4px 8px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+  }
+  
+  .oe-testimonials__list-item-content {
+    background-color: var(--oe-color-white);
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+  
+  .oe-testimonials__list-item-image-wrapper {
+    width: 100%;
+    padding-top: 90%;
+    position: relative;
+  }
+
+  .oe-testimonials__list-item-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .oe-testimonials__list-item-image-overlay {
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .oe-testimonials__list-item-icon {
+    display: none;
+  }
+  
+  .oe-testimonials__list-item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: var(--oe-color-copy);
+    margin: 0 0 auto;
+    order: 3;
+  }
+
+  .oe-testimonials__list-item-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--oe-color-black);
+    order: 1;
+    margin: 0;
+  }
+  
+  .oe-testimonials__list-item-position {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--oe-color-copy);
+    margin: 0 0 24px;
+    padding: 0 0 12px;
+    order: 2;
+    position: relative;
+  }
+
+  .oe-testimonials__list-item-position::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 125px;
+    height: 1px;
+    background-color: var(--oe-color-grey-300);
+  }
+
+  .oe-testimonials__list-pagination {
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  .oe-testimonials__list-pagination-bullet {
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-color: var(--oe-color-black);
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .oe-testimonials__list-pagination-bullet.is-active {
+    background-color: var(--oe-color-white);
+  }
+  
+  @media screen and (min-width: 750px) {
+    .oe-testimonials {
+      padding: 40px 0 75px;
+      
+    }
+
+    .oe-testimonials__title {
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 120%;
+      margin-bottom: 0;
+    }
+
+    .oe-testimonials__list {
+      display: flex;
+    }
+
+    .oe-testimonials__list-item {
+      max-width: 620px;
+      width: 100%;
+      margin-right: 60px;
+      flex-direction: row;
+      min-height: 275px;
+    }
+
+    .oe-testimonials__list-item-image-wrapper {
+      width: 183px;
+      min-width: 183px;
+      height: 100%;
+      position: relative;
+      padding-top: 45%
+    }
+
+    .oe-testimonials__list-item-image-overlay {
+      display: none;
+    }
+
+    .oe-testimonials__list-item-content {
+      padding: 32px 32px 12px;
+      position: relative;
+    }
+
+    .oe-testimonials__list-item-icon {
+      display: block;
+      position: absolute;
+      right: 32px;
+      bottom: 64px;
+      opacity: 0.1;
+      width: 55px;
+      height: 46px;
+    }
+
+    .oe-testimonials__list-item-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      order: 1;
+    }
+
+    .oe-testimonials__list-item-name {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      text-transform: unset;
+      margin: 0;
+      order: 2;
+    }
+    
+    .oe-testimonials__list-item-position {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      order: 3;
+      margin: 0;
+      padding: 0;
+    }
+
+    .oe-testimonials__list-item-position::before {
+      display: none;
+    }
+
+    .oe-testimonials__list-pagination {
+      display: none;
+    }
+  }
+{%- endstyle -%}
+
+<div class="oe-testimonials section-{{ section.id }}">
+  <div class="oe-testimonials__container container">
+    {%- if section.settings.headline != blank -%}
+    <h3 class="oe-testimonials__title">{{ section.settings.headline }}</h3>
+    <div class="oe-testimonials__list js-testimonials-slider">
+      <div class="oe-testimonials__list-wrapper js-testimonials-slider-wrapper">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'testimonials' -%}
+              <div class="oe-testimonials__list-item">
+                {%- if block.settings.image != blank -%}
+                  <div class="oe-testimonials__list-item-image-wrapper">
+                    {{ block.settings.image | image_url: width: 183 | image_tag:
+                      loading: 'lazy',
+                      width: 183,
+                      height: 275,
+                      class: "oe-testimonials__list-item-image",
+                      alt: block.settings.image.alt | escape
+                    }}
+                    <svg class="oe-testimonials__list-item-image-overlay" viewBox="0 0 282 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M281 149.5H281.5V149V3V1.74158L280.636 2.65685C239.04 46.7393 202.705 76.4411 159.988 98.5015C117.264 120.565 68.1275 135 0.901487 148.51L1 149.5H281Z" fill="white" stroke="white"/>
+                    </svg>
+                  </div>
+                {%- endif -%}
+                <div class="oe-testimonials__list-item-content">
+                  <p class="oe-testimonials__list-item-text">"{{ block.settings.text }}"</p>
+                  <div class="oe-testimonials__list-item-icon">
+                    {% render 'icon-testimonial-quote' %}
+                  </div>
+                  <p class="oe-testimonials__list-item-name">{{ block.settings.name }}</p>
+                  <p class="oe-testimonials__list-item-position">{{ block.settings.position }}</p>
+                </div>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+      <div class="oe-testimonials__list-pagination js-testimonials-slider-pagination"></div>
+    </div>
+  {%- endif -%}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const swiper = new Swiper('.section-{{ section.id }} .js-testimonials-slider', {
+        slideClass: 'oe-testimonials__list-item',
+        wrapperClass: 'js-testimonials-slider-wrapper',
+        slideActiveClass: 'is-active',
+        slidesPerView: 'auto',
+        pagination: {
+          el: '.js-testimonials-slider-pagination',
+          bulletClass: 'oe-testimonials__list-pagination-bullet',
+          bulletActiveClass: 'is-active'
+        },       
+      });
+  })
+</script>
+
+{% schema %}
+{
+  "name": "OE Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "default": "You Don’t Have To Take Our Word For It...",
+      "label": "Headline"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonials",
+      "name": "Testimonials",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Testimonial text...",
+          "label": "Testimonial text"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "default": "John Doe",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "id": "position",
+          "default": "CEO of Cookie Company",
+          "label": "position"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE Testimonials",
+      "blocks": [
+        {
+          "type": "testimonials"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
