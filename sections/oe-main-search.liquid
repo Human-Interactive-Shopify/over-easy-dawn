@@ -1,0 +1,496 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-card-search-product.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
+
+<style>
+  .oe-search-results__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .oe-search-results__list-item {
+    width: 100%;
+  }
+
+  .template-search {
+    padding-bottom: 48px;
+  }
+
+  .template-search__header {
+    text-align: center;
+    background-color: var(--oe-color-red);
+    padding: 20px 0;
+    margin-bottom: 48px;
+  }
+  
+  .template-search__text {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: var(--oe-color-white);
+  }
+  
+  .template-search__term {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 120%;
+    color: var(--oe-color-white);
+  }
+
+  .template-search__no-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .template-search__no-result-title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--oe-color-black);
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  
+  .template-search__no-result-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    text-align: center;
+    color: var(--oe-color-copy);
+    margin-bottom: 24px;
+  }
+  
+  .template-search__search {
+    margin-bottom: 40px;
+  }
+
+  .template-search__related-list-wrapper {
+    padding-top: 32px;
+    padding-bottom: 70px;
+  }
+  
+  .template-search__related-list-wrapper--tabs:not(.is-active) {
+    display: none;
+  }
+
+  .template-search__related-list-view-all {
+    border: 8px solid var(--oe-color-grey-200);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    flex: 1 0 auto;
+    box-shadow: 15px 63px 26px rgb(0 0 0 / 1%), 9px 35px 22px rgb(0 0 0 / 5%), 4px 16px 16px rgb(0 0 0 / 9%), 1px 4px 9px rgb(0 0 0 / 10%), 0px 0px 0px rgb(0 0 0 / 10%);
+  }
+  
+  .template-search__related-list-view-all-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    text-transform: uppercase;
+  }
+
+  .template-search__related-list-view-all-icon {
+    width: 42px;
+    color: var(--oe-color-black);
+  }
+
+  .template-search__related-list {
+    display: flex;
+    {% comment %} gap: 24px; {% endcomment %}
+  }
+
+  .template-search__related-list > * {
+    width: 70%;
+  }
+
+  .template-search__related-list > *:not(:last-of-type) {
+    margin-right: 24px;
+  }
+
+  .template-search__related-title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 120%;
+    color: var(--oe-color-black);
+    border-bottom: 1px solid var(--oe-color-grey-300);
+    padding-bottom: 8px;
+  }
+
+  .template-search__related-tabs {
+    display: flex;
+    gap: 32px;
+  }
+
+  .template-search__related-tab {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--oe-color-black);
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    font-family: var(--font-heading-family);
+  }
+
+  .template-search__related-tab.is-active {
+    text-decoration: underline;
+  }
+  
+  @media screen and (min-width: 750px) {
+    .template-search {
+      padding-bottom: 80px;
+    }
+
+    .template-search__header {
+      padding: 40px 0;
+      margin-bottom: 80px;
+    }
+
+    .template-search__term {
+      font-size: 44px;
+    }
+    
+    .oe-search-results__list {
+      gap: 64px;
+    }
+
+    .oe-search-results__list-item {
+      width: calc(33% - ((64px * 2) / 3));
+    }
+
+    .template-search__related-list-wrapper {
+      padding-top: 64px;
+    }
+
+    .template-search__related-list {
+      display: flex;
+      gap: 40px;
+    }
+
+    .template-search__related-title {
+      font-size: 28px;
+      line-height: 120%;
+      padding-bottom: 16px;
+    }
+
+    .template-search__related-list > * {
+      width: calc(20% - ((40px * 4) / 5));
+    }
+
+    .template-search__related-list > *:not(:last-of-type) {
+      margin-right: 0;
+    }
+
+    .template-search__related-list-view-all {
+      box-shadow: none;
+      transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    }
+    
+    .template-search__related-list-view-all:hover {
+      transform: translateY(-16px);
+      box-shadow: 15px 63px 26px rgba(0, 0, 0, 0.01), 9px 35px 22px rgba(0, 0, 0, 0.05), 4px 16px 16px rgba(0, 0, 0, 0.09), 1px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .template-search__related-tab {
+      font-size: 22px;
+      line-height: 120%;
+    }
+  }
+</style>
+
+{%- liquid
+  assign sort_by = search.sort_by | default: search.default_sort_by
+  assign terms = search.terms | escape
+  assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+-%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %}">
+  <div class="template-search__header">
+    {%- if search.performed -%}
+      <p class="template-search__text">Your search for</p>
+      <h2 class="template-search__term">{{ search.terms | escape }}</h2>
+    {%- else -%}
+      <h1 class="template-search__title">{{ 'general.search.search' | t }}</h1>
+    {%- endif -%}
+  </div>
+  {%- if search.performed -%}
+    <div class="container" id="ProductGridContainer">
+      {%- if search.results_count != 0 -%}
+        {% paginate search.results by 6 %}
+          <div class="template-search__results" id="product-grid" data-id="{{ section.id }}">
+            <div class="loading-overlay"></div>
+            <ul class="oe-search-results__list" role="list">
+              {%- for item in search.results -%}
+                {%- case item.object_type -%}
+                  {%- when 'product' -%}
+                    <li class="oe-search-results__list-item">
+                      {% render 'card-search-product', card_product: item, button_label: 'Shop now' %}
+                    </li>
+                  {%- endcase -%}
+              {%- endfor -%}
+            </ul>
+            {%- if paginate.pages > 1 -%}
+              {% render 'pagination', paginate: paginate %}
+            {%- endif -%}
+          </div>
+        {% endpaginate %}
+        {% if section.settings.show_related_products %}
+        <div class="template-search__related section-{{ section.id }}">
+          <h3 class="template-search__related-title">{{ section.settings.related_products_title }}</h3>
+          <div class="template-search__related-list-wrapper js-related-product-slider">
+            <div class="template-search__related-list">
+              {% for product in collections[section.settings.collection].products limit: 4 %}
+                {% render 'card-search-product', card_product: product, variation: 'small', classes: 'template-search__related-list-item', button_label: 'Shop now' %}
+              {% endfor %}
+              <a href="{{ section.settings.collection.url }}" class="template-search__related-list-item template-search__related-list-view-all">
+                <h5 class="template-search__related-list-view-all-text">Shop all</h5>
+                <div class="template-search__related-list-view-all-icon">
+                  {% render 'icon-arrow-long' %}
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {%- else-%}
+        <div class="template-search__no-result">
+          <h2 class="template-search__no-result-title">Sorry, no matches were found.</h2>
+          <p class="template-search__no-result-text">No big deal! Let’s try again or take a look at some of our suggestions below.</p>
+          <div class="template-search__search">
+            {%- if settings.predictive_search_enabled -%}
+              <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
+            {%- endif -%}
+              <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+                <div class="search__input-wrapper">
+                  <input
+                    class="search__input"
+                    id="Search-In-Template"
+                    type="search"
+                    name="q"
+                    value="{{ search.terms | escape }}"
+                    placeholder="Search Over Easy"
+                    {%- if settings.predictive_search_enabled -%}
+                      role="combobox"
+                      aria-expanded="false"
+                      aria-owns="predictive-search-results-list"
+                      aria-controls="predictive-search-results-list"
+                      aria-haspopup="listbox"
+                      aria-autocomplete="list"
+                      autocorrect="off"
+                      autocomplete="off"
+                      autocapitalize="off"
+                      spellcheck="false"
+                    {%- endif -%}
+                  >
+                  <label class="search__label" for="Search-In-Template">Search Over Easy</label>
+                  <input name="options[prefix]" type="hidden" value="last">
+                  <input name="type" type="hidden" value="product">
+    
+                  {%- if settings.predictive_search_enabled -%}
+                    <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
+                      <div class="predictive-search__loading-state">
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                        </svg>
+                      </div>
+                    </div>
+    
+                    <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+                  {%- endif -%}
+    
+                  <button type="submit" class="search__button" aria-label="{{ 'general.search.search' | t }}">
+                    <svg class="icon icon-search">
+                      <use xlink:href="#icon-search">
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            {%- if settings.predictive_search_enabled -%}
+              </predictive-search>
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="template-search__related js-related section-{{ section.id }}">
+          <h3 class="template-search__related-title">Suggested</h3>
+          <div class="template-search__related-tabs js-related-tabs">
+            {% if section.settings.show_latest_products %}
+              <button class="template-search__related-tab js-related-tab" data-tab-id="search-latest-products">
+                Products
+              </button>
+            {% endif %}
+            {% if section.settings.show_faq %}
+              <button class="template-search__related-tab js-related-tab">
+                FAQ
+              </button>
+            {% endif %}
+            {% if section.settings.show_latest_blogs %}
+              <button class="template-search__related-tab js-related-tab" data-tab-id="search-latest-blogs">
+                Blog
+              </button>
+            {% endif %}
+          </div>
+          {% if section.settings.show_latest_products %}
+            <div id="search-latest-products" class="template-search__related-list-wrapper template-search__related-list-wrapper--tabs is-active js-latest-product-slider">
+              <div class="template-search__related-list">
+                <script>console.log({{ articles | json }});</script>
+                {% for product in collections[section.settings.latest_products_collection].products limit: 4 %}
+                  {% render 'card-search-product', card_product: product, variation: 'small', classes: 'template-search__related-list-item' button_label: 'Shop now' %}
+                {% endfor %}
+                <a href="{{ section.settings.collection.url }}" class="template-search__related-list-item template-search__related-list-view-all">
+                  <h5 class="template-search__related-list-view-all-text">Shop all</h5>
+                  <div class="template-search__related-list-view-all-icon">
+                    {% render 'icon-arrow-long' %}
+                  </div>
+                </a>
+              </div>
+            </div>
+          {% endif %}
+          {% if section.settings.show_latest_blogs %}
+            <div id="search-latest-blogs" class="template-search__related-list-wrapper template-search__related-list-wrapper--tabs js-latest-blog-slider">
+              <div class="template-search__related-list">
+                {% for article in blogs['news'].articles limit: 4 %}
+                  {% render 'card-search-product', card_product: article, variation: 'small', classes: 'template-search__related-list-item', hide_image: true, button_label: 'Read more' %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.innerWidth <= 989) {
+      const swiper = new Swiper('.section-{{ section.id }} .js-latest-product-slider', {
+        wrapperClass: 'template-search__related-list',
+        slideClass: 'template-search__related-list-item',
+        slideActiveClass: 'is-active',
+        slidesPerView: 'auto',
+      });
+    }
+    
+    if (window.innerWidth <= 989) {
+      const swiper = new Swiper('.section-{{ section.id }} .js-latest-blog-slider', {
+        wrapperClass: 'template-search__related-list',
+        slideClass: 'template-search__related-list-item',
+        slideActiveClass: 'is-active',
+        slidesPerView: 'auto',
+      });
+    }
+
+    const initRelatedTabs = (relatedSection) => {
+      const tabButtons = relatedSection.querySelectorAll('.js-related-tab')
+      const tabWrappers = relatedSection.querySelectorAll('.template-search__related-list-wrapper')
+
+      if (tabButtons.length) {
+        tabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            if (tabWrappers.length) {
+              tabWrappers.forEach(wrapper => wrapper.classList.remove('is-active'))
+              tabButtons.forEach(tab => tab.classList.remove('is-active'))
+
+              relatedSection.querySelector(`#${button.dataset.tabId}`).classList.add('is-active')
+              button.classList.add('is-active')
+            }
+          })
+        })
+
+        tabButtons[0].click()
+      }
+    }
+
+    const relatedSection = document.querySelector('.js-related')
+
+    if (relatedSection) {
+      initRelatedTabs(relatedSection)
+    }
+  })
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.main-search.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_related_products",
+      "default": true,
+      "label": "Show related products section"
+    },
+    {
+      "type": "text",
+      "id": "related_products_title",
+      "default": "You Might Also Like...",
+      "label": "Related products title"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "info": "Collection used in 'You might also like' section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_latest_products",
+      "default": false,
+      "label": "Show latest products section"
+    },
+    {
+      "type": "collection",
+      "id": "latest_products_collection",
+      "label": "Latest products collection",
+      "info": "Collection used in 'Suggested' section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_faq",
+      "default": false,
+      "label": "Show FAQs section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_latest_blogs",
+      "default": false,
+      "label": "Show latest blogs section"
+    }
+  ]
+}
+{% endschema %}

@@ -119,9 +119,12 @@
     <path d="M25.2285 23.4192L18.5073 16.6978C19.9809 14.9309 20.8702 12.6605 20.8702 10.1851C20.8702 4.56894 16.3013 0 10.6852 0C5.069 0 0.500061 4.56894 0.500061 10.1851C0.500061 15.8012 5.069 20.3702 10.6852 20.3702C13.1606 20.3702 15.4309 19.4808 17.1978 18.0072L23.9193 24.7287C24.1001 24.9095 24.3371 25 24.5739 25C24.8107 25 25.0478 24.9095 25.2285 24.7287C25.5903 24.3669 25.5903 23.7808 25.2285 23.4192ZM2.3519 10.1851C2.3519 5.59023 6.08982 1.85183 10.6852 1.85183C15.2805 1.85183 19.0184 5.59023 19.0184 10.1851C19.0184 14.78 15.2805 18.5183 10.6852 18.5183C6.08982 18.5183 2.3519 14.78 2.3519 10.1851Z" fill="#171717"/>
   </symbol>
 
-  <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
-    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+  <symbol id="icon-close" class="icon icon-close" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.02 10.7152H12.2883V6.98351C12.2883 6.87549 12.2 6.78711 12.0919 6.78711H10.9135C10.8055 6.78711 10.7171 6.87549 10.7171 6.98351V10.7152H6.98547C6.87744 10.7152 6.78906 10.8035 6.78906 10.9116V12.09C6.78906 12.198 6.87744 12.2864 6.98547 12.2864H10.7171V16.018C10.7171 16.1261 10.8055 16.2144 10.9135 16.2144H12.0919C12.2 16.2144 12.2883 16.1261 12.2883 16.018V12.2864H16.02C16.128 12.2864 16.2164 12.198 16.2164 12.09V10.9116C16.2164 10.8035 16.128 10.7152 16.02 10.7152Z" fill="#171717"/>
+    <path d="M11.5025 0.501953C5.4287 0.501953 0.503906 5.42675 0.503906 11.5005C0.503906 17.5743 5.4287 22.499 11.5025 22.499C17.5762 22.499 22.501 17.5743 22.501 11.5005C22.501 5.42675 17.5762 0.501953 11.5025 0.501953ZM11.5025 20.6332C6.45982 20.6332 2.36973 16.5431 2.36973 11.5005C2.36973 6.45786 6.45982 2.36778 11.5025 2.36778C16.5451 2.36778 20.6352 6.45786 20.6352 11.5005C20.6352 16.5431 16.5451 20.6332 11.5025 20.6332Z" fill="#171717"/>
+    <path d="M11.4985 0.501953C5.4248 0.501953 0.5 5.42675 0.5 11.5005C0.5 17.5743 5.4248 22.499 11.4985 22.499C17.5723 22.499 22.4971 17.5743 22.4971 11.5005C22.4971 5.42675 17.5723 0.501953 11.4985 0.501953ZM11.4985 20.6332C6.45591 20.6332 2.36582 16.5431 2.36582 11.5005C2.36582 6.45786 6.45591 2.36778 11.4985 2.36778C16.5412 2.36778 20.6313 6.45786 20.6313 11.5005C20.6313 16.5431 16.5412 20.6332 11.4985 20.6332Z" fill="#171717"/>
   </symbol>
+
 </svg>
 
 
@@ -147,7 +150,7 @@
             {%- if section.settings.show_search -%}
             <details-modal class="header__search">
               <details>
-                <summary class="header__icon link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+                <summary class="header__icon link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="Search Over Easy">
                   <span class="modal__toggle-open">
                     {% render 'icon-search' %}
                   </span>
@@ -155,7 +158,7 @@
                     Search
                   </span>
                 </summary>
-                <div class="search-modal modal__content" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+                <div class="search-modal modal__content" role="dialog" aria-modal="true" aria-label="Search Over Easy">
                   <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
                     {%- if settings.predictive_search_enabled -%}
                       <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
@@ -164,10 +167,10 @@
                         <div class="search__input-wrapper">
                           <input class="search__input"
                             id="Search-In-Modal"
-                            type="search"
+                            type="text"
                             name="q"
                             value=""
-                            placeholder="{{ 'general.search.search' | t }}"
+                            placeholder="Search Over Easy"
                             {%- if settings.predictive_search_enabled -%}
                               role="combobox"
                               aria-expanded="false"
@@ -181,13 +184,15 @@
                               spellcheck="false"
                             {%- endif -%}
                           >
+                          <label class="search__label" for="Search-In-Template">Search Over Easy</label>
                           <input type="hidden" name="options[prefix]" value="last">
-                          <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                          <input type="hidden" name="type" value="product">
+                          <button class="search__button" aria-label="Search Over Easy">
                             <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
                               <use href="#icon-search">
                             </svg>
                           </button>
-                          <button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+                          <button type="button" class="search__button search__button--close" aria-label="{{ 'accessibility.close' | t }}">
                             <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
                               <use href="#icon-close">
                             </svg>
@@ -284,7 +289,7 @@
   {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
     <details-modal class="header__search">
       <details>
-        <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+        <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="Search Over Easy">
           <span>
             <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
               <use href="#icon-search">
@@ -294,7 +299,7 @@
             </svg>
           </span>
         </summary>
-        <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+        <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="Search Over Easy">
           <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
             {%- if settings.predictive_search_enabled -%}
               <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
@@ -303,10 +308,10 @@
                 <div class="field">
                   <input class="search__input field__input"
                     id="Search-In-Modal-1"
-                    type="search"
+                    type="text"
                     name="q"
                     value=""
-                    placeholder="{{ 'general.search.search' | t }}"
+                    placeholder="Search Over Easy"
                     {%- if settings.predictive_search_enabled -%}
                       role="combobox"
                       aria-expanded="false"
@@ -320,14 +325,14 @@
                       spellcheck="false"
                     {%- endif -%}
                   >
-                  <label class="field__label" for="Search-In-Modal-1">Search OverEasy</label>
+                  <label class="search__label" for="Search-In-Template">Search Over Easy</label>
                   <input type="hidden" name="options[prefix]" value="last">
-                  <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                  <button class="search__button" aria-label="Search Over Easy">
                     <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
                       <use href="#icon-search">
                     </svg>
                   </button>
-                  <button type="button" class="modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+                  <button type="button" class="search__button search__button--close" aria-label="{{ 'accessibility.close' | t }}">
                     <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
                       <use href="#icon-close">
                     </svg>
@@ -453,7 +458,7 @@
     {%- if section.settings.show_search -%}
     <details-modal class="header__search">
       <details>
-        <summary class="header__icon link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+        <summary class="header__icon link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="Search Over Easy">
           <span class="modal__toggle-open">
             {% render 'icon-search' %}
           </span>
@@ -461,7 +466,7 @@
             Search
           </span>
         </summary>
-        <div class="search-modal modal__content" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+        <div class="search-modal modal__content" role="dialog" aria-modal="true" aria-label="Search Over Easy">
           <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
             {%- if settings.predictive_search_enabled -%}
               <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
@@ -473,7 +478,7 @@
                     type="search"
                     name="q"
                     value=""
-                    placeholder="{{ 'general.search.search' | t }}"
+                    placeholder="Search Over Easy"
                     {%- if settings.predictive_search_enabled -%}
                       role="combobox"
                       aria-expanded="false"
@@ -487,13 +492,15 @@
                       spellcheck="false"
                     {%- endif -%}
                   >
+                  <label class="search__label" for="Search-In-Template">Search Over Easy</label>
                   <input type="hidden" name="options[prefix]" value="last">
-                  <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                  <input type="hidden" name="type" value="product">
+                  <button class="search__button" aria-label="Search Over Easy">
                     <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
                       <use href="#icon-search">
                     </svg>
                   </button>
-                  <button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+                  <button type="button" class="search__button search__button--close" aria-label="{{ 'accessibility.close' | t }}">
                     <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
                       <use href="#icon-close">
                     </svg>
