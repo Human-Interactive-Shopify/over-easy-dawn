@@ -1,0 +1,32 @@
+{% comment %}
+    Renders a product card for search
+
+    Accepts:
+    - card_product: {Object} Product Liquid object (optional)
+    - variation: {String}
+    - classes: {String}
+    - button_label: {String}
+    - hide_image: {Bool}
+
+    Usage:
+    {% render 'card-product', card_product: product %}
+{% endcomment %}
+
+<a href="{{ card_product.url }}" class="oe-card-search-product oe-card-search-product--{{ variation }} {% if hide_image %}oe-card-search-product--height-auto{% endif %} {{ classes }}">
+  {%- if card_product.featured_image != blank and hide_image != true -%}
+  <div class="oe-card-search-product__image-wrapper">
+      {{ card_product.featured_image | image_url: width: 183 | image_tag:
+        loading: 'lazy',
+        width: 183,
+        height: 275,
+        class: "oe-card-search-product__image",
+        alt: card_product.title | escape
+      }}
+    </div>
+  {%- endif -%}
+  <div class="oe-card-search-product__content">
+    <h3 class="oe-card-search-product__title">{{ card_product.title }}</h3>
+    <p class="oe-card-search-product__text">{{ card_product.metafields.custom.excerpt }}</p>
+    {% render 'button', variation: 'primary', color: 'black' , size: 'big', label: 'Shop now', classes: "oe-card-search-product__button", label: button_label %}
+  </div>
+</a>
