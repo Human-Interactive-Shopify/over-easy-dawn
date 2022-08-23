@@ -23,7 +23,6 @@
   .oe-featured-collections__list-item {
     background-color: var(--oe-color-grey-200);
     width: 100%;
-    box-shadow: 15px 63px 26px rgba(0, 0, 0, 0.01), 9px 35px 22px rgba(0, 0, 0, 0.05), 4px 16px 16px rgba(0, 0, 0, 0.09), 1px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     text-decoration: none;
     padding: 8px;
@@ -31,10 +30,6 @@
     margin: 0 12px;
     display: flex;
     flex-direction: column;
-  }
-  
-  .oe-featured-collections__list-item:not(:last-of-type) {
-    
   }
   
   .oe-featured-collections__list-item-content {
@@ -119,8 +114,14 @@
     }
 
     .oe-featured-collections__list-item {
-      width: calc(100% / 3);
+      width: calc(100% / 3 - (2 * 40px));
       margin: 0 20px;
+      transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+    .oe-featured-collections__list-item:hover {
+      transform: translateY(-16px);
+      box-shadow: 15px 63px 26px rgba(0, 0, 0, 0.01), 9px 35px 22px rgba(0, 0, 0, 0.05), 4px 16px 16px rgba(0, 0, 0, 0.09), 1px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
     }
     
     .oe-featured-collections__list-item:not(:last-of-type) {
@@ -196,23 +197,20 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-      const swiper = new Swiper('.section-{{ section.id }} .js-featured-collections-slider', {
-        slideClass: 'oe-featured-collections__list-item',
-        wrapperClass: 'js-featured-collections-slider-wrapper',
-        slideActiveClass: 'is-active',
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        pagination: {
-          el: '.js-featured-collections-slider-pagination',
-          bulletClass: 'oe-featured-collections__list-pagination-bullet',
-          bulletActiveClass: 'is-active'
-        },
-        breakpoints: {
-          990: {
-            centeredSlides: false
-          }
-        }
-      });
+      if (window.innerWidth < 990) {
+        const swiper = new Swiper('.section-{{ section.id }} .js-featured-collections-slider', {
+          slideClass: 'oe-featured-collections__list-item',
+          wrapperClass: 'js-featured-collections-slider-wrapper',
+          slideActiveClass: 'is-active',
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          pagination: {
+            el: '.js-featured-collections-slider-pagination',
+            bulletClass: 'oe-featured-collections__list-pagination-bullet',
+            bulletActiveClass: 'is-active'
+          },
+        });
+      }
   })
 </script>
 

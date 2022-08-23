@@ -1,0 +1,24 @@
+{% comment %}
+    Renders an accordion component.
+
+    Accepts:
+    - title: {String}
+    - content: {String}
+    - tags: {Array}
+    - isHidden: {Boolean}
+
+    Usage:
+    {% render 'accordion' title: title, content: content %}
+{% endcomment %}
+
+<div class="oe-accordion js-oe-accordion{% if isHidden > 0 %} is-hidden{% endif %}" data-tags="{{ tags | reverse | join: ', ' }}">
+  <div class="oe-accordion__header">
+    <p class="oe-accordion__title">{{ title }}</p>
+    <div class="oe-accordion__icon">
+      {% render 'icon-accordion-plus' %}
+    </div>
+  </div>
+  <div class="oe-accordion__content">
+    {{ content }}
+  </div>
+</div>

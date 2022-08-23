@@ -1056,6 +1056,12 @@
         "label": "t:settings_schema.search_input.settings.predictive_search_enabled.label"
       },
       {
+        "type": "link_list",
+        "id": "quick_links",
+        "default": "main-menu",
+        "label": "Quick links menu"
+      },
+      {
         "type": "checkbox",
         "id": "predictive_search_show_vendor",
         "default": false,
