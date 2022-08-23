@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "oe-main-faq",
+      "settings": {
+        "show_subscriptions": true,
+        "show_shipping_tracking": true,
+        "show_products": true,
+        "show_payment_returns": true,
+        "show_contact": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

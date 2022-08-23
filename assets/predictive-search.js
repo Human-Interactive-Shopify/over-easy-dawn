@@ -33,7 +33,6 @@ class PredictiveSearch extends HTMLElement {
 		const searchTerm = this.getQuery();
 
 		if (!searchTerm.length) {
-			this.close(true);
 			return;
 		}
 
@@ -48,11 +47,11 @@ class PredictiveSearch extends HTMLElement {
 	onFocus() {
 		const searchTerm = this.getQuery();
 
+		this.open();
+
 		if (!searchTerm.length) return;
 
-		if (this.getAttribute('results') === 'true') {
-			this.open();
-		} else {
+		if (this.getAttribute('results') !== 'true') {
 			this.getSearchResults(searchTerm);
 		}
 	}
@@ -64,7 +63,6 @@ class PredictiveSearch extends HTMLElement {
 	}
 
 	onKeyup(event) {
-		if (!this.getQuery().length) this.close(true);
 		event.preventDefault();
 
 		switch (event.code) {
@@ -142,7 +140,6 @@ class PredictiveSearch extends HTMLElement {
 			.then((response) => {
 				if (!response.ok) {
 					var error = new Error(response.status);
-					this.close();
 					throw error;
 				}
 
@@ -156,7 +153,6 @@ class PredictiveSearch extends HTMLElement {
 				this.renderSearchResults(resultsMarkup);
 			})
 			.catch((error) => {
-				this.close();
 				throw error;
 			});
 	}

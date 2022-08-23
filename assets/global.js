@@ -888,3 +888,29 @@ class VariantRadios extends VariantSelects {
 }
 
 customElements.define('variant-radios', VariantRadios);
+
+const slideOut = (container) => {
+	if (!container.classList.contains('is-active')) {
+		container.classList.add('is-active');
+		container.style.height = 'auto';
+
+		var height = container.clientHeight + 'px';
+
+		container.style.height = '0px';
+
+		setTimeout(function () {
+			container.style.height = height;
+		}, 0);
+	} else {
+		container.style.height = '0px';
+		container.addEventListener(
+			'transitionend',
+			function () {
+				container.classList.remove('is-active');
+			},
+			{
+				once: true,
+			},
+		);
+	}
+};

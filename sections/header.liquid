@@ -201,10 +201,24 @@
 
                         {%- if settings.predictive_search_enabled -%}
                           <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-                            <div class="predictive-search__loading-state">
-                              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                              </svg>
+                            <div id="predictive-search-results">
+                              <h2 id="predictive-search-products" class="predictive-search__heading text-body caption-with-letter-spacing">
+                                QUICK LINKS
+                                <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                </svg>
+                              </h2>
+                              <ul id="predictive-search-results-list" class="predictive-search__results-list list-unstyled" role="listbox" aria-labelledby="predictive-search-products">
+                                {%- for link in settings.quick_links.links -%}
+                                  <li id="predictive-search-option-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
+                                    <a href="{{ link.url }}" class="predictive-search__item predictive-search__item--link link link--text" tabindex="-1">
+                                      <div class="predictive-search__item-content">
+                                        <span class="predictive-search__item-heading">{{ link.title }}</span> 
+                                      </div>
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
                             </div>
                           </div>
 
@@ -243,7 +257,7 @@
                       <details id="Details-HeaderMenu-{{ forloop.index }}">
                         <summary class="header__menu-item list-menu__item link focus-inset">
                           <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
-                          {% render 'icon-plus-2' %}
+                          {% render 'icon-accordion-plus' %}
                         </summary>
                         <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu" data-items-per-row="{{ section.settings.items_in_row }}" role="list" tabindex="-1">
                           {%- for childLink in link.links -%}
@@ -341,10 +355,24 @@
 
                 {%- if settings.predictive_search_enabled -%}
                   <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-                    <div class="predictive-search__loading-state">
-                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
+                    <div id="predictive-search-results">
+                      <h2 id="predictive-search-products" class="predictive-search__heading text-body caption-with-letter-spacing">
+                        QUICK LINKS
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                        </svg>
+                      </h2>
+                      <ul id="predictive-search-results-list" class="predictive-search__results-list list-unstyled" role="listbox" aria-labelledby="predictive-search-products">
+                        {%- for link in settings.quick_links.links -%}
+                          <li id="predictive-search-option-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
+                            <a href="{{ link.url }}" class="predictive-search__item predictive-search__item--link link link--text" tabindex="-1">
+                              <div class="predictive-search__item-content">
+                                <span class="predictive-search__item-heading">{{ link.title }}</span> 
+                              </div>
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
                     </div>
                   </div>
 
@@ -475,7 +503,7 @@
                 <div class="search__input-wrapper">
                   <input class="search__input"
                     id="Search-In-Modal"
-                    type="search"
+                    type="text"
                     name="q"
                     value=""
                     placeholder="Search Over Easy"
@@ -509,10 +537,24 @@
 
                 {%- if settings.predictive_search_enabled -%}
                   <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
-                    <div class="predictive-search__loading-state">
-                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
+                    <div id="predictive-search-results">
+                      <h2 id="predictive-search-products" class="predictive-search__heading text-body caption-with-letter-spacing">
+                        QUICK LINKS
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                        </svg>
+                      </h2>
+                      <ul id="predictive-search-results-list" class="predictive-search__results-list list-unstyled" role="listbox" aria-labelledby="predictive-search-products">
+                        {%- for link in settings.quick_links.links -%}
+                          <li id="predictive-search-option-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
+                            <a href="{{ link.url }}" class="predictive-search__item predictive-search__item--link link link--text" tabindex="-1">
+                              <div class="predictive-search__item-content">
+                                <span class="predictive-search__item-heading">{{ link.title }}</span> 
+                              </div>
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
                     </div>
                   </div>
 

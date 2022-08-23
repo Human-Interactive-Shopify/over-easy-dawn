@@ -22,8 +22,14 @@
 
   .oe-testimonials__list-wrapper {
     display: flex;
+    animation: move 12s linear infinite alternate;
   }
   
+  @keyframes move {
+    from {transform: translateX(0%);}
+    to { transform: translateX(calc(-150%)); }
+  }
+
   .oe-testimonials__list-item {
     max-width: 80%;
     width: 100%;
@@ -31,7 +37,8 @@
     flex-direction: column;
     flex: 1 0 auto;
     margin-right: 24px;
-    filter: drop-shadow(19px 58px 25px rgba(0, 0, 0, 0.01)) drop-shadow(11px 33px 21px rgba(0, 0, 0, 0.05)) drop-shadow(5px 15px 15px rgba(0, 0, 0, 0.09)) drop-shadow(1px 4px 8px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+    border-radius: 10px;
+    overflow: hidden;
   }
   
   .oe-testimonials__list-item-content {
@@ -215,6 +222,11 @@
     .oe-testimonials__list-pagination {
       display: none;
     }
+
+    @keyframes move {
+      from {transform: translateX(0%);}
+      to { transform: translateX(calc(-60%)); }
+    }
   }
 {%- endstyle -%}
 
@@ -259,22 +271,6 @@
   {%- endif -%}
   </div>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-      const swiper = new Swiper('.section-{{ section.id }} .js-testimonials-slider', {
-        slideClass: 'oe-testimonials__list-item',
-        wrapperClass: 'js-testimonials-slider-wrapper',
-        slideActiveClass: 'is-active',
-        slidesPerView: 'auto',
-        pagination: {
-          el: '.js-testimonials-slider-pagination',
-          bulletClass: 'oe-testimonials__list-pagination-bullet',
-          bulletActiveClass: 'is-active'
-        },       
-      });
-  })
-</script>
 
 {% schema %}
 {

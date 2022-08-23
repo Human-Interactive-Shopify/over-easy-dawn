@@ -1,0 +1,86 @@
+{{ 'component-oe-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-faq.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'oe-accordion.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'oe-faq.js' | asset_url }}" defer="defer"></script>
+
+<div class="oe-faq-blog">
+  <div class="container">
+    <h1 class="oe-faq-blog__title">{{ section.settings.title | escape }}</h1>
+    <p class="oe-faq-blog__subtitle">{{ section.settings.subtitle | escape }}</p>
+  
+    <nav class="oe-faq-blog__navigation js-faq-navigation">
+    </nav>
+  
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'faq-section' -%}
+          <div id="{{ block.settings.blog.handle }}" class="oe-faq-blog__list js-faq-section">
+            <h3 class="oe-faq-blog__list-title">{{ block.settings.blog.title | escape }}</h3>
+            {% if block.settings.blog.tags.size > 0 %}
+              <div class="oe-faq-blog__list-filters js-faq-list-filters">
+                {% assign blogTags = block.settings.blog.tags | reverse %}
+                {%- for tag in blogTags -%}
+                  <button class="oe-faq-blog__list-filter" data-filter-id="{{ tag }}">{{ tag }}</button>
+                {%- endfor -%}
+              </div>
+            {% endif %}
+            {%- for article in block.settings.blog.articles -%}
+              {%- render 'accordion', title: article.title, content: article.content, tags: article.tags, isHidden: article.tags.size > 0 -%}
+            {%- endfor -%}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ Settings",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "FAQs",
+      "label": "Page title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "default": "We got you covered.",
+      "label": "Page subtitle"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact",
+      "default": true,
+      "label": "Show contact form"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq-section",
+      "name": "FAQ Section",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "FAQ List"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE FAQ Sections",
+      "blocks": [
+        {
+          "type": "faq-section"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

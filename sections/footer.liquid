@@ -172,6 +172,10 @@
     margin-top: 16px;
   }
 
+  .footer__image {
+    display: none;
+  }
+
   @media screen and (min-width: 990px) {
     .footer {
       position: relative;
@@ -244,7 +248,12 @@
       padding-top: 19%;
     }
 
+    
+  }
+
+  @media screen and (min-width: 1600px) {
     .footer__image {
+      display: block;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -499,30 +508,6 @@
         form.submit()
       }
     })
-  }
-
-  const slideOut = (container) => {
-    if (!container.classList.contains('is-active')) {
-      
-      container.classList.add('is-active');
-      container.style.height = 'auto';
-
-      var height = container.clientHeight + 'px';
-
-      container.style.height = '0px';
-
-      setTimeout(function () {
-        container.style.height = height;
-      }, 0);
-      
-    } else {
-      container.style.height = '0px';
-      container.addEventListener('transitionend', function () {
-        container.classList.remove('is-active');
-      }, {
-        once: true
-      })
-    }
   }
 {% endjavascript %}
 
