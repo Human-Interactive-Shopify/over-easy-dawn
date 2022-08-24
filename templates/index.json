@@ -1,5 +1,77 @@
 {
   "sections": {
+    "oe-hero-banner": {
+      "type": "oe-hero-banner",
+      "blocks": {
+        "492b49ef-d613-46a4-bdd7-0bfc3c7ca045": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hero banner"
+          }
+        },
+        "9f31ef22-ad2a-4d6f-ab16-a7f0bb434bd6": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
+        "55e5f5f7-e248-43c1-920c-2bcd3e022d02": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_label_2": "Button label",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "492b49ef-d613-46a4-bdd7-0bfc3c7ca045",
+        "9f31ef22-ad2a-4d6f-ab16-a7f0bb434bd6",
+        "55e5f5f7-e248-43c1-920c-2bcd3e022d02"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/over-easy-hero.png",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "center",
+        "mobile_content_position": "center",
+        "mobile_content_alignment": "center",
+        "color_scheme": "black"
+      }
+    },
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
+      "settings": {
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "red",
+        "text_color_scheme": "white"
+      }
+    },
+    "oe-benefits": {
+      "type": "oe-benefits",
+      "settings": {
+        "headline": "Benefits"
+      }
+    },
+    "oe-ingredients": {
+      "type": "oe-ingredients",
+      "settings": {
+        "headline": "Only the Best Ingredients"
+      }
+    },
+    "oe-testimonials": {
+      "type": "oe-testimonials",
+      "settings": {
+        "headline": "You Don’t Have To Take Our Word For It..."
+      }
+    },
+    "oe-featured-collections": {
+      "type": "oe-featured-collections",
+      "settings": {
+        "headline": "You Don’t Have To Take Our Word For It..."
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -21,7 +93,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -53,7 +125,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Talk about your brand</p>",
+            "heading": "<p>Talk about your brand<\/p>",
             "heading_size": "h1"
           }
         },
@@ -69,6 +141,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
@@ -80,75 +154,27 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "background-1",
+        "full_width": false,
         "show_view_all": false,
-        "swipe_on_mobile": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 28,
         "padding_bottom": 36
       }
-    },
-    "oe-hero-banner": {
-      "type": "oe-hero-banner",
-      "settings": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ]
-    },
-    "oe-jumbotron": {
-      "type": "oe-jumbotron",
-      "settings": {}
-    },
-    "oe-benefits": {
-      "type": "oe-benefits",
-      "settings": {}
-    },
-    "oe-ingredients": {
-      "type": "oe-ingredients",
-      "settings": {}
-    },
-    "oe-testimonials": {
-      "type": "oe-testimonials",
-      "settings": {}
-    },
-    "oe-featured-collections": {
-      "type": "oe-featured-collections",
-      "settings": {}
     },
     "collage": {
       "type": "collage",
@@ -192,8 +218,8 @@
       "type": "video",
       "settings": {
         "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "heading_size": "h1",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
@@ -247,9 +273,9 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
         "color_scheme": "background-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
