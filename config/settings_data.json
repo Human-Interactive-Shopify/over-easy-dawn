@@ -122,7 +122,7 @@
         "type": "header",
         "settings": {
           "logo": "shopify:\/\/shop_images\/Screenshot_2022-07-06_at_10.34_1.jpg",
-          "menu": "main-menu",
+          "menu": "wip-dawn-menu",
           "show_search": true,
           "show_store_locator": true,
           "store_locator_page": "",
