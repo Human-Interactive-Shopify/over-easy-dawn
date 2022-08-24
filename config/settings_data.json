@@ -122,7 +122,7 @@
         "type": "oe-header",
         "settings": {
           "logo": "shopify:\/\/shop_images\/Screenshot_2022-07-06_at_10.34_1.jpg",
-          "menu": "main-menu",
+          "menu": "wip-dawn-menu",
           "show_search": true,
           "show_store_locator": true,
           "store_locator_page": "",
@@ -132,15 +132,37 @@
       "oe-footer": {
         "type": "oe-footer",
         "blocks": {
+          "4b1e6609-b794-4d1b-bf90-1c7856709252": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "98e5ca84-acd9-4d4b-a4d9-3fade86397f3": {
+            "type": "footer_images",
+            "settings": {
+              "gallery_image_picker": "shopify:\/\/shop_images\/over-easy-hero.png"
+            }
+          },
+          "6cb6de82-d9a8-4c48-9bdc-bb9cb478e6f0": {
+            "type": "footer_images",
+            "settings": {
+              "gallery_image_picker": "shopify:\/\/shop_images\/woman-and-boy-muscle.jpg"
+            }
+          }
         },
         "block_order": [
+          "4b1e6609-b794-4d1b-bf90-1c7856709252",
+          "98e5ca84-acd9-4d4b-a4d9-3fade86397f3",
+          "6cb6de82-d9a8-4c48-9bdc-bb9cb478e6f0"
         ],
         "settings": {
           "color_scheme": "red",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
           "show_social": true,
-          "footer_image": ""
+          "footer_image": "shopify:\/\/shop_images\/PB_Render_72ppi.png"
         }
       },
       "main-password-header": {
@@ -282,10 +304,6 @@
         },
         "oe-footer": {
           "type": "oe-footer",
-          "blocks": {
-          },
-          "block_order": [
-          ],
           "settings": {
             "color_scheme": "background-1",
             "newsletter_enable": true,
