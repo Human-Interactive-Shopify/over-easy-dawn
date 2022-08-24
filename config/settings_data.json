@@ -121,7 +121,7 @@
       "oe-header": {
         "type": "oe-header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/Screenshot_2022-07-06_at_10.34_1.jpg",
+          "logo": "shopify:\/\/shop_images\/logo.png",
           "menu": "wip-dawn-menu",
           "show_search": true,
           "show_store_locator": true,
