@@ -1,0 +1,128 @@
+<section class="FindUs section-{{ section.id }}" data-section-name="Find Us">
+  <div class="FindUs-wrapper">
+    <h2 class="desktop">&#9135;&#9135; &nbsp; In case you’re passing by, find us here! &nbsp; &#9135;&#9135;</h2>
+    <h2 class="mobile">&#9135;&#9135; &nbsp; Find us here! &nbsp; &#9135;&#9135;</h2>
+    <div class="FindUs-scroller">
+      <div class="FindUs-outer-wrap">
+        {% for block in section.blocks %}
+          <div class="FindUs-inner-wrap">
+            <div class="FindUs-img-wrap">
+              <img src="{{ block.settings.merchant_image|img_url: '360x' }}">
+            </div>
+          </div>
+        {% endfor %}
+        {% for block in section.blocks %}
+          <div class="FindUs-inner-wrap">
+            <div class="FindUs-img-wrap">
+              <img src="{{ block.settings.merchant_image|img_url: '360x' }}">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <a href="/pages/stores" class="primary-btn">Go to store locator</a>
+  </div>
+</section>
+
+<style>
+  .FindUs {
+    background-color: #fef9ef;
+  }
+  .FindUs-wrapper {
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+  }
+  .FindUs-wrapper > h2.desktop {
+    display:none;
+}
+.FindUs-wrapper > h2.mobile {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 68px;
+}
+.FindUs-scroller {
+  display: inline-block;
+  animation: move 12s linear infinite;
+  margin-bottom:40px;
+}
+.FindUs-outer-wrap {
+  display:flex;
+  align-content: center;
+  align-items: center;
+}
+@keyframes move {
+  from {transform: translateX(0%);}
+  to { transform: translateX(calc(-50%)); }
+}
+.FindUs-inner-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 40px;
+}
+.FindUs-img-wrap {
+  padding-bottom: 24px;
+  width: max-content;
+}
+@media (min-width: 768px) {
+  .FindUs-scroller {
+    margin-bottom:68px;
+    animation: move 36s linear infinite;
+  }
+  .FindUs-inner-wrap{
+    height: 150px;
+    flex-direction: row;
+  }
+  .FindUs-img-wrap {
+    padding-bottom: 0;
+    border: none;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  
+  .FindUs-wrapper {
+    padding: 80px 0 !important;
+  }
+  .FindUs-wrapper > h2.mobile {
+    display:none;
+  }
+  .FindUs-wrapper > h2.desktop {
+    display: block;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 68px;
+  }
+}
+
+</style>
+
+
+{% schema %}
+  {
+    "name": "OE Find Us",
+    "blocks": [
+      {
+        "name": "OE Find Us",
+        "type": "merchant",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "merchant_image",
+            "label": "Merchant Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Find Us",
+        "category": "Layout"
+      }
+    ]
+  }
+{% endschema %}

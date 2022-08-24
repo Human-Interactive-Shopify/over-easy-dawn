@@ -1,0 +1,166 @@
+<section class="Press section-{{ section.id }}" data-section-name="Sources">
+  <div class="Press-wrapper">
+    <h2>&#9135;&#9135; &nbsp; As Seen On &nbsp; &#9135;&#9135;</h2>
+    <div class="slider-custom-quotes Press-slider">
+      {% for block in section.blocks %}
+        <div class="Press-inner-wrap">
+          <div class="Press-text-wrap">
+            <div class="text-center lg:text-left">{{ block.settings.text }}</div>
+          </div>
+          <div class="Press-img-wrap">
+            <img width="240" height="80" src="{{ block.settings.source_image|img_url: '360x' }}">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .Press {
+    background-color: #fef9ef;
+  }
+  .Press-wrapper {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 40px 0;
+  }
+  .Press-wrapper > h2 {
+    display:none;
+}
+  .Press-inner-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Press-img-wrap {
+    padding-bottom: 24px;
+    border-bottom: 1px solid white;
+  }
+  .Press-text-wrap {
+    margin-top: 24px;
+    margin-bottom: 32px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #3A3A3A;
+    max-width: 300px;
+    background: #fef9ef;
+  }
+  @media (min-width: 1280px) {
+    .Press-wrapper > h2 {
+      display:block;
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 80px;
+  }
+    .Press-inner-wrap{
+      flex-direction: row;
+      position:relative;
+      min-height: 100px;
+    }
+    .Press-img-wrap {
+      padding-bottom: 0;
+      border: none;
+    }
+    .Press-text-wrap {
+      margin-bottom: 0;
+      max-width: 280px;
+      margin-top: 0;
+      position:absolute;
+      font-size: 22px;
+      opacity:0;
+    }
+    .Press-text-wrap:hover {
+      opacity:1;
+      transition: opacity 0.5s;
+    }
+  }
+  .page-entry-offer .Press-wrapper {
+    padding-top: 0;
+  }
+  @media (min-width: 1024px) {
+    .Press-wrapper {
+      padding: 80px 0 !important;
+    }
+  }
+  .slider-custom-quotes.slick-initialized .slick-slide {
+    display: flex;
+  }
+  .slider-custom-quotes .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .Press .Press-wrapper .slider-custom-quotes .slick-dots button {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #666666;
+    border-radius: 50%;
+    line-height: 0px;
+    font-size: 0px;
+    color: transparent;
+    opacity: 1;
+    transition: background 0.3s;
+  }
+  .Press .Press-wrapper .slider-custom-quotes .slick-dots .slick-active button {
+    background: #960014;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    $('.section-{{ section.id }} .slider-custom-quotes').slick({
+      arrows: false,
+      infinite: false,
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: { slidesToShow: 2, slidesToScroll: 2, dots: true }
+        },
+        {
+          breakpoint: 1280,
+          settings: { slidesToShow: 4, slidesToScroll: 4, dots: false }
+        }
+      ]
+    })
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "OE Source",
+    "class": "home-page",
+    "blocks": [
+      {
+        "name": "OE Sources",
+        "type": "source",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "source_image",
+            "label": "Source Image"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Source",
+        "category": "Layout"
+      }
+    ]
+  }
+{% endschema %}
