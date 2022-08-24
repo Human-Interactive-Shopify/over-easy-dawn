@@ -637,7 +637,7 @@
     }
 
     connectedCallback() {
-      this.header = document.getElementById('shopify-section-header');
+      this.header = document.getElementById('shopify-section-oe-header');
       this.headerBounds = {};
       this.currentScrollTop = 0;
       this.preventReveal = false;
@@ -694,18 +694,18 @@
     }
 
     hide() {
-      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+      this.header.classList.add('shopify-section-oe-header-hidden', 'shopify-section-oe-header-sticky');
       this.closeMenuDisclosure();
       this.closeSearchModal();
     }
 
     reveal() {
-      this.header.classList.add('shopify-section-header-sticky', 'animate');
-      this.header.classList.remove('shopify-section-header-hidden');
+      this.header.classList.add('shopify-section-oe-header-sticky', 'animate');
+      this.header.classList.remove('shopify-section-oe-header-hidden');
     }
 
     reset() {
-      this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+      this.header.classList.remove('shopify-section-oe-header-hidden', 'shopify-section-oe-header-sticky', 'animate');
     }
 
     closeMenuDisclosure() {

@@ -407,7 +407,7 @@ class HeaderDrawer extends MenuDrawer {
   }
 
   openMenuDrawer(summaryElement) {
-    this.header = this.header || document.getElementById('shopify-section-header');
+    this.header = this.header || document.getElementById('shopify-section-oe-header');
     this.header.classList.add('menu-open');
 
     summaryElement.setAttribute('aria-expanded', true);

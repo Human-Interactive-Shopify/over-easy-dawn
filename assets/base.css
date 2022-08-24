@@ -2151,24 +2151,24 @@ details[open] > .share-button__fallback {
 }
 
 /* section-header */
-#shopify-section-header {
+#shopify-section-oe-header {
   z-index: 3;
 }
 
-.shopify-section-header-sticky {
+.shopify-section-oe-header-sticky {
   position: sticky;
   top: 0;
 }
 
-.shopify-section-header-hidden {
+.shopify-section-oe-header-hidden {
   transform: translateY(-100%);
 }
 
-.shopify-section-header-hidden.menu-open {
+.shopify-section-oe-header-hidden.menu-open {
   transform: translateY(0);
 }
 
-#shopify-section-header.animate {
+#shopify-section-oe-header.animate {
   transition: transform 0.15s ease-out;
 }
 
