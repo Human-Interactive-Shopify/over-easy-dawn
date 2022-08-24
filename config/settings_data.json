@@ -131,16 +131,12 @@
       },
       "oe-footer": {
         "type": "oe-footer",
-        "blocks": {
-        },
-        "block_order": [
-        ],
         "settings": {
           "color_scheme": "red",
           "newsletter_enable": true,
           "newsletter_heading": "Subscribe to our emails",
           "show_social": true,
-          "footer_image": ""
+          "footer_image": "shopify:\/\/shop_images\/PB_Render_72ppi.png"
         }
       },
       "main-password-header": {
@@ -282,10 +278,6 @@
         },
         "oe-footer": {
           "type": "oe-footer",
-          "blocks": {
-          },
-          "block_order": [
-          ],
           "settings": {
             "color_scheme": "background-1",
             "newsletter_enable": true,
