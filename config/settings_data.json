@@ -142,20 +142,34 @@
           "98e5ca84-acd9-4d4b-a4d9-3fade86397f3": {
             "type": "footer_images",
             "settings": {
-              "gallery_image_picker": "shopify:\/\/shop_images\/over-easy-hero.png"
+              "gallery_image_picker": "shopify:\/\/shop_images\/image_12.jpg"
             }
           },
           "6cb6de82-d9a8-4c48-9bdc-bb9cb478e6f0": {
             "type": "footer_images",
             "settings": {
-              "gallery_image_picker": "shopify:\/\/shop_images\/woman-and-boy-muscle.jpg"
+              "gallery_image_picker": "shopify:\/\/shop_images\/overeasy-ft-food-face-d_2048x_3.jpg"
+            }
+          },
+          "437e346a-9c9a-47e7-9f46-046cca83e08d": {
+            "type": "footer_images",
+            "settings": {
+              "gallery_image_picker": "shopify:\/\/shop_images\/image_2.jpg"
+            }
+          },
+          "4fa185d0-f8e0-4f62-82fd-2058bbf50d32": {
+            "type": "footer_images",
+            "settings": {
+              "gallery_image_picker": "shopify:\/\/shop_images\/Rectangle_38.jpg"
             }
           }
         },
         "block_order": [
           "4b1e6609-b794-4d1b-bf90-1c7856709252",
           "98e5ca84-acd9-4d4b-a4d9-3fade86397f3",
-          "6cb6de82-d9a8-4c48-9bdc-bb9cb478e6f0"
+          "6cb6de82-d9a8-4c48-9bdc-bb9cb478e6f0",
+          "437e346a-9c9a-47e7-9f46-046cca83e08d",
+          "4fa185d0-f8e0-4f62-82fd-2058bbf50d32"
         ],
         "settings": {
           "color_scheme": "red",
