@@ -3,7 +3,11 @@
     "main": {
       "type": "oe-main-search",
       "settings": {
+        "show_related_products": true,
+        "related_products_title": "You Might Also Like...",
+        "collection": "home-page-bars",
         "show_latest_products": true,
+        "latest_products_collection": "",
         "show_faq": true,
         "show_latest_blogs": true
       }
