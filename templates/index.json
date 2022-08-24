@@ -36,12 +36,32 @@
         "desktop_content_alignment": "center",
         "mobile_content_position": "center",
         "mobile_content_alignment": "center",
-        "color_scheme": "black"
+        "color_scheme": "white"
       }
     },
     "oe-jumbotron": {
       "type": "oe-jumbotron",
+      "blocks": {
+        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
+          "type": "heading",
+          "settings": {
+            "heading": "Complete Nutrition"
+          }
+        },
+        "9f477b3a-45a3-4dfd-a315-608b89a18f81": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Explore",
+            "button_link_1": ""
+          }
+        }
+      },
+      "block_order": [
+        "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "9f477b3a-45a3-4dfd-a315-608b89a18f81"
+      ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "red",
@@ -50,6 +70,42 @@
     },
     "oe-benefits": {
       "type": "oe-benefits",
+      "blocks": {
+        "40444aef-af53-4520-8094-575ad2ea0700": {
+          "type": "benefits",
+          "settings": {
+            "heading": "PROMOTES GUT HEALTH",
+            "text": "In sit tortor eget sit iaculis a mauris volutpat enim. Pretium tellus mollis facilisis diam euismod tempor at ac."
+          }
+        },
+        "52dcb772-1d61-4ab2-9172-b240499ed829": {
+          "type": "benefits",
+          "settings": {
+            "heading": "Supports immunity",
+            "text": "In sit tortor eget sit iaculis a mauris volutpat enim. Pretium tellus mollis facilisis diam euismod tempor at ac."
+          }
+        },
+        "9d953f82-519a-4622-b8c1-eb9e714934ac": {
+          "type": "benefits",
+          "settings": {
+            "heading": "Boosts energy",
+            "text": "In sit tortor eget sit iaculis a mauris volutpat enim. Pretium tellus mollis facilisis diam euismod tempor at ac."
+          }
+        },
+        "6bbbd805-1770-4d25-9399-b077127ca3a5": {
+          "type": "benefits",
+          "settings": {
+            "heading": "Helps recovery",
+            "text": "In sit tortor eget sit iaculis a mauris volutpat enim. Pretium tellus mollis facilisis diam euismod tempor at ac."
+          }
+        }
+      },
+      "block_order": [
+        "40444aef-af53-4520-8094-575ad2ea0700",
+        "52dcb772-1d61-4ab2-9172-b240499ed829",
+        "9d953f82-519a-4622-b8c1-eb9e714934ac",
+        "6bbbd805-1770-4d25-9399-b077127ca3a5"
+      ],
       "settings": {
         "headline": "Benefits"
       }
