@@ -1,6 +1,6 @@
 <section class="Press section-{{ section.id }}" data-section-name="Sources">
   <div class="Press-wrapper">
-    <h2>&#9135;&#9135; &nbsp; As Seen On &nbsp; &#9135;&#9135;</h2>
+    <h2>&#9135;&#9135;&#9135;&#9135; &nbsp; As Seen On &nbsp; &#9135;&#9135;&#9135;&#9135;</h2>
     <div class="slider-custom-quotes Press-slider">
       {% for block in section.blocks %}
         <div class="Press-inner-wrap">
@@ -13,12 +13,14 @@
         </div>
       {% endfor %}
     </div>
+    <div class="Press-pagination js-Press-pagination"></div>
   </div>
 </section>
 
 <style>
   .Press {
     background-color: #fef9ef;
+    overflow-x: hidden;
   }
   .Press-wrapper {
     margin: 0 auto;
@@ -26,13 +28,20 @@
     padding: 40px 0;
   }
   .Press-wrapper > h2 {
+    font-family: Gopher;
     display:none;
 }
+  .Press-slider {
+    display: flex;
+  }
+
   .Press-inner-wrap{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    width: 100vw;
   }
   .Press-img-wrap {
     padding-bottom: 24px;
@@ -46,13 +55,19 @@
     color: #3A3A3A;
     max-width: 300px;
     background: #fef9ef;
+    width: 100%;
   }
   @media (min-width: 1280px) {
+
+    .Press-slider {
+      justify-content: space-around;
+    }
+
     .Press-wrapper > h2 {
       display:block;
-      font-size: 32px;
+      font-size: 16px;
       text-align: center;
-      margin-bottom: 80px;
+      margin-bottom: 48px;
   }
     .Press-inner-wrap{
       flex-direction: row;
@@ -84,35 +99,49 @@
       padding: 80px 0 !important;
     }
   }
-  .slider-custom-quotes.slick-initialized .slick-slide {
+
+  .Press-pagination {
     display: flex;
-  }
-  .slider-custom-quotes .slick-dots {
-    display: flex;
-    align-items: center;
+    gap: 9px;
     justify-content: center;
-    gap: 12px;
     margin-top: 32px;
   }
-  .Press .Press-wrapper .slider-custom-quotes .slick-dots button {
+
+  .Press-pagination-bullet {
     display: block;
-    width: 12px;
-    height: 12px;
-    background: #666666;
+    width: 9px;
+    height: 9px;
+    background-color: var(--oe-color-copy-light);
     border-radius: 50%;
-    line-height: 0px;
-    font-size: 0px;
-    color: transparent;
-    opacity: 1;
-    transition: background 0.3s;
+    transition: background-color 0.2s ease-in-out;
   }
-  .Press .Press-wrapper .slider-custom-quotes .slick-dots .slick-active button {
-    background: #960014;
+  
+  .Press-pagination-bullet.is-active {
+    background-color: var(--oe-color-red);
   }
+
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    if (window.innerWidth < 1279) {
+      const swiper = new Swiper('.section-{{ section.id }} .Press-wrapper', {
+        slideClass: 'Press-inner-wrap',
+        wrapperClass: 'Press-slider',
+        slideActiveClass: 'is-active',
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        initialSlide: 0,
+        loop: 1,
+        pagination: {
+          el: '.js-Press-pagination',
+          bulletClass: 'Press-pagination-bullet',
+          bulletActiveClass: 'is-active'
+        }
+      });
+    }
+  })
+  {% comment %} document.addEventListener('DOMContentLoaded', () => {
     $('.section-{{ section.id }} .slider-custom-quotes').slick({
       arrows: false,
       infinite: false,
@@ -131,7 +160,9 @@
         }
       ]
     })
-  })
+  }) {% endcomment %}
+
+
 </script>
 
 {% schema %}

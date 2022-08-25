@@ -1244,6 +1244,10 @@ deferred-media {
 /* component-button */
 /* Button - default */
 
+button {
+  border: none;
+}
+
 .button {
   appearance: none;
   cursor: pointer;
