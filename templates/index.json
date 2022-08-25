@@ -6,20 +6,20 @@
         "492b49ef-d613-46a4-bdd7-0bfc3c7ca045": {
           "type": "heading",
           "settings": {
-            "heading": "Hero banner"
+            "heading": "A Better Morning Routine."
           }
         },
         "9f31ef22-ad2a-4d6f-ab16-a7f0bb434bd6": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template."
+            "text": "Simple Ingredients. Delicious Taste. Breakfast made simple."
           }
         },
         "55e5f5f7-e248-43c1-920c-2bcd3e022d02": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "button_label_1": "TRY NOW",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_label_2": "",
             "button_link_2": ""
           }
@@ -37,35 +37,6 @@
         "mobile_content_position": "center",
         "mobile_content_alignment": "center",
         "color_scheme": "white"
-      }
-    },
-    "oe-jumbotron": {
-      "type": "oe-jumbotron",
-      "blocks": {
-        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
-          "type": "heading",
-          "settings": {
-            "heading": "Complete Nutrition"
-          }
-        },
-        "9f477b3a-45a3-4dfd-a315-608b89a18f81": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Explore",
-            "button_link_1": ""
-          }
-        }
-      },
-      "block_order": [
-        "7cff6e7a-e90c-4fb9-9d42-476226636238",
-        "9f477b3a-45a3-4dfd-a315-608b89a18f81"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
-        "desktop_content_position": "left",
-        "mobile_content_position": "bottom",
-        "background_color_scheme": "red",
-        "text_color_scheme": "white"
       }
     },
     "1661427940e35b089a": {
@@ -107,6 +78,35 @@
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
       ],
       "settings": {
+      }
+    },
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
+      "blocks": {
+        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
+          "type": "heading",
+          "settings": {
+            "heading": "Complete Nutrition"
+          }
+        },
+        "9f477b3a-45a3-4dfd-a315-608b89a18f81": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Explore",
+            "button_link_1": ""
+          }
+        }
+      },
+      "block_order": [
+        "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "9f477b3a-45a3-4dfd-a315-608b89a18f81"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "red",
+        "text_color_scheme": "white"
       }
     },
     "oe-benefits": {
@@ -223,7 +223,7 @@
         "66dc171b-c8b1-44d6-bf0a-974a99e7839a": {
           "type": "testimonials",
           "settings": {
-            "image": "shopify:\/\/shop_images\/woman-and-boy-muscle.jpg",
+            "image": "shopify:\/\/shop_images\/Frame_174.jpg",
             "text": "Testimonial text...",
             "name": "John Doe",
             "position": "CEO of Cookie Company"
@@ -232,7 +232,7 @@
         "f4a2657d-497c-456e-b8c0-0f5c9d2d2e24": {
           "type": "testimonials",
           "settings": {
-            "image": "shopify:\/\/shop_images\/over-easy-hero.png",
+            "image": "shopify:\/\/shop_images\/Frame_174_1.jpg",
             "text": "Testimonial text...",
             "name": "John Doe",
             "position": "CEO of Cookie Company"
@@ -241,7 +241,7 @@
         "d92c32c8-7744-40ba-a781-6c0e360b8608": {
           "type": "testimonials",
           "settings": {
-            "image": "shopify:\/\/shop_images\/overeasy-ft-hand-on-bar-d_bb803341-e9e0-4bc8-92d7-1a2459b29a86.jpg",
+            "image": "shopify:\/\/shop_images\/Frame_174.jpg",
             "text": "Testimonial text...",
             "name": "John Doe",
             "position": "CEO of Cookie Company"
@@ -373,28 +373,28 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
+        "title": "Check Out Our Bestsellers",
+        "heading_size": "h0",
         "description": "",
         "show_description": false,
         "description_style": "body",
         "collection": "all",
-        "products_to_show": 8,
+        "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
+        "image_ratio": "square",
+        "show_secondary_image": false,
         "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
         "padding_top": 28,
-        "padding_bottom": 36
+        "padding_bottom": 32
       }
     },
     "collage": {
@@ -558,8 +558,8 @@
   },
   "order": [
     "oe-hero-banner",
-    "oe-jumbotron",
     "1661427940e35b089a",
+    "oe-jumbotron",
     "oe-benefits",
     "oe-ingredients",
     "oe-testimonials",
