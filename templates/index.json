@@ -39,35 +39,6 @@
         "color_scheme": "white"
       }
     },
-    "oe-jumbotron": {
-      "type": "oe-jumbotron",
-      "blocks": {
-        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
-          "type": "heading",
-          "settings": {
-            "heading": "Complete Nutrition"
-          }
-        },
-        "9f477b3a-45a3-4dfd-a315-608b89a18f81": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Explore",
-            "button_link_1": ""
-          }
-        }
-      },
-      "block_order": [
-        "7cff6e7a-e90c-4fb9-9d42-476226636238",
-        "9f477b3a-45a3-4dfd-a315-608b89a18f81"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
-        "desktop_content_position": "left",
-        "mobile_content_position": "bottom",
-        "background_color_scheme": "red",
-        "text_color_scheme": "white"
-      }
-    },
     "1661427940e35b089a": {
       "type": "oe-sources",
       "blocks": {
@@ -107,6 +78,35 @@
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
       ],
       "settings": {
+      }
+    },
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
+      "blocks": {
+        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
+          "type": "heading",
+          "settings": {
+            "heading": "Complete Nutrition"
+          }
+        },
+        "9f477b3a-45a3-4dfd-a315-608b89a18f81": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Explore",
+            "button_link_1": ""
+          }
+        }
+      },
+      "block_order": [
+        "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "9f477b3a-45a3-4dfd-a315-608b89a18f81"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "red",
+        "text_color_scheme": "white"
       }
     },
     "oe-benefits": {
@@ -558,8 +558,8 @@
   },
   "order": [
     "oe-hero-banner",
-    "oe-jumbotron",
     "1661427940e35b089a",
+    "oe-jumbotron",
     "oe-benefits",
     "oe-ingredients",
     "oe-testimonials",
