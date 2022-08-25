@@ -6,20 +6,20 @@
         "492b49ef-d613-46a4-bdd7-0bfc3c7ca045": {
           "type": "heading",
           "settings": {
-            "heading": "Hero banner"
+            "heading": "A Better Morning Routine."
           }
         },
         "9f31ef22-ad2a-4d6f-ab16-a7f0bb434bd6": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template."
+            "text": "Simple Ingredients. Delicious Taste. Breakfast made simple."
           }
         },
         "55e5f5f7-e248-43c1-920c-2bcd3e022d02": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "button_label_1": "TRY NOW",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_label_2": "",
             "button_link_2": ""
           }
