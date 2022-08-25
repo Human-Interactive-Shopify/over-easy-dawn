@@ -68,6 +68,47 @@
         "text_color_scheme": "white"
       }
     },
+    "1661427940e35b089a": {
+      "type": "oe-sources",
+      "blocks": {
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/Bestcovery.png",
+            "text": "\"Top Pick - Best Breakfast Bars 2022\""
+          }
+        },
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/6AMHealth.png",
+            "text": "\"Helping to make breakfast easy\""
+          }
+        },
+        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/MomsMeet.png",
+            "text": "\"The perfect grab-and-go meal\""
+          }
+        },
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/WomensRunning.png",
+            "text": "\"Enough fiber & protein to keep hunger at arm's length\""
+          }
+        }
+      },
+      "block_order": [
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
+        "9f72aff9-1cbe-4979-bae9-7973f162a636",
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
+      ],
+      "settings": {
+      }
+    },
     "oe-benefits": {
       "type": "oe-benefits",
       "blocks": {
@@ -462,11 +503,63 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "16614278019efa8d2e": {
+      "type": "oe-find-us",
+      "blocks": {
+        "89145ece-7344-4faa-9891-194a608b4d8d": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/WholeFoods.png"
+          }
+        },
+        "2c013d01-a847-4746-a8d6-b860d381d285": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/Heinens.png"
+          }
+        },
+        "cb254a99-dee7-4801-9dde-e197538d5d70": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/Sheetz.png"
+          }
+        },
+        "445bbc91-f25a-4dc1-b842-de698fac7990": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/Wegmans.png"
+          }
+        },
+        "443f75cd-5bd3-49a4-a554-11c1086ce550": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/Giant.png"
+          }
+        },
+        "63312fa2-852f-42bb-8012-299cd60bd2c8": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/EarthFare.png"
+          }
+        }
+      },
+      "block_order": [
+        "89145ece-7344-4faa-9891-194a608b4d8d",
+        "2c013d01-a847-4746-a8d6-b860d381d285",
+        "cb254a99-dee7-4801-9dde-e197538d5d70",
+        "445bbc91-f25a-4dc1-b842-de698fac7990",
+        "443f75cd-5bd3-49a4-a554-11c1086ce550",
+        "63312fa2-852f-42bb-8012-299cd60bd2c8"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "oe-hero-banner",
     "oe-jumbotron",
+    "1661427940e35b089a",
     "oe-benefits",
     "oe-ingredients",
     "oe-testimonials",
@@ -476,6 +569,7 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "16614278019efa8d2e"
   ]
 }
