@@ -89,6 +89,12 @@
             "heading": "Complete Nutrition"
           }
         },
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
+          "type": "text",
+          "settings": {
+            "text": "Euismod etiam lorem at mauris, tincidunt sit. Arcu aliquet nunc sit nec nec sed fermentum, duis tincidunt."
+          }
+        },
         "9f477b3a-45a3-4dfd-a315-608b89a18f81": {
           "type": "buttons",
           "settings": {
@@ -99,6 +105,7 @@
       },
       "block_order": [
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
         "9f477b3a-45a3-4dfd-a315-608b89a18f81"
       ],
       "settings": {
