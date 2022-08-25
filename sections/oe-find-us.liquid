@@ -1,7 +1,7 @@
 <section class="FindUs section-{{ section.id }}" data-section-name="Find Us">
   <div class="FindUs-wrapper">
-    <h2 class="desktop">&#9135;&#9135; &nbsp; In case you’re passing by, find us here! &nbsp; &#9135;&#9135;</h2>
-    <h2 class="mobile">&#9135;&#9135; &nbsp; Find us here! &nbsp; &#9135;&#9135;</h2>
+    <h2 class="desktop">&#9135;&#9135;&#9135;&#9135; &nbsp; In case you’re passing by, find us here! &nbsp; &#9135;&#9135;&#9135;&#9135;</h2>
+    <h2 class="mobile">&#9135;&#9135;&#9135;&#9135; &nbsp; Find us here! &nbsp; &#9135;&#9135;&#9135;&#9135;</h2>
     <div class="FindUs-scroller">
       <div class="FindUs-outer-wrap">
         {% for block in section.blocks %}
@@ -20,7 +20,7 @@
         {% endfor %}
       </div>
     </div>
-    <a href="/pages/stores" class="primary-btn">Go to store locator</a>
+    <a href="/pages/stores" class="button button--primary button-size--big button-color--black">Store locator</a>
   </div>
 </section>
 
@@ -33,6 +33,9 @@
     text-align: center;
     padding: 40px 0;
   }
+  .FindUs-wrapper > h2 {
+    font-family: Gopher;
+}
   .FindUs-wrapper > h2.desktop {
     display:none;
 }
@@ -93,9 +96,9 @@
   }
   .FindUs-wrapper > h2.desktop {
     display: block;
-    font-size: 32px;
+    font-size: 16px;
     text-align: center;
-    margin-bottom: 68px;
+    margin-bottom: 48px;
   }
 }
 

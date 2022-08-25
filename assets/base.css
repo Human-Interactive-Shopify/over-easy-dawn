@@ -1249,6 +1249,7 @@ deferred-media {
   cursor: pointer;
   text-decoration: none;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  box-shadow: 48px 37px 24px rgba(0, 0, 0, 0.01), 27px 21px 20px rgba(0, 0, 0, 0.05), 12px 9px 15px rgba(0, 0, 0, 0.09), 3px 2px 8px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .button--primary {
