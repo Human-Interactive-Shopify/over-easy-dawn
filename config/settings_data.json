@@ -125,7 +125,7 @@
           "menu": "wip-dawn-menu",
           "show_search": true,
           "show_store_locator": true,
-          "store_locator_page": "",
+          "store_locator_page": "stores",
           "items_in_row": 5
         }
       },
