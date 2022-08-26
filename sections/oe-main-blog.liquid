@@ -1,0 +1,76 @@
+{{ 'component-card-blog.css' | asset_url | stylesheet_tag }}
+{{ 'section-oe-main-blog.css' | asset_url | stylesheet_tag }}
+
+{%- paginate blog.articles by 6 -%}
+  <div class="oe-main-blog">
+    <div class="oe-main-blog__header">
+      <div class="container">
+        <h1 class="oe-main-blog__title">{{ section.settings.heading | escape }}</h1>
+        <p class="oe-main-blog__text">{{ section.settings.text | escape }}</p>
+    
+        {% if section.settings.show_newsletter_subscribe %}
+          <div class="oe-main-blog__newsletter"></div>
+        {%- endif -%}
+        
+        {% if section.settings.show_tags %}
+          {% assign current_tag = current_tags | first %}
+          <div class="oe-main-blog__tags">
+            <div class="oe-main-blog__tag{% if current_tag == blank %} is-active{% endif %}">
+              <a href="{{ blog.url }}" title="{{ blog.title }}">All</a>
+            </div>
+            {% for tag in blog.all_tags %}
+              <div class="oe-main-blog__tag{% if tag == current_tag %} is-active{% endif %}">
+                {{- tag | link_to_tag: tag }}
+              </div>
+            {% endfor %}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="container">
+      <div class="oe-main-blog__list">
+        {%- for article in blog.articles -%}
+          {% render 'card-blog', article: article %}
+        {%- endfor -%}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    </div>
+  </div>
+{%- endpaginate -%}
+
+{% schema %}
+{
+  "name": "OE Main Blog",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Chew on This",
+      "label": "Show newsletter subscribe form"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "default": "Welcome to our blog! Sign up now for special discounts, product announcements and our weekly blog updates.",
+      "label": "Show newsletter subscribe form"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter_subscribe",
+      "default": true,
+      "label": "Show newsletter subscribe form"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "default": true,
+      "label": "Show tag buttons"
+    }
+  ]
+}
+{% endschema %}

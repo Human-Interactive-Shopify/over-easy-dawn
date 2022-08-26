@@ -1,0 +1,97 @@
+{{ 'section-oe-blog-post.css' | asset_url | stylesheet_tag }}
+
+<article class="oe-article-template" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="oe-article-template__header">
+    <div class="container">
+      <div class="oe-article-template__header-content">
+        <h1 class="oe-article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
+        <div class="oe-article-template__meta">
+          <span>{{ article.tags | join: ', ' }}</span>
+          <span>{{ article.published_at | time_tag: format: 'date' }}</span>
+        </div>
+      </div>
+      <div class="oe-article-template__image-wrapper">
+        <img
+          class="oe-article-template__image"
+          srcset="{% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
+            {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
+            {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
+            {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
+            {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
+            {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
+            {{ article.image | image_url }} {{ article.image.width }}w"
+          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+          src="{{ article.image | image_url: width: 1100 }}"
+          loading="lazy"
+          width="{{ article.image.width }}"
+          height="{{ article.image.height }}"
+          alt="{{ article.image.alt | escape }}">
+      </div>
+    </div>
+  </div>
+  <div class="oe-article-template__content" itemprop="articleBody" {{ block.shopify_attributes }}>
+    <div class="container container--small">
+      {{ article.content }}
+    </div>
+  </div>
+  {% if article.metafields.custom.sources != blank %}
+    <div class="oe-article-template__sources">
+      <div class="container container--small">
+        <h3 class="oe-article-template__sources-title">Resources:</h3>
+        <ol class="oe-article-template__sources-list">
+          {% for source in article.metafields.custom.sources.value %}
+            <li><a href="{{ source }}">{{ article.metafields.custom.sources_labels.value[forloop.index0] }}</a></li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+  {% endif %}
+</article>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "articleBody": {{ article.content | strip_html | json }},
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ request.origin | append: page.url | json }}
+    },
+    "headline": {{ article.title | json }},
+    {% if article.excerpt != blank %}
+      "description": {{ article.excerpt | strip_html | json }},
+    {% endif %}
+    {% if article.image %}
+      "image": [
+        {{ article | image_url: width: article.image.width | prepend: "https:" | json }}
+      ],
+    {% endif %}
+    "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    "author": {
+      "@type": "Person",
+      "name": {{ article.author | json }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      {% if settings.share_image %}
+        "logo": {
+          "@type": "ImageObject",
+          "height": {{ settings.share_image.height | json }},
+          "url": {{ settings.share_image | image_url: width: settings.share_image.width | prepend: "https:" | json }},
+          "width": {{ settings.share_image.width | json }}
+        },
+      {% endif %}
+      "name": {{ shop.name | json }}
+    }
+  }
+  </script>
+
+
+{% schema %}
+{
+  "name": "t:sections.main-article.name",
+  "tag": "section",
+  "class": "section"
+}
+{% endschema %}

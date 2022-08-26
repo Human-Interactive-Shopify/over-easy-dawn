@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-article",
+      "type": "oe-main-article",
       "blocks": {
         "featured_image": {
           "type": "featured_image",
@@ -16,12 +16,6 @@
             "blog_show_author": false
           }
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
         "content": {
           "type": "content"
         }
@@ -29,7 +23,6 @@
       "block_order": [
         "featured_image",
         "title",
-        "share",
         "content"
       ]
     }
