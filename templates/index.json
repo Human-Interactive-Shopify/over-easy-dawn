@@ -398,6 +398,8 @@
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": true,
+        "enable_add_to_cart": true,
+        "enable_buy_it_now": true,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 28,

@@ -316,3 +316,41 @@
 .card-article-info {
   margin-top: 1rem;
 }
+
+.card__info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-count {
+  font-size: 12px;
+  color: #FF5000;
+  background: #FFFFFF;
+  padding: 4px 8px;
+  border: 1px dashed red;
+  border-radius: 30px;
+}
+
+.quick-add .shopify-payment-button__button{
+  background-color: var(--oe-color-black);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.quick-add .shopify-payment-button__button--unbranded:hover:not([disabled]) {
+  background-color: #3E3E3E;
+}
+
+.quick-add .shopify-challenge__button:before, .customer button:before, .shopify-payment-button__button--unbranded:before, .shopify-payment-button [role="button"]:before, .cart__dynamic-checkout-buttons [role='button']:before {
+  box-shadow: none;
+}
+
+.quick-add .shopify-challenge__button:after, .customer button:after, .shopify-payment-button__button--unbranded:after {
+  box-shadow: none;
+}
+
+.shopify-challenge__button:hover::after, .customer button:hover::after, .shopify-payment-button__button--unbranded:hover::after {
+  box-shadow: none;
+}
