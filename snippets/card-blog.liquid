@@ -1,0 +1,33 @@
+{% comment %}
+    Renders a product card for search
+
+    Accepts:
+    - article: {Object} Product Liquid object
+    - classes: {String}
+
+    Usage:
+    {% render 'card-blog', article: article %}
+{% endcomment %}
+
+<a href="{{ article.url }}" class="oe-card-blog">
+  {%- if article.image != blank -%}
+  <div class="oe-card-blog__image-wrapper">
+      {{ article.image | image_url: width: 183 | image_tag:
+        loading: 'lazy',
+        width: 357,
+        height: 240,
+        class: "oe-card-blog__image",
+        alt: article.title | escape
+      }}
+    </div>
+  {%- endif -%}
+  <div class="oe-card-blog__content">
+    <div class="oe-card-blog__meta">
+      <span>{{ article.tags | join: ', ' }}</span>
+      <span>{{ article.published_at | time_tag: format: 'date' }}</span>
+    </div>
+    <h3 class="oe-card-blog__title">{{ article.title }}</h3>
+    <p class="oe-card-blog__text">{{ article.excerpt }}</p>
+    {% render 'button', variation: 'primary', color: 'red' , size: 'big', label: 'Shop now', classes: "oe-card-blog__button", label: "Read more" %}
+  </div>
+</a>

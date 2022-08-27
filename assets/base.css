@@ -1241,6 +1241,10 @@ deferred-media {
   }
 }
 
+.container--small {
+  max-width: calc(840px + (2 * var(--oe-gutter)));
+}
+
 /* component-button */
 /* Button - default */
 

@@ -1,0 +1,129 @@
+.oe-main-blog__title {
+  max-width: 710px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 31px;
+  line-height: 120%;
+  color: var(--oe-color-black);
+  margin-bottom: 16px;
+}
+
+.oe-main-blog__text  {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--oe-color-copy);
+  text-align: center;
+  max-width: 710px;
+  margin: 0 auto;
+}
+
+.oe-main-blog__header {
+  background-color: var(--oe-color-grey-100);
+  padding: 40px 0 52px;
+}
+
+.oe-main-blog__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.oe-main-blog__list > * {
+  position: relative;
+  z-index: 3;
+}
+
+.oe-main-blog__list::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 64px;
+  width: 100vw;
+  background-color: var(--oe-color-grey-100);
+}
+
+.oe-main-blog__tags {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  margin-top: 40px
+}
+
+.oe-main-blog__tag a {
+  padding: 12px 24px;
+  border-radius: 32px;
+  background-color: var(--oe-color-black);
+  color: var(--oe-color-white);
+  flex: 1 0 auto;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.oe-main-blog__tag a:hover,
+.oe-main-blog__tag.is-active a {
+  background-color: var(--oe-color-red);
+}
+
+@media screen and (min-width: 750px) {
+  .oe-main-blog__header {
+    padding: 88px 0;
+  }
+
+  .oe-main-blog__title {
+    font-size: 55px;
+    line-height: 120%;
+  }
+  
+  .oe-main-blog__text {
+    font-size: 18px;
+    line-height: 160%;
+  }
+
+  .oe-main-blog__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 84px;
+    column-gap: 32px;
+    justify-content: flex-start;
+    margin-bottom: 116px;
+  }
+
+  .oe-main-blog__list::before {
+    height: 164px;
+  }
+
+  .oe-main-blog__list > * {
+    max-width: calc(100% / 3 - ((32px * 2) / 3));
+    position: relative;
+    z-index: 3;
+  }
+
+  .oe-main-blog__tags {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    overflow-x: unset;
+    justify-content: center;
+    margin-top: 64px;
+  }
+
+  .oe-main-blog__tag a {
+    padding: 12px 48px;
+    border-radius: 24px;
+    font-size: 18px;
+    line-height: 160%;
+  }
+}
