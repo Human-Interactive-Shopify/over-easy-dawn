@@ -377,8 +377,8 @@
         "padding_bottom": 0
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "oe-featured_collection": {
+      "type": "oe-featured-collection",
       "settings": {
         "title": "Check Out Our Bestsellers",
         "heading_size": "h0",
@@ -573,7 +573,7 @@
     "oe-featured-collections",
     "image_banner",
     "rich_text",
-    "featured_collection",
+    "oe-featured_collection",
     "collage",
     "video",
     "multicolumn",

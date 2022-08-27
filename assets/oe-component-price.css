@@ -24,6 +24,7 @@
 
 .price__regular .price-item--regular {
   margin-right: 0;
+  font-weight: 700;
 }
 
 .price:not(.price--show-badge) .price-item--last:last-of-type {
