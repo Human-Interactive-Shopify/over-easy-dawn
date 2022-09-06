@@ -1,0 +1,186 @@
+<style type="text/css">
+  .page-404 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .page-404__alert {
+    background: var(--oe-color-red);
+    border-radius: 4px;
+    color: var(--oe-color-white);
+    display: flex; 
+    align-items: center;
+    padding: 6px 12px;
+    font-weight: 700;
+    gap: 12px;
+  }
+
+  .page-404__content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 535px;
+  }
+
+  .page-404__content a {
+    color: var(--oe-color-red);
+  }
+
+  .page-404__title {
+    font-size: 31px;
+    line-height: 120%;
+    color: var(--oe-color-black);
+    margin: 8px 0 16px;
+    font-weight: 500;
+  }
+  
+  .page-404__search {
+    margin-top: 32px;
+    width: 100%;
+  }
+  
+  .page-404__illustration {
+    margin-bottom: 40px;
+  }
+  
+
+  @media screen and (min-width: 750px) {
+    .page-404 {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+      padding-top: 120px;
+      padding-bottom: 120px;
+      justify-content: space-between;
+    }
+
+    .page-404__content {
+      width: 50%;
+      order: 1;
+    }
+    
+    .page-404__illustration {
+      width: 50%;
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    .page-404__title {
+      font-size: 55px;
+      line-height: 120%;
+      color: var(--oe-color-black);
+      margin: 16px 0 24px;
+    }
+
+    .page-404__alert {  
+      padding: 12px 16px;
+    }
+  }
+</style>
+
+<div class="page-404 container">
+  {%- if section.settings.image != blank -%}
+    <div class="page-404__illustration">
+      {{ section.settings.image | image_url: width: 550 | image_tag:
+        loading: 'lazy',
+        width: section.settings.image.width,
+        height: 350,
+        class: "oe-jumbotron__media",
+        alt: section.settings.image.alt | escape
+      }}
+    </div>
+  {%- endif -%}
+  <div class="page-404__content">
+    <div class="page-404__alert">
+      {% render 'icon-alert' %}
+      404 Error
+    </div>
+    <h1 class="page-404__title">
+      {{ 'templates.404.title' | t }}
+    </h1>
+    <p class="page-404__text">
+      {{ 'templates.404.subtext' | t }}
+    </p>
+    {%- if section.settings.show_search -%}
+      <div class="page-404__search">
+        {%- if settings.predictive_search_enabled -%}
+          <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
+        {%- endif -%}
+          <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+            <div class="search__input-wrapper">
+              <input
+                class="search__input"
+                id="Search-In-Template"
+                type="search"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="Search Over Easy"
+                {%- if settings.predictive_search_enabled -%}
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-owns="predictive-search-results-list"
+                  aria-controls="predictive-search-results-list"
+                  aria-haspopup="listbox"
+                  aria-autocomplete="list"
+                  autocorrect="off"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                {%- endif -%}
+              >
+              <label class="search__label" for="Search-In-Template">Search Over Easy</label>
+              <input name="options[prefix]" type="hidden" value="last">
+              <input name="type" type="hidden" value="product">
+
+              {%- if settings.predictive_search_enabled -%}
+                <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
+                  <div class="predictive-search__loading-state">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                    </svg>
+                  </div>
+                </div>
+
+                <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+              {%- endif -%}
+
+              <button type="submit" class="search__button" aria-label="{{ 'general.search.search' | t }}">
+                <svg class="icon icon-search">
+                  <use xlink:href="#icon-search">
+                </svg>
+              </button>
+            </div>
+          </form>
+        {%- if settings.predictive_search_enabled -%}
+          </predictive-search>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+  
+</div>
+
+
+{% schema %}
+{
+  "name": "OE Main 404",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "default": true,
+      "label": "Show search bar"
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE Main 404"
+    }
+  ]
+}
+{% endschema %}

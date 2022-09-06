@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="{{ 'section-oe-main-contact.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="main-contact container container--small">
+  <h1 class="main-contact__title">
+    {{ page.title | escape }}
+  </h1>
+  <div class="main-contact__content">
+    {{ page.content }}
+  </div>
+  <div class="main-contact__contacts">
+    {% if section.settings.show_general_service_contact %}
+      <h3 class="main-contact__contacts-title">General & Customer Service</h3>
+      <a href="mailto:{{ section.settings.general_service_contact }}" target="_blank" class="main-contact__contacts-link">{% render 'icon-mail' %}{{ section.settings.general_service_contact }}</a>
+    {% endif %}
+    {% if section.settings.show_wholesale_contact %}
+      <h3 class="main-contact__contacts-title">Wholesale Orders</h3>
+      <a href="mailto:{{ section.settings.wholesale_contact }}" target="_blank" class="main-contact__contacts-link">{% render 'icon-mail' %}{{ section.settings.wholesale_contact }}</a>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "OE Main Contact",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+     {
+      "type": "checkbox",
+      "id": "show_general_service_contact",
+      "default": true,
+      "label": "Show general service contact email"
+    },
+    {
+      "type": "text",
+      "id": "general_service_contact",
+      "default": "hello@overeasyfoods.com",
+      "label": "General service contact email"
+    },
+     {
+      "type": "checkbox",
+      "id": "show_wholesale_contact",
+      "default": true,
+      "label": "Show wholesale contact email"
+    },
+    {
+      "type": "text",
+      "id": "wholesale_contact",
+      "default": "orders@overeasyfoods.com",
+      "label": "Wholesale contact email"
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE Main Contact"
+    }
+  ]
+}
+{% endschema %}
