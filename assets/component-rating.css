@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+.oe-product .rating-star {
+  --letter-spacing: 0.2;
+  --font-size: 2.2;
+}
+
 .product .rating-star {
   --letter-spacing: 0.8;
   --font-size: 1.7;
@@ -33,7 +38,7 @@
   content: '★★★★★';
   background: linear-gradient(
     90deg,
-    var(--oe-color-orange) var(--percent),
+    red var(--percent),
     rgba(var(--color-foreground), 0.15) var(--percent)
   );
   -webkit-background-clip: text;

@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "oe-main-product",
       "blocks": {
         "vendor": {
           "type": "text",

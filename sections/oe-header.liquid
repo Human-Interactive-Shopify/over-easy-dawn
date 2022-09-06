@@ -587,11 +587,7 @@
 
     <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
       {%- liquid
-        if cart == empty
-          render 'icon-cart-empty'
-        else
-          render 'icon-cart'
-        endif
+        render 'icon-cart-empty'
       -%}
       <span class="header__icon-text">{{ 'templates.cart.cart' | t }}</span>
       {%- if cart != empty -%}
@@ -607,11 +603,7 @@
   <div class="mobile-header-cart">
     <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
       {%- liquid
-        if cart == empty
-          render 'icon-cart-empty'
-        else
-          render 'icon-cart'
-        endif
+        render 'icon-cart-empty'
       -%}
       {%- if cart != empty -%}
         <div class="cart-count-bubble">

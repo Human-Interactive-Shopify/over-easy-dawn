@@ -22,12 +22,6 @@
 
   .oe-testimonials__list-wrapper {
     display: flex;
-    animation: move 12s linear infinite alternate;
-  }
-  
-  @keyframes move {
-    from {transform: translateX(0%);}
-    to { transform: translateX(calc(-150%)); }
   }
 
   .oe-testimonials__list-item {
@@ -223,9 +217,9 @@
       display: none;
     }
 
-    @keyframes move {
-      from {transform: translateX(0%);}
-      to { transform: translateX(calc(-60%)); }
+    .oe-testimonials__list-wrapper {
+      transition-duration: 8s !important;
+      transition-timing-function: linear;
     }
   }
 {%- endstyle -%}
@@ -271,6 +265,31 @@
   {%- endif -%}
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const swiper = new Swiper('.section-{{ section.id }} .js-testimonials-slider', {
+        slideClass: 'oe-testimonials__list-item',
+        wrapperClass: 'js-testimonials-slider-wrapper',
+        slideActiveClass: 'is-active',
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        pagination: {
+          el: '.js-testimonials-slider-pagination',
+          bulletClass: 'oe-testimonials__list-pagination-bullet',
+          bulletActiveClass: 'is-active'
+        },
+        breakpoints: {
+          990: {
+            autoplay: {
+              delay: 8000,
+              waitForTransition: false,
+            },
+          }
+        }    
+      });
+  })
+</script>
 
 {% schema %}
 {
