@@ -6,7 +6,21 @@
     },
     "oe-contact-form": {
       "type": "oe-contact-form",
-      "settings": {}
+      "settings": {
+        "background_color": "orange",
+        "content_align": "flex-start"
+      },
+      "blocks": {
+        "form-heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get in Touch"
+          }
+        }
+      },
+      "block_order": [
+        "form-heading"
+      ]
     }
   },
   "order": [

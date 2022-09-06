@@ -1,11 +1,18 @@
 .oe-contact-form {
-  max-width: 1100px;
+  max-width: 1060px;
   margin: 0 auto;
 }
 
 .oe-contact-form__section {
-  background-color: var(--oe-color-orange);
+  background-color: var(--oe-contact-form-section-background-color, --oe-color-orange);
   padding: 32px 25px;
+}
+
+.oe-contact-form__content {
+  display: flex;
+  flex-direction: column;
+  align-items: var(--oe-contact-form-section-content-align, flex-start);
+  text-align: var(--oe-contact-form-section-content-align, left);
 }
 
 .oe-contact-form__title {
@@ -29,7 +36,48 @@
   margin-bottom: 12px;
 }
 
+.main-contact__contacts-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid currentColor;
+  color: var(--oe-color-black);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-radius: 24px;
+  margin-bottom: 24px;
+}
+
+.main-contact__contacts-link svg {
+  width: 15px;
+  height: 9px;
+}
+
+.oe-contact-form__line {
+  margin: 0 0 16px 0;
+  width: 40px;
+  border-color: var(--oe-color-copy-white);
+}
+
+.oe-contact-form__title,
+.oe-contact-form__text,
+.main-contact__contacts-link {
+  color: var(--oe-color-white);
+}
+
+.oe-contact-form__title,
+.oe-contact-form__text {
+  margin-top: 0;
+}
+
 @media screen and (min-width: 750px) {
+  .oe-contact-form__section {
+    padding: 80px 25px;
+  }
+
   .oe-contact-form__title {
     font-size: 44px;
     line-height: 120%;
@@ -53,6 +101,35 @@
   }
 
   .oe-contact-form__title {
+    color: var(--oe-color-black);
+  }
+
+  .main-contact__contacts-link {
+    font-size: 18px;
+    line-height: 160%;
+    padding: 8px 40px;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+
+  .main-contact__contacts-link svg {
+    width: 24px;
+    height: 16px;
+  }
+
+  .oe-contact-form__line {
+    margin: 0 0 24px 0;
+    width: 80px;
+    border-color: var(--oe-color-copy-light);
+  }
+
+  .main-contact__contacts-link {
+    margin-top: 24px;
+  }
+
+  .oe-contact-form__title,
+  .oe-contact-form__text,
+  .main-contact__contacts-link {
     color: var(--oe-color-black);
   }
 }

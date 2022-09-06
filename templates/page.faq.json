@@ -39,9 +39,47 @@
         "subtitle": "We got you covered.",
         "show_contact": true
       }
+    },
+    "oe-contact-form": {
+      "type": "oe-contact-form",
+      "settings": {
+        "background_color": "orange",
+        "content_align": "center"
+      },
+      "blocks": {
+        "form-heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Have more questions?"
+          }
+        },
+        "form-line": {
+          "type": "line",
+          "settings": {}
+        },
+        "form-text": {
+          "type": "text",
+          "settings": {
+            "text": "Great! Just fill up the form below and our team will get back to you ASAP."
+          }
+        },
+        "form-link": {
+          "type": "link",
+          "settings": {
+            "mail_address": "hello@overeasyfoods.com"
+          }
+        }
+      },
+      "block_order": [
+        "form-heading",
+        "form-line",
+        "form-text",
+        "form-link"
+      ]
     }
   },
   "order": [
-    "main"
+    "main",
+    "oe-contact-form"
   ]
 }

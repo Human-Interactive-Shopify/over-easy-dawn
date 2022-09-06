@@ -1,14 +1,30 @@
 {{ 'section-oe-contact-form.css' | asset_url | stylesheet_tag }}
 
-
 <section class="oe-contact-form__section">
+  <style>
+    .oe-contact-form__section {
+      --oe-contact-form-section-background-color: var(--oe-color-{{ section.settings.background_color }});
+      --oe-contact-form-section-content-align: {{ section.settings.content_align }};
+    }
+  </style>
   <div class="oe-contact-form">
     {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
-      {%- if section.settings.form_heading != blank -%}
-      <h2 class="oe-contact-form__title">{{ section.settings.form_heading }}</h2>
-      {%- endif -%}
+      <div class="oe-contact-form__content">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              <h2 class="oe-contact-form__title">{{ block.settings.heading }}</h2>
+            {%- when 'line' -%}
+              <hr class="oe-contact-form__line">
+            {%- when 'text' -%}
+              <p class="oe-contact-form__text">{{ block.settings.text }}</p>
+            {%- when 'link' -%}
+              <a href="mailto:{{ block.settings.mail_address }}" target="_blank" class="main-contact__contacts-link">{% render 'icon-mail' %}{{ block.settings.mail_address }}</a>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
       {%- if form.posted_successfully? -%}
-        <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</h2>
+        <h3 class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</h3>
       {%- elsif form.errors -%}
         <div class="form__message">
           <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h2>
@@ -78,10 +94,84 @@
   "class": "section",
   "settings": [
     {
+      "type": "select",
+      "id": "background_color",
+      "options": [
+        {
+          "value": "red",
+          "label": "Red"
+        },
+        {
+          "value": "orange",
+          "label": "Orange"
+        },
+        {
+          "value": "black",
+          "label": "Black"
+        }
+      ],
+      "default": "red",
+      "label": "Background color"
+    },
+    {
+      "type": "select",
+      "id": "content_align",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "flex-start",
+      "label": "Content align"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Headline",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Have more questions?",
+          "label": "Headline"
+        }
+      ]
+    },
+    {
       "type": "text",
-      "id": "form_heading",
-      "default": "Contact form",
-      "label": "Contact form title"
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Great! Just fill up the form below and our team will get back to you ASAP.",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "line",
+      "name": "Horizontal line",
+      "settings": []
+    },
+    {
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "mail_address",
+          "default": "hello@overeasyfoods.com",
+          "label": "Mail address"
+        }
+      ]
     }
   ],
   "presets": [
