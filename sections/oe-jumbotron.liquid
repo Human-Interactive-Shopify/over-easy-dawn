@@ -89,10 +89,27 @@
     line-height: 120%;
     color: inherit;
   }
+
+  .oe-jumbotron__heading-size--small {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+  }
   
   .oe-jumbotron__text {
     color: inherit;
     margin-bottom: 40px;
+  }
+
+  .oe-jumbotron__list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .oe-jumbotron__list-item svg {
+    width: 20px;
   }
 
   @media screen and (min-width: 750px) {
@@ -118,6 +135,11 @@
       font-size: 55px;
       line-height: 120%;
       padding-bottom: 24px;
+    }
+
+    .oe-jumbotron__heading-size--small {
+      font-size: 35px;
+      line-height: 120%;
     }
     
     .oe-jumbotron__text {
@@ -165,9 +187,11 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'heading' -%}
-              <h2 class="oe-jumbotron__heading">{{ block.settings.heading | escape }}</h2>
+              <h2 class="oe-jumbotron__heading oe-jumbotron__heading-size--{{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
             {%- when 'text' -%}
               <div class="oe-jumbotron__text">{{ block.settings.text | escape }}</div>
+            {%- when 'list_item' -%}
+              <div class="oe-jumbotron__list-item">{% render 'icon-list-item' %}{{ block.settings.text | escape }}</div>
             {%- when 'buttons' -%}
               {%- if block.settings.button_label_1 != blank -%}
                 {% render 'button', href: block.settings.button_link_1 , variation: 'primary', color: section.settings.text_color_scheme , size: 'big', label: block.settings.button_label_1 %}
@@ -272,6 +296,22 @@
           "id": "heading",
           "default": "Complete Nutrition",
           "label": "Headline"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "default",
+              "label": "Default"
+            },
+            {
+              "value": "small",
+              "label": "Small"
+            }
+          ],
+          "default": "default",
+          "label": "Size"
         }
       ]
     },
@@ -284,6 +324,18 @@
           "type": "text",
           "id": "text",
           "default": "Give customers details about the banner image(s) or content on the template.",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "list_item",
+      "name": "List item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Organic Oats & Fiber Blend",
           "label": "Text"
         }
       ]
@@ -309,7 +361,7 @@
   ],
   "presets": [
     {
-      "name": "OE Jumbotron presets",
+      "name": "OE Jumbotron",
       "blocks": [
         {
           "type": "heading"

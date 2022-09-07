@@ -9,12 +9,13 @@
     - size: {String} big | small.
     - label: {String} Text to show inside a button.
     - targetBlank: {boolean} Text to show inside a button.
+    - isFullWidth: {boolean} Full width.
 
     Usage:
     {% render 'button' classes: 'js-button', href: 'https://example.com', variation: 'primary', color: 'black', size: 'big', label: 'Button' %}
 {% endcomment %}
 
 
-<{% if href != blank %}a href="{{ href }}"{% else %}button {% endif %} {%- if href != blank and targetBlank -%} target="_blank"{%- endif -%}  class="button button--{{ variation }} button-size--{{ size }} button-color--{{ color }} {{ classes }}">
+<{% if href != blank %}a href="{{ href }}"{% else %}button {% endif %} {%- if href != blank and targetBlank -%} target="_blank"{%- endif -%}  class="button button--{{ variation }} button-size--{{ size }} button-color--{{ color }} {%- if isFullWidth -%}is-full-width{%- endif -%} {{ classes }}">
   {{ label }}
 </{%- if href != blank -%}a{%- else -%}button{%- endif -%}>

@@ -1,7 +1,7 @@
 {%- style -%}
 
   .oe-ingredients {
-    background-color: var(--oe-color-grey-100);
+    background-color: var(--oe-ingredients-background-color, --oe-color-grey-100);
     padding: 24px 0;
   }
   
@@ -65,13 +65,13 @@
       font-weight: 500;
       font-size: 35px;
       line-height: 120%;
-      background-color: var(--oe-color-grey-100);
+      background-color: var(--oe-ingredients-background-color, --oe-color-grey-100);
       margin-bottom: 8px;
       padding-bottom: 0;
     }
     
     .oe-ingredients__title span {
-      background-color: var(--oe-color-grey-100);
+      background-color: var(--oe-ingredients-background-color, --oe-color-grey-100);
       position: relative;
       z-index: 2;
       padding: 0 48px;
@@ -101,6 +101,11 @@
 {%- endstyle -%}
 
 <div class="oe-ingredients">
+  <style>
+    .oe-ingredients {
+      --oe-ingredients-background-color: var(--oe-color-{{ section.settings.background_color }});
+    }
+  </style>
   <div class="oe-ingredients__container container">
     {%- if section.settings.headline != blank -%}
     <h3 class="oe-ingredients__title"><span>{{ section.settings.headline }}</span></h3>
@@ -147,6 +152,22 @@
       "id": "headline",
       "default": "Only the Best Ingredients",
       "label": "Headline"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "grey-100",
+          "label": "Grey"
+        }
+      ],
+      "default": "grey-100",
+      "label": "Section background color"
     }
   ],
   "blocks": [

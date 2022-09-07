@@ -15,10 +15,11 @@
   top: 100%;
   left: 0;
   width: 100%;
-  height: calc(100vh - 135px);
+  height: calc(100vh - 115px);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   background-color: var(--oe-color-white);
   overflow-y: auto;
+  z-index: 999;
 }
 
 .header-drawer.is-open .header__menu-drawer {
