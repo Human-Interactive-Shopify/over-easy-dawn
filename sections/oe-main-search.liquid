@@ -155,6 +155,14 @@
   .template-search__related-tab.is-active {
     text-decoration: underline;
   }
+
+  .page-search .oe-faq-blog {
+    display: none;
+  }
+  
+  .page-search .oe-faq-blog.is-active {
+    display: block;
+  }
   
   @media screen and (min-width: 750px) {
     .template-search {
@@ -164,6 +172,16 @@
     .template-search__header {
       padding: 40px 0;
       margin-bottom: 80px;
+    }
+
+    .template-search__no-result-title {
+      font-size: 35px;
+      line-height: 120%;
+    }
+
+    .template-search__no-result-text {
+      font-size: 16px;
+      line-height: 160%;
     }
 
     .template-search__term {
@@ -353,7 +371,7 @@
               </button>
             {% endif %}
             {% if section.settings.show_faq %}
-              <button class="template-search__related-tab js-related-tab">
+              <button class="template-search__related-tab js-related-tab" data-tab-id="oe-faq-blog">
                 FAQ
               </button>
             {% endif %}
@@ -416,7 +434,7 @@
 
     const initRelatedTabs = (relatedSection) => {
       const tabButtons = relatedSection.querySelectorAll('.js-related-tab')
-      const tabWrappers = relatedSection.querySelectorAll('.template-search__related-list-wrapper')
+      const tabWrappers = document.querySelectorAll('.template-search__related-list-wrapper')
 
       if (tabButtons.length) {
         tabButtons.forEach(button => {
@@ -425,7 +443,7 @@
               tabWrappers.forEach(wrapper => wrapper.classList.remove('is-active'))
               tabButtons.forEach(tab => tab.classList.remove('is-active'))
 
-              relatedSection.querySelector(`#${button.dataset.tabId}`).classList.add('is-active')
+              document.querySelector(`#${button.dataset.tabId}`).classList.add('is-active')
               button.classList.add('is-active')
             }
           })

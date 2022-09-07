@@ -6,14 +6,51 @@
         "show_related_products": true,
         "related_products_title": "You Might Also Like...",
         "collection": "home-page-bars",
-        "show_latest_products": true,
+        "show_latest_products": false,
         "latest_products_collection": "",
-        "show_faq": true,
-        "show_latest_blogs": true
+        "show_faq": false,
+        "show_latest_blogs": false
       }
+    },
+    "oe-main-faq": {
+      "type": "oe-main-faq",
+      "blocks": {
+        "dd5f9f87-9458-40fd-a333-ed055b52311f": {
+          "type": "faq-section",
+          "settings": {
+            "blog": "subscriptions"
+          }
+        },
+        "27d3090b-da3e-4e5f-b94e-cdf34e325d15": {
+          "type": "faq-section",
+          "settings": {
+            "blog": "shipping-tracking"
+          }
+        },
+        "b1eebb32-06b4-460e-9195-1b5209bb52b8": {
+          "type": "faq-section",
+          "settings": {
+            "blog": "products"
+          }
+        },
+        "e22893bb-770d-4828-8f44-5cc137941ae7": {
+          "type": "faq-section",
+          "settings": {
+            "blog": "payment-returns"
+          }
+        }
+      },
+      "block_order": [
+        "dd5f9f87-9458-40fd-a333-ed055b52311f",
+        "27d3090b-da3e-4e5f-b94e-cdf34e325d15",
+        "b1eebb32-06b4-460e-9195-1b5209bb52b8",
+        "e22893bb-770d-4828-8f44-5cc137941ae7"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "oe-main-faq"
   ]
 }

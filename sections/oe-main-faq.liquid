@@ -4,10 +4,14 @@
 <script src="{{ 'oe-accordion.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'oe-faq.js' | asset_url }}" defer="defer"></script>
 
-<div class="oe-faq-blog">
+<div id="oe-faq-blog" class="oe-faq-blog template-search__related-list-wrapper">
   <div class="container">
-    <h1 class="oe-faq-blog__title">{{ section.settings.title | escape }}</h1>
-    <p class="oe-faq-blog__subtitle">{{ section.settings.subtitle | escape }}</p>
+    {% if section.settings.title != blank %}
+      <h1 class="oe-faq-blog__title">{{ section.settings.title | escape }}</h1>
+    {% endif %}
+    {% if section.settings.subtitle != blank %}
+      <p class="oe-faq-blog__subtitle">{{ section.settings.subtitle | escape }}</p>
+    {% endif %}
   
     <nav class="oe-faq-blog__navigation js-faq-navigation">
     </nav>
