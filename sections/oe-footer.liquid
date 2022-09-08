@@ -286,6 +286,7 @@
           <h2 class="footer__block-heading">{{ section.settings.newsletter_heading | escape }}</h2>
         {%- endif -%}
         {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form js-newsletter-form' -%}
+          {{ form.errors | default_errors }}
           <input type="hidden" name="contact[tags]" value="newsletter">
           <div class="newsletter-form__field-wrapper">
             <div class="field">
@@ -324,6 +325,7 @@
                 class="oe-checkbox__input js-newsletter-form-consent"
                 value="consent"
                 aria-required="true"
+                required
               >
               <label class="oe-checkbox__label" for="NewsletterForm--consent">
                I agree with the privacy policy and terms of use
@@ -472,12 +474,6 @@
         })
       }
     }
-
-    const newsletterForm = document.querySelector('.js-newsletter-form')
-
-    if (newsletterForm) {
-      initNewsletterFormValidation(newsletterForm)
-    }
   })
 
   const initFooterAccordion = (element) => {
@@ -487,26 +483,6 @@
     button.addEventListener('click', () => {
       button.classList.toggle('is-active')
       slideOut(content)
-    })
-  }
-
-  const initNewsletterFormValidation = (form) => {
-    const consent = form.querySelector('.js-newsletter-form-consent')
-    const input = form.querySelector('.js-newsletter-form-input')
-    const submit = form.querySelector('.js-newsletter-form-submit')
-    const error = form.querySelector('.js-newsletter-form-error')
-    
-    form.addEventListener('submit', (event) => {
-      event.preventDefault()
-      
-      if (!consent.checked) {
-        error.style.display = 'block';
-      } else {
-        console.log('submit', consent.checked);
-        error.style.display = 'none';
-
-        form.submit()
-      }
     })
   }
 {% endjavascript %}

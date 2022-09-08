@@ -1836,8 +1836,13 @@ details[open] > .share-button__fallback {
   resize: none;
 }
 
+.oe-checkbox {
+  position: relative;
+}
+
 .oe-checkbox__input {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 
 .oe-checkbox__label {
