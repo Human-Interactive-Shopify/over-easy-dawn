@@ -86,13 +86,20 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Complete Nutrition"
+            "heading": "Complete Nutrition",
+            "heading_size": "default"
           }
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
           "settings": {
             "text": "Euismod etiam lorem at mauris, tincidunt sit. Arcu aliquet nunc sit nec nec sed fermentum, duis tincidunt."
+          }
+        },
+        "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Organic Oats & Fiber Blend"
           }
         },
         "9f477b3a-45a3-4dfd-a315-608b89a18f81": {
@@ -106,14 +113,15 @@
       "block_order": [
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
+        "c59113f4-bd26-4777-8e39-c7b3feaf3193",
         "9f477b3a-45a3-4dfd-a315-608b89a18f81"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
-        "background_color_scheme": "red",
-        "text_color_scheme": "white"
+        "background_color_scheme": "white",
+        "text_color_scheme": "black"
       }
     },
     "oe-benefits": {
@@ -156,6 +164,40 @@
       ],
       "settings": {
         "headline": "Benefits"
+      }
+    },
+    "oe-featured-collections": {
+      "type": "oe-featured-collections",
+      "blocks": {
+        "cc47b51b-9d1c-43fc-96ec-bcb30f596641": {
+          "type": "featured-collection",
+          "settings": {
+            "collection": "home-page-bars",
+            "button_label": "Shop Shakes"
+          }
+        },
+        "d0937394-2916-4718-bf42-04d77c58060a": {
+          "type": "featured-collection",
+          "settings": {
+            "collection": "breakfast-bars",
+            "button_label": "Shop Shakes"
+          }
+        },
+        "65b62c2d-2238-4120-8e65-ba4820b7ff28": {
+          "type": "featured-collection",
+          "settings": {
+            "collection": "brf",
+            "button_label": "Shop Shakes"
+          }
+        }
+      },
+      "block_order": [
+        "cc47b51b-9d1c-43fc-96ec-bcb30f596641",
+        "d0937394-2916-4718-bf42-04d77c58060a",
+        "65b62c2d-2238-4120-8e65-ba4820b7ff28"
+      ],
+      "settings": {
+        "headline": "Libero Amet Velit, Diam Nunc Amet Ac"
       }
     },
     "oe-ingredients": {
@@ -221,7 +263,8 @@
         "96229dcb-86af-47fa-8c8d-28417e98b443"
       ],
       "settings": {
-        "headline": "Only the Best Ingredients"
+        "headline": "Only the Best Ingredients",
+        "background_color": "grey-100"
       }
     },
     "oe-testimonials": {
@@ -262,40 +305,6 @@
       ],
       "settings": {
         "headline": "You Don’t Have To Take Our Word For It..."
-      }
-    },
-    "oe-featured-collections": {
-      "type": "oe-featured-collections",
-      "blocks": {
-        "cc47b51b-9d1c-43fc-96ec-bcb30f596641": {
-          "type": "featured-collection",
-          "settings": {
-            "collection": "home-page-bars",
-            "button_label": "Shop Shakes"
-          }
-        },
-        "d0937394-2916-4718-bf42-04d77c58060a": {
-          "type": "featured-collection",
-          "settings": {
-            "collection": "breakfast-bars",
-            "button_label": "Shop Shakes"
-          }
-        },
-        "65b62c2d-2238-4120-8e65-ba4820b7ff28": {
-          "type": "featured-collection",
-          "settings": {
-            "collection": "brf",
-            "button_label": "Shop Shakes"
-          }
-        }
-      },
-      "block_order": [
-        "cc47b51b-9d1c-43fc-96ec-bcb30f596641",
-        "d0937394-2916-4718-bf42-04d77c58060a",
-        "65b62c2d-2238-4120-8e65-ba4820b7ff28"
-      ],
-      "settings": {
-        "headline": "Libero Amet Velit, Diam Nunc Amet Ac"
       }
     },
     "image_banner": {
@@ -395,7 +404,6 @@
         "color_scheme": "background-1",
         "image_ratio": "square",
         "show_secondary_image": false,
-        "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": true,
         "enable_add_to_cart": true,
@@ -570,9 +578,9 @@
     "1661427940e35b089a",
     "oe-jumbotron",
     "oe-benefits",
+    "oe-featured-collections",
     "oe-ingredients",
     "oe-testimonials",
-    "oe-featured-collections",
     "image_banner",
     "rich_text",
     "oe-featured_collection",
