@@ -1,11 +1,31 @@
 .rating {
   display: inline-block;
   margin: 0;
+  line-height: 1;
 }
 
 .oe-product .rating-star {
   --letter-spacing: 0.2;
   --font-size: 2.2;
+}
+
+.oe-bundle-picker__product-rating-wrap .rating-count .caption {
+  color: var(--oe-color-black);
+}
+
+.oe-bundle-picker__product-rating-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.oe-bundle-picker__product-rating-wrap .rating-star {
+  --letter-spacing: 0.2;
+  --font-size: 1.4;
+}
+
+.oe-bundle-picker__product-rating-wrap .rating-star::before {
+  --color-main-star-color: var(--oe-color-black);
 }
 
 .product .rating-star {
@@ -38,7 +58,7 @@
   content: '★★★★★';
   background: linear-gradient(
     90deg,
-    red var(--percent),
+    var(--color-main-star-color, var(--oe-color-red)) var(--percent),
     rgba(var(--color-foreground), 0.15) var(--percent)
   );
   -webkit-background-clip: text;
@@ -52,6 +72,7 @@
 .rating-count {
   display: inline-block;
   margin: 0;
+  line-height: 1;
 }
 
 @media (forced-colors: active) {

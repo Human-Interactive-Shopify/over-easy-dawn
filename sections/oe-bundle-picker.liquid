@@ -1,0 +1,997 @@
+{{ 'section-oe-bundle-picker-intro.css' | asset_url | stylesheet_tag }}
+{{ 'section-oe-bundle-picker-section-heading.css' | asset_url | stylesheet_tag }}
+{{ 'section-oe-bundle-picker-products.css' | asset_url | stylesheet_tag }}
+{{ 'section-oe-bundle-picker-selling-plan.css' | asset_url | stylesheet_tag }}
+{{ 'section-oe-bundle-picker-overview.css' | asset_url | stylesheet_tag }}
+{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .page-product-bundle {
+    background-color: var(--oe-color-grey-100);
+    padding: 40px 0;
+  }
+  
+  @media screen and (min-width: 990px) {
+    .page-product-bundle {
+      padding: 80px 0;
+    }
+  }
+</style>
+{% if section.settings.show_intro %}
+<section id="oe-bundle-picker-intro-{{ section.id }}" class="oe-bundle-picker-intro__section" data-section="{{ section.id }}">
+  <div class="container">
+    <div class="oe-bundle-picker-intro">
+      {% if section.settings.image != blank %}
+        {{ section.settings.image | image_url: width: 130 | image_tag:
+          loading: 'lazy',
+          width: 130,
+          height: 130,
+          class: "oe-bundle-picker-intro__media",
+          alt: section.settings.image.alt | escape
+        }}
+      {% endif %}
+      <div class="oe-bundle-picker-intro__content">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              <h2 class="oe-bundle-picker-intro__heading">{{ block.settings.heading | escape }}</h2>
+            {%- when 'text' -%}
+              <div class="oe-bundle-picker-intro__text">{{ block.settings.text | escape }}</div>
+            {%- when 'list_item' -%}
+              <div class="oe-bundle-picker-intro__list-item">{% render 'icon-list-item' %}{{ block.settings.text | escape }}</div>
+            {%- when 'buttons' -%}
+              {%- if block.settings.button_label_1 != blank -%}
+                {% render 'button', href: block.settings.button_link_1 , variation: 'primary', color: section.settings.text_color_scheme , size: 'big', label: block.settings.button_label_1 %}
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+      
+      <div class="oe-bundle-picker-intro__sidebar">
+        <p class="oe-bundle-picker-intro__sidebar-title">{{ section.settings.sidebar_title }}</p>
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'discount-row' -%}
+              <div class="oe-bundle-picker-intro__discount-row">
+                <p class="oe-bundle-picker-intro__discount-row-text"><span>{{ block.settings.discount_text | escape }}</span></p>
+                <p class="oe-bundle-picker-intro__discount-row-price">{{ block.settings.discount_price | escape }} <span>per box</span></p>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+        <p class="oe-bundle-picker-intro__sidebar-text"><span>{{ section.settings.sidebar_text }}</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+ {% endif %}
+
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'bundle-picker-products' -%}
+      <section id="oe-bundle-builder-products" class="oe-bundle-picker__products-section">
+        <div class="container">
+          <h3 class="oe-bundle-picker__section-heading"><span>{{ block.settings.section_heading_number | escape }}</span> {{ block.settings.section_heading | escape }}</h3>
+          <div class="oe-bundle-picker__products-section-inner js-bundle-picker-product-slider">
+            <div class="oe-bundle-picker__products-section-products js-bundle-picker-product-slider-wrapper js-bundle-products" data-bundles-data='{"data": [{% for product in collections['custom-bundles'].products %} {%- assign filtered_selling_plan_groups = product.selling_plan_groups | where: "app_id", "4836205" -%}{"id": {{ product.id }}, "groups": [{% for group in filtered_selling_plan_groups  %}{"name": "{{ group.name }}", "id": "{{ group.id }}"}{% unless forloop.last %},{% endunless %} {% endfor %}] , "variants": [{% for variant in product.variants %} {"name": "{{ variant.title }}", "id": {{ variant.id }} }{% unless forloop.last %},{% endunless %} {% endfor %}], "name": "{{ product.title }}", "amount": {{ product.metafields.custom.box_amount }}, "compare": "{{ product.compare_at_price_min | money_without_trailing_zeros }}", "price": "{{ product.price | money_without_trailing_zeros }}", "notice": "{{ product.metafields.custom.discount_notice }}", "addbox": "{{ product.metafields.custom.add_another_box_text }}"}{% unless forloop.last %},{% endunless %}{% endfor %}]}'>
+              {% for product in block.settings.collection.products %}
+                {% liquid
+                  assign rating_decimal = 0
+                  assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+                  if decimal >= 0.3 and decimal <= 0.7
+                    assign rating_decimal = 0.5
+                  elsif decimal > 0.7
+                    assign rating_decimal = 1
+                  endif
+                %}
+               
+                {%- assign collection_images = product.images | where: 'alt', "mobile" -%}
+                {%- assign nutrition_images = product.images | where: 'alt', "nutrition" -%}
+  
+                <div class="oe-bundle-picker__product js-bundle-picker-product-slider-slide js-bundle-product" data-product-id="{{ product.id }}" data-product-title="{{ product.title }}">
+                  <div class="oe-bundle-picker__product-img-wrap">
+                    <svg class="check-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0H27.1952C29.7848 0 31.8841 2.09926 31.8841 4.68884V31.8841H0V0Z" fill="#E8173A"/>
+                      <path d="M25.2267 8.25739C24.849 7.87574 24.236 7.87508 23.8583 8.25577L12.2477 19.9344L8.05871 15.3459C7.69674 14.9496 7.08475 14.9239 6.69118 15.2889C6.29792 15.654 6.27274 16.2715 6.63471 16.6681L11.5061 22.0036C11.6845 22.1992 11.9341 22.3127 12.1974 22.3182C12.2045 22.3185 12.2113 22.3185 12.2181 22.3185C12.4739 22.3185 12.72 22.2161 12.9013 22.0339L25.2248 9.63784C25.6035 9.2572 25.6042 8.63903 25.2267 8.25739Z" fill="white"/>
+                    </svg>
+                    {% if collection_images != blank %}
+                      {{ collection_images | first | image_url: width: 280 | image_tag:
+                        loading: 'lazy',
+                        width: 280,
+                        height: 190,
+                        class: "oe-bundle-picker__product-img",
+                        alt: product.title
+                      }}
+                    {% endif %}
+                  </div>
+                  <div class="oe-bundle-picker__product-info-wrap">
+                    <p class="oe-bundle-picker__product-title">{{ product.title }}</p>
+                    {% if nutrition_images != blank %}
+                      <a class="oe-bundle-picker__product-more-info" href="#nutrition-facts-{{ product.id }}">MORE INFO</a>
+                    {% endif %}
+                  </div>
+                  {%- if block.settings.show_rating and product.metafields.reviews.rating.value != blank -%}
+                  <div class="oe-bundle-picker__product-rating-wrap">
+                    <div class="rating" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
+                      <span aria-hidden="true" class="rating-star color-icon-{{ settings.accent_icons }}" style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"></span>
+                    </div>
+                    <p class="rating-text caption">
+                      <span aria-hidden="true">{{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}</span>
+                    </p>
+                    <p class="rating-count caption">
+                      <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+                      <span class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "accessibility.total_reviews" | t }}</span>
+                    </p>
+                  </div>
+                  {%- endif -%}
+                  <div class="oe-bundle-picker__product-action">
+                    <button class="oe-bundle-picker__product-select js-product-select reset" data-select-text="select" data-remove-text="remove">Select</button>
+                    <div class="oe-bundle-picker__product-counter">
+                      <button class="oe-bundle-picker__product-action-subtract js-product-subtract is-disabled roquefort" data-product-id="{{ product.id }}">{% render 'icon-minus' %}</button>
+                      <span class="oe-bundle-picker__product-action-quantity js-product-quantity" data-product-id="{{ product.id }}">0</span>
+                      <button class="oe-bundle-picker__product-action-add js-product-add roquefort" data-product-id="{{ product.id }}">{% render 'icon-plus' %}</button>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="oe-bundle-picker__product-pagination js-bundle-picker-product-slider-pagination"></div>
+          </div>
+        </div>
+        {% for product in block.settings.collection.products %}
+          {%- assign nutrition_images = product.images | where: 'alt', "nutrition" -%}
+          <div class="oe-bundle-picker__product-modal" id="nutrition-facts-{{ product.id }}">
+            <div class="oe-bundle-picker__product-modal-overlay js-close-modal-trigger" data-href="#nutrition-facts-{{ product.id }}"></div>
+            <div class="oe-bundle-picker__product-modal-inner">
+              <button class="oe-bundle-picker__product-modal-close js-close-modal-trigger" data-href="#nutrition-facts-{{ product.id }}">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.8072 15.6612L15.6631 13.8054L6.1944 4.33667L4.33853 6.19254L13.8072 15.6612Z" fill="white"/>
+                  <path d="M6.1944 15.6636L15.6631 6.19495L13.8072 4.33907L4.33853 13.8078L6.1944 15.6636Z" fill="white"/>
+                </svg>
+              </button>
+              <div class="oe-bundle-picker__product-modal-image-wrap" style="background-color:{{product.metafields.sf_oe.product_color}}">
+                {% if nutrition_images != blank %}
+                  {{ nutrition_images | first | image_url: width: 280 | image_tag:
+                    loading: 'lazy',
+                    width: 280,
+                    height: 400,
+                    class: "oe-bundle-picker__product-modal-img",
+                    alt: product.title
+                  }}
+                {% endif %}
+              </div>
+              <div class="oe-bundle-picker__product-modal-content-wrapper">
+                <div class="oe-bundle-picker__product-modal-content">
+                  <h2>{{ product.title }}</h2>
+                  {% assign product_description = product.description | split: 'Ingredients' | first %}
+                  <p>{{ product.description }}</p>
+                </div>
+                <div class="oe-bundle-picker__product-modal-counter">
+                  <button class="oe-bundle-picker__product-modal-action-subtract js-product-subtract is-disabled roquefort" data-product-id="{{ product.id }}">{% render 'icon-minus' %}</button>
+                  <span class="oe-bundle-picker__product-modal-action-quantity js-product-quantity" data-product-id="{{ product.id }}">0</span>
+                  <button class="oe-bundle-picker__product-modal-action-add js-product-add roquefort" data-product-id="{{ product.id }}">{% render 'icon-plus' %}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </section>
+    {%- when 'bundle-selling-plan' -%}
+      <section class="oe-bundle-picker__selling-plan is-disabled">
+        <div class="container">
+          <h3 class="oe-bundle-picker__section-heading"><span>{{ block.settings.section_heading_number | escape }}</span> {{ block.settings.section_heading | escape }}</h3>
+          <div class="oe-bundle-picker__selling-plan-inner">
+            <div class="bundle-subselect-wrap js-subscription-radios">
+  
+              <div class="bundle-subselect-item">
+                <input id="radio-subscribe" name="order" type="radio" checked>
+                <label class="bundle-purchase-type bundle-purchase-type-subscription flex red-dark" for="radio-subscribe">
+                  {%- render 'icon-checkmark' -%}
+                  <div class="bundleSubscriptionHeader-wrap">
+                    <div class="bundlePlanHeader">{{ block.settings.subscribe_headline }}</div>
+                    <div style="color:#E0E0E0">⎯⎯</div>
+                  </div>
+                  <div class="bundleSubscriptionContent-wrap">
+                    <ul>
+                      <li>Save 10% on every order</li>
+                      <li>Cancel your subscription at any
+                      time with no cost to you</li>
+                      <li>Choose your delivery frequency</li>
+                    </ul>
+                  </div>
+                <div data-smartrr-product-id="" data-smartrr-price-style="overwrite-compare" data-use-quantity="true" data-smartrr-constant="af8fcdf85a320d52a7b3674bf613221e253f1ce3">
+                    <span data-smartrr-compare-price></span>
+                    <span data-smartrr-regular-price></span>
+                    <span data-smartrr-subscribe-price></span>
+                  </div>
+                </label>
+                <div class="subscriptionBadge">
+                  <svg width="231" height="231" viewBox="0 0 231 231" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M115.5 0L136.724 36.2893L173.25 15.4741L173.486 57.5137L215.526 57.75L194.711 94.2755L231 115.5L194.711 136.724L215.526 173.25L173.486 173.486L173.25 215.526L136.724 194.711L115.5 231L94.2755 194.711L57.75 215.526L57.5137 173.486L15.4741 173.25L36.2893 136.724L0 115.5L36.2893 94.2755L15.4741 57.75L57.5137 57.5137L57.75 15.4741L94.2755 36.2893L115.5 0Z"/>
+                  </svg>
+                  <div class="subscriptionBadge-text">
+                    you save
+                    <div class="subscriptionBadge-text-emphasized js-save-amount"></div>
+                  </div>
+                </div>
+              </div>
+            <div class="oe-bundle-picker__selling-plan-divider">⎯⎯ &nbsp; or &nbsp; ⎯⎯</div>
+              <div class="bundle-subselect-item">
+                <input id="radio-one-time" name="order" type="radio">
+                <label class="bundle-purchase-type bundle-purchase-type-onetime selected flex red-dark items-center" for="radio-one-time">
+                  {%- render 'icon-checkmark' -%}
+                  <div class="bundleSubscriptionHeader-wrap">
+                    <div class="bundlePlanHeader">{{ block.settings.onetime_headline }}</div>
+                    <div style="color:#E0E0E0">⎯⎯</div>
+                  </div>
+                  <div class="bundleOneTimeNote">{{ block.settings.onetime_copy }}</div>
+                  <div data-smartrr-product-id="" data-smartrr-price-style="original" data-use-quantity="true">
+                    <span data-smartrr-compare-price></span>
+                    <span data-smartrr-regular-price></span>
+                    <span data-smartrr-subscribe-price></span>
+                  </div>
+                </label>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </section>    
+    {%- when 'bundle-overview' -%}
+      <div class="oe-bundle-picker__overview-wrap is-disabled container">
+        <h3 class="oe-bundle-picker__section-heading"><span>{{ block.settings.section_heading_number | escape }}</span> {{ block.settings.section_heading | escape }}</h3>
+        <div class="oe-bundle-picker__overview-content">
+          <div class="oe-bundle-picker__overview-inner">
+            <h2 class="oe-bundle-picker__overview-header">⎯⎯ &nbsp; {{ block.settings.overview_headline }} &nbsp; ⎯⎯</h2>
+            <h4 class="oe-bundle-picker__overview-summary js-overview-summary">{{ block.settings.empty_text }}</h4>
+            <div class="oe-bundle-picker__overview-list js-overview-list"></div>
+          </div>
+          <div class="oe-bundle-picker__overview-total-wrap">
+            <div class="oe-bundle-picker__overview-another">
+              <h4>Add another box for only</h4>
+              <h3 class="js-total-add"></h3>
+              <button class="button button--primary button-color--black button--full-width oe-bundle-picker__overview-anchor reset" onclick="document.location='#oe-bundle-builder-products';return false;" type="" style="">YES PLEASE!</button>
+            </div>
+            <div class="oe-bundle-picker__overview-total-divider">⎯⎯ &nbsp; or &nbsp; ⎯⎯</div>
+            <div class="oe-bundle-picker__overview-total">
+              <h2 class="oe-bundle-picker__overview-total-header">Total:</h2>
+              <div class="oe-bundle-picker__overview-total-prices">
+                <div class="oe-bundle-picker__overview-total-compare js-total-compare" data-smartrr-compare-price ></div>
+                <div class="oe-bundle-picker__overview-total-price js-total-price" data-smartrr-subscribe-price ></div>
+              </div>
+              
+              <form class="oe-bundle-picker__overview-form js-add-to-cart-form product-form-el" action="/cart/add" method="post" style="width: 100%" data-smartrr-form-id="">
+                <fieldset class="smartrr-purchase-options" data-smartrr-purchase-options="">
+                  <div class="smartrr-no-plans-available hide" data-smartrr-no-plans>
+                    
+                  </div>
+                  <div data-smartrr-selling-plan-groups>
+  
+                    <label class="smartrr-selling-plan-group-label js-smartrr-label-subscribe" data-smartrr-sub data-smartrr-selling-plan-group-id="af8fcdf85a320d52a7b3674bf613221e253f1ce3">
+                      <div class="smartrr-selling-plan-group-header">
+                        <input type="radio" data-smartrr-selling-plan-group-input="af8fcdf85a320d52a7b3674bf613221e253f1ce3" name="purchase_option" value="af8fcdf85a320d52a7b3674bf613221e253f1ce3">
+                        <div class="smartrr-selling-plan-group-input-display"></div>
+                        <div class="smartrr-selling-plan-group-name">
+                          <div class="smartrr-selling-plan-group-prices" data-smartrr-product-id="" data-smartrr-price-style="overwrite-compare" data-smartrr-constant="af8fcdf85a320d52a7b3674bf613221e253f1ce3">
+                            <div>
+                              <span data-smartrr-subscribe-price></span>
+                              <span class="monthly-plan">/mo<span>
+                            </div>
+                            <span data-smartrr-compare-price></span>
+                            <span data-smartrr-regular-price></span>
+                          </div>
+                        </div>
+                        <div smartrr-plan></div>
+                      </div>
+                    </label>
+
+                    <label class="smartrr-selling-plan-group-label smartrr-otp js-smartrr-label-otp" data-smartrr-selling-plan-group-id>
+                      <div class="smartrr-selling-plan-group-header">
+                        <input type="radio" data-smartrr-selling-plan-group-input name="purchase_option" value="">
+                        <div class="smartrr-selling-plan-group-input-display"></div>
+                        <div class="smartrr-selling-plan-group-name">
+                          <div class="smartrr-selling-plan-group-prices" data-smartrr-product-id="" data-smartrr-price-style="original" data-use-quantity="true">
+                            <div>
+                              <span data-smartrr-subscribe-price></span>
+                            </div>
+                            <span data-smartrr-compare-price></span>
+                            <span data-smartrr-regular-price></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div data-smartrr-selling-plan-group-contents class="hide"></div>
+                    </label>
+                  
+                  </div>
+                </fieldset>
+                <p class="oe-bundle-picker__overview-total-notice"><span class="js-total-notice"></span><span class="js-total-subs is-disabled"> And let’s add another 10% for subscribing!</span> Way to go!</p>
+                <div class="hide" data-smartrr-page-load-variant=""></div>
+                <select name="id" class="hidden js-select-id prod-var-id">
+                  <option value="" data-var-price="" selected="">Bundle Box</option>
+                </select>
+                <label class="smartrr-selling-plan-group-label smartrr-group-active" data-smartrr-sub="" data-smartrr-selling-plan-group-id="af8fcdf85a320d52a7b3674bf613221e253f1ce3">
+                  <div class="smartrr-selling-plan-group-header">
+                    <input type="radio" data-smartrr-selling-plan-group-input="af8fcdf85a320d52a7b3674bf613221e253f1ce3" name="purchase_option" value="af8fcdf85a320d52a7b3674bf613221e253f1ce3" data-gtm-form-interact-field-id="0">
+                  </div>
+                  <div data-smartrr-selling-plan-group-contents="af8fcdf85a320d52a7b3674bf613221e253f1ce3" class="">
+                    <div data-smartrr-selling-plan-group-plans="">
+                      <select data-smartrr-selling-plans-select="af8fcdf85a320d52a7b3674bf613221e253f1ce3">
+                        <option class="js-subscription-property" data-smartrr-selling-plan-select-label-input="af8fcdf85a320d52a7b3674bf613221e253f1ce3" value="4615143490">Monthly</option>
+                      </select>
+                    </div>
+                  </div>
+                </label>
+                <div class="js-properties-wrapper">
+                  
+                </div>
+                <input type="hidden" class="js-subscription-property" name="selling_plan" data-smartrr-selling-plan-input="">
+                <input type="hidden" class="prod-quantity" name="quantity" value="1">
+                <button class=" button button--primary button-color--red ajax-submit add_to_cart button--full-width is-disabled" type="submit" style="visibility: visible;">Checkout</button>
+              </form>
+              {% comment %} <button class="js-add-bundle-to-cart" type="button">Add to cart</button> {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  {%- endcase -%}
+{%- endfor -%}
+
+<script type="text/javascript" defer src="{{ 'smartrr-pick-bundles-script.js' | asset_url }}"></script>
+
+<script>
+    if (typeof window.smartrrProductList === 'undefined') {
+      window.smartrrProductList = {};
+    }
+  
+    window.smartrrProductList = {
+    {% for product in collections['custom-bundles'].products %}
+      "{{ product.id }}": {
+          uniqueId: "{{ product.id }}",
+          ui: undefined,
+          logic: undefined,
+          appId: "4836205",
+          hiddenGroup: "[hidden]",
+          formTag: "data-smartrr-form-id",
+      
+          product: {{ product | json }},
+          uiImplementDetectChange: function (ui) {
+            var groupList = ui.apiQuerySelectorAllDataTag('data-smartrr-selling-plan-group-input', ui.$form);
+            var selectedGroup = "";
+            groupList && groupList.forEach(function (group) {
+              if (group.checked) {
+                selectedGroup = ui.apiGetAttribute(group, 'data-smartrr-selling-plan-group-input');
+              }
+            });
+      
+            var variantId = ui.apiGetAttribute(ui.apiQuerySelectorDataTag('data-smartrr-page-load-variant', ui.$form), 'data-smartrr-page-load-variant');
+      
+            ui.logic.apiSetupVariantAndGroup(variantId, selectedGroup);
+          },
+      
+          /* Called when Plan (the subscription frequency) is changed. */
+          /* Called when One time purchase is selected. */
+          uiOnPlanChange: function (ui, currentInfo) {
+            {% unless smartrr_nice_select %}
+            if (currentInfo.groupId && currentInfo.planId) {
+                /* Ensures the <select> option reflects the change in planId. */
+                ui.apiSetValue(ui.apiQuerySelectorDataTag('data-smartrr-selling-plans-select', ui.$form, currentInfo.groupId), currentInfo.planId);
+            }
+            {% endunless %}
+          },
+          /* Called when the group (One time purchase / Subscribe & Save) is changed. */
+          uiOnGroupChange: function (ui, currentInfo) {
+            /* Use this to implement active class on Groups */
+            var groupDivs = ui.apiQuerySelectorAllDataTag('data-smartrr-selling-plan-group-id', ui.$form);
+
+            groupDivs.forEach(function(group) {
+              console.log('uiOnGroupChange');
+              console.log(currentInfo.groupId);
+              console.log(group);
+              console.log(ui.apiGetAttribute(group, 'data-smartrr-selling-plan-group-id'));
+
+              if (currentInfo.groupId === ui.apiGetAttribute(group, 'data-smartrr-selling-plan-group-id')) {
+                group.classList.add('smartrr-group-active');
+              } else {
+                group.classList.remove('smartrr-group-active');
+              }
+            })
+      
+           {% if smartrr_nice_select %}
+            if (currentInfo.groupId !== "") {
+              var nice = ui.apiQuerySelectorDataTag('data-smartrr-nice-select', ui.$form, currentInfo.groupId);
+              if (nice) {
+                var li = nice.querySelector('[data-smartrr-ns-display] li');
+                if (li) {
+                  ui.logic.apiChangePlan(ui.apiGetAttribute(li, 'data-smartrr-ns-planid'));
+                }
+              }
+            }
+           {% endif %}
+          },
+      
+          uiOnVariantChange: function (ui, currentInfo) { },
+      
+          uiGetQuantity: function (ui) {
+            return 1;
+          },
+      
+          uiModifyPrice: function (ui, $div, money) {
+            /*
+            Change price here based on requirements. For example, setting up per case/pound/bag price.
+            money.regular: amount that shows up when strike display is chosen. This is the original un-discounted price.
+            money.subscribe: the final discounted price or one-time price that shows up in the checkout.
+            */
+            return money;
+          }
+        },
+      
+      
+    {% endfor %}
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth <= 989) {
+      const swiper = new Swiper('.js-bundle-picker-product-slider', {
+        wrapperClass: 'js-bundle-picker-product-slider-wrapper',
+        slideClass: 'js-bundle-picker-product-slider-slide',
+        slideActiveClass: 'is-active',
+        slidesPerView: 'auto',
+        pagination: {
+          el: '.js-bundle-picker-product-slider-pagination',
+          bulletClass: 'js-bundle-picker-product-slider-pagination-bullet',
+          bulletActiveClass: 'is-active'
+        }
+      });
+    }
+
+    // Bundle box configurator
+    const bundleProductsList = document.querySelector('.js-bundle-products');
+    const bundleProductsModalTriggers = document.querySelectorAll('.oe-bundle-picker__product-more-info');
+    const bundleProductsCloseModalTriggers = document.querySelectorAll('.js-close-modal-trigger');
+    const subscriptionRadios = document.querySelector('.js-subscription-radios');
+    const bundles = JSON.parse(bundleProductsList.dataset.bundlesData).data;
+    const addToCartButton = document.querySelector('.js-add-bundle-to-cart')
+    let currentBundle = null;
+    let state = [];
+
+    if (bundleProductsModalTriggers.length) {
+      bundleProductsModalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (event) => {
+          event.preventDefault();
+
+          const modal = document.querySelector(trigger.getAttribute('href'))
+
+          if (modal) {
+            modal.classList.add('is-open')
+            document.body.classList.add('u-overflow-hidden')
+          }
+        })
+      })
+    }
+    
+    if (bundleProductsCloseModalTriggers.length) {
+      bundleProductsCloseModalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (event) => {
+          event.preventDefault();
+
+          const modal = document.querySelector(trigger.getAttribute('data-href'))
+
+          if (modal) {
+            modal.classList.remove('is-open')
+            document.body.classList.remove('u-overflow-hidden')
+          }
+        })
+      })
+    }
+
+    const getAmount = () => {
+      return state.reduce((prev, curr) => prev + curr.quantity, 0) ?? 0
+    }
+
+    const initRadios = () => {
+        const radios = subscriptionRadios.querySelectorAll('[name="order"]')
+        const subscriptionProperties = document.querySelectorAll('.js-subscription-property')
+
+        radios.forEach(radio => {
+          if (radio.checked && radio.id === 'radio-subscribe') {
+            subscriptionProperties.forEach(prop => {
+              prop.removeAttribute('disabled')
+              document.querySelector('.js-smartrr-label-subscribe').click()
+              document.querySelector('.js-total-subs').classList.remove('is-disabled')
+            })
+          } else if (radio.checked && radio.id === 'radio-one-time') {
+            subscriptionProperties.forEach(prop => {
+              document.querySelector('.js-smartrr-label-otp').click()
+              prop.setAttribute('disabled', true)
+              document.querySelector('.js-total-subs').classList.add('is-disabled')
+            })
+          }
+  
+          radio.addEventListener('change', () => {
+            if (radio.checked && radio.id === 'radio-subscribe') {
+              subscriptionProperties.forEach(prop => {
+                prop.removeAttribute('disabled')
+                document.querySelector('.js-smartrr-label-subscribe').click()
+                document.querySelector('.js-total-subs').classList.remove('is-disabled')
+              })
+            } else {
+              subscriptionProperties.forEach(prop => {
+                document.querySelector('.js-smartrr-label-otp').click()
+                prop.setAttribute('disabled', true)
+                document.querySelector('.js-total-subs').classList.add('is-disabled')
+              })
+            }
+          })
+        })
+      }
+  
+      if (subscriptionRadios) {
+        initRadios()
+      }
+
+    const updateForm = () => {
+      const formElement = document.querySelector('.js-add-to-cart-form')
+      if (!formElement) {
+        return
+      }
+
+      const propertiesWrapper = formElement.querySelector('.js-properties-wrapper')
+      const addToCartButton = formElement.querySelector('.add_to_cart')
+      const variationIdSelectElement = formElement.querySelector('.js-select-id')
+      const selectedItems = state.filter(item => item.quantity > 0)
+
+      if (addToCartButton) {
+        addToCartButton.classList.toggle('is-disabled', getAmount() <= 1)
+      }
+
+      if (propertiesWrapper) {
+        propertiesWrapper.innerHTML = '';
+  
+        selectedItems.forEach(item => {
+          propertiesWrapper.insertAdjacentHTML('beforeend', `<input id="${item.name.toLowerCase().split(' ').join('-')}" type="hidden" name="properties[Box of ${item.name} Bars]" value="${item.quantity}">`)
+        })
+      }
+
+      if (variationIdSelectElement) {
+        const option = variationIdSelectElement.querySelector('option')
+        
+        option.setAttribute('value', currentBundle ? currentBundle.variants[0].id : '')
+        formElement.setAttribute('data-smartrr-form-id', currentBundle ? currentBundle.id  : '')
+        formElement.querySelector('[data-smartrr-page-load-variant]').setAttribute('data-smartrr-page-load-variant', currentBundle ? currentBundle.variants[0].id : '')
+        {% comment %} document.querySelectorAll('[data-smartrr-selling-plan-group-id]').forEach(attr => attr.setAttribute('data-smartrr-selling-plan-group-id', currentBundle ? currentBundle.variants[0].id : '')) {% endcomment %}
+        document.querySelectorAll('[data-smartrr-product-id]').forEach(attr => attr.setAttribute('data-smartrr-product-id', currentBundle ? currentBundle.id : ''))
+
+        if (currentBundle) {
+          console.log(currentBundle)
+          window.initSmartrr(currentBundle.id, true)
+        }
+
+        const subscriptionElement = document.querySelector('.bundle-purchase-type-subscription')
+        const saveAmountElement = document.querySelector('.js-save-amount') 
+        const comparePrice = +subscriptionElement.querySelector('[data-smartrr-compare-price]').innerText.split('$').join('')
+        const subscriptionPrice = +subscriptionElement.querySelector('[data-smartrr-subscribe-price]').innerText.split('$').join('')
+
+        saveAmountElement.innerText = '$' + (Math.round((comparePrice - subscriptionPrice) * 100) / 100)
+      }
+
+      const bundlePlansSection = document.querySelector('.oe-bundle-picker__selling-plan')
+      const bundleOverviewSection = document.querySelector('.oe-bundle-picker__overview-wrap')
+
+      bundlePlansSection.classList.toggle('is-disabled', getAmount() < 2)
+      bundleOverviewSection.classList.toggle('is-disabled', getAmount() < 2)
+    }
+
+    const updateTotals = () => {
+      const totalNotice = document.querySelector('.js-total-notice')
+      const totalAddMore = document.querySelector('.js-total-add')
+
+      currentBundle = bundles.find(item => item.amount === getAmount())
+
+      totalNotice.innerText = currentBundle ? currentBundle.notice : ''
+      totalAddMore.innerText = currentBundle ? currentBundle.addbox : ''
+      
+      updateForm()
+    }
+
+    const updateOverview = () => {
+      const selectedItems = state.filter(item => item.quantity > 0)
+      const overviewSummary = document.querySelector('.js-overview-summary')
+      const overviewList = document.querySelector('.js-overview-list')
+
+      if (overviewSummary) {
+        if (!selectedItems.length) {
+          overviewSummary.innerText = 'Your bundle is empty';
+        } else {
+          overviewSummary.innerHTML = `Breakfast Bars <span></span> ${getAmount()} boxes`;
+        }
+      }
+
+      if (overviewList) {
+        overviewList.innerHTML = ''
+
+        selectedItems.forEach(selectedItem => {
+          overviewList.insertAdjacentHTML('beforeend', `<div class="oe-bundle-picker__overview-list-item"><p>${selectedItem.name} Bars</p> <p>${selectedItem.quantity}x box</p></div>`)
+        })
+      }
+
+      updateTotals()
+    }
+    
+    const updateProducts = () => {
+      window.sessionStorage.setItem('bundles-state', JSON.stringify({data: state}));
+
+      state.forEach(item => {
+        const productElement = bundleProductsList.querySelector(`[data-product-id="${item.id}"]`)
+        const productCounter = document.querySelectorAll(`.js-product-quantity[data-product-id="${item.id}"]`)
+        const productCounterAdd = document.querySelectorAll(`.js-product-add[data-product-id="${item.id}"]`)
+        const productCounterSubtract = document.querySelectorAll(`.js-product-subtract[data-product-id="${item.id}"]`)
+        const productSelectButton = productElement.querySelector('.js-product-select')
+        
+        productElement.classList.toggle('is-selected', item.quantity > 0)
+        productSelectButton.innerText = item.quantity > 0 ? productSelectButton.dataset.removeText : productSelectButton.dataset.selectText
+        productSelectButton.classList.toggle('is-disabled', getAmount() >= 12 && productSelectButton.innerText.toLowerCase() === productSelectButton.dataset.selectText)
+        
+        productCounterSubtract.forEach(counterSubtract => counterSubtract.classList.toggle('is-disabled',  item.quantity <= 0))
+        productCounterAdd.forEach(counterAdd => counterAdd.classList.toggle('is-disabled', getAmount() >= 12))
+        productCounter.forEach(counter => counter.innerText = item.quantity)
+        
+      })
+
+      updateOverview()
+    }
+
+    const initSelectButton = (product) => {
+      const selectButton = product.querySelector('.js-product-select')
+      const { productId, productTitle } =  product.dataset;
+
+      selectButton.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        if (!state.length) {
+          return
+        }
+
+        if (selectButton.innerText.toLowerCase() === selectButton.dataset.selectText) {
+          state.map(stateItem => {
+            if (stateItem.id === productId) {
+              stateItem.quantity += 1
+            }
+          })
+        } else {
+          state.map(stateItem => {
+            if (stateItem.id === productId) {
+              stateItem.quantity = 0
+            }
+          })
+        }
+
+        updateProducts()
+      })
+    }
+    
+    const initCounterButtons = (product) => {
+      const { productId } =  product.dataset;
+      const counterSubtract = document.querySelectorAll(`.js-product-subtract[data-product-id="${productId}"]`)
+      const counterAdd = document.querySelectorAll(`.js-product-add[data-product-id="${productId}"]`)
+
+      counterSubtract.forEach(subtractButton => {
+        subtractButton.addEventListener('click', (event) => {
+          event.preventDefault()
+  
+          if (!state.length) {
+            return
+          }
+          
+          state.map(stateItem => {
+            if (stateItem.id === productId) {
+              if (stateItem.quantity <= 0) {
+                return
+              }
+              
+              stateItem.quantity -= 1
+            }
+          })
+  
+          updateProducts()
+        })
+      })
+      
+      counterAdd.forEach(addButton => {
+        addButton.addEventListener('click', (event) => {
+          event.preventDefault()
+  
+          if (!state.length) {
+            return
+          }
+          
+          state.map(stateItem => {
+            if (stateItem.id === productId) {
+              if (getAmount() >= 12) {
+                return
+              }
+  
+              stateItem.quantity += 1
+            }
+          })
+  
+          updateProducts()
+        })
+      })
+    }
+
+    const setInitialState = (products) => {
+      let state = []
+
+      products.forEach(product => {
+        state.push({
+          id: product.dataset.productId,
+          name: product.dataset.productTitle,
+          quantity: 0
+        })
+
+        initSelectButton(product)
+        initCounterButtons(product)
+      })
+
+      const cachedState = window.sessionStorage.getItem('bundles-state')
+
+      if (cachedState) {
+        const { data } = JSON.parse(cachedState);
+
+        state = state.map(stateItem => {
+          const itemCache = data.find(obj => obj.id === stateItem.id)
+          if (itemCache) {
+            return {
+              ...stateItem,
+              quantity: itemCache.quantity
+            }
+          }
+        })
+      }
+
+      return state;
+    }
+
+    if (bundleProductsList) {
+      const products = bundleProductsList.querySelectorAll('.js-bundle-product')
+      state = setInitialState(products)
+
+      updateProducts()
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "OE Bundle picker intro",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_title",
+      "default": "Buy more, save more!",
+      "label": "Sidebar top text"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_text",
+      "default": "Regular price per box: $32.99",
+      "label": "Sidebar bottom text"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_intro",
+      "default": true,
+      "label": "Show intro section"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Intro Headline",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Build Your Own Breakfast Bundle",
+          "label": "Headline"
+        }
+      ]
+    },
+    {
+      "type": "bundle-picker-products",
+      "name": "Products",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "section_heading",
+          "default": "Section heading",
+          "label": "Section heading"
+        },
+        {
+          "type": "text",
+          "id": "section_heading_number",
+          "default": "0",
+          "label": "Section number"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Product collection"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_rating",
+          "default": true,
+          "label": "Show product rating"
+        }
+      ]
+    },
+    {
+      "type": "bundle-overview",
+      "name": "Bundle overview",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "section_heading",
+          "default": "Section heading",
+          "label": "Section heading"
+        },
+        {
+          "type": "text",
+          "id": "section_heading_number",
+          "default": "0",
+          "label": "Section number"
+        },
+        {
+          "type": "text",
+          "id": "overview_headline",
+          "default": "Your bundle",
+          "label": "Bundle overview title"
+        },
+        {
+          "type": "text",
+          "id": "empty_text",
+          "default": "Your bundle is empty.",
+          "label": "Empty bundle text"
+        }
+      ]
+    },
+    {
+      "type": "bundle-selling-plan",
+      "name": "Bundle selling plan",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "section_heading",
+          "default": "Select Your Plan",
+          "label": "Section heading"
+        },
+        {
+          "type": "text",
+          "id": "section_heading_number",
+          "default": "2",
+          "label": "Section number"
+        },
+        {
+          "type": "text",
+          "id": "subscribe_headline",
+          "default": "Subscribe & Save Extra 10%",
+          "label": "Subscribe heading"
+        },
+        {
+          "type": "text",
+          "id": "onetime_headline",
+          "default": "One Time Purchase",
+          "label": "Onetime heading"
+        },
+        {
+          "type": "text",
+          "id": "onetime_copy",
+          "default": "No obligations, just a plain ol’ purchase process!",
+          "label": "Onetime text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Intro Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "You’ve asked and we listened! Select your favorite flavors and build your very own breakfast bundle. Did we mention that the more you buy, the more you save, too? Easy.",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "list_item",
+      "name": "Intro List item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Organic Oats & Fiber Blend",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "Intro Buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "default": "Button label",
+          "label": "Label"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "Url"
+        }
+      ]
+    },
+    {
+      "type": "discount-row",
+      "name": "Intro Discount row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "discount_text",
+          "default": "Buy 2 = 10 % off",
+          "label": "Discount text"
+        },
+        {
+          "type": "text",
+          "id": "discount_price",
+          "default": "$29.99",
+          "label": "Price (per box)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE Bundle picker",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "discount-row"
+        },
+        {
+          "type": "discount-row"
+        },
+        {
+          "type": "discount-row"
+        },
+        {
+          "type": "discount-row"
+        },
+        {
+          "type": "discount-row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
