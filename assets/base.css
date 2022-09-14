@@ -1229,12 +1229,12 @@ deferred-media {
   max-width: calc(1260px + (2 * var(--oe-gutter)));
   padding: 0 var(--oe-gutter);
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 990px) {
   .container {
-    overflow-x: visible;
+    overflow: visible;
   }
 }
 
