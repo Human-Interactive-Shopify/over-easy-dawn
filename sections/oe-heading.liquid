@@ -4,8 +4,14 @@
     text-align: {{ section.settings.mobile_align }};
     font-size: {{ section.settings.mobile_font_size }}px;
     line-height: 1.2;
+    margin: 0;
   }
   
+  .oe-heading-{{ section.id }}__section {
+    max-width: {{ section.settings.max_width }}px;
+    padding: 40px 0;
+  }
+
   @media screen and (min-width: 990px) {
     .oe-heading-{{ section.id }} {
       text-align: {{ section.settings.desktop_align }};
@@ -14,6 +20,7 @@
     
     .oe-heading-{{ section.id }}__section {
       max-width: {{ section.settings.max_width }}px;
+      padding: 80px 0;
     }
   }
 {%- endstyle -%}

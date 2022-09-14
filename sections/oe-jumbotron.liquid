@@ -194,7 +194,7 @@
               <div class="oe-jumbotron__list-item">{% render 'icon-list-item' %}{{ block.settings.text | escape }}</div>
             {%- when 'buttons' -%}
               {%- if block.settings.button_label_1 != blank -%}
-                {% render 'button', href: block.settings.button_link_1 , variation: 'primary', color: section.settings.text_color_scheme , size: 'big', label: block.settings.button_label_1 %}
+                {% render 'button', href: block.settings.button_link_1 , variation: 'primary', color: section.settings.button_color_scheme , size: 'big', label: block.settings.button_label_1 %}
               {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}
@@ -263,6 +263,26 @@
       ],
       "default": "red",
       "label": "Background color"
+    },
+    {
+      "type": "select",
+      "id": "button_color_scheme",
+      "options": [
+        {
+          "value": "red",
+          "label": "Red"
+        },
+        {
+          "value": "black",
+          "label": "Black"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        }
+      ],
+      "default": "red",
+      "label": "Button color"
     },
     {
       "type": "select",

@@ -1,14 +1,280 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "oe-hero-banner": {
+      "type": "oe-hero-banner",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "color_scheme": "white"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Story"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ]
+    },
+    "oe-heading-1": {
+      "type": "oe-heading",
+      "settings": {
+        "heading": "Welcome to Over Easy",
+        "level": 2,
+        "desktop_font_size": 55,
+        "mobile_font_size": 25
+      }
+    },
+    "oe-text-image-1": {
+      "type": "oe-text-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "desktop_content_position": "right"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fighting the good fight"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "As a former athlete and Army Captain, living a healthy and active life wasn't just my passion, it was my job. But today, as a father, husband, and entrepreneur, I know full well that staying fit doesn't always come easy. One day we feel like we have everything under control, then a couple late nights and skipped meals later, we're picking up the pieces and starting over. Day 1, again and again."
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ]
+    },
+    "oe-text-image-2": {
+      "type": "oe-text-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "desktop_content_position": "left"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "It starts at breakfast"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "As a former athlete and Army Captain, living a healthy and active life wasn't just my passion, it was my job. But today, as a father, husband, and entrepreneur, I know full well that staying fit doesn't always come easy. One day we feel like we have everything under control, then a couple late nights and skipped meals later, we're picking up the pieces and starting over. Day 1, again and again."
+          }
+        },
+        "text-2": {
+          "type": "text",
+          "settings": {
+            "text": "Breakfast is more than just a meal - it's the fuel that sets the tone for how we're going to feel the rest of the day. But traditional breakfast foods are often loaded with sugar, artificial ingredients, and are little more than dessert in disguise. "
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "text-2"
+      ]
+    },
+    "oe-text-image-3": {
+      "type": "oe-text-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "desktop_content_position": "right"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Healthy morning. Healthy life."
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "At Over Easy, we believe that good nutrition and healthy mornings are fundamental to a healthy and happy life, so we're here to serve as the first step you take every morning on your personal wellness journey. "
+          }
+        },
+        "text-2": {
+          "type": "text",
+          "settings": {
+            "text": "Whether you're a 5am warrior or simply looking for a better morning routine, start here. Welcome to Over Easy."
+          }
+        },
+        "text-3": {
+          "type": "text",
+          "settings": {
+            "text": "Kyle Maggard, CEO & Founder"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "text-2",
+        "text-3"
+      ]
+    },
+    "oe-heading-2": {
+      "type": "oe-heading",
+      "settings": {
+        "heading": "\"We believe that good nutrition and healthy mornings are fundamental to a healthy and happy life\"",
+        "level": 3,
+        "desktop_font_size": 35,
+        "mobile_font_size": 22,
+        "color_scheme": "red",
+        "desktop_align": "center",
+        "mobile_align": "center",
+        "max_width": 1000
+      }
+    },
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Made for everyone, trusted by the best."
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Over Easy products are backed by leading dietitians and loved by some of the most elite athletes in the world."
+          }
+        },
+        "text-2": {
+          "type": "text",
+          "settings": {
+            "text": "Today, we are committed to helping everyone enjoy a better start to their day through delicious and complete nutrition breakfast foods."
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "text-2"
+      ]
+    },
+    "oe-why-over-easy": {
+      "type": "oe-why-over-easy",
+      "settings": {
+        "main_headline": "You don’t take shortcuts. Neither do we.",
+        "text": "Real Food. Made with Purpose.",
+        "secondary_headline": "Start Fresh. Start Today.",
+        "button_page": ""
+      },
+      "blocks": {
+        "box": {
+          "type": "box",
+          "settings": {
+            "heading": "Clean Ingredients",
+            "text": "All our products are made with clean and wholesome ingredients, and are free from artificial flavors, colors, and preservatives. We’re always dairy free, soy free, and gluten free. Only the best, every time."
+          }
+        },
+        "box-2": {
+          "type": "box",
+          "settings": {
+            "heading": "Complete Nutrition",
+            "text": "Everything you need to start your day, and nothing you don’t. Complex carbs for energy, clean protein for lean muscle, collagen for your hair, skin, and nail, and fiber and vitamins for gut and immunity support."
+          }
+        },
+        "box-3": {
+          "type": "box",
+          "settings": {
+            "heading": "Delicious Taste",
+            "text": "Rule #1 - food is meant to be enjoyed, so we will never release a product that isn’t downright delicious. No protein grittiness, no weird aftertaste, nothing to “get used to”. Simply Delicious, from the first taste to the last."
+          }
+        }
+      },
+      "block_order": [
+        "box",
+        "box-2",
+        "box-3"
+      ]
+    },
+    "oe-team": {
+      "type": "oe-team",
+      "settings": {
+        "headline": "Meet the Team",
+        "text": "Want to join us? Reach out below."
+      },
+      "blocks": {
+        "team-box": {
+          "type": "team-box",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_174.jpg",
+            "name": "Kyle Maggard",
+            "position": "Chief Executive Officer",
+            "text": "Lectus amet, donec adipiscing fames. Consequat leo tempor leo gravida purus eu ante."
+          }
+        },
+        "team-box-2": {
+          "type": "team-box",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_174.jpg",
+            "name": "Jeff Warren",
+            "position": "Chief Operations Officer",
+            "text": "Lectus amet, donec adipiscing fames. Consequat leo tempor leo gravida purus eu ante."
+          }
+        },
+        "team-box-3": {
+          "type": "team-box",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_174.jpg",
+            "name": "Jeff Warren",
+            "position": "Chief Operations Officer",
+            "text": "Lectus amet, donec adipiscing fames. Consequat leo tempor leo gravida purus eu ante."
+          }
+        },
+        "team-box-4": {
+          "type": "team-box",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_174.jpg",
+            "name": "Jeff Warren",
+            "position": "Chief Operations Officer",
+            "text": "Lectus amet, donec adipiscing fames. Consequat leo tempor leo gravida purus eu ante."
+          }
+        }
+      },
+      "block_order": [
+        "team-box",
+        "team-box-2",
+        "team-box-3",
+        "team-box-4"
+      ]
+    },
+    "oe-talk-to-us": {
+      "type": "oe-talk-to-us",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "heading": "Talk to Us",
+        "text": "We’d love to hear from you!",
+        "link": "/contact-us",
+        "background_color_scheme": "black"
       }
     }
   },
   "order": [
-    "main"
+    "oe-hero-banner",
+    "oe-heading-1",
+    "oe-text-image-1",
+    "oe-text-image-2",
+    "oe-text-image-3",
+    "oe-heading-2",
+    "oe-jumbotron",
+    "oe-why-over-easy",
+    "oe-team",
+    "oe-talk-to-us"
   ]
 }

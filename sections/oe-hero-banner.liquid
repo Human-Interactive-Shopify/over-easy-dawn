@@ -170,12 +170,9 @@
           {%- when 'text' -%}
             <div class="banner__text">{{ block.settings.text | escape }}</div>
           {%- when 'buttons' -%}
-            <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}">
+            <div class="banner__buttons">
               {%- if block.settings.button_label_1 != blank -%}
-                {% render 'button', href: block.settings.button_link_1 , variation: 'primary', color: section.settings.color_scheme , size: 'big', label: block.settings.button_label_1 %}
-              {%- endif -%}
-              {%- if block.settings.button_label_2 != blank -%}
-                {% render 'button', href: block.settings.button_link_2 , variation: 'primary', color: section.settings.color_scheme , size: 'big', label: block.settings.button_label_2 %}
+                {% render 'button', href: block.settings.button_link_1 , variation: 'primary', color: section.settings.button_color_scheme , size: 'big', label: block.settings.button_label_1 %}
               {%- endif -%}
             </div>
         {%- endcase -%}
@@ -292,6 +289,26 @@
       ],
       "default": "black",
       "label": "Content color"
+    },
+    {
+      "type": "select",
+      "id": "button_color_scheme",
+      "options": [
+        {
+          "value": "red",
+          "label": "Red"
+        },
+        {
+          "value": "black",
+          "label": "Black"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        }
+      ],
+      "default": "red",
+      "label": "Button color"
     }
   ],
   "blocks": [
@@ -337,18 +354,6 @@
           "type": "url",
           "id": "button_link_1",
           "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
-        },
-        {
-          "type": "text",
-          "id": "button_label_2",
-          "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link_2",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
         }
       ]
     }
