@@ -69,6 +69,11 @@
         "text_color_scheme": "black"
       }
     },
+    "1663186300c28e5e47": {
+      "type": "oe-nutrition-facts",
+      "settings": {
+      }
+    },
     "oe-ingredients": {
       "type": "oe-ingredients",
       "blocks": {
@@ -155,6 +160,7 @@
   "order": [
     "main",
     "oe-jumbotron",
+    "1663186300c28e5e47",
     "oe-ingredients",
     "16631556027bfa8473",
     "16631570203f45fb2a"

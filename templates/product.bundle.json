@@ -2,13 +2,16 @@
   "sections": {
     "main": {
       "type": "oe-bundle-picker",
-      "settings": {},
       "blocks": {
         "intro-heading": {
-          "type": "heading"
+          "type": "heading",
+          "settings": {
+          }
         },
         "intro-text": {
-          "type": "text"
+          "type": "text",
+          "settings": {
+          }
         },
         "intro-discount-row-1": {
           "type": "discount-row",
@@ -41,9 +44,9 @@
         "bundle-picker-products": {
           "type": "bundle-picker-products",
           "settings": {
-            "collection": "custom-bundles-flavors",
             "section_heading": "Select Products",
-            "section_heading_number": "1"
+            "section_heading_number": "1",
+            "collection": "custom-bundles-flavors"
           }
         },
         "bundle-selling-plan": {
@@ -56,10 +59,10 @@
         "bundle-overview": {
           "type": "bundle-overview",
           "settings": {
-            "overview_headline": "Your bundle",
-            "empty_text": "Your bundle is empty",
             "section_heading": "Overview & Checkout",
-            "section_heading_number": "3"
+            "section_heading_number": "3",
+            "overview_headline": "Your bundle",
+            "empty_text": "Your bundle is empty"
           }
         }
       },
@@ -70,11 +73,12 @@
         "intro-discount-row-2",
         "intro-discount-row-3",
         "intro-discount-row-4",
-        "intro-discount-row-5",
         "bundle-picker-products",
         "bundle-selling-plan",
         "bundle-overview"
-      ]
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
