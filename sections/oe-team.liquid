@@ -1,0 +1,286 @@
+{%- style -%}
+
+  .oe-team {
+    padding: 32px 0;
+    overflow-x: hidden;
+    background-color: var(--oe-color-grey-200);
+  }
+
+  .oe-team__title {
+    position: relative;
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 120%;
+    color: var(--oe-color-black);
+    margin: 0 0 12px;
+  }
+  
+  .oe-team__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--oe-color-black);
+    text-align: center;
+    margin: 0;
+  }
+
+  .oe-team__divider {
+    margin: 24px 0 32px;
+    border-color: var(--oe-color-grey-300);
+  }
+
+  .oe-team__list-wrapper {
+    display: flex;
+  }
+  
+  .oe-team__list-item {
+    background-color: var(--oe-color-white);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 12px;
+    flex: 1 0 auto;
+    margin: 0 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 18px 51px 22px rgba(0, 0, 0, 0.01), 10px 29px 18px rgba(0, 0, 0, 0.05), 5px 13px 13px rgba(0, 0, 0, 0.09), 1px 3px 7px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .oe-team__list-item-content {
+    padding: 12px 4px 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .oe-team__list-item-image-wrapper {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+  }
+
+  .oe-team__list-item-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .oe-team__list-item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: var(--oe-color-copy);
+    margin: 0;
+  }
+
+  .oe-team__list-item-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--oe-color-black);
+    margin: 0;
+  }
+  
+  .oe-team__list-item-position {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: var(--oe-color-copy-lighter);
+    margin: 0 0 12px;
+  }
+
+  .oe-team__list-pagination {
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  .oe-team__list-pagination-bullet {
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-color: var(--oe-color-copy-light);
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .oe-team__list-pagination-bullet.is-active {
+    background-color: var(--oe-color-red);
+  }
+  
+  @media screen and (min-width: 750px) {
+    .oe-team {
+      padding: 40px 0 75px;
+    }
+
+    .oe-team__title {
+      font-size: 55px;
+      margin-bottom: 16px;
+    }
+    
+    .oe-team__text {
+      font-size: 18px;
+    }
+    
+    .oe-team__divider {
+      margin: 40px 0
+    }
+
+    .oe-team__list {
+      display: flex;
+    }
+    
+    .oe-team__list-wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px 20px;
+    }
+
+    .oe-team__list-item {
+      width: calc(100% / 4 - ((3 * 20px) / 4));
+      max-width: calc(100% / 4 - ((3 * 20px) / 4));
+      margin: 0;
+    }
+
+    .oe-team__list-item-image-wrapper {
+      width: 100%;
+      position: relative;
+      padding-top: 100%
+    }
+
+    .oe-team__list-item-title {
+      font-size: 22px;
+    }
+
+    .oe-team__list-pagination {
+      display: none;
+    }
+
+    .oe-product__slider-pagination {
+      display: none;
+    }
+  }
+{%- endstyle -%}
+
+<div class="oe-team section-{{ section.id }}">
+  <div class="oe-team__container container">
+    <h3 class="oe-team__title">{{ section.settings.headline }}</h3>
+    <p class="oe-team__text">{{ section.settings.text }}</p>
+    <hr class="oe-team__divider">
+    <div class="oe-team__list js-team-slider">
+      <div class="oe-team__list-wrapper js-team-slider-wrapper">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'team-box' -%}
+              <div class="oe-team__list-item">
+                <div class="oe-team__list-item-image-wrapper">
+                  {%- if block.settings.image != blank -%}
+                    {{ block.settings.image.src | image_url: width: 440 | image_tag:
+                      loading: 'lazy',
+                      width: 280,
+                      height: 260,
+                      class: "oe-team__list-item-image",
+                      alt: block.settings.image.alt | escape
+                    }}
+                  {%- endif -%}
+                  </div>
+                <div class="oe-team__list-item-content">
+                  <h3 class="oe-team__list-item-title">{{ block.settings.name }}</h3>
+                  <p class="oe-team__list-item-position">{{ block.settings.position }}</p>
+                  <p class="oe-team__list-item-text">{{ block.settings.text }}</p>
+                </div>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+      <div class="oe-team__list-pagination js-team-slider-pagination"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      if (window.innerWidth < 990) {
+        const swiper = new Swiper('.section-{{ section.id }} .js-team-slider', {
+          slideClass: 'oe-team__list-item',
+          wrapperClass: 'js-team-slider-wrapper',
+          slideActiveClass: 'is-active',
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          pagination: {
+            el: '.js-team-slider-pagination',
+            bulletClass: 'oe-team__list-pagination-bullet',
+            bulletActiveClass: 'is-active'
+          },
+        });
+      }
+  })
+</script>
+
+{% schema %}
+{
+  "name": "OE Team",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "default": "Meet the Team",
+      "label": "Headline"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "default": "Want to join us? Reach out below.",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "team-box",
+      "name": "Team box",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "default": "John Doe",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "id": "position",
+          "default": "Position",
+          "label": "Position"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Lectus amet, donec adipiscing fames. Consequat leo tempor leo gravida purus eu ante.",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE Team",
+      "blocks": [
+        {
+          "type": "team-box"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
