@@ -1,6 +1,7 @@
-
-<section class="okendo-reviews" data-section-name="Okendo reviews">
-    <div data-oke-reviews-widget data-oke-reviews-product-id="shopify-{{ product.id }}">{{ product.metafields.okendo.ProductReviewsWidgetSnippet }}</div>
+<section class="okendo-reviews" data-section-name="Okendo reviews" id="product-reviews">
+    <div class="okendo-reviews__container container"> 
+        <div data-oke-reviews-widget data-oke-reviews-product-id="shopify-{{ product.id }}">{{ product.metafields.okendo.ProductReviewsWidgetSnippet }}</div>
+    </div>
 </section>
 
 {% schema %}

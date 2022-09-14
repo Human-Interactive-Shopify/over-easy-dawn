@@ -306,6 +306,7 @@
  
   .oe-product__variations-list-item {
     width: calc(100% / 3 - ((20px * 2) / 3));
+    height: 58px;
   }
   
   .oe-product__thumbnails {
