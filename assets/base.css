@@ -2175,6 +2175,8 @@ details[open] > .share-button__fallback {
   padding: 1rem 0;
   margin: 0;
   letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 /* section-header */
