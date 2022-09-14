@@ -1,31 +1,20 @@
 {%- style -%}
-
-  .oe-jumbotron-background--red {
-    background-color: var(--oe-color-red);
-  }
-
-  .oe-jumbotron-background--white {
-    background-color: var(--oe-color-white);
-  }
-
-  .oe-jumbotron-background--black {
-    background-color: var(--oe-color-black);
-  }
-
-  .oe-jumbotron__container {
+  .oe-text-image__container {
     position: relative;
     display: flex;
     flex-direction: column;
+    margin-bottom: 32px;
   }
 
-  .oe-jumbotron__media-wrapper {
-    width: 100vw;
+  .oe-text-image__media-wrapper {
+    width: 100%;
     position: relative;
-    padding-top: 100%;
-    margin: 0 calc(var(--oe-gutter) * -1);
+    padding-top: 62%;
+    border-radius: 5px;
+    overflow: hidden;
   }
 
-  .oe-jumbotron__media {
+  .oe-text-image__media {
     position: absolute;
     top: 0;
     left: 0;
@@ -34,29 +23,17 @@
     object-fit: cover;
   }
 
-  .oe-jumbotron__content {
+  .oe-text-image__content {
     display: flex;
     flex-direction: column;
-    max-width: 440px;
+    max-width: 550px;
     display: flex;
     align-items: flex-start;
     position: relative;
     z-index: 2;
   }
 
-  .oe-jumbotron__content-color--red {
-    color: var(--oe-color-red);
-  }
-
-  .oe-jumbotron__content-color--white {
-    color: var(--oe-color-white);
-  }
-
-  .oe-jumbotron__content-color--black {
-    color: var(--oe-color-black);
-  }
-
-  .oe-jumbotron__content-wrapper {
+  .oe-text-image__content-wrapper {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -65,111 +42,117 @@
     padding: 24px 0;
   }
 
-  .oe-jumbotron-content-mobile-position--bottom .oe-jumbotron__content-wrapper {
+  .oe-text-image-content-mobile-position--bottom .oe-text-image__content-wrapper {
     order: 2;
   }
   
-  .oe-jumbotron-content-mobile-position--bottom .oe-jumbotron__media-wrapper {
+  .oe-text-image-content-mobile-position--bottom .oe-text-image__media-wrapper {
     order: 1;
   }
   
-  .oe-jumbotron-content-mobile-position--top .oe-jumbotron__content-wrapper {
+  .oe-text-image-content-mobile-position--top .oe-text-image__content-wrapper {
     order: 1;
   }
   
-  .oe-jumbotron-content-mobile-position--top .oe-jumbotron__media-wrapper {
+  .oe-text-image-content-mobile-position--top .oe-text-image__media-wrapper {
     order: 2;
   }
 
-  .oe-jumbotron__heading {
+  .oe-text-image__heading {
     margin: 0;
-    padding-bottom: 24px;
     font-weight: 500;
     font-size: 40px;
     line-height: 120%;
-    color: inherit;
+    color: var(--oe-color-black);
   }
 
-  .oe-jumbotron__heading-size--small {
+  .oe-text-image__heading-size--small {
     font-weight: 500;
     font-size: 20px;
     line-height: 140%;
   }
   
-  .oe-jumbotron__text {
-    color: inherit;
+  .oe-text-image__text {
+    color: var(--oe-color-black);
     margin-bottom: 40px;
   }
+  
+  .oe-text-image__text:last-of-type {
+    margin-bottom: 0;
+  }
 
-  .oe-jumbotron__list-item {
+  .oe-text-image__list-item {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 12px;
   }
 
-  .oe-jumbotron__list-item svg {
+  .oe-text-image__list-item svg {
     width: 20px;
   }
 
   @media screen and (min-width: 750px) {
-    .oe-jumbotron__container {
+    .oe-text-image__container {
       flex-direction: row;
+      gap: 100px;
+      margin-bottom: 56px;
     }
 
-    .oe-jumbotron__content-wrapper,
-    .oe-jumbotron__media-wrapper {
-      width: 50%;
+    .oe-text-image__content-wrapper {
+      min-width: 40%;
     }
     
-    .oe-jumbotron__content-wrapper {
+    .oe-text-image__content-wrapper {
       padding: 64px 0;
     }
 
-    .oe-jumbotron__media-wrapper {
-      padding-top: 50%;
+    .oe-text-image__media-wrapper {
+      padding-top: calc(50% * 0.64);
+      border-radius: 10px;
+      min-width: 48% !important;
     }
     
-    .oe-jumbotron__heading {
+    .oe-text-image__heading {
       font-weight: 500;
       font-size: 55px;
       line-height: 120%;
       padding-bottom: 24px;
     }
 
-    .oe-jumbotron__heading-size--small {
+    .oe-text-image__heading-size--small {
       font-size: 35px;
       line-height: 120%;
     }
     
-    .oe-jumbotron__text {
+    .oe-text-image__text {
       font-weight: 400;
       font-size: 18px;
       line-height: 160%;
     }
 
-    .oe-jumbotron-content-position--left .oe-jumbotron__content-wrapper {
+    .oe-text-image-content-position--left .oe-text-image__content-wrapper {
       order: 1;
     }
     
-    .oe-jumbotron-content-position--left .oe-jumbotron__media-wrapper {
+    .oe-text-image-content-position--left .oe-text-image__media-wrapper {
       order: 2;
     }
     
-    .oe-jumbotron-content-position--right .oe-jumbotron__content-wrapper {
+    .oe-text-image-content-position--right .oe-text-image__content-wrapper {
       order: 2;
     }
     
-    .oe-jumbotron-content-position--right .oe-jumbotron__media-wrapper {
+    .oe-text-image-content-position--right .oe-text-image__media-wrapper {
       order: 1;
     }
   }
 {%- endstyle -%}
 
-<div class="oe-jumbotron oe-jumbotron-background--{{ section.settings.background_color_scheme }} oe-jumbotron-content-position--{{ section.settings.desktop_content_position }} oe-jumbotron-content-mobile-position--{{ section.settings.mobile_content_position }}">
-  <div class="oe-jumbotron__container container">
+<section class="oe-text-image oe-text-image-content-position--{{ section.settings.desktop_content_position }} oe-text-image-content-mobile-position--{{ section.settings.mobile_content_position }}">
+  <div class="oe-text-image__container container">
     {%- if section.settings.image != blank -%}
-      <div class="oe-jumbotron__media-wrapper">
+      <div class="oe-text-image__media-wrapper">
         {%-liquid
           assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
         -%}
@@ -177,21 +160,21 @@
           loading: 'lazy',
           width: section.settings.image.width,
           height: image_height,
-          class: "oe-jumbotron__media",
+          class: "oe-text-image__media",
           alt: section.settings.image.alt | escape
         }}
       </div>
     {%- endif -%}
-    <div class="oe-jumbotron__content-wrapper">
-      <div class="oe-jumbotron__content oe-jumbotron__content-color--{{ section.settings.text_color_scheme }}">
+    <div class="oe-text-image__content-wrapper">
+      <div class="oe-text-image__content">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'heading' -%}
-              <h2 class="oe-jumbotron__heading oe-jumbotron__heading-size--{{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
+              <h3 class="oe-text-image__heading oe-text-image__heading-size--{{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h3>
             {%- when 'text' -%}
-              <div class="oe-jumbotron__text">{{ block.settings.text | escape }}</div>
+              <p class="oe-text-image__text">{{ block.settings.text | escape }}</p>
             {%- when 'list_item' -%}
-              <div class="oe-jumbotron__list-item">{% render 'icon-list-item' %}{{ block.settings.text | escape }}</div>
+              <div class="oe-text-image__list-item">{% render 'icon-list-item' %}{{ block.settings.text | escape }}</div>
             {%- when 'buttons' -%}
               {%- if block.settings.button_label_1 != blank -%}
                 {% render 'button', href: block.settings.button_link_1 , variation: 'primary', color: section.settings.text_color_scheme , size: 'big', label: block.settings.button_label_1 %}
@@ -201,11 +184,11 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
 {% schema %}
 {
-  "name": "OE Jumbotron",
+  "name": "OE Text/Image",
   "settings": [
     {
       "type": "image_picker",
@@ -243,53 +226,12 @@
       ],
       "default": "bottom",
       "label": "Content position - mobile"
-    },
-    {
-      "type": "select",
-      "id": "background_color_scheme",
-      "options": [
-        {
-          "value": "red",
-          "label": "Red"
-        },
-        {
-          "value": "black",
-          "label": "Black"
-        },
-        {
-          "value": "white",
-          "label": "White"
-        }
-      ],
-      "default": "red",
-      "label": "Background color"
-    },
-    {
-      "type": "select",
-      "id": "text_color_scheme",
-      "options": [
-        {
-          "value": "red",
-          "label": "Red"
-        },
-        {
-          "value": "black",
-          "label": "Black"
-        },
-        {
-          "value": "white",
-          "label": "White"
-        }
-      ],
-      "default": "white",
-      "label": "Content color"
     }
   ],
   "blocks": [
     {
       "type": "heading",
       "name": "Headline",
-      "limit": 1,
       "settings": [
         {
           "type": "text",
@@ -360,16 +302,13 @@
   ],
   "presets": [
     {
-      "name": "OE Jumbotron",
+      "name": "OE Text/Image",
       "blocks": [
         {
           "type": "heading"
         },
         {
           "type": "text"
-        },
-        {
-          "type": "buttons"
         }
       ]
     }

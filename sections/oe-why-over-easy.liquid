@@ -1,0 +1,296 @@
+{%- style -%}
+
+  .oe-why-over-easy {
+    padding: 32px 0;
+    overflow-x: hidden;
+    background-color: var(--oe-color-grey-100);
+  }
+
+  .oe-why-over-easy__title {
+    position: relative;
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 120%;
+    color: var(--oe-color-black);
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+  
+  .oe-why-over-easy__text {
+    position: relative;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--oe-color-copy);
+    margin: 0;
+  }
+
+  .oe-why-over-easy__button {
+    width: 270px;
+    margin: 32px auto 0;
+    display: block;
+    text-align: center;
+  }
+
+  .oe-why-over-easy__divider {
+    margin: 24px auto;
+    border-color: var(--oe-color-grey-300);
+  }
+
+  .oe-why-over-easy__list {
+    padding-bottom: 48px;
+  }
+
+  .oe-why-over-easy__list-wrapper {
+    display: flex;
+  }
+  
+  .oe-why-over-easy__list-item {
+    background-color: var(--oe-color-white);
+    max-width: 90%;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 8px;
+    flex: 1 0 auto;
+    margin: 0 12px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 10px solid #171717;
+    box-shadow: 18px 51px 22px rgba(0, 0, 0, 0.01), 10px 29px 18px rgba(0, 0, 0, 0.05), 5px 13px 13px rgba(0, 0, 0, 0.09), 1px 3px 7px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .oe-why-over-easy__list-item-content {
+    padding: 32px 20px 64px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .oe-why-over-easy__list-item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: var(--oe-color-copy);
+    margin: 0 0 24px;
+  }
+
+  .oe-why-over-easy__list-item-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 120%;
+    color: var(--oe-color-black);
+    margin: 0 0 40px;
+  }
+
+  .oe-why-over-easy__list-pagination {
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  .oe-why-over-easy__list-pagination-bullet {
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-color: var(--oe-color-copy-light);
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .oe-why-over-easy__list-pagination-bullet.is-active {
+    background-color: var(--oe-color-red);
+  }
+  
+  @media screen and (min-width: 750px) {
+    .oe-why-over-easy {
+      padding: 40px 0 75px;
+      
+    }
+
+    .oe-why-over-easy__title {
+      font-size: 55px;
+      line-height: 120%;
+      margin: 0 0 24px;
+    }
+    
+    .oe-why-over-easy__text {
+      font-size: 25px;
+      line-height: 120%;
+      margin: 0;
+    }
+
+    .oe-why-over-easy__divider {
+      margin: 40px auto;
+    }
+
+    .oe-why-over-easy__divider--small {
+      max-width: 620px;
+    }
+
+    .oe-why-over-easy__button {
+      margin: 54px auto 0;
+      width: 400px;
+    }
+
+    .oe-why-over-easy__list {
+      display: flex;
+    }
+
+    .oe-why-over-easy__list-item {
+      width: calc(100% / 3 - (2 * 40px));
+      margin: 0 20px;
+    }
+
+    .oe-why-over-easy__list-item-image-wrapper {
+      width: 100%;
+      position: relative;
+      padding-top: 100%
+    }
+
+    .oe-why-over-easy__list-item-content {
+      padding: 32px 24px 24px;
+    }
+
+    .oe-why-over-easy__list-item-text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      margin: 0 0 40px;
+    }
+
+    .oe-why-over-easy__list-item-title {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 120%;
+      margin: 0 0 16px;
+    }
+
+    .oe-why-over-easy__list-pagination {
+      display: none;
+    }
+
+    .oe-product__slider-pagination {
+      display: none;
+    }
+  }
+{%- endstyle -%}
+
+<div class="oe-why-over-easy section-{{ section.id }}">
+  <div class="oe-why-over-easy__container container">
+    {%- if section.settings.main_headline != blank -%}
+      <h3 class="oe-why-over-easy__title">{{ section.settings.main_headline }}</h3>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <p class="oe-why-over-easy__text">{{ section.settings.text }}</p>
+    {%- endif -%}
+    <hr class="oe-why-over-easy__divider oe-why-over-easy__divider--small">
+    <div class="oe-why-over-easy__list js-why-over-easy-slider">
+      <div class="oe-why-over-easy__list-wrapper js-why-over-easy-slider-wrapper">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'box' -%}
+              <div class="oe-why-over-easy__list-item">
+                <div class="oe-why-over-easy__list-item-content">
+                  <h3 class="oe-why-over-easy__list-item-title">{{ block.settings.heading }}</h3>
+                  <p class="oe-why-over-easy__list-item-text">{{ block.settings.text }}</p>
+                </div>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+      <div class="oe-why-over-easy__list-pagination js-why-over-easy-slider-pagination"></div>
+    </div>
+    <hr class="oe-why-over-easy__divider">
+    <h3 class="oe-why-over-easy__title">{{ section.settings.secondary_headline }}</h3>
+    {% if section.settings.button_page != blank %}
+      {% render 'button', href: section.settings.button_page , variation: 'primary', color: 'red' , size: 'big', label: "shop now", classes: "oe-why-over-easy__button" %}
+    {% endif %}
+    <hr class="oe-why-over-easy__divider">
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.innerWidth < 990) {
+      const swiper = new Swiper('.section-{{ section.id }} .js-why-over-easy-slider', {
+        slideClass: 'oe-why-over-easy__list-item',
+        wrapperClass: 'js-why-over-easy-slider-wrapper',
+        slideActiveClass: 'is-active',
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        pagination: {
+          el: '.js-why-over-easy-slider-pagination',
+          bulletClass: 'oe-why-over-easy__list-pagination-bullet',
+          bulletActiveClass: 'is-active'
+        },
+      });
+    }
+  })
+</script>
+
+{% schema %}
+{
+  "name": "OE Why Over Easy",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_headline",
+      "default": "You don’t take shortcuts. Neither do we.",
+      "label": "Main Headline"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "default": "Real Food. Made with Purpose.",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "secondary_headline",
+      "default": "Start Fresh. Start Today.",
+      "label": "Secondary Headline"
+    },
+    {
+      "type": "url",
+      "id": "button_page",
+      "label": "Button link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "box",
+      "name": "Box",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Clean Ingredients",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "default": "All our products are made with clean and wholesome ingredients, and are free from artificial flavors, colors, and preservatives.",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE Why Over Easy",
+      "blocks": [
+        {
+          "type": "box"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
