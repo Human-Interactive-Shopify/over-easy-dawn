@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "oe-main": {
+      "type": "oe-main-404"
+    }
+  },
+  "order": [
+    "oe-main"
+  ]
+}
