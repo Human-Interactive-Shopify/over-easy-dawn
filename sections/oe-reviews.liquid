@@ -1,0 +1,22 @@
+
+<section class="okendo-reviews" data-section-name="Okendo reviews">
+    <div data-oke-reviews-widget data-oke-reviews-product-id="shopify-{{ product.id }}">{{ product.metafields.okendo.ProductReviewsWidgetSnippet }}</div>
+</section>
+
+{% schema %}
+{
+  "name": "OE Okendo Product Reviews",
+  "settings": [
+    {
+      "type": "header",
+      "content": "OE Okendo Product Reviews"
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE Okendo Product Reviews",
+      "category": "Layout"
+    }
+  ]
+}
+{% endschema %}
