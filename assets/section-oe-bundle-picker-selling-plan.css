@@ -1,0 +1,364 @@
+
+.oe-bundle-picker__selling-plan.is-disabled {
+  display: none;
+}
+
+.oe-bundle-picker__selling-plan-inner {
+  padding: 24px 32px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.oe-bundle-picker__selling-plan-inner.is-disabled {
+  display: none;
+}
+
+@media (min-width: 990px) {
+  .oe-bundle-picker__selling-plan-inner {
+    padding: 64px 48px;
+    border-radius: 10px;
+  }
+}
+
+.bundle-subselect-item {
+  position:relative;
+}
+
+@media (min-width: 990px) {
+  .bundle-subselect-item {
+    height: 400px;
+  }
+}
+
+.bundle-subselect-wrap .bundle-subselect-item input[type="radio"] {
+  display: none;
+}
+
+.bundle-subselect-wrap .bundle-subselect-item input[type="radio"] + label {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--oe-color-black);
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid var(--oe-color-grey-400);
+}
+
+.bundle-subselect-wrap .bundle-subselect-item input[type="radio"] + label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.bundle-subselect-wrap .bundle-subselect-item input[type="radio"]:checked + label {
+  border: 2px solid var(--oe-color-red);
+}
+
+.bundle-subselect-wrap {
+  gap: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.bundle-subselect-wrap {
+  gap: 16px;
+}
+
+.bundle-subselect-wrap,
+#form-cart-buttons {
+  display: flex;
+  flex-direction: column !important;
+}
+#form-cart-buttons {
+  gap: 16px;
+}
+@media (min-width: 990px) {
+  .bundle-subselect-wrap .bundle-subselect-item input[type="radio"] + label {
+    padding: 50px 24px 40px 24px;
+  }
+
+  .bundle-subselect-wrap,
+  #form-cart-buttons {
+    flex-direction: row !important;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .bundle-subselect-wrap > *:first-child,
+  #form-cart-buttons > *:first-child {
+    flex-basis: 40%;
+  }
+  .bundle-subselect-wrap > *:last-child,
+  #form-cart-buttons > *:last-child {
+    flex-basis: 40%;
+  }
+}
+
+.bundle-purchase-type-subscription [data-smartrr-subscribe-price], .bundle-purchase-type-onetime  [data-smartrr-subscribe-price] {
+  font-family: 'Roquefort';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  text-align: center;
+  color: #3A3A3A;
+}
+
+.bundle-purchase-type-subscription [data-smartrr-compare-price], .bundle-purchase-type-onetime [data-smartrr-compare-price] , .bundle-purchase-type-subscription [data-smartrr-regular-price], .bundle-purchase-type-onetime  [data-smartrr-regular-price] {
+  display: none;
+}
+
+@media (min-width: 990px) {
+  .bundle-purchase-type-subscription [data-smartrr-subscribe-price], .bundle-purchase-type-onetime  [data-smartrr-subscribe-price] {
+    font-size: 35px;
+    line-height: 140%;
+  }
+}
+
+.bundle-purchase-type svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-color: var(--oe-color-grey-400);
+  display: block;
+  padding: 2px;
+}
+.bundle-purchase-type svg rect {
+  fill: #D9D9D9;
+}
+input[type="radio"]:checked + .bundle-purchase-type svg {
+  background-color: var(--oe-color-red);
+}
+.bundle-purchase-type svg path {
+  fill: #F0F0F0;
+}
+.bundleSubscriptionHeader-wrap{
+}
+.bundlePlanHeader{
+  font-size:16px;
+  font-weight:500;
+  line-height:140%;
+}
+@media (min-width: 990px) {
+  .bundlePlanHeader{
+    font-size:26px;
+    margin-bottom: 16px;
+  }
+}
+
+.bundleSubscriptionContent-wrap {
+  text-align: left;
+}
+
+.bundleSubscriptionContent-wrap ul {
+  list-style: none;
+}
+.bundleSubscriptionContent-wrap ul li {
+  color: var(--oe-color-copy-lighter);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.bundleSubscriptionContent-wrap ul li:before {
+  content: '✓';
+  position: absolute;
+  left:-16px;
+  font-family: system-ui;
+}
+
+@media (min-width: 990px) {
+  .bundleSubscriptionContent-wrap {
+    max-width:300px;
+  }
+  .bundleSubscriptionContent-wrap ul li {
+    font-size:16px;
+  }
+  .bundleSubscriptionContent-wrap ul li:before {
+    left:-24px;
+  }
+}
+
+.bundleOneTimeNote {
+  font-size:12px;
+  font-weight:400;
+  line-height:140%;
+  max-width:256px;
+}
+@media (min-width: 990px) {
+  .bundleOneTimeNote {
+    font-size:18px;
+    max-width:280px;
+  }
+}
+.bundlePurchaseType-price {
+  font-size:24px;
+  font-weight: 700;
+}
+
+.subscriptionBadge {
+  position: absolute;
+  bottom: -22px;
+  left: -24px;
+  z-index: 99;
+  width: 80px;
+  height: 80px;
+  transform: translate(0%, 0%);
+}
+@media (min-width: 990px) {
+  .subscriptionBadge {
+    width: 138px;
+    height: 138px;
+    top: -58px;
+    left: -64px;
+  }
+}
+
+[data-smartrr-selling-plans-select] {
+  display: none;
+}
+
+.smartrr-selling-plan-group-prices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 12px;
+  flex-direction: column;
+}
+
+.smartrr-purchase-options {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.smartrr-purchase-options .smartrr-selling-plan-group-label {
+  display: none;
+}
+
+.smartrr-purchase-options .smartrr-selling-plan-group-label.smartrr-group-active {
+  display: block;
+}
+
+.smartrr-purchase-options .smartrr-selling-plan-group-label [data-smartrr-subscribe-price] {
+  font-family: 'Roquefort';
+  font-weight: 500;
+  font-size: 31px;
+  line-height: 120%;
+  color: var(--oe-color-black);
+}
+
+.smartrr-selling-plan-group-header input[type="radio"] {
+  display: none;
+}
+
+@media (min-width: 990px) {
+  .smartrr-purchase-options .smartrr-selling-plan-group-label [data-smartrr-subscribe-price] {
+    font-size: 44px;
+    line-height: 140%;
+  }
+}
+
+.smartrr-purchase-options .smartrr-selling-plan-group-label [data-smartrr-compare-price] {
+  font-family: 'Roquefort';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-decoration-line: line-through;
+  color: #3A3A3A;
+}
+
+@media (min-width: 990px) {
+  .smartrr-purchase-options .smartrr-selling-plan-group-label [data-smartrr-compare-price] {
+    font-size: 24px;
+    line-height: 140%;
+  }
+}
+
+.subscriptionBadge svg {
+  width: 100%;
+  height: 100%;
+}
+
+input[type="radio"] ~ .subscriptionBadge > .subscriptionBadge-text {
+  color: #FFFFFF;
+}
+
+input[type="radio"]:checked ~ .subscriptionBadge > .subscriptionBadge-text {
+  color: var(--oe-color-white);
+}
+
+input[type="radio"] ~ .subscriptionBadge > svg > path {
+  fill: #C4C4C4;
+}
+
+input[type="radio"]:checked ~ .subscriptionBadge > svg > path {
+  fill: #FFBB38;
+}
+
+.subscriptionBadge-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 120%;
+  color: var(--oe-color-white);
+}
+@media (min-width: 990px) {
+  .subscriptionBadge-text {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .subscriptionBadge-text {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1440px) {
+  .subscriptionBadge-text {
+    font-size: 16px;
+  }
+}
+
+.subscriptionBadge-text-emphasized {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+}
+@media (min-width: 990px) {
+  .subscriptionBadge-text-emphasized {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .subscriptionBadge-text-emphasized {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1440px) {
+  .subscriptionBadge-text-emphasized {
+    font-size: 22px;
+  }
+}
+.oe-bundle-picker__selling-plan-divider{
+  font-size: 10px;
+}
+@media (min-width: 990px) {
+  .oe-bundle-picker__selling-plan-divider {
+    font-size: 16px;
+  }
+}
