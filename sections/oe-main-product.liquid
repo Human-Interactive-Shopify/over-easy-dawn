@@ -69,9 +69,10 @@
             </div>
           {%- endif -%}
           {%- for media in product.media -%}
+            {% if media.alt == "Xnutrition" or media.alt == "home" or media.alt == "table" or media.alt == "overover" or media.alt == "ingredient" or media.alt == "vertical" or media.alt == "naked_only" %}{% continue %}{% endif %}
             {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
               <div class="oe-product__slider-slide">
-                {{ media | image_url: width: 700 | image_tag:
+                {{ media | image_url: width: 1050 | image_tag:
                   loading: 'lazy',
                   width: 700,
                   class: "oe-product__image",
@@ -92,8 +93,9 @@
       <div class="oe-product__thumbnails js-thumbnail-slider">
         <div class="oe-product__thumbnails-wrapper">
           {%- for media in product.media -%}
+            {% if media.alt == "Xnutrition" or media.alt == "home" or media.alt == "table" or media.alt == "overover" or media.alt == "ingredient" or media.alt == "vertical" or media.alt == "naked_only" %}{% continue %}{% endif %}
             <div class="oe-product__thumbnails-thumbnail">
-              {{ media | image_url: width: 100 | image_tag:
+              {{ media | image_url: width: 150 | image_tag:
                 loading: 'lazy',
                 width: 100,
                 class: "oe-product__image",
