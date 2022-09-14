@@ -145,12 +145,18 @@
         "cta_url": "",
         "cta_text": ""
       }
+    },
+    "16631570203f45fb2a": {
+      "type": "oe-reviews",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "oe-jumbotron",
     "oe-ingredients",
-    "16631556027bfa8473"
+    "16631556027bfa8473",
+    "16631570203f45fb2a"
   ]
 }
