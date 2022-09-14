@@ -8,7 +8,8 @@
         "collection": "breakfast-bars",
         "show_rating": true,
         "show_ingredients_anchor": true,
-        "show_nutrition_anchor": true
+        "show_nutrition_anchor": true,
+        "mobile_links": ""
       }
     },
     "oe-jumbotron": {
@@ -134,11 +135,22 @@
         "headline": "Clean Ingredients. Made with Care.",
         "background_color": "white"
       }
+    },
+    "16631556027bfa8473": {
+      "type": "oe-comparison-chart",
+      "settings": {
+        "title_desktop": "Our Bars are Head and Shoulders Above the Competition!",
+        "title_mobile": "Above the Competition!",
+        "image_desktop": "shopify:\/\/shop_images\/oe_comparison_table.png",
+        "cta_url": "",
+        "cta_text": ""
+      }
     }
   },
   "order": [
     "main",
     "oe-jumbotron",
-    "oe-ingredients"
+    "oe-ingredients",
+    "16631556027bfa8473"
   ]
 }
