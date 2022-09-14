@@ -139,7 +139,7 @@
 
 .card__media .media img {
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
   width: 100%;
 }
@@ -330,6 +330,7 @@
   padding: 4px 8px;
   border: 1px dashed red;
   border-radius: 30px;
+  white-space: nowrap;
 }
 
 .quick-add .shopify-payment-button__button{
