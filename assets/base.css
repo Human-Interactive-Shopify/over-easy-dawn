@@ -2624,6 +2624,7 @@ details[open] > .header__menu-item .icon-caret {
   background-color: var(--oe-color-grey-100);
   overflow: hidden;
   margin-bottom: 12px;
+  border-radius: 5px;
 }
 
 .header__submenu-link-image {

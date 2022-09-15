@@ -81,6 +81,7 @@
   .oe-contact-form__title {
     font-size: 44px;
     line-height: 120%;
+    margin-bottom: 40px;
   }
 
   .oe-contact-form {
@@ -93,6 +94,7 @@
   .oe-contact-form .field__input {
     background: var(--oe-color-grey-200);
     border-radius: 10px;
+    height: 74px;
   }
   
   .oe-contact-form form {

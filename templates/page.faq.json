@@ -36,7 +36,6 @@
       ],
       "settings": {
         "title": "FAQs",
-        "subtitle": "We got you covered.",
         "show_contact": true
       }
     },
@@ -50,17 +49,7 @@
         "form-heading": {
           "type": "heading",
           "settings": {
-            "heading": "Have more questions?"
-          }
-        },
-        "form-line": {
-          "type": "line",
-          "settings": {}
-        },
-        "form-text": {
-          "type": "text",
-          "settings": {
-            "text": "Great! Just fill up the form below and our team will get back to you ASAP."
+            "heading": "Contact Us"
           }
         },
         "form-link": {
@@ -72,8 +61,6 @@
       },
       "block_order": [
         "form-heading",
-        "form-line",
-        "form-text",
         "form-link"
       ]
     }

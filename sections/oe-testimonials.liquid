@@ -281,13 +281,18 @@
         },
         breakpoints: {
           990: {
+            centeredSlides: false,
             autoplay: {
               delay: 8000,
               waitForTransition: false,
+              disableOnInteraction: false,
             },
           }
         }    
       });
+
+      console.log(swiper);
+      swiper.autoplay.start();
   })
 </script>
 

@@ -9,25 +9,12 @@
   }
 
   .oe-benefits__title {
-    position: relative;
     text-align: center;
     font-size: 25px;
     line-height: 120%;
     color: var(--oe-color-black);
     padding: 16px 0;
     margin: 0;
-  }
-
-  .oe-benefits__title::before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 1px;
-    background-color: var(--oe-color-grey-400);
   }
 
   .oe-benefits__list {
@@ -74,7 +61,7 @@
       font-size: 35px;
       line-height: 120%;
       background-color: var(--oe-color-grey-100);
-      margin-bottom: 32px;
+      padding: 32px 0;
     }
     
     .oe-benefits__title span {
@@ -138,14 +125,25 @@
 <div class="oe-benefits">
   <div class="oe-benefits__container container">
     {%- if section.settings.headline != blank -%}
-    <h3 class="oe-benefits__title"><span>{{ section.settings.headline }}</span></h3>
+    <h3 class="oe-benefits__title">{{ section.settings.headline }}</h3>
     <div class="oe-benefits__list">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'benefits' -%}
             <div class="oe-benefits__list-item">
               <div class="oe-benefits__list-item-icon">
-                {% render 'icon-benefit-checkmark' %}
+                {% liquid 
+                  case block.settings.icon
+                   when 'boost-energy' 
+                      render 'icon-boost-energy' 
+                   when 'immunity-support' 
+                      render 'icon-immunity-support' 
+                   when 'gut-health' 
+                      render 'icon-gut-health' 
+                   when 'brain-food' 
+                      render 'icon-brain-food'  
+                 endcase 
+                %}
               </div>
               <hr class="oe-benefits__list-item-line">
               <h4 class="oe-benefits__list-item-title">{{ block.settings.heading }}</h4>
@@ -177,14 +175,37 @@
         {
           "type": "text",
           "id": "heading",
-          "default": "PROMOTES GUT HEALTH",
+          "default": "BOOSTS ENERGY",
           "label": "Heading"
         },
         {
           "type": "text",
           "id": "text",
-          "default": "In sit tortor eget sit iaculis a mauris volutpat enim. Pretium tellus mollis facilisis diam euismod tempor at ac.",
+          "default": "Slow burning complex carbs provide long lasting energy to keep your body fueled for hours.",
           "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "boost-energy",
+              "label": "Boost Energy"
+            },
+            {
+              "value": "immunity-support",
+              "label": "Immunity Support"
+            },
+            {
+              "value": "gut-health",
+              "label": "Gut Health"
+            },
+            {
+              "value": "brain-food",
+              "label": "Brain Food"
+            }
+          ],
+          "label": "Icon"
         }
       ]
     }

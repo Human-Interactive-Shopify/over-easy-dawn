@@ -6,22 +6,20 @@
         "492b49ef-d613-46a4-bdd7-0bfc3c7ca045": {
           "type": "heading",
           "settings": {
-            "heading": "A Better Morning Routine."
+            "heading": "Boost Your Mornings"
           }
         },
         "9f31ef22-ad2a-4d6f-ab16-a7f0bb434bd6": {
           "type": "text",
           "settings": {
-            "text": "Simple Ingredients. Delicious Taste. Breakfast made simple."
+            "text": "Complete nutrition breakfast shakes and bars to supercharge your morning routine."
           }
         },
         "55e5f5f7-e248-43c1-920c-2bcd3e022d02": {
           "type": "buttons",
           "settings": {
             "button_label_1": "TRY NOW",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_label_2": "",
-            "button_link_2": ""
+            "button_link_1": "shopify:\/\/collections\/all"
           }
         }
       },
@@ -36,7 +34,8 @@
         "desktop_content_alignment": "center",
         "mobile_content_position": "center",
         "mobile_content_alignment": "center",
-        "color_scheme": "white"
+        "color_scheme": "white",
+        "button_color_scheme": "red"
       }
     },
     "1661427940e35b089a": {
@@ -77,8 +76,7 @@
         "9f72aff9-1cbe-4979-bae9-7973f162a636",
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "oe-jumbotron": {
       "type": "oe-jumbotron",
@@ -86,14 +84,14 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Complete Nutrition",
-            "heading_size": "default"
+            "heading": "Complete morning nutrition for full body and brain health",
+            "heading_size": "small"
           }
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
           "settings": {
-            "text": "Euismod etiam lorem at mauris, tincidunt sit. Arcu aliquet nunc sit nec nec sed fermentum, duis tincidunt."
+            "text": "Made from wholesome and nutrient dense ingredients, our products have been designed to give your body exactly what you need to start your day right, every single morning."
           }
         },
         "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
@@ -102,7 +100,25 @@
             "text": "Organic Oats & Fiber Blend"
           }
         },
-        "9f477b3a-45a3-4dfd-a315-608b89a18f81": {
+        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Colagen & Egg White Protein"
+          }
+        },
+        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Essential Vitamins & Minerals"
+          }
+        },
+        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Super Greens Blend"
+          }
+        },
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Explore",
@@ -114,14 +130,19 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
         "c59113f4-bd26-4777-8e39-c7b3feaf3193",
-        "9f477b3a-45a3-4dfd-a315-608b89a18f81"
+        "9f477b3a-45a3-4dfd-a315-608b89a18f81",
+        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
+        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
+        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
-        "text_color_scheme": "black"
+        "text_color_scheme": "black",
+        "button_color_scheme": "red"
       }
     },
     "oe-benefits": {
@@ -130,29 +151,33 @@
         "40444aef-af53-4520-8094-575ad2ea0700": {
           "type": "benefits",
           "settings": {
-            "heading": "PROMOTES GUT HEALTH",
-            "text": "In sit tortor eget sit iaculis a mauris volutpat enim. Pretium tellus mollis facilisis diam euismod tempor at ac."
+            "icon": "boost-energy",
+            "heading": "BOOSTS ENERGY",
+            "text": "Slow burning complex carbs provide long lasting energy to keep your body fueled for hours."
           }
         },
         "52dcb772-1d61-4ab2-9172-b240499ed829": {
           "type": "benefits",
           "settings": {
-            "heading": "Supports immunity",
-            "text": "In sit tortor eget sit iaculis a mauris volutpat enim. Pretium tellus mollis facilisis diam euismod tempor at ac."
+            "icon": "immunity-support",
+            "heading": "IMMUNITY SUPPORT",
+            "text": "Essential vitamins and minerals from plant nutrients promote a strong immune system."
           }
         },
         "9d953f82-519a-4622-b8c1-eb9e714934ac": {
           "type": "benefits",
           "settings": {
-            "heading": "Boosts energy",
-            "text": "In sit tortor eget sit iaculis a mauris volutpat enim. Pretium tellus mollis facilisis diam euismod tempor at ac."
+            "icon": "gut-health",
+            "heading": "GUT HEALTH",
+            "text": "Prebiotic Dietary Fiber and Beta Glucan aid in digestion and nourish a balanced gut biome."
           }
         },
         "6bbbd805-1770-4d25-9399-b077127ca3a5": {
           "type": "benefits",
           "settings": {
-            "heading": "Helps recovery",
-            "text": "In sit tortor eget sit iaculis a mauris volutpat enim. Pretium tellus mollis facilisis diam euismod tempor at ac."
+            "icon": "brain-food",
+            "heading": "BRAIN FOOD",
+            "text": "Vitamin K, Beta-Carotene, and Antioxidants from Kale and Spinach deliver essential nutrients. "
           }
         }
       },
@@ -173,21 +198,21 @@
           "type": "featured-collection",
           "settings": {
             "collection": "home-page-bars",
-            "button_label": "Shop Shakes"
+            "button_label": "Shop now"
           }
         },
         "d0937394-2916-4718-bf42-04d77c58060a": {
           "type": "featured-collection",
           "settings": {
             "collection": "breakfast-bars",
-            "button_label": "Shop Shakes"
+            "button_label": "Shop now"
           }
         },
         "65b62c2d-2238-4120-8e65-ba4820b7ff28": {
           "type": "featured-collection",
           "settings": {
-            "collection": "brf",
-            "button_label": "Shop Shakes"
+            "collection": "minis",
+            "button_label": "Shop now"
           }
         }
       },
@@ -197,7 +222,7 @@
         "65b62c2d-2238-4120-8e65-ba4820b7ff28"
       ],
       "settings": {
-        "headline": "Libero Amet Velit, Diam Nunc Amet Ac"
+        "headline": ""
       }
     },
     "oe-ingredients": {
@@ -254,8 +279,8 @@
         }
       },
       "block_order": [
-        "e070b7a8-8707-47da-8b33-42d31fcaea9e",
         "037943ff-e6f2-4e31-9264-a51271ab8477",
+        "e070b7a8-8707-47da-8b33-42d31fcaea9e",
         "bd1cf9c3-d9c7-45a1-818d-97561a1981e1",
         "8ee23ecf-27d8-4496-a6f7-b046b799ebb7",
         "d5d8f806-116e-42df-bed2-516e6faaee78",
@@ -263,7 +288,7 @@
         "96229dcb-86af-47fa-8c8d-28417e98b443"
       ],
       "settings": {
-        "headline": "Only the Best Ingredients",
+        "headline": "Cleain Ingredients. Made with Care.",
         "background_color": "grey-100"
       }
     },
@@ -274,122 +299,43 @@
           "type": "testimonials",
           "settings": {
             "image": "shopify:\/\/shop_images\/Frame_174.jpg",
-            "text": "Testimonial text...",
-            "name": "John Doe",
-            "position": "CEO of Cookie Company"
-          }
-        },
-        "f4a2657d-497c-456e-b8c0-0f5c9d2d2e24": {
-          "type": "testimonials",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_174_1.jpg",
-            "text": "Testimonial text...",
-            "name": "John Doe",
-            "position": "CEO of Cookie Company"
+            "text": "When I first tried Over Easy, I absolutely loved the taste and was surprised to look at how clean and simple the ingredients were... All of my teammates love the bars, too.",
+            "name": "Adam Thielen",
+            "position": "NFL Wide Receiver, MN Vikings"
           }
         },
         "d92c32c8-7744-40ba-a781-6c0e360b8608": {
           "type": "testimonials",
           "settings": {
             "image": "shopify:\/\/shop_images\/Frame_174.jpg",
-            "text": "Testimonial text...",
-            "name": "John Doe",
-            "position": "CEO of Cookie Company"
+            "text": "I knew it was healthy right from the start, but goddamn, it tastes sooo goood too!",
+            "name": "April Verdi, MPH, RD, LD",
+            "position": "Clinical Nutrition Manager "
+          }
+        },
+        "f4a2657d-497c-456e-b8c0-0f5c9d2d2e24": {
+          "type": "testimonials",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_174_1.jpg",
+            "text": "I knew it was healthy right from the start, but goddamn, it tastes sooo goood too!",
+            "name": "Amy Gibbs, MEd, RD, LD",
+            "position": "Cleveland Clinic, Director, Wellness Enterprise"
           }
         }
       },
       "block_order": [
         "66dc171b-c8b1-44d6-bf0a-974a99e7839a",
-        "f4a2657d-497c-456e-b8c0-0f5c9d2d2e24",
-        "d92c32c8-7744-40ba-a781-6c0e360b8608"
+        "d92c32c8-7744-40ba-a781-6c0e360b8608",
+        "f4a2657d-497c-456e-b8c0-0f5c9d2d2e24"
       ],
       "settings": {
-        "headline": "You Don’t Have To Take Our Word For It..."
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "disabled": true,
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "disabled": true,
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "headline": "Over Easy Advisory Team"
       }
     },
     "oe-featured_collection": {
       "type": "oe-featured-collection",
       "settings": {
-        "title": "Check Out Our Bestsellers",
+        "title": "Bestsellers",
         "heading_size": "h0",
         "description": "",
         "show_description": false,
@@ -412,113 +358,6 @@
         "swipe_on_mobile": true,
         "padding_top": 28,
         "padding_bottom": 32
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "disabled": true,
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "disabled": true,
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "16614278019efa8d2e": {
@@ -569,8 +408,7 @@
         "443f75cd-5bd3-49a4-a554-11c1086ce550",
         "63312fa2-852f-42bb-8012-299cd60bd2c8"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
@@ -581,12 +419,7 @@
     "oe-featured-collections",
     "oe-ingredients",
     "oe-testimonials",
-    "image_banner",
-    "rich_text",
     "oe-featured_collection",
-    "collage",
-    "video",
-    "multicolumn",
     "16614278019efa8d2e"
   ]
 }

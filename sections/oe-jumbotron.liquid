@@ -108,6 +108,10 @@
     margin-bottom: 12px;
   }
 
+  .oe-jumbotron__list-item:last-of-type {
+    margin-bottom: 24px;
+  }
+
   .oe-jumbotron__list-item svg {
     width: 20px;
   }
@@ -146,6 +150,10 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 160%;
+    }
+
+    .oe-jumbotron__list-item:last-of-type {
+      margin-bottom: 48px;
     }
 
     .oe-jumbotron-content-position--left .oe-jumbotron__content-wrapper {
@@ -189,7 +197,7 @@
             {%- when 'heading' -%}
               <h2 class="oe-jumbotron__heading oe-jumbotron__heading-size--{{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
             {%- when 'text' -%}
-              <div class="oe-jumbotron__text">{{ block.settings.text | escape }}</div>
+              <p class="oe-jumbotron__text">{{ block.settings.text | escape }}</p>
             {%- when 'list_item' -%}
               <div class="oe-jumbotron__list-item">{% render 'icon-list-item' %}{{ block.settings.text | escape }}</div>
             {%- when 'buttons' -%}

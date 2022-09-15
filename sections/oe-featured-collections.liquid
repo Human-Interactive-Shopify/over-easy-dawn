@@ -1,7 +1,7 @@
 {%- style -%}
 
   .oe-featured-collections {
-    padding: 32px 0;
+    padding: 40px 0;
     overflow-x: hidden;
   }
 
@@ -98,7 +98,7 @@
   
   @media screen and (min-width: 750px) {
     .oe-featured-collections {
-      padding: 40px 0 75px;
+      padding: 80px 0;
       
     }
 
@@ -164,7 +164,8 @@
 <div class="oe-featured-collections section-{{ section.id }}">
   <div class="oe-featured-collections__container container">
     {%- if section.settings.headline != blank -%}
-    <h3 class="oe-featured-collections__title">{{ section.settings.headline }}</h3>
+      <h3 class="oe-featured-collections__title">{{ section.settings.headline }}</h3>
+    {%- endif -%}
     <div class="oe-featured-collections__list js-featured-collections-slider">
       <div class="oe-featured-collections__list-wrapper js-featured-collections-slider-wrapper">
         {%- for block in section.blocks -%}
@@ -195,7 +196,6 @@
       </div>
       <div class="oe-featured-collections__list-pagination js-featured-collections-slider-pagination"></div>
     </div>
-  {%- endif -%}
   </div>
 </div>
 

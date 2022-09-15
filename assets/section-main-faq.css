@@ -10,18 +10,7 @@
   text-align: center;
   padding-bottom: 8px;
   position: relative;
-  margin: 24px 0 0;
-}
-
-.oe-faq-blog__title::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  height: 1px;
-  width: 25px;
-  background-color: var(--oe-color-copy-light);
-  transform: translateX(-50%);
+  margin: 24px 0 40px;
 }
 
 .oe-faq-blog__subtitle {
@@ -105,7 +94,7 @@
     font-size: 55px;
     line-height: 120%;
     padding-bottom: 24px;
-    margin: 80px 0 0;
+    margin: 80px 0 60px;
   }
   
   .oe-faq-blog__subtitle {

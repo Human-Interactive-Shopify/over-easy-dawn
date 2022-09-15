@@ -71,8 +71,7 @@
     },
     "1663186300c28e5e47": {
       "type": "oe-nutrition-facts",
-      "settings": {
-      }
+      "settings": {}
     },
     "oe-ingredients": {
       "type": "oe-ingredients",
@@ -128,8 +127,8 @@
         }
       },
       "block_order": [
-        "e070b7a8-8707-47da-8b33-42d31fcaea9e",
         "037943ff-e6f2-4e31-9264-a51271ab8477",
+        "e070b7a8-8707-47da-8b33-42d31fcaea9e",
         "bd1cf9c3-d9c7-45a1-818d-97561a1981e1",
         "8ee23ecf-27d8-4496-a6f7-b046b799ebb7",
         "d5d8f806-116e-42df-bed2-516e6faaee78",
@@ -153,8 +152,7 @@
     },
     "16631570203f45fb2a": {
       "type": "oe-reviews",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
