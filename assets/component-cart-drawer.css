@@ -17,7 +17,7 @@
 
 .drawer__inner {
   height: 100%;
-  width: 40rem;
+  width: 44rem;
   max-width: calc(100vw - 3rem);
   padding: 0 1.5rem;
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
@@ -116,7 +116,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 .drawer__footer {
   background-color: rgb(var(--color-background));
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.2);
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 
 cart-drawer-items.is-empty + .drawer__footer {
@@ -316,7 +316,7 @@ cart-drawer-items {
 }
 
 .cart-drawer .tax-note {
-  margin: 1.2rem 0 1rem auto;
+  margin: 1.2rem 0 2rem auto;
   text-align: left;
 }
 

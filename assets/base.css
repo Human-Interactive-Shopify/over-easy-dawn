@@ -1270,6 +1270,7 @@ button {
   text-decoration: none;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   display: inline-block;
+  font-family: 'Gopher';
 }
 
 .button.is-full-width {

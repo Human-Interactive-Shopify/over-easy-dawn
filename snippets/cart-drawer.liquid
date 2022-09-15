@@ -46,7 +46,7 @@
         </div>
       {%- endif -%}
       <div class="drawer__header">
-        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+        <h4 class="drawer__heading">{{ 'sections.cart.title' | t }}</h4>
         <button class="drawer__close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
       </div>
       <cart-drawer-items {% if cart == empty %}class=" is-empty"{% endif %}>
@@ -86,7 +86,7 @@
                             <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                           {%- endif -%}
 
-                          <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
+                          <a href="{{ item.url }}" class="cart-item__name h6 break">{{ item.product.title | escape }}</a>
 
                           {%- if item.original_price != item.final_price -%}
                             <div class="cart-item__discounted-prices">
@@ -271,7 +271,7 @@
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div class="totals" role="status">
             <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+            <p class="totals__subtotal-value">{{ cart.total_price | money }}</p>
           </div>
 
           <div>
@@ -310,7 +310,7 @@
             </button>
           </noscript>
 
-          <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button button" name="checkout" form="CartDrawer-Form"{% if cart == empty %} disabled{% endif %}>
+          <button type="submit" id="CartDrawer-Checkout" class="cart__checkout-button button button--primary button-color--red" name="checkout" form="CartDrawer-Form"{% if cart == empty %} disabled{% endif %}>
             {{ 'sections.cart.checkout' | t }}
           </button>
         </div>

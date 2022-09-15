@@ -321,6 +321,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .product-count {
@@ -338,6 +339,7 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 1rem;
+  font-family: 'Gopher';
 }
 
 .quick-add .shopify-payment-button__button--unbranded:hover:not([disabled]) {

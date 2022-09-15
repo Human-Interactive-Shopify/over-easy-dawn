@@ -15,6 +15,10 @@
   display: flex;
 }
 
+.cart-item__quantity-wrapper .quantity {
+  max-width: 136px;
+}
+
 .cart-item__totals {
   position: relative;
 }
@@ -50,7 +54,7 @@
 
 .cart-item__details > * {
   margin: 0;
-  max-width: 30rem;
+  /* max-width: 30rem; */
 }
 
 .cart-item__details > * + * {
@@ -128,6 +132,7 @@ cart-remove-button .button {
   min-height: 4.5rem;
   padding: 0;
   margin: 0 0.1rem 0.1rem 0;
+  background-color: initial;
 }
 
 cart-remove-button .button:before,
