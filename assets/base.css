@@ -1269,6 +1269,7 @@ button {
   cursor: pointer;
   text-decoration: none;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  display: inline-block;
 }
 
 .button.is-full-width {

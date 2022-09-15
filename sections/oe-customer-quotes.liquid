@@ -1,22 +1,154 @@
 {%- style -%}
+.oe-customer-quotes {
+  padding: 32px 0 32px 0;
+  background-color: #F5F5F5;
+  overflow: hidden;
+}
+.oe-customer-quotes__header{
+  text-align: center;
+}
+
+.oe-customer-quotes__header span {
+  display:block;
+}
+.oe-customer-quotes__slider {
+  margin: 32px 0 32px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.oe-customer-quotes__slide {
+  margin-right: 12px;
+  margin-left: 12px;
+  padding: 24px;
+  background: #FFFFFF;
+  box-shadow: 41px 35px 22px rgba(0, 0, 0, 0.01), 23px 20px 18px rgba(0, 0, 0, 0.05), 10px 9px 14px rgba(0, 0, 0, 0.09), 3px 2px 7px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+
+.oe-customer-quotes__slide:first-child {
+  margin-left: 0;
+}
+
+.oe-customer-quotes__slide:last-child {
+  margin-right: 0;
+}
+
+.oe-customer-quotes__text {
+  line-height: 160%;
+  margin-bottom: 28px;
+}
+
+.oe-customer-quotes__meta {
+ display: flex;
+ align-items: center;
+}
+
+.oe-customer-quotes__customer {
+  font-weight: 700;
+}
+
+.oe-customer-quotes__divider {
+  border-left: 1px solid #666666;
+  height: 18px;
+  margin: 0 19px 0 19px;
+}
+
+.oe-customer-quotes__pagination {
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  @media screen and (min-width: 1260px) {
+    .oe-customer-quotes__pagination {
+      display: none;
+    }
+}
+
+  .oe-customer-quotes__pagination-bullet {
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-color: var(--oe-color-copy-light);
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .oe-customer-quotes__pagination-bullet.is-active {
+    background-color: var(--oe-color-red);
+  }
+
+  .oe-customer-quotes__stars {
+    width: 130px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;utf8,<svg width='130' height='16' viewBox='0 0 130 16' fill='%23FF5000' xmlns='http://www.w3.org/2000/svg'><path d='M5 5H0L3 9L2 14H6L8 16L10 14L14 15V11L18 8L14 5V1L9 3L5 0V5Z'/><path d='M33 5H28L31 9L30 14H34L36 16L38 14L42 15V11L46 8L42 5V1L37 3L33 0V5Z'/><path d='M61 5H56L59 9L58 14H62L64 16L66 14L70 15V11L74 8L70 5V1L65 3L61 0V5Z'/><path d='M89 5H84L87 9L86 14H90L92 16L94 14L98 15V11L102 8L98 5V1L93 3L89 0V5Z'/><path d='M117 5H112L115 9L114 14H118L120 16L122 14L126 15V11L130 8L126 5V1L121 3L117 0V5Z'/></svg>");
+}
 
 {%- endstyle -%}
 
 <section class="oe-customer-quotes section-{{ section.id }}" data-section-name="Customer Quotes">
   <div class="oe-customer-quotes__wrapper container">
+    <div class="oe-customer-quotes__header">
+      <span class="h3">{{ section.settings.headline }}</span>
+      <span>{{ section.settings.sub-headline }}</span>
+    </div>
     <div class="oe-customer-quotes__slider">
       {% for block in section.blocks %}
         <div class="oe-customer-quotes__slide">
           <div class="oe-customer-quotes__text">{{ block.settings.text }}</div>
             <div class="oe-customer-quotes__meta">
               <div class="oe-customer-quotes__customer">{{ block.settings.customer }}</div>
-              <div>stars</div>
+              <div class="oe-customer-quotes__divider"></div>
+              <div class="oe-customer-quotes__stars"></div>
             </div>
         </div>
       {% endfor %}
     </div>
+    <div class="oe-customer-quotes__pagination js-oe-customer-quotes__pagination"></div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+      const swiperParams = {
+        slideClass: 'oe-customer-quotes__slide',
+        wrapperClass: 'oe-customer-quotes__slider',
+        slideActiveClass: 'is-active',
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        initialSlide: 1,
+        loop: 0,
+        pagination: {
+          el: '.js-oe-customer-quotes__pagination',
+          bulletClass: 'oe-customer-quotes__pagination-bullet',
+          bulletActiveClass: 'is-active'
+        },
+        breakpoints: {
+          750: {
+            slidesPerView: 2,
+            centeredSlides: true,
+            initialSlide: 1,
+          },
+          1260: {
+            slidesPerView: 3,
+            centeredSlides: false,
+          },
+        }
+      };
+        
+      const swiper = new Swiper('.section-{{ section.id }} .oe-customer-quotes__wrapper', swiperParams);
+      
+  })
+</script>
 
 {% schema %}
 {

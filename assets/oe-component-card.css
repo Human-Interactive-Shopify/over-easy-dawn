@@ -149,7 +149,7 @@
 }
 
 .card__heading {
-  margin-top: 0;
+  margin-top: 4px;
   margin-bottom: 0;
   font-family: Gopher;
   font-weight: 700;
@@ -319,7 +319,7 @@
 
 .card__info-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
