@@ -1870,6 +1870,7 @@ details[open] > .share-button__fallback {
   position: relative;
   color: inherit;
   padding-left: 24px;
+  text-transform: capitalize;
 }
 
 .oe-checkbox__label::before {
