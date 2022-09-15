@@ -175,10 +175,9 @@
               <a href="{{ block.settings.collection.url }}" class="oe-featured-collections__list-item">
                 <div class="oe-featured-collections__list-item-image-wrapper">
                   {%- if block.settings.collection.image != blank -%}
-                    {{ block.settings.collection.image.src | image_url: width: 273 | image_tag:
+                    {{ block.settings.collection.image.src | image_url: width: 546 | image_tag:
                       loading: 'lazy',
-                      width: 182,
-                      height: 275,
+                      width: 364,
                       class: "oe-featured-collections__list-item-image",
                       alt: block.settings.collection.image.alt | escape
                     }}

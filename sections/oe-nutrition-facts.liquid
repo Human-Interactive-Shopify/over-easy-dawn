@@ -1,4 +1,4 @@
-<style>
+{%- style -%}
     .nutrition-info-eyebrow {
         font-size: 12px;
         font-weight: 800;
@@ -305,8 +305,7 @@
         border-left: 1px solid #BDBDBD;
         height: 48px;
     }
-
-</style>
+{%- endstyle -%}
 {%- liquid
 
     assign props = product.metafields.overeasy.props.value
@@ -340,7 +339,7 @@
                 <div class="product-nutrition-pack{% if isFirst %} active{% endif %}">
                 <div class="product-nutrition-pack-top">
                     <div class="product-nutrition-pack-top-image-wrap">
-                    <img src="{{ bp_collection_images[0] | img_url: 'small' }}" alt="">
+                    <img src="{{ bp_collection_images[0] | img_url: 'compact' }}" alt="">
                     </div>
                     <div class="product-nutrition-pack-top-content">
                     <div class="product-nutrition-pack-top-heading">{{ bundleProduct.title }}</div>
@@ -361,7 +360,7 @@
             <div class="product-nutrition-pack{% if isFirst %} active{% endif %}">
             <div class="product-nutrition-pack-top">
                 <div class="product-nutrition-pack-top-image-wrap">
-                <img src="{{ collection_images[0] | img_url: 'small' }}" alt="">
+                <img src="{{ collection_images[0] | img_url: 'compact' }}" alt="">
                 </div>
                 <div class="product-nutrition-pack-top-content">
                 <div class="product-nutrition-pack-top-heading">{{ product.title }}</div>

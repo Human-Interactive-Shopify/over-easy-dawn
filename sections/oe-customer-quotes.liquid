@@ -1,0 +1,63 @@
+{%- style -%}
+
+{%- endstyle -%}
+
+<section class="oe-customer-quotes section-{{ section.id }}" data-section-name="Customer Quotes">
+  <div class="oe-customer-quotes__wrapper container">
+    <div class="oe-customer-quotes__slider">
+      {% for block in section.blocks %}
+        <div class="oe-customer-quotes__slide">
+          <div class="oe-customer-quotes__text">{{ block.settings.text }}</div>
+            <div class="oe-customer-quotes__meta">
+              <div class="oe-customer-quotes__customer">{{ block.settings.customer }}</div>
+              <div>stars</div>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "OE Customer Quotes",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "default": "Over 1 Million breakfasts served",
+      "label": "Headline"
+    },
+    {
+      "type": "text",
+      "id": "sub-headline",
+      "default": "and the reviews are in",
+      "label": "Subheadline"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Quote",
+      "type": "quote",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "customer",
+          "label": "Customer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE Customer Quotes",
+      "category": "Layout"
+    }
+  ]
+}
+{% endschema %}
