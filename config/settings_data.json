@@ -106,7 +106,7 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our store",
+              "text": "Wanna save even more? Sign up for 20 % off your next order!",
               "text_alignment": "center",
               "color_scheme": "accent-1",
               "link": ""
@@ -122,7 +122,7 @@
       "oe-header": {
         "type": "oe-header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo": "shopify:\/\/shop_images\/OE_Pantone_Logo_2022.png",
           "menu": "wip-dawn-menu",
           "show_search": true,
           "show_store_locator": true,
