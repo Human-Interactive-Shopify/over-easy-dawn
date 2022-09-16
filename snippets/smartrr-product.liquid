@@ -249,7 +249,7 @@ assign smartrr_unique_id = product.id
     /* Called when the group (One time purchase / Subscribe & Save) is changed. */
     uiOnGroupChange: function (ui, currentInfo) {
         /* Use this to implement active class on Groups */
-        /*
+        
         var groupDivs = ui.apiQuerySelectorAllDataTag('data-smartrr-selling-plan-group-id', ui.$form);
         groupDivs.forEach(function(group) {
           if (currentInfo.groupId === ui.apiGetAttribute(group, 'data-smartrr-selling-plan-group-id')) {
@@ -258,7 +258,7 @@ assign smartrr_unique_id = product.id
             group.classList.remove('smartrr-group-active');
           }
         });
-        */
+        
         {% if smartrr_nice_select %}
         if (currentInfo.groupId !== "") {
             var nice = ui.apiQuerySelectorDataTag('data-smartrr-nice-select', ui.$form, currentInfo.groupId);
