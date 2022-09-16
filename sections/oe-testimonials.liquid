@@ -280,8 +280,13 @@
           bulletActiveClass: 'is-active'
         },
         breakpoints: {
-          1270: {
-            enabled: false
+          990: {
+            centeredSlides: false,
+            autoplay: {
+              delay: 8000,
+              waitForTransition: false,
+              disableOnInteraction: false,
+            },
           }
         }    
       });

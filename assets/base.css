@@ -2701,6 +2701,7 @@ details[open] > .header__submenu-overlay {
   opacity: 1;
   pointer-events: unset;
   transform: translate3d(-50%, 0, 0);
+  box-shadow: 41px 35px 22px rgba(0, 0, 0, 0.01), 23px 20px 18px rgba(0, 0, 0, 0.05), 10px 9px 14px rgba(0, 0, 0, 0.09), 3px 2px 7px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .header__submenu.list-menu {
