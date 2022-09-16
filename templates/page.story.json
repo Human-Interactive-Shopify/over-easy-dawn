@@ -2,9 +2,6 @@
   "sections": {
     "oe-hero-banner": {
       "type": "oe-hero-banner",
-      "settings": {
-        "color_scheme": "white"
-      },
       "blocks": {
         "heading": {
           "type": "heading",
@@ -15,28 +12,38 @@
       },
       "block_order": [
         "heading"
-      ]
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/over-easy-hero.png",
+        "desktop_content_position": "center",
+        "desktop_content_alignment": "center",
+        "mobile_content_position": "center",
+        "mobile_content_alignment": "center",
+        "color_scheme": "white",
+        "button_color_scheme": "red"
+      }
     },
     "oe-heading-1": {
       "type": "oe-heading",
       "settings": {
         "heading": "Welcome to Over Easy",
+        "desktop_align": "left",
+        "mobile_align": "left",
         "level": 2,
         "desktop_font_size": 55,
-        "mobile_font_size": 25
+        "mobile_font_size": 25,
+        "max_width": 1300,
+        "color_scheme": "black"
       }
     },
     "oe-text-image-1": {
       "type": "oe-text-image",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
-        "desktop_content_position": "right"
-      },
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Fighting the good fight"
+            "heading": "Fighting the good fight",
+            "heading_size": "default"
           }
         },
         "text": {
@@ -49,19 +56,21 @@
       "block_order": [
         "heading",
         "text"
-      ]
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "desktop_content_position": "right",
+        "mobile_content_position": "bottom"
+      }
     },
     "oe-text-image-2": {
       "type": "oe-text-image",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
-        "desktop_content_position": "left"
-      },
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "It starts at breakfast"
+            "heading": "It starts at breakfast",
+            "heading_size": "default"
           }
         },
         "text": {
@@ -73,7 +82,7 @@
         "text-2": {
           "type": "text",
           "settings": {
-            "text": "Breakfast is more than just a meal - it's the fuel that sets the tone for how we're going to feel the rest of the day. But traditional breakfast foods are often loaded with sugar, artificial ingredients, and are little more than dessert in disguise. "
+            "text": "Breakfast is more than just a meal - it's the fuel that sets the tone for how we're going to feel the rest of the day. But traditional breakfast foods are often loaded with sugar, artificial ingredients, and are little more than dessert in disguise."
           }
         }
       },
@@ -81,25 +90,27 @@
         "heading",
         "text",
         "text-2"
-      ]
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom"
+      }
     },
     "oe-text-image-3": {
       "type": "oe-text-image",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
-        "desktop_content_position": "right"
-      },
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Healthy morning. Healthy life."
+            "heading": "Healthy morning. Healthy life.",
+            "heading_size": "default"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "At Over Easy, we believe that good nutrition and healthy mornings are fundamental to a healthy and happy life, so we're here to serve as the first step you take every morning on your personal wellness journey. "
+            "text": "At Over Easy, we believe that good nutrition and healthy mornings are fundamental to a healthy and happy life, so we're here to serve as the first step you take every morning on your personal wellness journey."
           }
         },
         "text-2": {
@@ -120,31 +131,34 @@
         "text",
         "text-2",
         "text-3"
-      ]
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "desktop_content_position": "right",
+        "mobile_content_position": "bottom"
+      }
     },
     "oe-heading-2": {
       "type": "oe-heading",
       "settings": {
         "heading": "\"We believe that good nutrition and healthy mornings are fundamental to a healthy and happy life\"",
+        "desktop_align": "center",
+        "mobile_align": "center",
         "level": 3,
         "desktop_font_size": 35,
         "mobile_font_size": 22,
-        "color_scheme": "red",
-        "desktop_align": "center",
-        "mobile_align": "center",
-        "max_width": 1000
+        "max_width": 1000,
+        "color_scheme": "red"
       }
     },
     "oe-jumbotron": {
       "type": "oe-jumbotron",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png"
-      },
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Made for everyone, trusted by the best."
+            "heading": "Made for everyone, trusted by the best.",
+            "heading_size": "default"
           }
         },
         "text": {
@@ -164,16 +178,18 @@
         "heading",
         "text",
         "text-2"
-      ]
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "red",
+        "button_color_scheme": "red",
+        "text_color_scheme": "white"
+      }
     },
     "oe-why-over-easy": {
       "type": "oe-why-over-easy",
-      "settings": {
-        "main_headline": "You don’t take shortcuts. Neither do we.",
-        "text": "Real Food. Made with Purpose.",
-        "secondary_headline": "Start Fresh. Start Today.",
-        "button_page": ""
-      },
       "blocks": {
         "box": {
           "type": "box",
@@ -201,14 +217,16 @@
         "box",
         "box-2",
         "box-3"
-      ]
+      ],
+      "settings": {
+        "main_headline": "You don’t take shortcuts. Neither do we.",
+        "text": "Real Food. Made with Purpose.",
+        "secondary_headline": "Start Fresh. Start Today.",
+        "button_page": ""
+      }
     },
     "oe-team": {
       "type": "oe-team",
-      "settings": {
-        "headline": "Meet the Team",
-        "text": "Want to join us? Reach out below."
-      },
       "blocks": {
         "team-box": {
           "type": "team-box",
@@ -252,7 +270,11 @@
         "team-box-2",
         "team-box-3",
         "team-box-4"
-      ]
+      ],
+      "settings": {
+        "headline": "Meet the Team",
+        "text": "Want to join us? Reach out below."
+      }
     },
     "oe-talk-to-us": {
       "type": "oe-talk-to-us",
@@ -260,7 +282,7 @@
         "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
         "heading": "Talk to Us",
         "text": "We’d love to hear from you!",
-        "link": "/contact-us",
+        "link": "\/contact-us",
         "background_color_scheme": "black"
       }
     }
