@@ -59,7 +59,8 @@ assign smartrr_unique_id = product.id
                     <div class="smartrr-selling-plan-group-input-display"></div>
                     <div class="smartrr-selling-plan-group-name">
                         <div>One Time Purchase</div>
-                        <div class="showSavings" data-smartrr-product-id="{{ smartrr_unique_id }}" data-smartrr-price-style="original">
+                        <div class="showSavings" data-smartrr-product-id="{{ smartrr_unique_id }}"
+                            data-smartrr-price-style="original">
                             <span data-smartrr-compare-price></span>
                             <span data-smartrr-regular-price></span>
                             <span data-smartrr-subscribe-price></span>
@@ -67,10 +68,10 @@ assign smartrr_unique_id = product.id
                         </div>
                     </div>
                 </label>
-                        <div data-smartrr-perks>
-                <div>Choose your delivery frequency.</div>
-                <div>Cancel any time</div>
-              </div>
+                <div data-smartrr-perks>
+                    <div smartrr-text>Choose your delivery frequency.</div>
+                    <div smartrr-text>Cancel any time</div>
+                </div>
             </div>
             <div data-smartrr-selling-plan-group-contents class="hide"></div>
         </div>
@@ -82,13 +83,14 @@ assign smartrr_unique_id = product.id
             <div class="smartrr-selling-plan-group-header">
                 <label class="smartrr-selling-plan-group-label">
                     <input type="radio" data-smartrr-selling-plan-group-input="{{ group.id }}" name="purchase_option"
-                        value="{{ group.id }}" 
+                        value="{{ group.id }}"
                         data-smartrr-comment="Uncomment this to make Subscribe & Save the default Option." {% if
                         forloop.index0==0 %} checked="checked" {% endif %}>
                     <div class="smartrr-selling-plan-group-input-display"></div>
                     <div class="smartrr-selling-plan-group-name">
                         <div>{{ group.name }}</div>
-                        <div class="showSavings"  data-smartrr-product-id="{{ smartrr_unique_id }}"data-smartrr-price-style="overwrite-compare" data-smartrr-constant="{{ group.id }}">
+                        <div class="showSavings" data-smartrr-product-id="{{ smartrr_unique_id }}"
+                            data-smartrr-price-style="overwrite-compare" data-smartrr-constant="{{ group.id }}">
                             <span data-smartrr-compare-price></span>
                             <span data-smartrr-regular-price></span>
                             <span data-smartrr-subscribe-price></span>
@@ -130,15 +132,15 @@ assign smartrr_unique_id = product.id
                         {% endfor %}
                     </select>
                     {% endif %}
-                  
+
                 </div>
-              <div data-smartrr-benefits>
-                <div>Choose your delivery frequency.</div>
-                <div>Cancel any time</div>
-              </div>
+                <div data-smartrr-benefits>
+                    <div>Choose your delivery frequency.</div>
+                    <div>Cancel any time</div>
+                </div>
             </div>
         </div>
-      
+
         {%endunless %}
         {%endfor %}
     </div>
@@ -253,16 +255,16 @@ assign smartrr_unique_id = product.id
     /* Called when the group (One time purchase / Subscribe & Save) is changed. */
     uiOnGroupChange: function (ui, currentInfo) {
         /* Use this to implement active class on Groups */
-        
+
         var groupDivs = ui.apiQuerySelectorAllDataTag('data-smartrr-selling-plan-group-id', ui.$form);
-        groupDivs.forEach(function(group) {
-          if (currentInfo.groupId === ui.apiGetAttribute(group, 'data-smartrr-selling-plan-group-id')) {
-            group.classList.add('smartrr-group-active');
-          } else {
-            group.classList.remove('smartrr-group-active');
-          }
+        groupDivs.forEach(function (group) {
+            if (currentInfo.groupId === ui.apiGetAttribute(group, 'data-smartrr-selling-plan-group-id')) {
+                group.classList.add('smartrr-group-active');
+            } else {
+                group.classList.remove('smartrr-group-active');
+            }
         });
-        
+
         {% if smartrr_nice_select %}
         if (currentInfo.groupId !== "") {
             var nice = ui.apiQuerySelectorDataTag('data-smartrr-nice-select', ui.$form, currentInfo.groupId);
@@ -293,18 +295,18 @@ assign smartrr_unique_id = product.id
         money.regular: amount that shows up when strike display is chosen. This is the original un-discounted price.
         money.subscribe: the final discounted price or one-time price that shows up in the checkout.
         */
-      if ($div.classList.contains("showSavings")) {
-        var perSaving = Number(money.subscribe) / 10;
-        var formattedSavings = ui.logic.apiFormatMoney(perSaving);
-        var $saving = $div.querySelector('[data-smartrr-per-bar-price]');
-        if ($saving) {
-          ui.apiSetText($saving, formattedSavings +"/bar");
+        if ($div.classList.contains("showSavings")) {
+            var perSaving = Number(money.subscribe) / 10;
+            var formattedSavings = ui.logic.apiFormatMoney(perSaving);
+            var $saving = $div.querySelector('[data-smartrr-per-bar-price]');
+            if ($saving) {
+                ui.apiSetText($saving, formattedSavings + "/bar");
+            }
         }
-      } 
 
-      return money;
+        return money;
     }
-  };
+      };
 
     window.initSmartrr && window.initSmartrr("{{ smartrr_unique_id }}");
 </script>
