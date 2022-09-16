@@ -283,14 +283,19 @@ assign smartrr_unique_id = product.id
         money.regular: amount that shows up when strike display is chosen. This is the original un-discounted price.
         money.subscribe: the final discounted price or one-time price that shows up in the checkout.
         */
-      if ($div.classList.contains("showSavings")) {
-        var perSaving = Number(money.subscribe) / 10;
-        var formattedSavings = ui.logic.apiFormatMoney(perSaving);
-        var $saving = $div.querySelector('[data-smartrr-per-serving-price]');
-        if ($saving) {
-          ui.apiSetText($saving, formattedSavings +"/bar");
+       $subscribePerPrice = $div.querySelector('[data-smartrr-subscribe-price-per-item]');
+      $comparePerPrice = $div.querySelector('[data-smartrr-regular-price-per-item]');
+
+      if ($subscribePerPrice && $comparePerPrice) {
+        var currentInfo = ui.logic.apiGetCurrentCopy();
+        var variant = ui.logic.apiGetVariantById(currentInfo.variantId);
+
+        if (parseInt(variant.option1) !== NaN) {
+          var size = parseInt(variant.option1);
+          $subscribePerPrice.innerHTML = `${ ui.logic.apiFormatMoney(money.subscribe / size)}/bottle`;
+          $comparePerPrice.innerHTML = `${ ui.logic.apiFormatMoney(money.regular / size)}/bottle`;
         }
-      } 
+      }
 
       return money;
     }
