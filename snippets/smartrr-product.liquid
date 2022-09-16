@@ -59,11 +59,11 @@ assign smartrr_unique_id = product.id
                     <div class="smartrr-selling-plan-group-input-display"></div>
                     <div class="smartrr-selling-plan-group-name">
                         <div>One time purchase</div>
-                        <div class="smartrr-price-show-savings" data-smartrr-product-id="{{ smartrr_unique_id }}" data-smartrr-price-style="original">
+                        <div class="showSavings" data-smartrr-product-id="{{ smartrr_unique_id }}" data-smartrr-price-style="original">
                             <span data-smartrr-compare-price></span>
                             <span data-smartrr-regular-price></span>
                             <span data-smartrr-subscribe-price></span>
-                           <div class="smartrr-subscribe-price"><span data-smartrr-subscribe-price></span><span data-smartrr-subscribe-price-per-item></span></div>
+                            <span data-smartrr-per-serving-price></span>
                         </div>
                     </div>
                 </label>
@@ -84,11 +84,11 @@ assign smartrr_unique_id = product.id
                     <div class="smartrr-selling-plan-group-input-display"></div>
                     <div class="smartrr-selling-plan-group-name">
                         <div>{{ group.name }}</div>
-                        <div class="smartrr-price-show-savings" data-smartrr-product-id="{{ smartrr_unique_id }}"data-smartrr-price-style="overwrite-compare" data-smartrr-constant="{{ group.id }}">
+                        <div class="showSavings"  data-smartrr-product-id="{{ smartrr_unique_id }}"data-smartrr-price-style="overwrite-compare" data-smartrr-constant="{{ group.id }}">
                             <span data-smartrr-compare-price></span>
                             <span data-smartrr-regular-price></span>
                             <span data-smartrr-subscribe-price></span>
-                           <div class="smartrr-subscribe-price"><span data-smartrr-subscribe-price></span><span data-smartrr-subscribe-price-per-item></span></div>
+                            <span data-smartrr-per-serving-price></span>
                         </div>
                     </div>
                 </label>
@@ -283,19 +283,14 @@ assign smartrr_unique_id = product.id
         money.regular: amount that shows up when strike display is chosen. This is the original un-discounted price.
         money.subscribe: the final discounted price or one-time price that shows up in the checkout.
         */
-       $subscribePerPrice = $div.querySelector('[data-smartrr-subscribe-price-per-item]');
-      $comparePerPrice = $div.querySelector('[data-smartrr-regular-price-per-item]');
-
-      if ($subscribePerPrice && $comparePerPrice) {
-        var currentInfo = ui.logic.apiGetCurrentCopy();
-        var variant = ui.logic.apiGetVariantById(currentInfo.variantId);
-
-        if (parseInt(variant.option1) !== NaN) {
-          var size = parseInt(variant.option1);
-          $subscribePerPrice.innerHTML = `${ ui.logic.apiFormatMoney(money.subscribe / bar)}/bottle`;
-          $comparePerPrice.innerHTML = `${ ui.logic.apiFormatMoney(money.regular / bar)}/bottle`;
+      if ($div.classList.contains("showSavings")) {
+        var perSaving = Number(money.subscribe) / 10;
+        var formattedSavings = ui.logic.apiFormatMoney(perSaving);
+        var $saving = $div.querySelector('[data-smartrr-per-serving-price]');
+        if ($saving) {
+          ui.apiSetText($saving, formattedSavings +"/bar");
         }
-      }
+      } 
 
       return money;
     }
