@@ -63,7 +63,7 @@ assign smartrr_unique_id = product.id
                             <span data-smartrr-compare-price></span>
                             <span data-smartrr-regular-price></span>
                             <span data-smartrr-subscribe-price></span>
-                            <span data-smartrr-per-serving-price></span>
+                            <span data-smartrr-per-bar-price></span>
                         </div>
                     </div>
                 </label>
@@ -88,7 +88,7 @@ assign smartrr_unique_id = product.id
                             <span data-smartrr-compare-price></span>
                             <span data-smartrr-regular-price></span>
                             <span data-smartrr-subscribe-price></span>
-                            <span data-smartrr-per-serving-price></span>
+                            <span data-smartrr-per-bar-price></span>
                         </div>
                     </div>
                 </label>
@@ -292,7 +292,7 @@ assign smartrr_unique_id = product.id
       if ($div.classList.contains("showSavings")) {
         var perSaving = Number(money.subscribe) / 10;
         var formattedSavings = ui.logic.apiFormatMoney(perSaving);
-        var $saving = $div.querySelector('[data-smartrr-per-serving-price]');
+        var $saving = $div.querySelector('[data-smartrr-per-bar-price]');
         if ($saving) {
           ui.apiSetText($saving, formattedSavings +"/bar");
         }
