@@ -298,7 +298,7 @@ assign smartrr_unique_id = product.id
 
 var per_bag_price = money.subscribe / 700
 var bottom_price = ui.$form.querySelector('[data-smartrr-per-bar-price]')
-bottom_price.innerText= "($" + per_bag_price.toFixed(2) +"/Bag)"
+bottom_price.innerText= "($" + per_bag_price.toFixed(1) +"/Bag)"
 {% else %}
 var per_bag_price = money.subscribe / 400
 var bottom_price = ui.$form.querySelector('[data-smartrr-per-bar-price]')
