@@ -303,7 +303,7 @@ assign smartrr_unique_id = product.id
         if (!isNaN(perServing)) {          
           var perSaving = Number(money.subscribe) / perServing;
           var formattedSavings = ui.logic.apiFormatMoney(perSaving);
-          var $saving = $div.querySelector('[data-smartrr-per-serving-price]');
+          var $saving = $div.querySelector('[data-smartrr-per-bar-price]');
           if ($saving) {
             ui.apiSetText($saving, formattedSavings +"/serving");
           }
