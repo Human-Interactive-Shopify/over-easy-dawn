@@ -24,7 +24,7 @@
       --rating-decimal: {{ rating_decimal }};
     }
   </style>
-  <div class="oe-product container">
+  <div class="oe-product container" data-smartrr-form-id="{{ product.id }}">
     {% if section.settings.mobile_links != blank %}
     <div class="oe-product__mobile-links">
       <ul class="oe-product__mobile-links-list">
