@@ -291,7 +291,7 @@ assign smartrr_unique_id = product.id
         */
       if ($div.classList.contains("showSavings")) {
         var perSaving = Number(money.subscribe) / 12;
-        var formattedSavings = ui.logic.apiFormatMoney(perBar);
+        var formattedSavings = ui.logic.apiFormatMoney(perSaving);
         var $saving = $div.querySelector('[data-smartrr-per-serving-price]');
         if ($saving) {
           ui.apiSetText($saving, formattedSavings +"/bar");
