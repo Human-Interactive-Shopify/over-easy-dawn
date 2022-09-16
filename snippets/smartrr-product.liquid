@@ -78,9 +78,9 @@ assign smartrr_unique_id = product.id
             <div class="smartrr-selling-plan-group-header">
                 <label class="smartrr-selling-plan-group-label">
                     <input type="radio" data-smartrr-selling-plan-group-input="{{ group.id }}" name="purchase_option"
-                        value="{{ group.id }}" {% comment %}
+                        value="{{ group.id }}" 
                         data-smartrr-comment="Uncomment this to make Subscribe & Save the default Option." {% if
-                        forloop.index0==0 %} checked="checked" {% endif %} {% endcomment %}>
+                        forloop.index0==0 %} checked="checked" {% endif %}>
                     <div class="smartrr-selling-plan-group-input-display"></div>
                     <div class="smartrr-selling-plan-group-name">
                         <div>{{ group.name }}</div>
