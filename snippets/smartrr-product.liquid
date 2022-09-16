@@ -290,7 +290,7 @@ assign smartrr_unique_id = product.id
         money.subscribe: the final discounted price or one-time price that shows up in the checkout.
         */
       if ($div.classList.contains("showSavings")) {
-        var perSaving = Number(money.subscribe) / 12;
+        var perSaving = Number(money.subscribe) / 400;
         var formattedSavings = ui.logic.apiFormatMoney(perSaving);
         var $saving = $div.querySelector('[data-smartrr-per-serving-price]');
         if ($saving) {
