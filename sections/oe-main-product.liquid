@@ -1,3 +1,15 @@
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign current_selling_plan_allocation = current_variant.selected_selling_plan_allocation
+  if current_selling_plan_allocation == nil and current_variant.requires_selling_plan
+    assign current_selling_plan_allocation = current_variant.selling_plan_allocations | first
+  endif
+  assign offer = current_selling_plan_allocation | default: current_variant
+  assign filtered_selling_plan_groups = product.selling_plan_groups | where: "app_id", "4836205"
+  assign hiddenGroups = filtered_selling_plan_groups | map: "name" | where: "[hidden]"
+  assign visibleGroupsSize = filtered_selling_plan_groups.size | minus: hiddenGroups.size
+  assign smartrr_unique_id = product.id
+-%}
 {{ 'section-oe-main-product.css' | asset_url | stylesheet_tag }}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
@@ -198,6 +210,7 @@
             </div>
 
             {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+              <input type="hidden" name="selling_plan" data-smartrr-selling-plan-input value="{{ current_selling_plan_allocation.selling_plan.id | default: '' }}">
               <input
                 type="hidden"
                 name="id"
