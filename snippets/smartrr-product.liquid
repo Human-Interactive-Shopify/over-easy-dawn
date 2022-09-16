@@ -294,9 +294,17 @@ assign smartrr_unique_id = product.id
         money.regular: amount that shows up when strike display is chosen. This is the original un-discounted price.
         money.subscribe: the final discounted price or one-time price that shows up in the checkout.
         */
+{% if product.metafields.product_form.enable_price_per_mix %}
+
 var per_bag_price = money.subscribe / 700
 var bottom_price = ui.$form.querySelector('[data-smartrr-per-bar-price]')
 bottom_price.innerText= "($" + per_bag_price.toFixed(2) +"/Bag)"
+{% else %}
+var per_bag_price = money.subscribe / 400
+var bottom_price = ui.$form.querySelector('[data-smartrr-per-bar-price]')
+bottom_price.innerText= "($" + per_bag_price.toFixed(2) +"/Bag)"
+{% endif %}
+
 
 
         return money;
