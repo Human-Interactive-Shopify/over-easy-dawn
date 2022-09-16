@@ -292,8 +292,8 @@ assign smartrr_unique_id = product.id
 
         if (parseInt(variant.option1) !== NaN) {
           var size = parseInt(variant.option1);
-          $subscribePerPrice.innerHTML = `${ ui.logic.apiFormatMoney(money.subscribe / size)}/bottle`;
-          $comparePerPrice.innerHTML = `${ ui.logic.apiFormatMoney(money.regular / size)}/bottle`;
+          $subscribePerPrice.innerHTML = `${ ui.logic.apiFormatMoney(money.subscribe / bar)}/bottle`;
+          $comparePerPrice.innerHTML = `${ ui.logic.apiFormatMoney(money.regular / bar)}/bottle`;
         }
       }
 
