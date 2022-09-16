@@ -74,7 +74,7 @@ assign smartrr_unique_id = product.id
 
         {% for group in filtered_selling_plan_groups %}
         {% unless group.name contains "[hidden]" %}
-        <div data-smartrr-selling-plan-group-id="{{ group.id }}">
+        <div data-smartrr-sub data-smartrr-selling-plan-group-id="{{ group.id }}">
             <div class="smartrr-selling-plan-group-header">
                 <label class="smartrr-selling-plan-group-label">
                     <input type="radio" data-smartrr-selling-plan-group-input="{{ group.id }}" name="purchase_option"
