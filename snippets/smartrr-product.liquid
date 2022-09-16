@@ -1,0 +1,286 @@
+
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign current_selling_plan_allocation = current_variant.selected_selling_plan_allocation
+  if current_selling_plan_allocation == nil and current_variant.requires_selling_plan
+    assign current_selling_plan_allocation = current_variant.selling_plan_allocations | first
+  endif
+  assign offer = current_selling_plan_allocation | default: current_variant
+  assign filtered_selling_plan_groups = product.selling_plan_groups | where: "app_id", "4836205"
+  assign hiddenGroups = filtered_selling_plan_groups | map: "name" | where: "[hidden]"
+  assign visibleGroupsSize = filtered_selling_plan_groups.size | minus: hiddenGroups.size
+  assign smartrr_unique_id = product.id
+-%}
+
+{% comment %}
+  <!-- Add 'data-smartrr-form-id: product.id' to your '{ % form 'product' ... % } code so Smartrr can find your form. -->
+  <!-- data-smartrr-form-id should have the same value as smartrr_unique_id, product.id in this case -->
+  <!-- Add a { % render 'smartrr-product' % } in the product form for this code to be displayed. -->
+  <!-- Use uiImplementDetectChange below to inform Smartrr when Variant/Quantity are changed. -->
+  <!-- Set smartrr_collection for collection pages to avoid duplicate <style> and <script> for each product on the page. -->
+  <!-- Add the style and script render code separately to the top of the collection page. -->
+{% endcomment %}
+
+{% unless smartrr_collection %}
+  {% render 'smartrr-product-styles' %}
+{% endunless %}
+
+{% comment %}
+  <!-- use this code to create a pricing display element anywhere on the page -->
+  <!-- Available Styles: original(variant-price), strike(discounted price struck through), overwrite -->
+  <!-- Adding '-compare' at the end of the style will show the Compare At price when One time purchase is selected -->
+  <!-- Remove the 'data-use-quantity="true"' if you do not want the quantity to affect the pricing display -->
+  <!-- Replace 'smartrr_unique_id' with 'product.id' when placing this outside this Liquid File -->
+  <div data-smartrr-product-id="{{ smartrr_unique_id }}" data-smartrr-price-style="overwrite-compare" data-use-quantity="true">
+    <span data-smartrr-compare-price></span>
+    <span data-smartrr-regular-price></span>
+    <span data-smartrr-subscribe-price></span>
+  </div>
+{% endcomment %}
+
+{% comment %}
+  <!-- Make sure your cart/add.js AJAX call gets this value. Older/Custom carts may not extract this input from the form. -->
+{% endcomment %}
+<input type="hidden" name="selling_plan" data-smartrr-selling-plan-input value="{{ current_selling_plan_allocation.selling_plan.id | default: '' }}">
+
+<div class="hide" data-smartrr-page-load-variant="{{ current_variant.id }}"></div>
+
+{% if visibleGroupsSize > 0 %}
+<fieldset class="smartrr-purchase-options" data-smartrr-purchase-options="{{ smartrr_unique_id }}">
+  <div class="smartrr-no-plans-available hide" data-smartrr-no-plans>
+    No available purchase options for this selection.
+  </div>
+  <div data-smartrr-selling-plan-groups>
+    {% unless product.requires_selling_plan %}
+    <div data-smartrr-selling-plan-group-id class="smartrr-otp">
+      <div class="smartrr-selling-plan-group-header">
+        <label class="smartrr-selling-plan-group-label">
+          <input type="radio" data-smartrr-selling-plan-group-input name="purchase_option" value="">
+          <div class="smartrr-selling-plan-group-input-display"></div>
+          <div class="smartrr-selling-plan-group-name">
+            <div>One time purchase</div>
+          </div>
+        </label>
+      </div>
+      <div data-smartrr-selling-plan-group-contents class="hide"></div>
+    </div>
+    {% endunless %}
+
+    {% for group in filtered_selling_plan_groups %}
+    {% unless group.name contains "[hidden]" %}
+    <div data-smartrr-selling-plan-group-id="{{ group.id }}">
+      <div class="smartrr-selling-plan-group-header">
+        <label class="smartrr-selling-plan-group-label">
+          <input type="radio" data-smartrr-selling-plan-group-input="{{ group.id }}"
+            name="purchase_option" value="{{ group.id }}"
+            {% comment %}
+            data-smartrr-comment="Uncomment this to make Subscribe & Save the default Option."
+            {% if forloop.index0 == 0 %} checked="checked" {% endif %}
+            {% endcomment %}
+          >
+          <div class="smartrr-selling-plan-group-input-display"></div>
+          <div class="smartrr-selling-plan-group-name">
+            <div>{{ group.name }}</div>
+          </div>
+        </label>
+      </div>
+      <div data-smartrr-selling-plan-group-contents="{{ group.id }}" class="hide">
+        <div data-smartrr-selling-plan-group-plans>
+          <div class="smartrr-deliver-frequency">Deliver Every</div>
+          {% if smartrr_nice_select %}
+          <div data-smartrr-nice-select="{{ group.id }}">
+            <div data-smartrr-ns-display></div>
+            <div data-smartrr-ns-list="{{ group.id }}">
+              <ul>
+                {% for plan in group.selling_plans %}
+                {% unless plan.name contains "{{H}}" %}
+                {% unless plan.options[0].value contains "{{H}}" %}
+                <li
+                  data-smartrr-selling-plan-select-label-input="{{ group.id }}"
+                  data-smartrr-ns-plan="{{ group.id }}"
+                  data-smartrr-ns-planid="{{ plan.id }}"
+                >
+                  <span>{{ plan.options[0].value }}</span>
+                </li>
+                {% endunless %}
+                {% endunless %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% else %}
+          <select data-smartrr-selling-plans-select="{{ group.id }}">
+            {% for plan in group.selling_plans %}
+            {% unless plan.name contains "{{H}}" %}
+            {% unless plan.options[0].value contains "{{H}}" %}
+            <option data-smartrr-selling-plan-select-label-input="{{ group.id }}" value="{{ plan.id }}">{{ plan.options[0].value }}</option>
+            {% endunless %}
+            {% endunless %}
+            {% endfor %}
+          </select>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {%endunless %}
+    {%endfor %}
+  </div>
+
+</fieldset>
+{% endif %}
+
+{% unless smartrr_collection %}
+  <script type="text/javascript" src="{{ 'smartrr-product-script.js' | asset_url }}"></script>
+{% endunless %}
+
+{% if product.id %}
+<script>
+  if (typeof window.smartrrProductList === 'undefined') {
+    window.smartrrProductList = {};
+  }
+
+  window.smartrrProductList["{{ smartrr_unique_id }}"] = {
+    uniqueId: "{{ smartrr_unique_id }}",
+    ui: undefined,
+    logic: undefined,
+    appId: "4836205",
+    hiddenGroup: "[hidden]",
+    formTag: "data-smartrr-form-id",
+
+    product: {{ product|json }},
+    /* Called at DOMContentLoaded when initSmartrr creates the UI and Logic Modules */
+    /* Used to inform the Modules of changes in Variants and Plans */
+    uiImplementDetectChange: function (ui) {
+
+      {% if smartrr_nice_select %}
+      var niceSelects = ui.apiQuerySelectorAllDataTag('data-smartrr-nice-select', ui.$form);
+      niceSelects.forEach(function (nice) {
+        ui.apiSetupNiceSelect(nice, function(li) {
+          ui.logic.apiChangePlan(ui.apiGetAttribute(li, 'data-smartrr-ns-planid'));
+        });
+      })
+      {% endif %}
+
+      var groupList = ui.apiQuerySelectorAllDataTag('data-smartrr-selling-plan-group-input', ui.$form);
+      var selectedGroup = "";
+      groupList && groupList.forEach(function (group) {
+        if (group.checked) {
+          selectedGroup = ui.apiGetAttribute(group, 'data-smartrr-selling-plan-group-input');
+        }
+      });
+
+      /* Inform the Logic handler about the variant selected when the page loads. */
+      var variantId = ui.apiGetAttribute(ui.apiQuerySelectorDataTag('data-smartrr-page-load-variant', ui.$form), 'data-smartrr-page-load-variant');
+
+      ui.logic.apiSetupVariantAndGroup(variantId, selectedGroup);
+
+      /* Handle the variant selector on the page here. */
+      /* Get the variant selector/buttons. On change/click, get the variant id and call ui.logic.apiChangeVariant(variantId); */
+      /* Example code shows how to handle a swatch */
+      /*
+      var variantButtons = ui.$form.querySelectorAll('.swatch.clearfix input');
+      variantButtons.forEach(function(variantInput) {
+        variantInput.addEventListener('click', function() {
+          var variantName = ui.apiGetValue(variantInput);
+          var variant = ui.logic.apiGetVariantByName(variantName);
+          ui.logic.apiChangeVariant(variant.id);
+        });
+      });
+      */
+
+      // Variant Detection for Dawn Themes
+      var selects = ui.$form.querySelector('variant-selects');
+      if (selects) {
+        selects.addEventListener('change', (e) => {
+          ui.logic.apiChangeVariant(selects.currentVariant.id)
+        });
+      }
+
+      var radios  = ui.$form.querySelector('variant-radios');
+      if (radios) {
+        radios.addEventListener('change', (e) => {
+          ui.logic.apiChangeVariant(radios.currentVariant.id)
+        });
+      }
+
+
+      /* Handle the plan selectors for each group. In this case, it is a <select> */
+      {% unless smartrr_nice_select %}
+      var planSelectors = ui.apiQuerySelectorAllDataTag('data-smartrr-selling-plans-select', ui.$form);
+      planSelectors.forEach(function(planSelector) {
+        planSelector.addEventListener("change", function () {
+          ui.logic.apiChangePlan(ui.apiGetValue(planSelector));
+        });
+      });
+      {% endunless %}
+
+      /* Signal possible change in pricing displays when quantity is changed */
+      /*
+      var qty = ui.$form.querySelector('input[name="quantity"]');
+      qty.addEventListener("change", function() {
+        ui.logic.apiChangePlan(ui.logic.apiGetCurrentCopy().planId);
+      });
+      */
+    },
+
+    /* Called when Plan (the subscription frequency) is changed. */
+    /* Called when One time purchase is selected. */
+    uiOnPlanChange: function (ui, currentInfo) {
+      {% unless smartrr_nice_select %}
+      if (currentInfo.groupId && currentInfo.planId) {
+          /* Ensures the <select> option reflects the change in planId. */
+          ui.apiSetValue(ui.apiQuerySelectorDataTag('data-smartrr-selling-plans-select', ui.$form, currentInfo.groupId), currentInfo.planId);
+      }
+      {% endunless %}
+    },
+    /* Called when the group (One time purchase / Subscribe & Save) is changed. */
+    uiOnGroupChange: function (ui, currentInfo) {
+      /* Use this to implement active class on Groups */
+      /*
+      var groupDivs = ui.apiQuerySelectorAllDataTag('data-smartrr-selling-plan-group-id', ui.$form);
+      groupDivs.forEach(function(group) {
+        if (currentInfo.groupId === ui.apiGetAttribute(group, 'data-smartrr-selling-plan-group-id')) {
+          group.classList.add('smartrr-group-active');
+        } else {
+          group.classList.remove('smartrr-group-active');
+        }
+      });
+      */
+     {% if smartrr_nice_select %}
+     if (currentInfo.groupId !== "") {
+      var nice = ui.apiQuerySelectorDataTag('data-smartrr-nice-select', ui.$form, currentInfo.groupId);
+      if (nice) {
+        var li = nice.querySelector('[data-smartrr-ns-display] li');
+        if (li) {
+          ui.logic.apiChangePlan(ui.apiGetAttribute(li, 'data-smartrr-ns-planid'));
+        }
+      }
+     }
+     {% endif %}
+    },
+
+    /* Called when the variant is changed */
+    uiOnVariantChange: function (ui, currentInfo) { },
+
+    /* Called when the quantity is retrieved for used in pricing display calculation. */
+    uiGetQuantity: function (ui) {
+      /* Handle the quantity input on the page here. */
+      /* return 1 if you don't want quantity to be considered in pricing display elements */
+      /* return ui.apiGetValue(ui.$form.querySelector('input[name="quantity"]')); */
+      return 1;
+    },
+
+    uiModifyPrice: function (ui, $div, money) {
+      /*
+      Change price here based on requirements. For example, setting up per case/pound/bag price.
+      money.regular: amount that shows up when strike display is chosen. This is the original un-discounted price.
+      money.subscribe: the final discounted price or one-time price that shows up in the checkout.
+      */
+      return money;
+    }
+  };
+
+  window.initSmartrr && window.initSmartrr("{{ smartrr_unique_id }}");
+</script>
+
+{% endif %}
