@@ -59,7 +59,7 @@ assign smartrr_unique_id = product.id
                     <div class="smartrr-selling-plan-group-input-display"></div>
                     <div class="smartrr-selling-plan-group-name">
                         <div>One time purchase</div>
-                        <div data-smartrr-product-id="{{ smartrr_unique_id }}"data-smartrr-price-style="original">
+                        <div data-smartrr-product-id="{{ smartrr_unique_id }}" data-smartrr-price-style="original">
                             <span data-smartrr-compare-price></span>
                             <span data-smartrr-regular-price></span>
                             <span data-smartrr-subscribe-price></span>
@@ -83,11 +83,12 @@ assign smartrr_unique_id = product.id
                     <div class="smartrr-selling-plan-group-input-display"></div>
                     <div class="smartrr-selling-plan-group-name">
                         <div>{{ group.name }}</div>
-                      <div data-smartrr-product-id="{{ smartrr_unique_id }}" data-smartrr-price-style="overwrite-compare" data-smartrr-constant="{{ group.id }}">
-            <span data-smartrr-compare-price></span>
-            <span data-smartrr-regular-price></span>
-            <span data-smartrr-subscribe-price></span>
-          </div>
+                        <div data-smartrr-product-id="{{ smartrr_unique_id }}"
+                            data-smartrr-price-style="overwrite-compare" data-smartrr-constant="{{ group.id }}">
+                            <span data-smartrr-compare-price></span>
+                            <span data-smartrr-regular-price></span>
+                            <span data-smartrr-subscribe-price></span>
+                        </div>
                     </div>
                 </label>
             </div>
@@ -283,7 +284,7 @@ assign smartrr_unique_id = product.id
         */
         return money;
     }
-    };
+        };
 
     window.initSmartrr && window.initSmartrr("{{ smartrr_unique_id }}");
 </script>
