@@ -15,6 +15,9 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/over-easy-hero.png",
+        "use_image_as_thumbnail": false,
+        "use_video": false,
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6bd87ee546254860ab0fab9106b33f13.mp4",
         "desktop_content_position": "center",
         "desktop_content_alignment": "center",
         "mobile_content_position": "center",
@@ -227,6 +230,7 @@
     },
     "oe-team": {
       "type": "oe-team",
+      "disabled": true,
       "blocks": {
         "team-box": {
           "type": "team-box",
