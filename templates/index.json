@@ -454,7 +454,7 @@
       "settings": {
         "heading_size": 28,
         "feed_width": 100,
-        "html_area": "<style>\n#insta-feed {\nbackground-color: var(--oe-color-red);\nmargin: 0 auto;\npadding: 64px 0;\n}\n#insta-feed h2 {\ndisplay: none;\ncolor: #FFFFFF;\nmargin:0 0 32px 0;\n}\n<\/style>"
+        "html_area": "<style>\n#insta-feed {\nbackground-color: var(--oe-color-red);\nmargin: 0 auto;\npadding: 64px 0 0 0;\n}\n#insta-feed h2 {\ndisplay: none;\ncolor: #FFFFFF;\nmargin:0 0 32px 0;\n}\n<\/style>"
       }
     }
   },
