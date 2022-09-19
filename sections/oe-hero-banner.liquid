@@ -17,10 +17,10 @@
   .banner__content {
     display: flex;
     flex-direction: column;
-    max-width: 1020px;
     display: flex;
     position: relative;
     z-index: 2;
+    width: 100%;
   }
 
   .banner__content-wrapper {
@@ -78,11 +78,13 @@
     font-size: 48px;
     line-height: 110%;
     color: inherit;
+    max-width: calc(100% - 32px);
   }
   
   .banner__text {
     color: inherit;
     margin-bottom: 40px;
+    max-width: 780px;
   }
 
   .banner__buttons .button {
