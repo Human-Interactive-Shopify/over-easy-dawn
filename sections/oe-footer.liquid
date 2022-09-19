@@ -269,10 +269,10 @@
       {%- case block.type -%}
         {%- when 'footer_images' -%}
           <div class="footer__gallery-image-wrapper">
-            {{ block.settings.gallery_image_picker | image_url: width: 450 | image_tag:
+            {{ block.settings.gallery_image_picker | image_url: width: 720 | image_tag:
               loading: 'lazy',
               width: section.settings.image.width,
-              height: 300,
+              height: 480,
               class: "footer__gallery-image",
               alt: section.settings.image.alt | escape
             }}
