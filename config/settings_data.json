@@ -128,7 +128,7 @@
           "show_search": true,
           "show_store_locator": true,
           "store_locator_page": "stores",
-          "items_in_row": 3
+          "items_in_row": 5
         }
       },
       "oe-footer": {
