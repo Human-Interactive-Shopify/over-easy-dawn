@@ -88,6 +88,10 @@
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
     }
+
+    summary.list-menu__item {
+      height: 96px;
+    }
   }
 </style>
 
@@ -265,19 +269,24 @@
                               <a href="{{ childLink.url }}" class="header__submenu-link{% if childLink.current %} header__submenu-link--active{% endif %}"{% if childLink.current %} aria-current="page"{% endif %}>
                                 <p class="header__submenu-link-title">{{ childLink.title | strip_html | truncatewords: 8, '...' }}{%- if childLink.type == 'collection_link' -%}{%- if childLink.object.metafields.custom.new_collection.value -%}<span class="header__submenu-link-title-new">New</span>{%- endif -%}{%- endif -%} </p>
                                 <div class="header__submenu-link-image-wrapper">
-                                  {%- if childLink.type == 'collection_link' or childLink.type == 'article_link' -%}
+                                 {%- if childLink.type == 'collection_link' -%}
+                                  {%- if childLink.object.metafields.custom.menu_image.value != blank -%}
+                                      <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.metafields.custom.menu_image.value | image_url: width: 250 }}" alt="{{ childLink.object.image.alt }}" />
+                                    {%- endif -%}
+                                  {%- endif -%}
+                                  {%- if childLink.type == 'article_link' -%}
                                     {%- if childLink.object.image != blank -%}
-                                      <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.image.src | image_url }}" alt="{{ childLink.object.image.alt }}" />
+                                      <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.image.src | image_url: width: 250 }}" alt="{{ childLink.object.image.alt }}" />
                                     {%- endif -%}
                                   {%- endif -%}
                                   {%- if childLink.type == 'page_link' or childLink.type == 'blog_link' -%}
                                     {%- if childLink.object.metafields.custom.featured_image.value != blank -%}
-                                      <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.metafields.custom.featured_image.value.src | image_url }}" alt="{{ childLink.object.metafields.custom.featured_image.value.alt }}" />
+                                      <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.metafields.custom.featured_image.value.src | image_url: width: 250 }}" alt="{{ childLink.object.metafields.custom.featured_image.value.alt }}" />
                                     {%- endif -%}
                                   {%- endif -%}
                                   {%- if childLink.type == 'product_link' -%}
-                                    {%- if childLink.object.featured_image != blank -%}
-                                      <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.featured_image | image_url }}" alt="{{ childLink.object.title }}" />
+                                    {%- if childLink.object.metafields.custom.thumbnail_image.value != blank -%}
+                                      <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.metafields.custom.thumbnail_image.value | image_url: width: 250 }}" alt="{{ childLink.object.title }}" />
                                     {%- endif -%}
                                   {%- endif -%}
                                 </div>
@@ -428,19 +437,24 @@
                           <li>
                             <a href="{{ childLink.url }}" class="header__submenu-link{% if childLink.current %} header__submenu-link--active{% endif %}"{% if childLink.current %} aria-current="page"{% endif %}>
                               <div class="header__submenu-link-image-wrapper">
-                                {%- if childLink.type == 'collection_link' or childLink.type == 'article_link' -%}
+                                {%- if childLink.type == 'collection_link' -%}
+                                  {%- if childLink.object.metafields.custom.menu_image.value != blank -%}
+                                    <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.metafields.custom.menu_image.value.src | image_url: width: 400 }}" alt="{{ childLink.object.metafields.custom.featured_image.value.alt }}" />
+                                  {%- endif -%}
+                                {%- endif -%}
+                                {%- if childLink.type == 'article_link' -%}
                                   {%- if childLink.object.image != blank -%}
-                                    <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.image.src | image_url }}" alt="{{ childLink.object.image.alt }}" />
+                                    <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.image.src | image_url: width: 400 }}" alt="{{ childLink.object.image.alt }}" />
                                   {%- endif -%}
                                 {%- endif -%}
                                 {%- if childLink.type == 'page_link' or childLink.type == 'blog_link' -%}
                                   {%- if childLink.object.metafields.custom.featured_image.value != blank -%}
-                                    <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.metafields.custom.featured_image.value.src | image_url }}" alt="{{ childLink.object.metafields.custom.featured_image.value.alt }}" />
+                                    <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.metafields.custom.featured_image.value.src | image_url: width: 400 }}" alt="{{ childLink.object.metafields.custom.featured_image.value.alt }}" />
                                   {%- endif -%}
                                 {%- endif -%}
                                 {%- if childLink.type == 'product_link' -%}
-                                  {%- if childLink.object.featured_image != blank -%}
-                                    <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.featured_image | image_url }}" alt="{{ childLink.object.title }}" />
+                                  {%- if childLink.object.metafields.custom.thumbnail_image.value != blank -%}
+                                    <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.metafields.custom.thumbnail_image.value | image_url: width: 400 }}" alt="{{ childLink.object.title }}" />
                                   {%- endif -%}
                                 {%- endif -%}
                               </div>

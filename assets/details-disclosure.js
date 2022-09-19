@@ -6,6 +6,12 @@ class DetailsDisclosure extends HTMLElement {
 
 		this.mainDetailsToggle.addEventListener('focusout', this.onFocusOut.bind(this));
 		this.mainDetailsToggle.addEventListener('toggle', this.onToggle.bind(this));
+		this.mainDetailsToggle.addEventListener('mouseenter', () => {
+			this.mainDetailsToggle.setAttribute('open', true);
+		});
+		this.mainDetailsToggle.addEventListener('mouseleave', () => {
+			this.mainDetailsToggle.removeAttribute('open');
+		});
 		// document.addEventListener('scroll', this.close.bind(this));
 	}
 
