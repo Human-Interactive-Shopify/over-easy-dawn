@@ -107,7 +107,8 @@
     },
     "1663186300c28e5e47": {
       "type": "oe-nutrition-facts",
-      "settings": {}
+      "settings": {
+      }
     },
     "oe-ingredients": {
       "type": "oe-ingredients",
@@ -196,7 +197,8 @@
     },
     "16631570203f45fb2a": {
       "type": "oe-reviews",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
