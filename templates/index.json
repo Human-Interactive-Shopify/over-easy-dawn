@@ -448,6 +448,14 @@
       ],
       "settings": {
       }
+    },
+    "16636132874ba6f16e": {
+      "type": "instafeed",
+      "settings": {
+        "heading_size": 28,
+        "feed_width": 100,
+        "html_area": "<style>\n#insta-feed {\nbackground-color: var(--oe-color-red);\nmargin: 0 auto;\npadding: 64px 0;\n}\n#insta-feed h2 {\ndisplay: none;\ncolor: #FFFFFF;\nmargin:0 0 32px 0;\n}\n<\/style>"
+      }
     }
   },
   "order": [
@@ -460,6 +468,7 @@
     "oe-testimonials",
     "oe-featured_collection",
     "1663281355fa8ec570",
-    "16614278019efa8d2e"
+    "16614278019efa8d2e",
+    "16636132874ba6f16e"
   ]
 }
