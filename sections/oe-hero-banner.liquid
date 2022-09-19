@@ -152,13 +152,30 @@
       {%-liquid
         assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
       -%}
-      {{ section.settings.image | image_url: width: 1500 | image_tag:
-        loading: 'lazy',
-        width: section.settings.image.width,
-        height: image_height,
-        class: "banner__media",
-        alt: section.settings.image.alt | escape
-      }}
+
+      {% unless section.settings.use_video %} 
+        {{ section.settings.image | image_url: width: 1500 | image_tag:
+          loading: 'lazy',
+          width: section.settings.image.width,
+          height: image_height,
+          class: "banner__media",
+          alt: section.settings.image.alt | escape
+        }}
+      {% endunless %}
+      
+      {% if section.settings.use_video %} 
+        <video 
+          src="{{ section.settings.video_url }}" 
+          loading="lazy" class="banner__media" 
+          muted 
+          autoplay 
+          playsinline 
+          loop
+          {% if section.settings.use_image_as_thumbnail %}
+            poster="{{ section.settings.image.src | image_url: width: 1500 }}"
+          {% endif %}
+        ></video>
+      {% endif %}
     </div>
   {%- endif -%}
   <div class="banner__content-wrapper">
@@ -189,6 +206,24 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_image_as_thumbnail",
+      "label": "Use image as thumbnail",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "use_video",
+      "label": "Use video",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video url",
+      "default": "https://cdn.shopify.com/videos/c/o/v/6bd87ee546254860ab0fab9106b33f13.mp4"
     },
     {
       "type": "select",

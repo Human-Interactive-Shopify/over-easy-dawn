@@ -139,7 +139,7 @@
 
     .oe-featured-collections__list-item-text {
       font-weight: 400;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 160%;
       margin: 0 0 40px;
     }
@@ -175,7 +175,7 @@
               <a href="{{ block.settings.collection.url }}" class="oe-featured-collections__list-item">
                 <div class="oe-featured-collections__list-item-image-wrapper">
                   {%- if block.settings.collection.image != blank -%}
-                    {{ block.settings.collection.image.src | image_url: width: 546 | image_tag:
+                    {{ block.settings.collection.image.src | image_url: width: 800 | image_tag:
                       loading: 'lazy',
                       width: 364,
                       class: "oe-featured-collections__list-item-image",
@@ -186,7 +186,7 @@
                 <div class="oe-featured-collections__list-item-content">
                   <h3 class="oe-featured-collections__list-item-title">{{ block.settings.collection.title }}</h3>
                   <p class="oe-featured-collections__list-item-text">{{ block.settings.collection.metafields.custom.excerpt }}</p>
-                  {% render 'button', variation: 'primary', color: 'black' , size: 'big', label: block.settings.button_label, classes: "oe-featured-collections__list-item-button" %}
+                  {% render 'button', variation: 'primary', color: 'red' , size: 'big', label: block.settings.button_label, classes: "oe-featured-collections__list-item-button" %}
                 </div>
               </a>
             {%- endif -%}

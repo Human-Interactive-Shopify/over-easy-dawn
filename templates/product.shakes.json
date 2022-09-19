@@ -2,213 +2,210 @@
   "sections": {
     "main": {
       "type": "oe-main-product",
-      "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title": {
-          "type": "title"
-        },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
-        },
-        "price": {
-          "type": "price"
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector"
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true
-          }
-        },
-        "description": {
-          "type": "description"
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "vendor",
-        "title",
-        "caption",
-        "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
-        "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
-      ],
       "settings": {
-        "enable_sticky_info": true,
-        "gallery_layout": "stacked",
-        "media_size": "large",
-        "mobile_thumbnails": "hide",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "shipping_notice": "Free Shipping on orders of 2 or more products",
+        "related_products_title": "Our Flavors",
+        "collection": "breakfast-bars",
+        "show_rating": true,
+        "show_ingredients_anchor": true,
+        "show_nutrition_anchor": true,
+        "mobile_links": ""
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
       "blocks": {
-        "image-with-text-0": {
+        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
+            "heading": "Complete morning nutrition for full body and brain health",
+            "heading_size": "small"
           }
         },
-        "image-with-text-1": {
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "text": "Made from wholesome and nutrient dense ingredients, our products have been designed to give your body exactly what you need to start your day right, every single morning."
           }
         },
-        "column-1": {
-          "type": "column",
+        "list-item-1": {
+          "type": "list_item",
           "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "text": "Organic Oats & Fiber Blend"
+          }
+        },
+        "list-item-2": {
+          "type": "list_item",
+          "settings": {
+            "text": "Colagen & Egg White Protein"
+          }
+        },
+        "list-item-3": {
+          "type": "list_item",
+          "settings": {
+            "text": "Essential Vitamins & Minerals"
+          }
+        },
+        "list-item-4": {
+          "type": "list_item",
+          "settings": {
+            "text": "Super Greens Blend"
           }
         }
       },
       "block_order": [
-        "column-0",
-        "column-1"
+        "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
+        "list-item-1",
+        "list-item-2",
+        "list-item-3",
+        "list-item-4"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "white",
+        "button_color_scheme": "red",
+        "text_color_scheme": "black"
       }
     },
-    "product-recommendations": {
-      "type": "product-recommendations",
+    "16632686971a8b65e4": {
+      "type": "oe-customer-quotes",
+      "blocks": {
+        "b1afe1ab-5065-411e-afed-c907d6856b5b": {
+          "type": "quote",
+          "settings": {
+            "text": "\"I can confidently say that these are the best bars I've ever tried! Awesome product!\"",
+            "customer": "Emily P."
+          }
+        },
+        "cf879779-9667-414e-a98b-40a845c88911": {
+          "type": "quote",
+          "settings": {
+            "text": "\"These are VERY tasty and I absolutely love the ingredient makeup!\"",
+            "customer": "Erin S."
+          }
+        },
+        "324e6dd1-c3de-4e97-97cf-92c58f916ca4": {
+          "type": "quote",
+          "settings": {
+            "text": "\"As a dietician, I'm a huge fan of healthy carbs, especially whole grains like oats. They also taste delicious!\"",
+            "customer": "Adrienne D."
+          }
+        }
+      },
+      "block_order": [
+        "b1afe1ab-5065-411e-afed-c907d6856b5b",
+        "cf879779-9667-414e-a98b-40a845c88911",
+        "324e6dd1-c3de-4e97-97cf-92c58f916ca4"
+      ],
       "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
+        "headline": "Over 1 Million breakfasts served",
+        "sub-headline": "and the reviews are in"
       }
+    },
+    "1663186300c28e5e47": {
+      "type": "oe-nutrition-facts",
+      "settings": {}
+    },
+    "oe-ingredients": {
+      "type": "oe-ingredients",
+      "blocks": {
+        "037943ff-e6f2-4e31-9264-a51271ab8477": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "egg",
+            "heading": "CAGE-FREE EGG WHITES"
+          }
+        },
+        "e070b7a8-8707-47da-8b33-42d31fcaea9e": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "oats",
+            "heading": "ORGANIC OATS"
+          }
+        },
+        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "glutten-free",
+            "heading": "GLUTTEN FREE"
+          }
+        },
+        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "soy-free",
+            "heading": "SOY FREE"
+          }
+        },
+        "d5d8f806-116e-42df-bed2-516e6faaee78": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "dairy-free",
+            "heading": "DAIRY FREE"
+          }
+        },
+        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "no-preservatives",
+            "heading": "NO PRESERVATIVES"
+          }
+        },
+        "96229dcb-86af-47fa-8c8d-28417e98b443": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "no-palm-oil",
+            "heading": "NO PALM OIL"
+          }
+        },
+        "b8642ba4-6685-48ef-9845-37c67c69ac50": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "egg",
+            "heading": "ORGANIC OATS"
+          }
+        }
+      },
+      "block_order": [
+        "037943ff-e6f2-4e31-9264-a51271ab8477",
+        "e070b7a8-8707-47da-8b33-42d31fcaea9e",
+        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1",
+        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7",
+        "d5d8f806-116e-42df-bed2-516e6faaee78",
+        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d",
+        "96229dcb-86af-47fa-8c8d-28417e98b443",
+        "b8642ba4-6685-48ef-9845-37c67c69ac50"
+      ],
+      "settings": {
+        "headline": "Clean Ingredients. Made with Care.",
+        "background_color": "white"
+      }
+    },
+    "16631556027bfa8473": {
+      "type": "oe-comparison-chart",
+      "settings": {
+        "title_desktop": "Our Bars are Head and Shoulders Above the Competition!",
+        "title_mobile": "Above the Competition!",
+        "image_desktop": "shopify:\/\/shop_images\/oe_comparison_table.png",
+        "cta_url": "",
+        "cta_text": ""
+      }
+    },
+    "16631570203f45fb2a": {
+      "type": "oe-reviews",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "image-with-text",
-    "multicolumn",
-    "product-recommendations"
+    "oe-jumbotron",
+    "16632686971a8b65e4",
+    "1663186300c28e5e47",
+    "oe-ingredients",
+    "16631556027bfa8473",
+    "16631570203f45fb2a"
   ]
 }
