@@ -297,22 +297,16 @@ assign smartrr_unique_id = product.id
        if ($div.classList.contains("showSavings")) {
         var variantId = ui.logic.apiGetCurrentCopy().variantId;
         var variant = ui.logic.apiGetVariantById(variantId);
-        
         var perServing = parseInt(variant.title);
-
-        if (!isNaN(perServing)) {          
-          var perSaving = Number(money.subscribe) / perServing;
+        var perSaving = Number(money.subscribe) / perServing;
           var formattedSavings = ui.logic.apiFormatMoney(perSaving);
           var $saving = $div.querySelector('[data-smartrr-per-bar-price]');
           if ($saving) {
-            ui.apiSetText($saving, formattedSavings +"/serving");
+            ui.apiSetText($saving, formattedSavings +"/bar");
           }
-        }
-      } 
-
+    }
       return money;
     }
-                      
   };
 
     window.initSmartrr && window.initSmartrr("{{ smartrr_unique_id }}");
