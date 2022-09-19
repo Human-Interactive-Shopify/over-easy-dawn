@@ -30,6 +30,9 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/over-easy-hero.png",
+        "use_image_as_thumbnail": true,
+        "use_video": true,
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6bd87ee546254860ab0fab9106b33f13.mp4",
         "desktop_content_position": "center",
         "desktop_content_alignment": "center",
         "mobile_content_position": "center",
@@ -76,7 +79,8 @@
         "9f72aff9-1cbe-4979-bae9-7973f162a636",
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "oe-jumbotron": {
       "type": "oe-jumbotron",
@@ -136,7 +140,7 @@
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "image": "shopify:\/\/shop_images\/jumbotron-shakes.png",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
@@ -297,7 +301,7 @@
         "66dc171b-c8b1-44d6-bf0a-974a99e7839a": {
           "type": "testimonials",
           "settings": {
-            "image": "shopify:\/\/shop_images\/AdamT.jpg",
+            "image": "shopify:\/\/shop_images\/cef37185be75484ffc422dd0a86d4ad0.jpg",
             "text": "When I first tried Over Easy, I absolutely loved the taste and was surprised to look at how clean and simple the ingredients were... All of my teammates love the bars, too.",
             "name": "Adam Thielen",
             "position": "NFL Wide Receiver, MN Vikings"
@@ -307,7 +311,7 @@
           "type": "testimonials",
           "settings": {
             "image": "shopify:\/\/shop_images\/Frame_174_1.jpg",
-            "text": "I knew it was healthy right from the start, but goddamn, it tastes sooo goood too!",
+            "text": "I was immediately impressed when I tried Over Easy bars - not only were they delicious, but with quality ingredients and balanced nutrients I feel good eating and recommending them.",
             "name": "April Verdi, MPH, RD, LD",
             "position": "Clinical Nutrition Manager"
           }
@@ -315,8 +319,8 @@
         "f4a2657d-497c-456e-b8c0-0f5c9d2d2e24": {
           "type": "testimonials",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_174_1.jpg",
-            "text": "I knew it was healthy right from the start, but goddamn, it tastes sooo goood too!",
+            "image": "shopify:\/\/shop_images\/44905fee151bb375335371a007637ee0.png",
+            "text": "I love that Over Easy bars have quality ingredients with a balance of carbohydrates, protein, fat, and vitamins and minerals to start the day. Plus, they have the added bonus of being both convenient and delicious.",
             "name": "Amy Gibbs, MEd, RD, LD",
             "position": "Cleveland Clinic, Director, Wellness Enterprise"
           }
@@ -442,7 +446,8 @@
         "443f75cd-5bd3-49a4-a554-11c1086ce550",
         "63312fa2-852f-42bb-8012-299cd60bd2c8"
       ],
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
