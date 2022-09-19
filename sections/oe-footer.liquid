@@ -179,7 +179,7 @@
   @media screen and (min-width: 990px) {
     .footer {
       position: relative;
-      padding: 80px 0;
+      padding: 64px 0;
       overflow: hidden;
     }
 
@@ -239,7 +239,7 @@
     }
 
     .footer__gallery {
-      margin-bottom: 70px;
+      margin-bottom: 64px;
     }
 
     .footer__gallery-image-wrapper {
@@ -263,6 +263,7 @@
 {%- endstyle -%}
 
 <footer class="footer footer-color--{{ section.settings.color_scheme }}">
+  {%- if template.name != 'index' -%}
   <div class="footer__gallery">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
@@ -279,6 +280,7 @@
       {%- endcase -%}
     {%- endfor -%}
   </div>
+  {%- endif -%} 
   <div class="footer__container container">
     {%- if section.settings.newsletter_enable -%}
       <div class="footer__block-newsletter">
