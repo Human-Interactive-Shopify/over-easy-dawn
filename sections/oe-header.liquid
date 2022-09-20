@@ -267,11 +267,16 @@
                           <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu" data-items-per-row="{{ section.settings.items_in_row }}" role="list" tabindex="-1">
                             {%- for childLink in link.links -%}
                               <li>
+                                {%- if childLink.type == 'collection_link' -%}
+                                   {% assign firstProduct = collections[block.settings.collection].products | first %}
+                                   <a href="{{ firstProduct.url }}" class="header__submenu-link{% if childLink.current %} header__submenu-link--active{% endif %}"{% if childLink.current %} aria-current="page"{% endif %}>
+                                {%- else -%}
                                 <a href="{{ childLink.url }}" class="header__submenu-link{% if childLink.current %} header__submenu-link--active{% endif %}"{% if childLink.current %} aria-current="page"{% endif %}>
+                                {%- endif -%}
                                   <p class="header__submenu-link-title">{{ childLink.title | strip_html | truncatewords: 8, '...' }}{%- if childLink.type == 'collection_link' -%}{%- if childLink.object.metafields.custom.new_collection.value -%}<span class="header__submenu-link-title-new">New</span>{%- endif -%}{%- endif -%} </p>
                                   <div class="header__submenu-link-image-wrapper">
-                                  {%- if childLink.type == 'collection_link' -%}
-                                    {%- if childLink.object.metafields.custom.menu_image.value != blank -%}
+                                    {%- if childLink.type == 'collection_link' -%}
+                                      {%- if childLink.object.metafields.custom.menu_image.value != blank -%}
                                         <img class="header__submenu-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.metafields.custom.menu_image.value | image_url: width: 250 }}" alt="{{ childLink.object.image.alt }}" />
                                       {%- endif -%}
                                     {%- endif -%}
@@ -436,7 +441,13 @@
                         <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu" data-items-per-row="{{ section.settings.items_in_row }}" role="list" tabindex="-1">
                           {%- for childLink in link.links -%}
                             <li>
-                              <a href="{{ childLink.url }}" class="header__submenu-link{% if childLink.current %} header__submenu-link--active{% endif %}"{% if childLink.current %} aria-current="page"{% endif %}>
+                              {%- if childLink.type == 'collection_link' -%}
+                                {% assign firstProduct = collections[childLink.object.handle].products | first %}
+                                
+                                <a href="{{ firstProduct.url }}" class="header__submenu-link{% if childLink.current %} header__submenu-link--active{% endif %}"{% if childLink.current %} aria-current="page"{% endif %}>
+                              {%- else -%}
+                                <a href="{{ childLink.url }}" class="header__submenu-link{% if childLink.current %} header__submenu-link--active{% endif %}"{% if childLink.current %} aria-current="page"{% endif %}>
+                              {%- endif -%}
                                 <div class="header__submenu-link-image-wrapper">
                                   {%- if childLink.type == 'collection_link' -%}
                                     {%- if childLink.object.metafields.custom.menu_image.value != blank -%}

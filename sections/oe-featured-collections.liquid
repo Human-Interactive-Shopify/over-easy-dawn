@@ -173,7 +173,8 @@
           {%- case block.type -%}
             {%- when 'featured-collection' -%}
               {%- if block.settings.collection != blank -%}
-              <a href="{{ block.settings.collection.url }}" class="oe-featured-collections__list-item">
+              {% assign firstProduct = collections[block.settings.collection].products | first %}
+              <a href="{{ firstProduct.url }}" class="oe-featured-collections__list-item">
                 <div class="oe-featured-collections__list-item-image-wrapper">
                   {%- if block.settings.collection.image != blank -%}
                     {{ block.settings.collection.image.src | image_url: width: 800 | image_tag:

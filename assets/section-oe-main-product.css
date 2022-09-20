@@ -147,11 +147,6 @@
   width: 100%;
 }
 
-.oe-product__meta-item a {
-  text-transform: uppercase;
-  color: var(--oe-color-copy-light);
-}
-
 .oe-product__meta-item {
   font-size: 14px;
   line-height: 160%;
@@ -354,16 +349,14 @@
     width: auto;
   }
 
-  .oe-product__meta-item a {
-    text-transform: uppercase;
-    color: var(--oe-color-copy-light);
-  }
-
+  .oe-product__meta-item a,
   .oe-product__meta-item {
     font-size: 14px;
     line-height: 160%;
     text-transform: uppercase;
     color: var(--oe-color-black);
+    display: flex;
+    gap: 5px;
   }
   
   .oe-product__meta-item:not(:first-child) {

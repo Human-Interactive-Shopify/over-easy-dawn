@@ -307,6 +307,9 @@
     }
 {%- endstyle -%}
 {%- liquid
+    if template.name == 'collection'
+        assign product = collection.products | first
+    endif
 
     assign props = product.metafields.overeasy.props.value
     assign naked_images = product.images | where: 'alt', "naked"
