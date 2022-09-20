@@ -1,28 +1,29 @@
 <style>
-    /* custom */
-    [data-smartrr-selling-plan-groups] {
-        display: flex;
-        flex-direction: column-reverse;
-    }
 
-    [data-smartrr-selling-plan-group-plans] {
-        display: none;
-    }
+/* custom */
+[data-smartrr-selling-plan-groups] {
+    display: flex;
+    flex-direction: column-reverse;
+}
 
-    .smartrr-group-active[data-smartrr-selling-plan-group-id] {
-        border: 2px solid #E8173A !important;
-    }
+[data-smartrr-selling-plan-group-plans] {
+    display: none;
+}
 
-    .smartrr-group-active[data-smartrr-selling-plan-group-id]::after {
-        border: 1px solid #E8173A;
-        background: #E8173A;
-    }
+.smartrr-group-active[data-smartrr-selling-plan-group-id] {
+    border: 2px solid #E8173A !important;
+}
 
-    .smartrr-otp {
-      margin-top: 20px;
-    }
+.smartrr-group-active[data-smartrr-selling-plan-group-id]::after {
+    border: 1px solid #E8173A;
+    background: #E8173A;
+}
 
-   [data-smartrr-selling-plan-group-id]::after {
+.smartrr-otp {
+    margin-top: 20px;
+}
+
+[data-smartrr-selling-plan-group-id]::after {
     content: "\2713";
     color: #fff;
     padding-left: 5px;
@@ -31,203 +32,205 @@
     background: #D9D9D9;
     align-self: flex-end;
 
-  }
+}
 
-  [data-smartrr-sub]::after {
+[data-smartrr-sub]::after {
     content: "\2713";
     color: #fff;
     width: 25px;
     height: 23px;
     background: #D9D9D9;
     align-self: flex-end;
-  }
+}
 
-  [data-smartrr-benefits] {
+[data-smartrr-benefits] {
     margin-left: 20px;
     color: #808080;
     font-size: 13px;
     margin-right: 20px;
-    
-  }
 
-   [data-smartrr-border]{
-     margin-left: 20px;
+}
+
+[data-smartrr-border] {
+    margin-left: 20px;
     color: #808080;
     font-size: 13px;
     margin-right: 20px;
     border-top: 2px solid #D9D9D9;
     margin-bottom: 8px;
-   }
-  
-   [data-smartrr-per-bar-price]{
-     font-size: 13px;
-      color: #808080;
-   }
+}
 
-  .smartrr-icon {
+[data-smartrr-per-bar-price] {
+    font-size: 13px;
+    color: #808080;
+}
+
+.smartrr-icon {
     padding-right: 8px;
     padding-top: 5px;
-  }
- .smartrr-icon2 {
-   margin-bottom: -6px;
-   padding-right: 8px
-  }
-
-
-
-    /* end custom */
-
-    /* Nice Select basics */
-
-
-    .hide {
-        display: none !important;
-    }
-
-    [data-smartrr-nice-select] {
-        position: relative;
-        width: 100%;
-    }
-
-    [data-smartrr-ns-list] {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        background-color: white;
-    }
-
-    [data-smartrr-nice-select] [data-smartrr-ns-list] {
-        display: none;
-    }
-
-    [data-smartrr-nice-select].smartrr-ns-open [data-smartrr-ns-list] {
-        display: unset;
-    }
-
-    /* end Nice Select */
-
-    [data-smartrr-compare-price] {
-        text-decoration: line-through;
-    }
-
-    [data-smartrr-regular-price] {
-        text-decoration: line-through;
-    }
-
-    /*  radio  */
-    [data-smartrr-selling-plan-group-input] {
-        position: absolute;
-        left: -9999px;
-    }
-
-    [data-smartrr-selling-plan-group-input]+.smartrr-selling-plan-group-input-display {
-        position: relative;
-        padding-left: 28px;
-        cursor: pointer;
-        height: 18px;
-        display: none;
-        color: #70c497;
-    }
-
-    [data-smartrr-selling-plan-group-input]+.smartrr-selling-plan-group-input-display:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 18px;
-        height: 18px;
-        border: 2px solid #70c497;
-        border-radius: 100%;
-        background: #fff;
-        box-sizing: border-box;
-    }
-
-    [data-smartrr-selling-plan-group-input]+.smartrr-selling-plan-group-input-display:after {
-        content: '';
-        background: #70c497;
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        top: 3px;
-        left: 3px;
-        border-radius: 100%;
-        -webkit-transition: all 0.2s ease;
-        transition: all 0.2s ease;
-
-        opacity: 0;
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
-
-    [data-smartrr-selling-plan-group-input]:checked+.smartrr-selling-plan-group-input-display:after {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-
-    /* end radio */
-
-    [data-smartrr-form-id] .smartrr-hide {
-        display: none;
-    }
-
-    [data-smartrr-selling-plans-select] {
-        padding: 13px 35px 13px 10px;
-        width: 100%;
-        border: 1px solid #ebebeb;
-        background: 0 0;
-    }
-
-    [data-smartrr-form-id] .smartrr-purchase-options {
-        border: none;
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 1rem;
-        padding: 0px;
-        color: #242424;
-    }
-
-    [data-smartrr-form-id] [data-smartrr-selling-plan-group-id] {
-        display: flex;
-        flex-direction: column;
-        column-gap: 0.4rem;
-        padding-top: 0.2rem;
-        border: 2px solid #D9D9D9;
-        cursor: pointer;
 }
-    
 
-    [data-smartrr-form-id] .smartrr-selling-plan-group-label {
-        cursor: pointer;
-        display: flex;
-        column-gap: 0.2rem;
-        align-items: center;
-    }
+.smartrr-icon2 {
+    margin-bottom: -6px;
+    padding-right: 8px
+}
 
-    [data-smartrr-form-id] [data-smartrr-selling-plan-group-input] {
-        min-height: 0;
-    }
 
-    [data-smartrr-form-id] .smartrr-selling-plan-group-contents {
-        margin-left: 1rem;
-    }
 
-    [data-smartrr-form-id] [data-smartrr-selling-plan-group-input]:disabled {
-        opacity: 0.7;
-    }
+/* end custom */
 
-    .smartrr-selling-plan-group-name {
-        display: inline-flex;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
-        padding: 10px 25px 0px 25px;
-        font-weight: bold;
-    }
+/* Nice Select basics */
 
-    [data-smartrr-form-id] [data-smartrr-selling-plan-group-input]:disabled+.smartrr-selling-plan-group-name {
-        opacity: 0.65;
-    }
+
+.hide {
+    display: none !important;
+}
+
+[data-smartrr-nice-select] {
+    position: relative;
+    width: 100%;
+}
+
+[data-smartrr-ns-list] {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
+
+[data-smartrr-nice-select] [data-smartrr-ns-list] {
+    display: none;
+}
+
+[data-smartrr-nice-select].smartrr-ns-open [data-smartrr-ns-list] {
+    display: unset;
+}
+
+/* end Nice Select */
+
+[data-smartrr-compare-price] {
+    text-decoration: line-through;
+}
+
+[data-smartrr-regular-price] {
+    text-decoration: line-through;
+}
+
+/*  radio  */
+[data-smartrr-selling-plan-group-input] {
+    position: absolute;
+    left: -9999px;
+}
+
+[data-smartrr-selling-plan-group-input]+.smartrr-selling-plan-group-input-display {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    height: 18px;
+    display: none;
+    color: #70c497;
+}
+
+[data-smartrr-selling-plan-group-input]+.smartrr-selling-plan-group-input-display:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #70c497;
+    border-radius: 100%;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+[data-smartrr-selling-plan-group-input]+.smartrr-selling-plan-group-input-display:after {
+    content: '';
+    background: #70c497;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+[data-smartrr-selling-plan-group-input]:checked+.smartrr-selling-plan-group-input-display:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/* end radio */
+
+[data-smartrr-form-id] .smartrr-hide {
+    display: none;
+}
+
+[data-smartrr-selling-plans-select] {
+    padding: 13px 35px 13px 10px;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    background: 0 0;
+}
+
+[data-smartrr-form-id] .smartrr-purchase-options {
+    border: none;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    padding: 0px;
+    color: #242424;
+}
+
+[data-smartrr-form-id] [data-smartrr-selling-plan-group-id] {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0.4rem;
+    padding-top: 0.2rem;
+    border: 2px solid #D9D9D9;
+    cursor: pointer;
+}
+
+
+[data-smartrr-form-id] .smartrr-selling-plan-group-label {
+    cursor: pointer;
+    display: flex;
+    column-gap: 0.2rem;
+    align-items: center;
+}
+
+[data-smartrr-form-id] [data-smartrr-selling-plan-group-input] {
+    min-height: 0;
+}
+
+[data-smartrr-form-id] .smartrr-selling-plan-group-contents {
+    margin-left: 1rem;
+}
+
+[data-smartrr-form-id] [data-smartrr-selling-plan-group-input]:disabled {
+    opacity: 0.7;
+}
+
+.smartrr-selling-plan-group-name {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 25px 0px 25px;
+    font-weight: bold;
+}
+
+[data-smartrr-form-id] [data-smartrr-selling-plan-group-input]:disabled+.smartrr-selling-plan-group-name {
+    opacity: 0.65;
+}
+
 </style>
