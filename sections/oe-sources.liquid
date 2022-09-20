@@ -56,7 +56,14 @@
 
   .Press-img-wrap {
     padding-bottom: 24px;
+    width: 200px;
   }
+
+  .Press-img-wrap img {
+    width: 100%;
+    object-fit: contain;
+  }
+
   .Press-text-wrap {
     margin-top: 24px;
     margin-bottom: 32px;
@@ -67,6 +74,9 @@
     max-width: 90%;
     background: var(--oe-color-grey-100);
     width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
   @media (min-width: 1280px) {
 
