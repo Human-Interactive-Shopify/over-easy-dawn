@@ -47,28 +47,28 @@
         "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
           "type": "source",
           "settings": {
-            "source_image": "shopify:\/\/shop_images\/Bestcovery.png",
+            "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
             "text": "\"Top Pick - Best Breakfast Bars 2022\""
           }
         },
         "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
           "type": "source",
           "settings": {
-            "source_image": "shopify:\/\/shop_images\/6AMHealth.png",
+            "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
             "text": "\"Helping to make breakfast easy\""
           }
         },
         "9f72aff9-1cbe-4979-bae9-7973f162a636": {
           "type": "source",
           "settings": {
-            "source_image": "shopify:\/\/shop_images\/MomsMeet.png",
+            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
             "text": "\"The perfect grab-and-go meal\""
           }
         },
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
           "type": "source",
           "settings": {
-            "source_image": "shopify:\/\/shop_images\/WomensRunning.png",
+            "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
             "text": "\"Enough fiber & protein to keep hunger at arm's length\""
           }
         }
