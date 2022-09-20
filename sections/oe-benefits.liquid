@@ -21,39 +21,89 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .oe-benefits__list-item {
-    width: 50%;
-    padding: 24px 12px;
-  }
-
-  .oe-benefits__list-item:nth-of-type(2n - 1) {
-    border-right: 1px solid var(--oe-color-grey-200);
-  }
-  
-  .oe-benefits__list-item:nth-of-type(n + 2) {
+    position: relative;
+    gap: 1px;
+    background: var(--oe-color-grey-200);
     border-top: 1px solid var(--oe-color-grey-200);
   }
   
+  .oe-benefits__list-item {
+    width: calc(50% - 1px);
+    padding: 24px 12px;
+    background: var(--oe-color-grey-100)
+  }
+  
   .oe-benefits__list-item-icon {
-    width: 24px;
+    width: 36px;
     margin: 0 auto;
   }
   
   .oe-benefits__list-item-title {
     text-align: center;
     margin: 20px 0 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
   }
   
   .oe-benefits__list-item-line,
   .oe-benefits__list-item-text {
     display: none;
   }
+
+  .oe-benefits__list-item-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--oe-color-grey-100);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .oe-benefits__list-item-info.is-visible {
+    opacity: 1;
+    pointer-events: unset;
+  }
+
+  .oe-benefits__list-item-info-close {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .oe-benefits__list-item-info-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    margin: 0 0 24px;
+  }
+  
+  .oe-benefits__list-item-info-text {
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+  }
   
   @media screen and (min-width: 750px) {
     .oe-benefits {
       
+    }
+
+    .oe-benefits__list-item-info {
+      display: none;
     }
 
     .oe-benefits__title {
@@ -78,7 +128,14 @@
       z-index: 1;
     }
 
+    .oe-benefits__list {
+      gap: 0;
+      background: transparent;
+      border-top: 0;
+    }
+    
     .oe-benefits__list-item {
+      background: transparent;
       width: 25%;
       padding: 32px 12px;
     }
@@ -115,14 +172,10 @@
     .oe-benefits__list-item:nth-of-type(n + 2) {
       border-top: 0;
     }
-
-    .oe-benefits__list-item-icon {
-      width: 40px;
-    }
   }
 {%- endstyle -%}
 
-<div class="oe-benefits">
+<div class="oe-benefits js-benefits">
   <div class="oe-benefits__container container">
     {%- if section.settings.headline != blank -%}
     <h3 class="oe-benefits__title">{{ section.settings.headline }}</h3>
@@ -148,6 +201,13 @@
               <hr class="oe-benefits__list-item-line">
               <h4 class="oe-benefits__list-item-title">{{ block.settings.heading }}</h4>
               <p class="oe-benefits__list-item-text">{{ block.settings.text }}</p>
+              <div class="oe-benefits__list-item-info">
+                <button class="oe-benefits__list-item-info-close">
+                  {% render 'icon-close-benefit' %}
+                </button>
+                <h4 class="oe-benefits__list-item-info-title">{{ block.settings.heading }}</h4>
+                <p class="oe-benefits__list-item-info-text">{{ block.settings.text }}</p>
+              </div>
             </div>
         {%- endcase -%}
       {%- endfor -%}
@@ -155,6 +215,58 @@
   {%- endif -%}
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const benefitSections = document.querySelectorAll('.js-benefits');
+
+    if (benefitSections.length) {
+      benefitSections.forEach(section => {
+        const benefitSection = new BenefitsSection(section);
+      });
+    }
+  })
+
+  class BenefitsSection {
+    constructor(element) {
+      this.rootElement = element
+      this.items = this.rootElement.querySelectorAll('.oe-benefits__list-item');
+
+      if (this.items.length) {
+        this.initItems()
+      }
+    }
+    
+    initItems() {
+      this.items.forEach(item => {
+        const closeButton = item.querySelector('.oe-benefits__list-item-info-close')
+        
+        
+        if (closeButton) {
+          console.log(closeButton)
+          closeButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            console.log('click closeButton')
+            this.closeItems();
+          })
+        }
+
+        item.addEventListener('click', () => {
+          if (window.innerWidth < 990) {
+            this.closeItems();
+
+            item.querySelector('.oe-benefits__list-item-info').classList.add('is-visible')
+          }
+        })
+
+      })
+    }
+
+    closeItems() {
+      this.items.forEach(item => {item.querySelector('.oe-benefits__list-item-info').classList.remove('is-visible')})
+    }
+  }
+</script>
 
 {% schema %}
 {

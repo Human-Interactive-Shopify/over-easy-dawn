@@ -461,13 +461,13 @@
                               <p class="header__submenu-link-title">{{ childLink.title | strip_html | truncatewords: 8, '...' }}{%- if childLink.type == 'collection_link' -%}{%- if childLink.object.metafields.custom.new_collection.value -%}<span class="header__submenu-link-title-new">New</span>{%- endif -%}{%- endif -%} </p>
                               {%- if childLink.type == 'collection_link' or childLink.type == 'product_link' or childLink.type == 'page_link' or childLink.type == 'blog_link' -%}
                                 {%- if childLink.object.metafields.custom.excerpt.value != blank -%}
-                                  <p class="header__submenu-link-excerpt">{{ childLink.object.metafields.custom.excerpt.value | strip_html | truncatewords: 12, '...' }}</p>
+                                  <p class="header__submenu-link-excerpt">{{ childLink.object.metafields.custom.excerpt.value | strip_html }}</p>
                                 {%- endif -%}
                               {%- endif -%}
                               
                               {%- if childLink.type == 'article_link' -%}
                                 {%- if childLink.object.excerpt != blank -%}
-                                  <p class="header__submenu-link-excerpt">{{ childLink.object.excerpt | strip_html | truncatewords: 12, '...' }}</p>
+                                  <p class="header__submenu-link-excerpt">{{ childLink.object.excerpt | strip_html }}</p>
                                 {%- endif -%}
                               {%- endif -%}
                             </a>

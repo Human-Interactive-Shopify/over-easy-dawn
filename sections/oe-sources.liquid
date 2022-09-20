@@ -8,7 +8,7 @@
             <div class="text-center lg:text-left">{{ block.settings.text }}</div>
           </div>
           <div class="Press-img-wrap">
-            <img width="240" height="80" src="{{ block.settings.source_image|img_url: '360x' }}">
+            <img width="240" height="80" loading="lazy" src="{{ block.settings.source_image | image_url: width: 500 }}">
           </div>
         </div>
       {% endfor %}
@@ -60,8 +60,9 @@
   .Press-text-wrap {
     margin-top: 24px;
     margin-bottom: 32px;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
     color: #3A3A3A;
     max-width: 90%;
     background: var(--oe-color-grey-100);

@@ -2682,9 +2682,13 @@ details[open] > .header__menu-item .icon-caret {
   margin-bottom: 0;
   margin-top: 6px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 160%;
   color: var(--oe-color-copy-light);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }
 
 [data-items-per-row="5"] .header__submenu-link-image-wrapper {

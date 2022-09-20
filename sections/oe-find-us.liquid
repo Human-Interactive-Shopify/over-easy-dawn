@@ -7,14 +7,14 @@
         {% for block in section.blocks %}
           <div class="FindUs-inner-wrap">
             <div class="FindUs-img-wrap">
-              <img src="{{ block.settings.merchant_image|img_url: '360x' }}">
+              <img width="190" height="120" loading="lazy" src="{{ block.settings.merchant_image | image_url: width: 300 }}" alt="{{ block.settings.merchant_image.alt}}">
             </div>
           </div>
         {% endfor %}
         {% for block in section.blocks %}
           <div class="FindUs-inner-wrap">
             <div class="FindUs-img-wrap">
-              <img src="{{ block.settings.merchant_image|img_url: '360x' }}">
+              <img width="190" height="120" loading="lazy" src="{{ block.settings.merchant_image | image_url: width: 300 }}" alt="{{ block.settings.merchant_image.alt}}">
             </div>
           </div>
         {% endfor %}
@@ -68,8 +68,14 @@
   margin: 0 40px;
 }
 .FindUs-img-wrap {
-  width: max-content;
+  width: 190px;
+  height: 100px;
 }
+.FindUs-img-wrap img {
+  width: 100%;
+  object-fit: contain;
+}
+
 @media (min-width: 768px) {
   .FindUs-scroller {
     margin-bottom: 32px;
