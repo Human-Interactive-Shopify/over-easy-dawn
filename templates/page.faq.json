@@ -36,15 +36,11 @@
       ],
       "settings": {
         "title": "FAQs",
-        "show_contact": true
+        "subtitle": ""
       }
     },
     "oe-contact-form": {
       "type": "oe-contact-form",
-      "settings": {
-        "background_color": "orange",
-        "content_align": "center"
-      },
       "blocks": {
         "form-heading": {
           "type": "heading",
@@ -62,7 +58,11 @@
       "block_order": [
         "form-heading",
         "form-link"
-      ]
+      ],
+      "settings": {
+        "background_color": "orange",
+        "content_align": "center"
+      }
     }
   },
   "order": [
