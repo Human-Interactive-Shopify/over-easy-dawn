@@ -35,11 +35,17 @@
 }
 
 .oe-faq-blog__list-filters {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   margin-bottom: 40px;
   display: flex;
   overflow-x: auto;
   gap: 24px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.oe-faq-blog__list-filters::-webkit-scrollbar {
+  display: none;
 }
 
 .oe-faq-blog__list-filter {
@@ -73,6 +79,7 @@
 }
 
 .oe-faq-blog__navigation-button {
+  font-family: var(--font-body-family);
   font-weight: 700;
   font-size: 14px;
   line-height: 160%;
