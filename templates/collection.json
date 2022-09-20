@@ -50,6 +50,13 @@
           "settings": {
             "text": "Super Greens Blend"
           }
+        },
+        "9a6c9bf1-a9f9-4d5e-b1fd-0e7e3e3c8f3b": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": ""
+          }
         }
       },
       "block_order": [
@@ -58,10 +65,11 @@
         "list-item-1",
         "list-item-2",
         "list-item-3",
-        "list-item-4"
+        "list-item-4",
+        "9a6c9bf1-a9f9-4d5e-b1fd-0e7e3e3c8f3b"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/VarietyPack_boxes_2048x_8d0c522c-3291-48b3-96f9-a0f8658dd70b.png",
+        "image": "shopify:\/\/shop_images\/jumbotron-shakes.png",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
@@ -106,7 +114,8 @@
     },
     "1663186300c28e5e47": {
       "type": "oe-nutrition-facts",
-      "settings": {}
+      "settings": {
+      }
     },
     "oe-ingredients": {
       "type": "oe-ingredients",
@@ -195,7 +204,8 @@
     },
     "16631570203f45fb2a": {
       "type": "oe-reviews",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
