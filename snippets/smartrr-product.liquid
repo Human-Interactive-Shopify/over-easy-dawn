@@ -94,16 +94,17 @@ assign smartrr_unique_id = product.id
                             <span class="smartrr-brackets">(<span data-smartrr-per-bar-price></span>)</span>
                         </div>
                     </div>
+                    <div data-smartrr-border></div>
+                    <div data-smartrr-benefits>
+                        <div>{% render 'icon-delivery' %} Choose your delivery frequency</div>
+                        <div>{% render 'icon-cancel' %} Cancel any time</div>
+                        {% comment %}
+                        <div><img class="smartrr-icon" src="https://cdn.shopify.com/s/files/1/0115/3626/9378/files/delivery_1.png?v=1663599111">Choose your delivery frequency</div>
+                        <div><img class="smartrr-icon2" src="https://cdn.shopify.com/s/files/1/0115/3626/9378/files/cancel.png?v=1663599111">Cancel any time</div>
+                        {% endcomment %}
+                    </div>
                 </label>
-                <div data-smartrr-border></div>
-                <div data-smartrr-benefits>
-                    <div>{% render 'icon-delivery' %} Choose your delivery frequency</div>
-                    <div>{% render 'icon-cancel' %} Cancel any time</div>
-                    {% comment %}
-                    <div><img class="smartrr-icon" src="https://cdn.shopify.com/s/files/1/0115/3626/9378/files/delivery_1.png?v=1663599111">Choose your delivery frequency</div>
-                    <div><img class="smartrr-icon2" src="https://cdn.shopify.com/s/files/1/0115/3626/9378/files/cancel.png?v=1663599111">Cancel any time</div>
-                    {% endcomment %}
-                </div>
+                
             </div>
             <div data-smartrr-selling-plan-group-contents="{{ group.id }}" class="hide">
                 <div data-smartrr-selling-plan-group-plans>
