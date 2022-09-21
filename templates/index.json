@@ -404,37 +404,43 @@
         "89145ece-7344-4faa-9891-194a608b4d8d": {
           "type": "merchant",
           "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/WholeFoods.png"
+            "merchant_image": "shopify:\/\/shop_images\/WholeFoods.png",
+            "is_small": true
           }
         },
         "2c013d01-a847-4746-a8d6-b860d381d285": {
           "type": "merchant",
           "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/Heinens.png"
+            "merchant_image": "shopify:\/\/shop_images\/Heinens.png",
+            "is_small": true
           }
         },
         "cb254a99-dee7-4801-9dde-e197538d5d70": {
           "type": "merchant",
           "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/Sheetz.png"
+            "merchant_image": "shopify:\/\/shop_images\/Sheetz.png",
+            "is_small": false
           }
         },
         "445bbc91-f25a-4dc1-b842-de698fac7990": {
           "type": "merchant",
           "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/Wegmans.png"
+            "merchant_image": "shopify:\/\/shop_images\/Wegmans.png",
+            "is_small": false
           }
         },
         "443f75cd-5bd3-49a4-a554-11c1086ce550": {
           "type": "merchant",
           "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/22d615d8b2488d0a0795b2bb54027df9.png"
+            "merchant_image": "shopify:\/\/shop_images\/22d615d8b2488d0a0795b2bb54027df9.png",
+            "is_small": false
           }
         },
         "63312fa2-852f-42bb-8012-299cd60bd2c8": {
           "type": "merchant",
           "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/EarthFare.png"
+            "merchant_image": "shopify:\/\/shop_images\/EarthFare.png",
+            "is_small": false
           }
         }
       },
