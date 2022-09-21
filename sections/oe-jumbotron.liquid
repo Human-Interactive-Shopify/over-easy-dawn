@@ -122,6 +122,57 @@
     max-width: 330px;
   }
 
+  .oe-jumbotron__eye-cacther {
+    position: absolute;
+    z-index: 3;
+    width: 140px;
+    height: 140px;
+  }
+
+  .oe-jumbotron__eye-cacther-position--top-left {
+    top: 0;
+    left: 0;
+  }
+  .oe-jumbotron__eye-cacther-position--top-right {
+    top: 0;
+    right: 0;
+  }
+  .oe-jumbotron__eye-cacther-position--bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+  .oe-jumbotron__eye-cacther-position--bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+
+  .oe-jumbotron__eye-cacther .oe-shape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    color: var(--oe-shape-color)
+  }
+
+  .oe-jumbotron__eye-cacther-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--oe-shape-text-color);
+    padding: 24px;
+  }
+
+  .oe-jumbotron__eye-cacther-text p {
+    margin: 0;
+    line-height: 1.2;
+  }
+
   @media screen and (min-width: 750px) {
     .oe-jumbotron__container {
       flex-direction: row;
@@ -193,6 +244,28 @@
           class: "oe-jumbotron__media",
           alt: section.settings.image.alt | escape
         }}
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'eye-catcher' -%}
+              <style>
+                #{{section.id}} {
+                  --oe-shape-color: var(--oe-color-{{ block.settings.color }});
+                  --oe-shape-text-color: var(--oe-color-{{ block.settings.text_color }});
+                }
+              </style>
+              <div id="{{ section.id }}" class="oe-jumbotron__eye-cacther oe-jumbotron__eye-cacther-shape--{{ block.settings.shape }} oe-jumbotron__eye-cacther-position--{{ block.settings.position }}">
+                {%- if block.settings.shape == 'spikes' -%}
+                  {% render 'spikes-shape' %}
+                {%- endif -%}
+                {%- if block.settings.shape == 'round' -%}
+                  {% render 'round-shape' %}
+                {%- endif -%}
+                <div class="oe-jumbotron__eye-cacther-text">
+                  {{ block.settings.text }}
+                </div>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
       </div>
     {%- endif -%}
     <div class="oe-jumbotron__content-wrapper">
@@ -387,6 +460,140 @@
           "type": "url",
           "id": "button_link_1",
           "label": "Url"
+        }
+      ]
+    },
+    {
+      "type": "eye-catcher",
+      "name": "Eye-catcher",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "position",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "Top left"
+            },
+            {
+              "value": "top-right",
+              "label": "Top right"
+            },
+            {
+              "value": "bottom-left",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottom-right",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "top-left",
+          "label": "Position"
+        },
+        {
+          "type": "select",
+          "id": "shape",
+          "options": [
+            {
+              "value": "spikes",
+              "label": "Spikes"
+            },
+            {
+              "value": "round",
+              "label": "Round"
+            }
+          ],
+          "default": "spikes",
+          "label": "Shape"
+        },
+        {
+          "type": "select",
+          "id": "color",
+          "options": [
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "black",
+              "label": "Black"
+            },
+            {
+              "value": "red",
+              "label": "Red"
+            },
+            {
+              "value": "violet",
+              "label": "Violet"
+            },
+            {
+              "value": "green",
+              "label": "Green"
+            },
+            {
+              "value": "copy",
+              "label": "Grey"
+            },
+            {
+              "value": "copy-lighter",
+              "label": "Grey - light"
+            },
+            {
+              "value": "orange",
+              "label": "Orange"
+            }
+            
+          ],
+          "default": "red",
+          "label": "Shape color"
+        },
+        {
+          "type": "select",
+          "id": "text_color",
+          "options": [
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "black",
+              "label": "Black"
+            },
+            {
+              "value": "red",
+              "label": "Red"
+            },
+            {
+              "value": "violet",
+              "label": "Violet"
+            },
+            {
+              "value": "green",
+              "label": "Green"
+            },
+            {
+              "value": "copy",
+              "label": "Grey"
+            },
+            {
+              "value": "copy-lighter",
+              "label": "Grey - light"
+            },
+            {
+              "value": "orange",
+              "label": "Orange"
+            }
+            
+          ],
+          "default": "white",
+          "label": "Text color"
         }
       ]
     }
