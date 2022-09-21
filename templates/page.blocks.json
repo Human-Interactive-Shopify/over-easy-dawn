@@ -38,7 +38,8 @@
         "9f72aff9-1cbe-4979-bae9-7973f162a636",
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "oe-jumbotron": {
       "type": "oe-jumbotron",
@@ -206,11 +207,13 @@
         "443f75cd-5bd3-49a4-a554-11c1086ce550",
         "63312fa2-852f-42bb-8012-299cd60bd2c8"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "1656406930ad5b3970": {
       "type": "oe-section-names",
-      "settings": {}
+      "settings": {
+      }
     },
     "oe-ingredients": {
       "type": "oe-ingredients",
