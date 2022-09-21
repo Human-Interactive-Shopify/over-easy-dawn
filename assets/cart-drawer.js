@@ -60,7 +60,17 @@ class CartDrawer extends HTMLElement {
     cartDrawerNote.parentElement.addEventListener('keyup', onKeyUpEscape);
   }
 
-  renderContents(parsedState) {
+  async renderContents(parsedState) {
+    // check if there is no sections. Fetch them directly.
+     if (!parsedState.sections) {
+			const sections = await fetch(
+				`${routes.cart_url}?sections=${this.getSectionsToRender().map(
+					(section) => section.id,
+				)}`,
+			);
+			parsedState.sections = await sections.json();
+		}
+
     this.querySelector('.drawer__inner').classList.contains('is-empty') && this.querySelector('.drawer__inner').classList.remove('is-empty');
     this.productId = parsedState.id;
     this.getSectionsToRender().forEach((section => {
