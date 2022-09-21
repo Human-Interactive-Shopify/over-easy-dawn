@@ -1,46 +1,5 @@
 {
   "sections": {
-    "1661427940e35b089a": {
-      "type": "oe-sources",
-      "blocks": {
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
-            "text": "\"Top Pick - Best Breakfast Bars 2022\""
-          }
-        },
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
-            "text": "\"Helping to make breakfast easy\""
-          }
-        },
-        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
-            "text": "\"The perfect grab-and-go meal\""
-          }
-        },
-        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
-            "text": "\"Enough fiber & protein to keep hunger at arm's length\""
-          }
-        }
-      },
-      "block_order": [
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
-        "9f72aff9-1cbe-4979-bae9-7973f162a636",
-        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
-      ],
-      "settings": {
-      }
-    },
     "oe-jumbotron": {
       "type": "oe-jumbotron",
       "blocks": {
@@ -153,68 +112,6 @@
         "headline": "Benefits"
       }
     },
-    "16614278019efa8d2e": {
-      "type": "oe-find-us",
-      "blocks": {
-        "89145ece-7344-4faa-9891-194a608b4d8d": {
-          "type": "merchant",
-          "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/WholeFoods.png",
-            "is_small": true
-          }
-        },
-        "2c013d01-a847-4746-a8d6-b860d381d285": {
-          "type": "merchant",
-          "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/Heinens.png",
-            "is_small": true
-          }
-        },
-        "cb254a99-dee7-4801-9dde-e197538d5d70": {
-          "type": "merchant",
-          "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/Sheetz.png",
-            "is_small": false
-          }
-        },
-        "445bbc91-f25a-4dc1-b842-de698fac7990": {
-          "type": "merchant",
-          "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/Wegmans.png",
-            "is_small": false
-          }
-        },
-        "443f75cd-5bd3-49a4-a554-11c1086ce550": {
-          "type": "merchant",
-          "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/22d615d8b2488d0a0795b2bb54027df9.png",
-            "is_small": false
-          }
-        },
-        "63312fa2-852f-42bb-8012-299cd60bd2c8": {
-          "type": "merchant",
-          "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/EarthFare.png",
-            "is_small": false
-          }
-        }
-      },
-      "block_order": [
-        "89145ece-7344-4faa-9891-194a608b4d8d",
-        "2c013d01-a847-4746-a8d6-b860d381d285",
-        "cb254a99-dee7-4801-9dde-e197538d5d70",
-        "445bbc91-f25a-4dc1-b842-de698fac7990",
-        "443f75cd-5bd3-49a4-a554-11c1086ce550",
-        "63312fa2-852f-42bb-8012-299cd60bd2c8"
-      ],
-      "settings": {
-      }
-    },
-    "1656406930ad5b3970": {
-      "type": "oe-section-names",
-      "settings": {
-      }
-    },
     "oe-ingredients": {
       "type": "oe-ingredients",
       "blocks": {
@@ -282,44 +179,102 @@
         "background_color": "grey-100"
       }
     },
-    "oe-testimonials": {
-      "type": "oe-testimonials",
+    "1661427940e35b089a": {
+      "type": "oe-sources",
       "blocks": {
-        "66dc171b-c8b1-44d6-bf0a-974a99e7839a": {
-          "type": "testimonials",
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
+          "type": "source",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cef37185be75484ffc422dd0a86d4ad0.jpg",
-            "text": "When I first tried Over Easy, I absolutely loved the taste and was surprised to look at how clean and simple the ingredients were... All of my teammates love the bars, too.",
-            "name": "Adam Thielen",
-            "position": "NFL Wide Receiver, MN Vikings"
+            "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
+            "text": "\"Top Pick - Best Breakfast Bars 2022\""
           }
         },
-        "d92c32c8-7744-40ba-a781-6c0e360b8608": {
-          "type": "testimonials",
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
+          "type": "source",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_174_1.jpg",
-            "text": "Working in a hospital, mornings are busy for me. OverEasy makes it simple... The combination of whole grains and protein sustains my energy levels all morning long.",
-            "name": "April Verdi, MPH, RD, LD",
-            "position": "Clinical Nutrition Manager"
+            "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
+            "text": "\"Helping to make breakfast easy\""
           }
         },
-        "f4a2657d-497c-456e-b8c0-0f5c9d2d2e24": {
-          "type": "testimonials",
+        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
+          "type": "source",
           "settings": {
-            "image": "shopify:\/\/shop_images\/44905fee151bb375335371a007637ee0.png",
-            "text": "I love that Over Easy bars have quality ingredients with a balance of carbohydrates, protein, fat, and vitamins and minerals to start the day. Plus, they have the added bonus of being both convenient and delicious.",
-            "name": "Amy Gibbs, MEd, RD, LD",
-            "position": "Cleveland Clinic, Director, Wellness Enterprise"
+            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
+            "text": "\"The perfect grab-and-go meal\""
+          }
+        },
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
+            "text": "\"Enough fiber & protein to keep hunger at arm's length\""
           }
         }
       },
       "block_order": [
-        "66dc171b-c8b1-44d6-bf0a-974a99e7839a",
-        "d92c32c8-7744-40ba-a781-6c0e360b8608",
-        "f4a2657d-497c-456e-b8c0-0f5c9d2d2e24"
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
+        "9f72aff9-1cbe-4979-bae9-7973f162a636",
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
       ],
       "settings": {
-        "headline": "Over Easy Advisory Team"
+      }
+    },
+    "16614278019efa8d2e": {
+      "type": "oe-find-us",
+      "blocks": {
+        "89145ece-7344-4faa-9891-194a608b4d8d": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/WholeFoods.png",
+            "is_small": true
+          }
+        },
+        "2c013d01-a847-4746-a8d6-b860d381d285": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/Heinens.png",
+            "is_small": true
+          }
+        },
+        "cb254a99-dee7-4801-9dde-e197538d5d70": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/Sheetz.png",
+            "is_small": false
+          }
+        },
+        "445bbc91-f25a-4dc1-b842-de698fac7990": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/Wegmans.png",
+            "is_small": false
+          }
+        },
+        "443f75cd-5bd3-49a4-a554-11c1086ce550": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/22d615d8b2488d0a0795b2bb54027df9.png",
+            "is_small": false
+          }
+        },
+        "63312fa2-852f-42bb-8012-299cd60bd2c8": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/EarthFare.png",
+            "is_small": false
+          }
+        }
+      },
+      "block_order": [
+        "89145ece-7344-4faa-9891-194a608b4d8d",
+        "2c013d01-a847-4746-a8d6-b860d381d285",
+        "cb254a99-dee7-4801-9dde-e197538d5d70",
+        "445bbc91-f25a-4dc1-b842-de698fac7990",
+        "443f75cd-5bd3-49a4-a554-11c1086ce550",
+        "63312fa2-852f-42bb-8012-299cd60bd2c8"
+      ],
+      "settings": {
       }
     },
     "1663281355fa8ec570": {
@@ -375,17 +330,62 @@
         "bg_color": "#f2e9db"
       }
     },
+    "oe-testimonials": {
+      "type": "oe-testimonials",
+      "blocks": {
+        "66dc171b-c8b1-44d6-bf0a-974a99e7839a": {
+          "type": "testimonials",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cef37185be75484ffc422dd0a86d4ad0.jpg",
+            "text": "When I first tried Over Easy, I absolutely loved the taste and was surprised to look at how clean and simple the ingredients were... All of my teammates love the bars, too.",
+            "name": "Adam Thielen",
+            "position": "NFL Wide Receiver, MN Vikings"
+          }
+        },
+        "d92c32c8-7744-40ba-a781-6c0e360b8608": {
+          "type": "testimonials",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_174_1.jpg",
+            "text": "Working in a hospital, mornings are busy for me. OverEasy makes it simple... The combination of whole grains and protein sustains my energy levels all morning long.",
+            "name": "April Verdi, MPH, RD, LD",
+            "position": "Clinical Nutrition Manager"
+          }
+        },
+        "f4a2657d-497c-456e-b8c0-0f5c9d2d2e24": {
+          "type": "testimonials",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/44905fee151bb375335371a007637ee0.png",
+            "text": "I love that Over Easy bars have quality ingredients with a balance of carbohydrates, protein, fat, and vitamins and minerals to start the day. Plus, they have the added bonus of being both convenient and delicious.",
+            "name": "Amy Gibbs, MEd, RD, LD",
+            "position": "Cleveland Clinic, Director, Wellness Enterprise"
+          }
+        }
+      },
+      "block_order": [
+        "66dc171b-c8b1-44d6-bf0a-974a99e7839a",
+        "d92c32c8-7744-40ba-a781-6c0e360b8608",
+        "f4a2657d-497c-456e-b8c0-0f5c9d2d2e24"
+      ],
+      "settings": {
+        "headline": "Over Easy Advisory Team"
+      }
+    },
     "oe-blocks-product": {
       "type": "oe-blocks-product",
       "settings": {
         "shipping_notice": "Free Shipping on orders of 2 or more products",
         "related_products_title": "Our Flavors",
-        "featured_product": "",
         "collection": "breakfast-bars",
+        "featured_product": "peanut-butter-breakfast-bar",
         "show_rating": true,
         "show_ingredients_anchor": false,
         "show_nutrition_anchor": false,
         "mobile_links": ""
+      }
+    },
+    "1656406930ad5b3970": {
+      "type": "oe-section-names",
+      "settings": {
       }
     }
   },
