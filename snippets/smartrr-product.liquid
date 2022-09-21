@@ -95,7 +95,7 @@ assign smartrr_unique_id = product.id
                               <span data-smartrr-compare-price></span>
                               <span data-smartrr-regular-price></span>
                               <span data-smartrr-subscribe-price></span>
-                              <span class="smartrr-brackets">(<span data-smartrr-per-bar-price></span>)</span>
+                              <span class="smartrr-brackets">(<span data-smartrr-per-bar-price></span>)</span> {{ block.settings.per_pack }}
                           </div>
                       </div>
                     </div>
@@ -299,18 +299,10 @@ assign smartrr_unique_id = product.id
      money.regular: amount that shows up when strike display is chosen. This is the original un-discounted price.
      money.subscribe: the final discounted price or one-time price that shows up in the checkout.
      */
-        if ($div.classList.contains("showSavings")) {
-             var perSaving = Number(money.subscribe) / 12;
-            var formattedSavings = ui.logic.apiFormatMoney(perSaving);
-            var $saving = $div.querySelector('[data-smartrr-per-bar-price]');
-            if ($saving) {
-                ui.apiSetText($saving, formattedSavings + "/bar");
-            }
-        }
-
-        return money;
+           return money;
     }
-  }; 
+
+  };
 
     window.initSmartrr && window.initSmartrr("{{ smartrr_unique_id }}");
 </script>
