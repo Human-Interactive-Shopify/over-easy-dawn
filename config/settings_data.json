@@ -110,7 +110,7 @@
               "text": "Wanna save even more? Sign up for 20 % off your next order!",
               "text_alignment": "center",
               "color_scheme": "accent-1",
-              "link": ""
+              "link": "\/account\/login"
             }
           }
         },
@@ -125,6 +125,7 @@
         "settings": {
           "logo": "shopify:\/\/shop_images\/OE_Pantone_Logo_2022.png",
           "menu": "wip-dawn-menu",
+          "enable_sticky_header": true,
           "show_search": true,
           "show_store_locator": true,
           "store_locator_page": "stores",
