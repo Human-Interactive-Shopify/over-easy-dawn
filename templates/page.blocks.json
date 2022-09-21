@@ -374,6 +374,19 @@
         "form_image": "shopify:\/\/shop_images\/right_image.png",
         "bg_color": "#f2e9db"
       }
+    },
+    "oe-blocks-product": {
+      "type": "oe-blocks-product",
+      "settings": {
+        "shipping_notice": "Free Shipping on orders of 2 or more products",
+        "related_products_title": "Our Flavors",
+        "featured_product": "",
+        "collection": "breakfast-bars",
+        "show_rating": true,
+        "show_ingredients_anchor": false,
+        "show_nutrition_anchor": false,
+        "mobile_links": ""
+      }
     }
   },
   "order": [
@@ -386,6 +399,7 @@
     "16631556027bfa8473",
     "166360256917f6db91",
     "oe-testimonials",
+    "oe-blocks-product",
     "1656406930ad5b3970"
   ]
 }

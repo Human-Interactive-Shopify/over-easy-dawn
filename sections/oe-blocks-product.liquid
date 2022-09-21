@@ -1,4 +1,5 @@
 {%- liquid
+  assign product = all_products[section.settings.featured_product]
   assign current_variant = product.selected_or_first_available_variant
   assign current_selling_plan_allocation = current_variant.selected_selling_plan_allocation
   if current_selling_plan_allocation == nil and current_variant.requires_selling_plan
@@ -23,10 +24,13 @@
   endif
 %}
 
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
 <section
   id="oe-main-product-{{ section.id }}"
   class="oe-product__section"
   data-section="{{ section.id }}"
+  data-section-name="Product"
 >
   <style>
     #oe-main-product-{{ section.id }} {
@@ -220,7 +224,7 @@
                 <button
                   type="submit"
                   name="add"
-                  class="button button--primary button-color--red is-full-width"
+                  class="product-form__submit button button--primary button-color--red is-full-width"
                   {% if product.selected_or_first_available_variant.available == false %}
                     disabled
                   {% endif %}
@@ -351,7 +355,7 @@
 
 {% schema %}
 {
-  "name": "OE Main product",
+  "name": "OE Blocks product",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -371,6 +375,11 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
+    },
+    {
+      "type": "product",
+      "id": "featured_product",
+      "label": "Product"
     },
     {
       "type": "header",
