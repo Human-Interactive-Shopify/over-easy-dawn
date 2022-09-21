@@ -107,7 +107,7 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "New Product: Shakes 25% OFF - Order now!",
+              "text": "New Product: Shakes 25% OFF - For now!",
               "text_alignment": "center",
               "color_scheme": "accent-1",
               "link": "\/account\/login"
