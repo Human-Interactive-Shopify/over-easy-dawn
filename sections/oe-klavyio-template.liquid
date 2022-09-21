@@ -1,0 +1,80 @@
+<section class="KlaviyoForm section-{{ section.id }}" data-section-name="Klaviyo Form" style="background-color:{{ section.settings.bg_color }}">
+  <div class="KlaviyoForm-wrapper">
+    <div class="KlaviyoForm-inner-wrap">
+      <div class="klaviyo-form-{{ section.settings.form_id }} KlavyioForm-form"></div>
+      {%- if section.settings.form_image != blank -%}
+      <div class="KlavyioForm-img"><img src="{{ section.settings.form_image | img_url: '1170x' }}"></div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+<style>
+  .KlaviyoForm button {
+    padding: 0px 24px !important;
+  }
+  .KlaviyoForm input {
+    background-color: rgb(255, 255, 255) !important;
+  }
+  .KlaviyoForm-wrapper {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 40px 0;
+  }
+
+  .KlaviyoForm-inner-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .KlavyioForm-form {
+    
+  }
+
+  @media (min-width: 768px) {
+  .KlavyioForm-form {
+      width: 55%;
+  }
+  .KlaviyoForm-inner-wrap {
+    flex-direction: row;
+  }
+  }
+
+  @media (min-width: 1024px) {
+    .KlaviyoForm-wrapper {
+      padding: 80px 0 !important;
+    }
+  }
+
+</style>
+
+{% schema %}
+  {
+    "name": "OE Klaviyo Embedded Form",
+    "class": "Klaviyo",
+    "settings": [
+      {
+        "type": "text",
+        "id": "form_id",
+        "label": "Embedded form ID"
+      },
+      {
+        "type": "image_picker",
+        "id": "form_image",
+        "label": "Subscribe Form Image"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color",
+        "default": "#F2E9DB"
+      }
+    ],
+    "presets": [
+      {
+        "name": "OE Klaviyo Form",
+        "category": "Layout"
+      }
+    ]
+  }
+{% endschema %}
