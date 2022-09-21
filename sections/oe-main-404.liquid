@@ -1,10 +1,10 @@
 <style type="text/css">
-  .page-404 {
+  .page-template-404 {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 
-  .page-404__alert {
+  .page-template-404__alert {
     background: var(--oe-color-red);
     border-radius: 4px;
     color: var(--oe-color-white);
@@ -15,18 +15,18 @@
     gap: 12px;
   }
 
-  .page-404__content {
+  .page-template-404__content {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     max-width: 535px;
   }
 
-  .page-404__content a {
+  .page-template-404__content a {
     color: var(--oe-color-red);
   }
 
-  .page-404__title {
+  .page-template-404__title {
     font-size: 31px;
     line-height: 120%;
     color: var(--oe-color-black);
@@ -34,18 +34,18 @@
     font-weight: 500;
   }
   
-  .page-404__search {
+  .page-template-404__search {
     margin-top: 32px;
     width: 100%;
   }
   
-  .page-404__illustration {
+  .page-template-404__illustration {
     margin-bottom: 40px;
   }
   
 
   @media screen and (min-width: 750px) {
-    .page-404 {
+    .page-template-404 {
       display: flex;
       align-items: center;
       gap: 100px;
@@ -54,33 +54,33 @@
       justify-content: space-between;
     }
 
-    .page-404__content {
+    .page-template-404__content {
       width: 50%;
       order: 1;
     }
     
-    .page-404__illustration {
+    .page-template-404__illustration {
       width: 50%;
       order: 2;
       margin-bottom: 0;
     }
 
-    .page-404__title {
+    .page-template-404__title {
       font-size: 55px;
       line-height: 120%;
       color: var(--oe-color-black);
       margin: 16px 0 24px;
     }
 
-    .page-404__alert {  
+    .page-template-404__alert {  
       padding: 12px 16px;
     }
   }
 </style>
 
-<div class="page-404 container">
+<div class="page-template-404 container">
   {%- if section.settings.image != blank -%}
-    <div class="page-404__illustration">
+    <div class="page-template-404__illustration">
       {{ section.settings.image | image_url: width: 550 | image_tag:
         loading: 'lazy',
         width: section.settings.image.width,
@@ -90,19 +90,19 @@
       }}
     </div>
   {%- endif -%}
-  <div class="page-404__content">
-    <div class="page-404__alert">
+  <div class="page-template-404__content">
+    <div class="page-template-404__alert">
       {% render 'icon-alert' %}
       404 Error
     </div>
-    <h1 class="page-404__title">
+    <h1 class="page-template-404__title">
       {{ 'templates.404.title' | t }}
     </h1>
-    <p class="page-404__text">
+    <p class="page-template-404__text">
       {{ 'templates.404.subtext' | t }}
     </p>
     {%- if section.settings.show_search -%}
-      <div class="page-404__search">
+      <div class="page-template-404__search">
         {%- if settings.predictive_search_enabled -%}
           <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
         {%- endif -%}
