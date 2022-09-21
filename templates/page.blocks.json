@@ -327,7 +327,7 @@
       "settings": {
         "form_id": "TXNAup",
         "form_image": "shopify:\/\/shop_images\/right_image.png",
-        "bg_color": "#f2e9db"
+        "bg_color": "{{ shop.brand.colors.primary[1].background }}"
       }
     },
     "oe-testimonials": {
