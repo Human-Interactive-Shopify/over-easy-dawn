@@ -110,7 +110,7 @@
               "text": "New Product: SHAKES 25% OFF right now!",
               "text_alignment": "center",
               "color_scheme": "accent-1",
-              "link": "\/account\/login"
+              "link": "shopify:\/\/collections\/shakes"
             }
           }
         },
