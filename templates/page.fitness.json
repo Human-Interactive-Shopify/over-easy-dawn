@@ -67,19 +67,6 @@
         "mobile_links": ""
       }
     },
-    "oe-blocks-product-2": {
-      "type": "oe-blocks-product",
-      "settings": {
-        "shipping_notice": "Free Shipping on orders of 2 or more products",
-        "related_products_title": "Our Flavors",
-        "collection": "breakfast-bars",
-        "featured_product": "peanut-butter-breakfast-bar",
-        "show_rating": true,
-        "show_ingredients_anchor": false,
-        "show_nutrition_anchor": false,
-        "mobile_links": ""
-      }
-    },
     "oe-ingredients": {
       "type": "oe-ingredients",
       "blocks": {
@@ -145,6 +132,54 @@
       "settings": {
         "headline": "Clean Ingredients. Made with Care.",
         "background_color": "grey-100"
+      }
+    },
+    "oe-blocks-product-2": {
+      "type": "oe-blocks-product",
+      "settings": {
+        "shipping_notice": "Free Shipping on orders of 2 or more products",
+        "related_products_title": "Our Flavors",
+        "collection": "breakfast-bars",
+        "featured_product": "peanut-butter-breakfast-bar",
+        "show_rating": true,
+        "show_ingredients_anchor": false,
+        "show_nutrition_anchor": false,
+        "mobile_links": ""
+      }
+    },
+    "1663281355fa8ec570": {
+      "type": "oe-customer-quotes",
+      "blocks": {
+        "3064b63c-3bda-4278-ae10-3da08d9d5002": {
+          "type": "quote",
+          "settings": {
+            "text": "\"I can confidently say that these are the best bars I've ever tried! Awesome product!\"",
+            "customer": "Emily P."
+          }
+        },
+        "b8aceaca-76da-4ac8-9346-75cdfda12de3": {
+          "type": "quote",
+          "settings": {
+            "text": "\"These are VERY tasty and I absolutely love the ingredient makeup!\"",
+            "customer": "Erin S."
+          }
+        },
+        "82bdc55b-0b95-4e13-bcd9-899321262b7a": {
+          "type": "quote",
+          "settings": {
+            "text": "\"As a dietician, I'm a huge fan of healthy carbs, especially whole grains like oats. They also taste delicious!\"",
+            "customer": "Adrienne D."
+          }
+        }
+      },
+      "block_order": [
+        "3064b63c-3bda-4278-ae10-3da08d9d5002",
+        "b8aceaca-76da-4ac8-9346-75cdfda12de3",
+        "82bdc55b-0b95-4e13-bcd9-899321262b7a"
+      ],
+      "settings": {
+        "headline": "Over 1 Million breakfasts served",
+        "sub-headline": "and the reviews are in"
       }
     },
     "oe-jumbotron": {
@@ -270,43 +305,9 @@
       "settings": {
       }
     },
-    "1663281355fa8ec570": {
-      "type": "oe-customer-quotes",
-      "blocks": {
-        "3064b63c-3bda-4278-ae10-3da08d9d5002": {
-          "type": "quote",
-          "settings": {
-            "text": "\"I can confidently say that these are the best bars I've ever tried! Awesome product!\"",
-            "customer": "Emily P."
-          }
-        },
-        "b8aceaca-76da-4ac8-9346-75cdfda12de3": {
-          "type": "quote",
-          "settings": {
-            "text": "\"These are VERY tasty and I absolutely love the ingredient makeup!\"",
-            "customer": "Erin S."
-          }
-        },
-        "82bdc55b-0b95-4e13-bcd9-899321262b7a": {
-          "type": "quote",
-          "settings": {
-            "text": "\"As a dietician, I'm a huge fan of healthy carbs, especially whole grains like oats. They also taste delicious!\"",
-            "customer": "Adrienne D."
-          }
-        }
-      },
-      "block_order": [
-        "3064b63c-3bda-4278-ae10-3da08d9d5002",
-        "b8aceaca-76da-4ac8-9346-75cdfda12de3",
-        "82bdc55b-0b95-4e13-bcd9-899321262b7a"
-      ],
-      "settings": {
-        "headline": "Over 1 Million breakfasts served",
-        "sub-headline": "and the reviews are in"
-      }
-    },
     "16631556027bfa8473": {
       "type": "oe-comparison-chart",
+      "disabled": true,
       "settings": {
         "title_desktop": "Our Bars are Head and Shoulders Above the Competition!",
         "title_mobile": "Above the Competition!",
@@ -401,11 +402,11 @@
     "166360256917f6db91",
     "oe-benefits",
     "oe-blocks-product",
-    "oe-blocks-product-2",
     "oe-ingredients",
+    "oe-blocks-product-2",
+    "1663281355fa8ec570",
     "oe-jumbotron",
     "16614278019efa8d2e",
-    "1663281355fa8ec570",
     "16631556027bfa8473",
     "oe-testimonials",
     "1661427940e35b089a"
