@@ -73,8 +73,9 @@
   }
   
   .oe-text-image__text {
+    margin-top: 0;
     color: var(--oe-color-black);
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
   
   .oe-text-image__text:last-of-type {
@@ -104,7 +105,7 @@
     }
     
     .oe-text-image__content-wrapper {
-      padding: 64px 0;
+      padding: 32px 0;
     }
 
     .oe-text-image__media-wrapper {
@@ -117,7 +118,7 @@
       font-weight: 500;
       font-size: 55px;
       line-height: 120%;
-      padding-bottom: 24px;
+      margin: 0 0 16px;
     }
 
     .oe-text-image__heading-size--small {
@@ -156,7 +157,7 @@
         {%-liquid
           assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
         -%}
-        {{ section.settings.image | image_url: width: 800 | image_tag:
+        {{ section.settings.image | image_url: width: 1300 | image_tag:
           loading: 'lazy',
           width: section.settings.image.width,
           height: image_height,

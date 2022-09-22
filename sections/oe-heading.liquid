@@ -7,8 +7,9 @@
     margin: 0;
     {% if section.settings.use_border%}
       display: block;
+      padding-bottom: 16px;
       border-bottom: 1px solid var(--oe-color-grey-200);
-    {% endif %} 
+      {% endif %} 
   }
   
   .oe-heading-{{ section.id }}__section {
@@ -20,12 +21,18 @@
     .oe-heading-{{ section.id }} {
       text-align: {{ section.settings.desktop_align }};
       font-size: {{ section.settings.desktop_font_size }}px;
+
+      {% if section.settings.use_border%}
+        padding-bottom: 32px;
+      {% endif %}
     }
     
     .oe-heading-{{ section.id }}__section {
       max-width: {{ section.settings.max_width }}px;
       padding: 80px 0;
     }
+
+    
   }
 {%- endstyle -%}
 
