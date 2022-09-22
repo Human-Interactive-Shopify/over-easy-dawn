@@ -828,6 +828,7 @@ summary::-webkit-details-marker {
 .focus-none {
   box-shadow: none !important;
   outline: 0 !important;
+  z-index: 1;
 }
 
 .focus-offset:focus-visible {

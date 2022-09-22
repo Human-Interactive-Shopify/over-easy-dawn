@@ -5,6 +5,10 @@
     font-size: {{ section.settings.mobile_font_size }}px;
     line-height: 1.2;
     margin: 0;
+    {% if section.settings.use_border%}
+      display: block;
+      border-bottom: 1px solid var(--oe-color-grey-200);
+    {% endif %} 
   }
   
   .oe-heading-{{ section.id }}__section {
@@ -143,6 +147,12 @@
       ],
       "default": "black",
       "label": "Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_border",
+      "label": "Show border",
+      "default": false
     }
   ],
   "presets": [
