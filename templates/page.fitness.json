@@ -67,6 +67,19 @@
         "mobile_links": ""
       }
     },
+    "oe-blocks-product-2": {
+      "type": "oe-blocks-product",
+      "settings": {
+        "shipping_notice": "Free Shipping on orders of 2 or more products",
+        "related_products_title": "Our Flavors",
+        "collection": "breakfast-bars",
+        "featured_product": "peanut-butter-breakfast-bar",
+        "show_rating": true,
+        "show_ingredients_anchor": false,
+        "show_nutrition_anchor": false,
+        "mobile_links": ""
+      }
+    },
     "oe-ingredients": {
       "type": "oe-ingredients",
       "blocks": {
@@ -388,6 +401,7 @@
     "166360256917f6db91",
     "oe-benefits",
     "oe-blocks-product",
+    "oe-blocks-product-2",
     "oe-ingredients",
     "oe-jumbotron",
     "16614278019efa8d2e",
