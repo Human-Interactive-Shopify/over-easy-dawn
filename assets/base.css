@@ -2283,13 +2283,15 @@ details[open] > .share-button__fallback {
     margin-left: -0.75rem;
   }
 
-  .header__heading {
+
+  
+  .header__heading-link {
     padding-right: 32px;
     position: relative;
     display: block;
   }
 
-  .header__heading::before {
+  .header__heading-link::before {
       content: '';
       position: absolute;
       right: 0;

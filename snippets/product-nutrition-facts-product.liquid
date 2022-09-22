@@ -1,5 +1,6 @@
 
 {%- assign props = product.metafields.overeasy.props.value -%}
+{%- assign type = product.metafields.custom.product_type.value -%}
 {%- assign ingredient_images = product.images | where: 'alt', "ingredient" -%}
 {%- assign vertical_images = product.images | where: 'alt', "vertical" -%}
 {%- assign nutrition_images = product.images | where: 'alt', "nutrition" -%}
@@ -10,18 +11,28 @@
         <div class="nutrition-info-description"><strong>Ingredients:</strong><br>{{ product_ingredients }}.</div>
         <div class="nutrition-info-props">
             <div class="text-center m2-valprop-el">
-                <h2 class="m2-valprop-val">{{props.protein_count}}</h2>                
-                <h3 class="gopher m2-valprop-name">Protein</h3>
+                <h2 class="m2-valprop-val">{{props.protein_count}}</h2>   
+                {% if type == 'Bar' %}             
+                    <p class="m2-valprop-name">Protein</p>
+                {% endif %}             
+                {% if type == 'Shake' %}             
+                    <p class="m2-valprop-name">Protein +<br>Colagen</p>
+                {% endif %}             
             </div>
             <div class="divider"></div>
             <div class="text-center m2-valprop-el">
                 <h2 class="m2-valprop-val">{{props.fiber_count}}</h2>
-                <h3 class="gopher m2-valprop-name">Fiber</h3>
+                <p class="m2-valprop-name">Fiber</p>
             </div>
             <div class="divider"></div>
             <div class="text-center m2-valprop-el">
                 <h2 class="m2-valprop-val">{{props.ingredient_count}}</h2>
-                <h3 class="brown-secondary gopher m2-valprop-name">Ingredients</h3>
+                {% if type == 'Bar' %}
+                    <p class="brown-secondary  m2-valprop-name">Ingredients</p>
+                {% endif %}
+                {% if type == 'Shake' %}
+                    <p class="brown-secondary  m2-valprop-name">Vitamins &<br>Minerals</p>
+                {% endif %}
             </div>
         </div>
         <div id="ingredients" class="nutrition-info-ingredients" style="margin: 20px 0; max-width: 100%;">
