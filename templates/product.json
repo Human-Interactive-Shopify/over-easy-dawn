@@ -187,6 +187,7 @@
     },
     "16631556027bfa8473": {
       "type": "oe-comparison-chart",
+      "disabled": true,
       "settings": {
         "title_desktop": "Our Bars are Head and Shoulders Above the Competition!",
         "title_mobile": "Above the Competition!",
