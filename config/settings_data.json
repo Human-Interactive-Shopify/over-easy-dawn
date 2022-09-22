@@ -123,7 +123,7 @@
       "oe-header": {
         "type": "oe-header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/OE_Pantone_Logo_2022.png",
+          "logo": "shopify:\/\/shop_images\/OE_logo.png",
           "menu": "wip-dawn-menu",
           "enable_sticky_header": true,
           "show_search": true,
