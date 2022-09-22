@@ -12,7 +12,7 @@
             height: block.settings.merchant_image.height,
             alt: block.settings.collection.image.alt | escape
           }}
-          
+
         {% endfor %}
         {% for block in section.blocks %}
           
@@ -61,6 +61,7 @@
   display:flex;
   align-content: center;
   align-items: center;
+  gap: 80px;
 }
 @keyframes move {
   from {transform: translateX(0%);}
