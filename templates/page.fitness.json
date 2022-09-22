@@ -59,8 +59,8 @@
       "settings": {
         "shipping_notice": "Free Shipping on orders of 2 or more products",
         "related_products_title": "Our Flavors",
-        "collection": "breakfast-bars",
-        "featured_product": "peanut-butter-breakfast-bar",
+        "collection": "shakes",
+        "featured_product": "strawberry-breakfast-shake",
         "show_rating": true,
         "show_ingredients_anchor": false,
         "show_nutrition_anchor": false,
