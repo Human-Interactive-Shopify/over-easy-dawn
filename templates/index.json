@@ -30,6 +30,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/over-easy-hero.png",
+        "use_overlay": false,
         "use_image_as_thumbnail": true,
         "use_video": true,
         "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c957b4103ab44c39a1dd3f0e243c9138.mp4",

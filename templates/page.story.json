@@ -15,6 +15,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/def2f61ef9de7e06a383eac52e3778fb.jpg",
+        "use_overlay": true,
         "use_image_as_thumbnail": false,
         "use_video": false,
         "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6bd87ee546254860ab0fab9106b33f13.mp4",
@@ -36,7 +37,8 @@
         "desktop_font_size": 55,
         "mobile_font_size": 25,
         "max_width": 1300,
-        "color_scheme": "black"
+        "color_scheme": "black",
+        "use_border": true
       }
     },
     "oe-text-image-1": {
@@ -151,7 +153,8 @@
         "desktop_font_size": 35,
         "mobile_font_size": 22,
         "max_width": 1100,
-        "color_scheme": "red"
+        "color_scheme": "red",
+        "use_border": false
       }
     },
     "oe-jumbotron": {
