@@ -109,8 +109,8 @@
         "324e6dd1-c3de-4e97-97cf-92c58f916ca4"
       ],
       "settings": {
-        "headline": "Over 1 Million breakfasts served",
-        "sub-headline": "and the reviews are in"
+        "headline": "Over 1 Million Breakfasts Served",
+        "sub-headline": "and the reviews are in!"
       }
     },
     "1663186300c28e5e47": {
@@ -139,7 +139,7 @@
           "type": "ingredients",
           "settings": {
             "icon": "glutten-free",
-            "heading": "GLUTTEN<br>FREE"
+            "heading": "GLUTEN FREE"
           }
         },
         "8ee23ecf-27d8-4496-a6f7-b046b799ebb7": {

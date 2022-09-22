@@ -404,35 +404,35 @@
         "89145ece-7344-4faa-9891-194a608b4d8d": {
           "type": "merchant",
           "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/WholeFoods.png",
+            "merchant_image": "shopify:\/\/shop_images\/whole-foods.png",
             "is_small": true
           }
         },
         "2c013d01-a847-4746-a8d6-b860d381d285": {
           "type": "merchant",
           "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/Heinens.png",
+            "merchant_image": "shopify:\/\/shop_images\/heinens_44939c7a-70e2-43b8-8b52-71e03282b95e.png",
             "is_small": true
           }
         },
         "cb254a99-dee7-4801-9dde-e197538d5d70": {
           "type": "merchant",
           "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/Sheetz.png",
+            "merchant_image": "shopify:\/\/shop_images\/sheetz_36c7737c-78d0-4ef4-88f9-61513e4462a6.png",
             "is_small": false
           }
         },
         "445bbc91-f25a-4dc1-b842-de698fac7990": {
           "type": "merchant",
           "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/Wegmans.png",
+            "merchant_image": "shopify:\/\/shop_images\/wegmans_f803be20-21af-4916-8c89-a57200597d67.png",
             "is_small": false
           }
         },
         "443f75cd-5bd3-49a4-a554-11c1086ce550": {
           "type": "merchant",
           "settings": {
-            "merchant_image": "shopify:\/\/shop_images\/22d615d8b2488d0a0795b2bb54027df9.png",
+            "merchant_image": "shopify:\/\/shop_images\/giant_9c8db1e9-ac9a-4a1a-b81b-b871e2440bf4.png",
             "is_small": false
           }
         },
