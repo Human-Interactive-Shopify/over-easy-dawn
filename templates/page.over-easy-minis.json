@@ -2,6 +2,7 @@
   "sections": {
     "166360256917f6db91": {
       "type": "oe-klavyio-template",
+      "disabled": true,
       "settings": {
         "form_id": "TXNAup",
         "form_image": "shopify:\/\/shop_images\/right_image.png",
@@ -10,6 +11,7 @@
     },
     "1655845521c871c9b0": {
       "type": "home-page-herogrid1",
+      "disabled": true,
       "settings": {
         "full_hero_image": "shopify:\/\/shop_images\/Variety_Pack_Bars_LP.png",
         "full_hero_image_mob": "shopify:\/\/shop_images\/Product_Image_w_bg.jpg",
@@ -27,85 +29,20 @@
         "key_feature_third_line": "at Checkout"
       }
     },
-    "1661427940e35b089a": {
-      "type": "oe-sources",
-      "blocks": {
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
-            "text": "\"Top Pick - Best Breakfast Bars 2022\""
-          }
-        },
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
-            "text": "\"Helping to make breakfast easy\""
-          }
-        },
-        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
-            "text": "\"The perfect grab-and-go meal\""
-          }
-        },
-        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
-            "text": "\"Enough fiber & protein to keep hunger at arm's length\""
-          }
-        }
-      },
-      "block_order": [
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
-        "9f72aff9-1cbe-4979-bae9-7973f162a636",
-        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
-      ],
-      "settings": {
-      }
-    },
     "oe-jumbotron": {
       "type": "oe-jumbotron",
       "blocks": {
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Complete morning nutrition for full body and brain health",
-            "heading_size": "small"
+            "heading": "Introducing: 100 Calorie Minis!",
+            "heading_size": "default"
           }
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
           "settings": {
-            "text": "Made from wholesome and nutrient dense ingredients, our products have been designed to give your body exactly what you need to start your day right, every single morning."
-          }
-        },
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Organic Oats & Fiber Blend"
-          }
-        },
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Colagen & Egg White Protein"
-          }
-        },
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Essential Vitamins & Minerals"
-          }
-        },
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Super Greens Blend"
+            "text": "Over Easy got its start as a nutritious and complete breakfast bar. Now, enjoy your favorite flavors in minis!"
           }
         },
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
@@ -119,10 +56,6 @@
       "block_order": [
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193",
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81"
       ],
       "settings": {
@@ -134,63 +67,39 @@
         "text_color_scheme": "black"
       }
     },
-    "oe-benefits": {
-      "type": "oe-benefits",
+    "1663281355fa8ec570": {
+      "type": "oe-customer-quotes",
       "blocks": {
-        "40444aef-af53-4520-8094-575ad2ea0700": {
-          "type": "benefits",
+        "3064b63c-3bda-4278-ae10-3da08d9d5002": {
+          "type": "quote",
           "settings": {
-            "heading": "BOOSTS ENERGY",
-            "text": "Slow burning complex carbs provide long lasting energy to keep your body fueled for hours.",
-            "icon": "boost-energy"
+            "text": "\"I can confidently say that these are the best bars I've ever tried! Awesome product!\"",
+            "customer": "Emily P."
           }
         },
-        "52dcb772-1d61-4ab2-9172-b240499ed829": {
-          "type": "benefits",
+        "b8aceaca-76da-4ac8-9346-75cdfda12de3": {
+          "type": "quote",
           "settings": {
-            "heading": "IMMUNITY SUPPORT",
-            "text": "Essential vitamins and minerals from plant nutrients promote a strong immune system.",
-            "icon": "immunity-support"
+            "text": "\"These are VERY tasty and I absolutely love the ingredient makeup!\"",
+            "customer": "Erin S."
           }
         },
-        "9d953f82-519a-4622-b8c1-eb9e714934ac": {
-          "type": "benefits",
+        "82bdc55b-0b95-4e13-bcd9-899321262b7a": {
+          "type": "quote",
           "settings": {
-            "heading": "GUT HEALTH",
-            "text": "Prebiotic Dietary Fiber and Beta Glucan aid in digestion and nourish a balanced gut biome.",
-            "icon": "gut-health"
-          }
-        },
-        "6bbbd805-1770-4d25-9399-b077127ca3a5": {
-          "type": "benefits",
-          "settings": {
-            "heading": "BRAIN FOOD",
-            "text": "Vitamin K, Beta-Carotene, and Antioxidants from Kale and Spinach deliver essential nutrients.",
-            "icon": "brain-food"
+            "text": "\"As a dietician, I'm a huge fan of healthy carbs, especially whole grains like oats. They also taste delicious!\"",
+            "customer": "Adrienne D."
           }
         }
       },
       "block_order": [
-        "40444aef-af53-4520-8094-575ad2ea0700",
-        "52dcb772-1d61-4ab2-9172-b240499ed829",
-        "9d953f82-519a-4622-b8c1-eb9e714934ac",
-        "6bbbd805-1770-4d25-9399-b077127ca3a5"
+        "3064b63c-3bda-4278-ae10-3da08d9d5002",
+        "b8aceaca-76da-4ac8-9346-75cdfda12de3",
+        "82bdc55b-0b95-4e13-bcd9-899321262b7a"
       ],
       "settings": {
-        "headline": "Benefits"
-      }
-    },
-    "oe-blocks-product": {
-      "type": "oe-blocks-product",
-      "settings": {
-        "shipping_notice": "Free Shipping on orders of 2 or more products",
-        "related_products_title": "Our Flavors",
-        "collection": "shakes",
-        "featured_product": "strawberry-breakfast-shake",
-        "show_rating": true,
-        "show_ingredients_anchor": false,
-        "show_nutrition_anchor": false,
-        "mobile_links": ""
+        "headline": "Over 1 Million breakfasts served",
+        "sub-headline": ""
       }
     },
     "oe-ingredients": {
@@ -265,8 +174,63 @@
       "settings": {
         "shipping_notice": "Free Shipping on orders of 2 or more products",
         "related_products_title": "Our Flavors",
-        "collection": "breakfast-bars",
-        "featured_product": "peanut-butter-breakfast-bar",
+        "collection": "minis",
+        "featured_product": "oatmeal-raisin-minis",
+        "show_rating": true,
+        "show_ingredients_anchor": false,
+        "show_nutrition_anchor": false,
+        "mobile_links": ""
+      }
+    },
+    "1661427940e35b089a": {
+      "type": "oe-sources",
+      "blocks": {
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
+            "text": "\"Top Pick - Best Breakfast Bars 2022\""
+          }
+        },
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
+            "text": "\"Helping to make breakfast easy\""
+          }
+        },
+        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
+            "text": "\"The perfect grab-and-go meal\""
+          }
+        },
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
+            "text": "\"Enough fiber & protein to keep hunger at arm's length\""
+          }
+        }
+      },
+      "block_order": [
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
+        "9f72aff9-1cbe-4979-bae9-7973f162a636",
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
+      ],
+      "settings": {
+      }
+    },
+    "oe-blocks-product": {
+      "type": "oe-blocks-product",
+      "disabled": true,
+      "settings": {
+        "shipping_notice": "Free Shipping on orders of 2 or more products",
+        "related_products_title": "Our Flavors",
+        "collection": "shakes",
+        "featured_product": "strawberry-breakfast-shake",
         "show_rating": true,
         "show_ingredients_anchor": false,
         "show_nutrition_anchor": false,
@@ -282,41 +246,6 @@
         "image_desktop": "shopify:\/\/shop_images\/oe_comparison_table.png",
         "cta_url": "",
         "cta_text": ""
-      }
-    },
-    "1663281355fa8ec570": {
-      "type": "oe-customer-quotes",
-      "blocks": {
-        "3064b63c-3bda-4278-ae10-3da08d9d5002": {
-          "type": "quote",
-          "settings": {
-            "text": "\"I can confidently say that these are the best bars I've ever tried! Awesome product!\"",
-            "customer": "Emily P."
-          }
-        },
-        "b8aceaca-76da-4ac8-9346-75cdfda12de3": {
-          "type": "quote",
-          "settings": {
-            "text": "\"These are VERY tasty and I absolutely love the ingredient makeup!\"",
-            "customer": "Erin S."
-          }
-        },
-        "82bdc55b-0b95-4e13-bcd9-899321262b7a": {
-          "type": "quote",
-          "settings": {
-            "text": "\"As a dietician, I'm a huge fan of healthy carbs, especially whole grains like oats. They also taste delicious!\"",
-            "customer": "Adrienne D."
-          }
-        }
-      },
-      "block_order": [
-        "3064b63c-3bda-4278-ae10-3da08d9d5002",
-        "b8aceaca-76da-4ac8-9346-75cdfda12de3",
-        "82bdc55b-0b95-4e13-bcd9-899321262b7a"
-      ],
-      "settings": {
-        "headline": "Over 1 Million breakfasts served",
-        "sub-headline": ""
       }
     },
     "oe-testimonials": {
@@ -423,20 +352,67 @@
       ],
       "settings": {
       }
+    },
+    "oe-benefits": {
+      "type": "oe-benefits",
+      "disabled": true,
+      "blocks": {
+        "40444aef-af53-4520-8094-575ad2ea0700": {
+          "type": "benefits",
+          "settings": {
+            "heading": "BOOSTS ENERGY",
+            "text": "Slow burning complex carbs provide long lasting energy to keep your body fueled for hours.",
+            "icon": "boost-energy"
+          }
+        },
+        "52dcb772-1d61-4ab2-9172-b240499ed829": {
+          "type": "benefits",
+          "settings": {
+            "heading": "IMMUNITY SUPPORT",
+            "text": "Essential vitamins and minerals from plant nutrients promote a strong immune system.",
+            "icon": "immunity-support"
+          }
+        },
+        "9d953f82-519a-4622-b8c1-eb9e714934ac": {
+          "type": "benefits",
+          "settings": {
+            "heading": "GUT HEALTH",
+            "text": "Prebiotic Dietary Fiber and Beta Glucan aid in digestion and nourish a balanced gut biome.",
+            "icon": "gut-health"
+          }
+        },
+        "6bbbd805-1770-4d25-9399-b077127ca3a5": {
+          "type": "benefits",
+          "settings": {
+            "heading": "BRAIN FOOD",
+            "text": "Vitamin K, Beta-Carotene, and Antioxidants from Kale and Spinach deliver essential nutrients.",
+            "icon": "brain-food"
+          }
+        }
+      },
+      "block_order": [
+        "40444aef-af53-4520-8094-575ad2ea0700",
+        "52dcb772-1d61-4ab2-9172-b240499ed829",
+        "9d953f82-519a-4622-b8c1-eb9e714934ac",
+        "6bbbd805-1770-4d25-9399-b077127ca3a5"
+      ],
+      "settings": {
+        "headline": "Benefits"
+      }
     }
   },
   "order": [
     "166360256917f6db91",
     "1655845521c871c9b0",
-    "1661427940e35b089a",
     "oe-jumbotron",
-    "oe-benefits",
-    "oe-blocks-product",
+    "1663281355fa8ec570",
     "oe-ingredients",
     "oe-blocks-product-2",
+    "1661427940e35b089a",
+    "oe-blocks-product",
     "16631556027bfa8473",
-    "1663281355fa8ec570",
     "oe-testimonials",
-    "16614278019efa8d2e"
+    "16614278019efa8d2e",
+    "oe-benefits"
   ]
 }
