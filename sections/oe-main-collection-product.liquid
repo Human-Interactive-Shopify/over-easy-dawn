@@ -70,6 +70,28 @@
     {%- endif -%}
     <div class="oe-product__gallery">
       <div class="oe-product__slider js-product-slider">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'eye-catcher-pdp' -%}
+              <style>
+                #{{section.id}} {
+                  --oe-shape-color: var(--oe-color-{{ block.settings.color }});
+                  --oe-shape-text-color: var(--oe-color-{{ block.settings.text_color }});
+                }
+              </style>
+              <div id="{{ section.id }}" class="oe-jumbotron__eye-cacther oe-jumbotron__eye-cacther-shape--{{ block.settings.shape }} oe-jumbotron__eye-cacther-position--{{ block.settings.position }}">
+                {%- if block.settings.shape == 'spikes' -%}
+                  {% render 'spikes-shape' %}
+                {%- endif -%}
+                {%- if block.settings.shape == 'round' -%}
+                  {% render 'round-shape' %}
+                {%- endif -%}
+                <div class="oe-jumbotron__eye-cacther-text">
+                  {{ block.settings.text }}
+                </div>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
         <div class="oe-product__slider-wrapper">
           {%- if product.selected_or_first_available_variant.featured_media != null -%}
             <div class="oe-product__slider-slide">
@@ -394,6 +416,134 @@
       "type": "link_list",
       "id": "mobile_links",
       "label": "Mobile links"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "eye-catcher-pdp",
+      "name": "Eye-catcher PDP",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "position",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "Top left"
+            },
+            {
+              "value": "top-right",
+              "label": "Top right"
+            }
+          ],
+          "default": "top-left",
+          "label": "Position"
+        },
+        {
+          "type": "select",
+          "id": "shape",
+          "options": [
+            {
+              "value": "spikes",
+              "label": "Spikes"
+            },
+            {
+              "value": "round",
+              "label": "Round"
+            }
+          ],
+          "default": "spikes",
+          "label": "Shape"
+        },
+        {
+          "type": "select",
+          "id": "color",
+          "options": [
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "black",
+              "label": "Black"
+            },
+            {
+              "value": "red",
+              "label": "Red"
+            },
+            {
+              "value": "violet",
+              "label": "Violet"
+            },
+            {
+              "value": "green",
+              "label": "Green"
+            },
+            {
+              "value": "copy",
+              "label": "Grey"
+            },
+            {
+              "value": "copy-lighter",
+              "label": "Grey - light"
+            },
+            {
+              "value": "orange",
+              "label": "Orange"
+            }
+            
+          ],
+          "default": "red",
+          "label": "Shape color"
+        },
+        {
+          "type": "select",
+          "id": "text_color",
+          "options": [
+            {
+              "value": "white",
+              "label": "White"
+            },
+            {
+              "value": "black",
+              "label": "Black"
+            },
+            {
+              "value": "red",
+              "label": "Red"
+            },
+            {
+              "value": "violet",
+              "label": "Violet"
+            },
+            {
+              "value": "green",
+              "label": "Green"
+            },
+            {
+              "value": "copy",
+              "label": "Grey"
+            },
+            {
+              "value": "copy-lighter",
+              "label": "Grey - light"
+            },
+            {
+              "value": "orange",
+              "label": "Orange"
+            }
+            
+          ],
+          "default": "white",
+          "label": "Text color"
+        }
+      ]
     }
   ]
 }
