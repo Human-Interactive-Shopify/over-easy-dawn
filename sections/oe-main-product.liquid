@@ -182,7 +182,36 @@
           </div>
           
         </div>
-        {% render 'smartrr-product' %}
+        {% if product.metafields.custom.product_type == 'Bottle' %}
+          {% render 'smartrr-product-styles' %}
+          <fieldset class="smartrr-purchase-options" data-smartrr-purchase-options="4260785651778">
+            <div data-smartrr-selling-plan-groups="">
+              <div data-smartrr-selling-plan-group-id="" class="smartrr-otp smartrr-group-active">
+                  <div class="smartrr-selling-plan-group-header">
+                      <label class="smartrr-selling-plan-group-label">
+                        <div class="smartrr-selling-plan-group-label-inner">
+                          <input type="radio" data-smartrr-selling-plan-group-input="" name="purchase_option" value="">
+                          <div class="smartrr-selling-plan-group-input-display"></div>
+                          <div class="smartrr-selling-plan-group-name">
+                              <div>One Time Purchase</div>
+                              <div class="showSavings" data-smartrr-product-id="4260785651778" data-smartrr-price-style="original-compare">
+                                  <span data-smartrr-compare-price="" class="hide">$INVALID</span>
+                                  <span data-smartrr-regular-price="" class="hide"></span>
+                                  <span data-smartrr-subscribe-price="">$20.00</span>
+                                  
+                              </div>
+                          </div>
+                        </div>
+                        <div data-smartrr-border=""></div>
+                      </label>
+                  </div>
+                  <div data-smartrr-selling-plan-group-contents="" class=""></div>
+                </div>
+              </div>
+          </fieldset>  
+        {% else %}
+          {% render 'smartrr-product' %}
+        {% endif %}
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         <div class="oe-product__actions">
