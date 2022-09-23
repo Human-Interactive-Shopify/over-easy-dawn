@@ -129,6 +129,16 @@
             "button_label_1": "Shop now",
             "button_link_1": "shopify:\/\/products\/strawberry-breakfast-shake"
           }
+        },
+        "ba805c69-004b-47cb-a9f7-f9bd28410b5a": {
+          "type": "eye-catcher",
+          "settings": {
+            "text": "<p><strong>25% OFF <\/strong><br\/>on shakes right now!<\/p>",
+            "position": "top-left",
+            "shape": "spikes",
+            "color": "red",
+            "text_color": "white"
+          }
         }
       },
       "block_order": [
@@ -138,7 +148,8 @@
         "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
         "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
         "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
-        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81"
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81",
+        "ba805c69-004b-47cb-a9f7-f9bd28410b5a"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/jumbotron-shakes.png",

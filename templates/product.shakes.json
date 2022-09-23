@@ -9,7 +9,7 @@
         "show_rating": true,
         "show_ingredients_anchor": true,
         "show_nutrition_anchor": true,
-        "mobile_links": ""
+        "mobile_links": "wip-dawn-product-link-list"
       }
     },
     "oe-jumbotron": {

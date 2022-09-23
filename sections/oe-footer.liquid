@@ -155,8 +155,7 @@
   .footer__gallery-image-wrapper {
     width: 40%;
     position: relative;
-    padding-top: 40%;
-    flex: 1 0 auto;
+    padding-top: 25%;
   }
 
   .footer__gallery-image {
@@ -245,7 +244,7 @@
     .footer__gallery-image-wrapper {
       width: 25%;
       position: relative;
-      padding-top: 19%;
+      padding-top: 25%;
     }
 
     
@@ -269,7 +268,7 @@
       {%- case block.type -%}
         {%- when 'footer_images' -%}
           <div class="footer__gallery-image-wrapper">
-            {{ block.settings.gallery_image_picker | image_url: width: 720 | image_tag:
+            {{ block.settings.gallery_image_picker | image_url: width: 1000 | image_tag:
               loading: 'lazy',
               width: section.settings.image.width,
               height: 480,
