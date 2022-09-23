@@ -2,51 +2,11 @@
   "sections": {
     "166360256917f6db91": {
       "type": "oe-klavyio-template",
+      "disabled": true,
       "settings": {
         "form_id": "TXNAup",
         "form_image": "shopify:\/\/shop_images\/right_image.png",
         "bg_color": "{{ shop.brand.colors.primary[1].background }}"
-      }
-    },
-    "1661427940e35b089a": {
-      "type": "oe-sources",
-      "blocks": {
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
-            "text": "\"Top Pick - Best Breakfast Bars 2022\""
-          }
-        },
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
-            "text": "\"Helping to make breakfast easy\""
-          }
-        },
-        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
-            "text": "\"The perfect grab-and-go meal\""
-          }
-        },
-        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
-            "text": "\"Enough fiber & protein to keep hunger at arm's length\""
-          }
-        }
-      },
-      "block_order": [
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
-        "9f72aff9-1cbe-4979-bae9-7973f162a636",
-        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
-      ],
-      "settings": {
       }
     },
     "oe-jumbotron": {
@@ -311,6 +271,47 @@
         "sub-headline": ""
       }
     },
+    "1661427940e35b089a": {
+      "type": "oe-sources",
+      "blocks": {
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
+            "text": "\"Top Pick - Best Breakfast Bars 2022\""
+          }
+        },
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
+            "text": "\"Helping to make breakfast easy\""
+          }
+        },
+        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
+            "text": "\"The perfect grab-and-go meal\""
+          }
+        },
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
+            "text": "\"Enough fiber & protein to keep hunger at arm's length\""
+          }
+        }
+      },
+      "block_order": [
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
+        "9f72aff9-1cbe-4979-bae9-7973f162a636",
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
+      ],
+      "settings": {
+      }
+    },
     "oe-testimonials": {
       "type": "oe-testimonials",
       "blocks": {
@@ -419,7 +420,6 @@
   },
   "order": [
     "166360256917f6db91",
-    "1661427940e35b089a",
     "oe-jumbotron",
     "oe-benefits",
     "oe-blocks-product",
@@ -427,6 +427,7 @@
     "oe-blocks-product-2",
     "16631556027bfa8473",
     "1663281355fa8ec570",
+    "1661427940e35b089a",
     "oe-testimonials",
     "16614278019efa8d2e"
   ]
