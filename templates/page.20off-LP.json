@@ -2,6 +2,7 @@
   "sections": {
     "166360256917f6db91": {
       "type": "oe-klavyio-template",
+      "disabled": true,
       "settings": {
         "form_id": "TXNAup",
         "form_image": "shopify:\/\/shop_images\/right_image.png",
@@ -10,6 +11,7 @@
     },
     "1655845521c871c9b0": {
       "type": "home-page-herogrid1",
+      "disabled": true,
       "settings": {
         "full_hero_image": "shopify:\/\/shop_images\/Variety_Pack_Bars_LP.png",
         "full_hero_image_mob": "shopify:\/\/shop_images\/Product_Image_w_bg.jpg",
@@ -25,6 +27,44 @@
         "key_feature_first_line": "OverEasy20 for",
         "key_feature_second_line": "20% OFF",
         "key_feature_third_line": "at Checkout"
+      }
+    },
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
+      "blocks": {
+        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
+          "type": "heading",
+          "settings": {
+            "heading": "Complete morning nutrition for full body and brain health",
+            "heading_size": "small"
+          }
+        },
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
+          "type": "text",
+          "settings": {
+            "text": "Kick start your mornings with a deliciously crafted mix of vitamins, nutrients, and clean ingredients."
+          }
+        },
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": ""
+          }
+        }
+      },
+      "block_order": [
+        "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/right_image.png",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "white",
+        "button_color_scheme": "red",
+        "text_color_scheme": "black"
       }
     },
     "1661427940e35b089a": {
@@ -66,131 +106,6 @@
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
       ],
       "settings": {
-      }
-    },
-    "oe-jumbotron": {
-      "type": "oe-jumbotron",
-      "blocks": {
-        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
-          "type": "heading",
-          "settings": {
-            "heading": "Complete morning nutrition for full body and brain health",
-            "heading_size": "small"
-          }
-        },
-        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
-          "type": "text",
-          "settings": {
-            "text": "Made from wholesome and nutrient dense ingredients, our products have been designed to give your body exactly what you need to start your day right, every single morning."
-          }
-        },
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Organic Oats & Fiber Blend"
-          }
-        },
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Colagen & Egg White Protein"
-          }
-        },
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Essential Vitamins & Minerals"
-          }
-        },
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Super Greens Blend"
-          }
-        },
-        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop now",
-            "button_link_1": ""
-          }
-        }
-      },
-      "block_order": [
-        "7cff6e7a-e90c-4fb9-9d42-476226636238",
-        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193",
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
-        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/jumbotron-shakes.png",
-        "desktop_content_position": "left",
-        "mobile_content_position": "bottom",
-        "background_color_scheme": "white",
-        "button_color_scheme": "red",
-        "text_color_scheme": "black"
-      }
-    },
-    "oe-benefits": {
-      "type": "oe-benefits",
-      "blocks": {
-        "40444aef-af53-4520-8094-575ad2ea0700": {
-          "type": "benefits",
-          "settings": {
-            "heading": "BOOSTS ENERGY",
-            "text": "Slow burning complex carbs provide long lasting energy to keep your body fueled for hours.",
-            "icon": "boost-energy"
-          }
-        },
-        "52dcb772-1d61-4ab2-9172-b240499ed829": {
-          "type": "benefits",
-          "settings": {
-            "heading": "IMMUNITY SUPPORT",
-            "text": "Essential vitamins and minerals from plant nutrients promote a strong immune system.",
-            "icon": "immunity-support"
-          }
-        },
-        "9d953f82-519a-4622-b8c1-eb9e714934ac": {
-          "type": "benefits",
-          "settings": {
-            "heading": "GUT HEALTH",
-            "text": "Prebiotic Dietary Fiber and Beta Glucan aid in digestion and nourish a balanced gut biome.",
-            "icon": "gut-health"
-          }
-        },
-        "6bbbd805-1770-4d25-9399-b077127ca3a5": {
-          "type": "benefits",
-          "settings": {
-            "heading": "BRAIN FOOD",
-            "text": "Vitamin K, Beta-Carotene, and Antioxidants from Kale and Spinach deliver essential nutrients.",
-            "icon": "brain-food"
-          }
-        }
-      },
-      "block_order": [
-        "40444aef-af53-4520-8094-575ad2ea0700",
-        "52dcb772-1d61-4ab2-9172-b240499ed829",
-        "9d953f82-519a-4622-b8c1-eb9e714934ac",
-        "6bbbd805-1770-4d25-9399-b077127ca3a5"
-      ],
-      "settings": {
-        "headline": "Benefits"
-      }
-    },
-    "oe-blocks-product": {
-      "type": "oe-blocks-product",
-      "settings": {
-        "shipping_notice": "Free Shipping on orders of 2 or more products",
-        "related_products_title": "Our Flavors",
-        "collection": "shakes",
-        "featured_product": "strawberry-breakfast-shake",
-        "show_rating": true,
-        "show_ingredients_anchor": false,
-        "show_nutrition_anchor": false,
-        "mobile_links": ""
       }
     },
     "oe-ingredients": {
@@ -260,6 +175,67 @@
         "background_color": "white"
       }
     },
+    "oe-benefits": {
+      "type": "oe-benefits",
+      "disabled": true,
+      "blocks": {
+        "40444aef-af53-4520-8094-575ad2ea0700": {
+          "type": "benefits",
+          "settings": {
+            "heading": "BOOSTS ENERGY",
+            "text": "Slow burning complex carbs provide long lasting energy to keep your body fueled for hours.",
+            "icon": "boost-energy"
+          }
+        },
+        "52dcb772-1d61-4ab2-9172-b240499ed829": {
+          "type": "benefits",
+          "settings": {
+            "heading": "IMMUNITY SUPPORT",
+            "text": "Essential vitamins and minerals from plant nutrients promote a strong immune system.",
+            "icon": "immunity-support"
+          }
+        },
+        "9d953f82-519a-4622-b8c1-eb9e714934ac": {
+          "type": "benefits",
+          "settings": {
+            "heading": "GUT HEALTH",
+            "text": "Prebiotic Dietary Fiber and Beta Glucan aid in digestion and nourish a balanced gut biome.",
+            "icon": "gut-health"
+          }
+        },
+        "6bbbd805-1770-4d25-9399-b077127ca3a5": {
+          "type": "benefits",
+          "settings": {
+            "heading": "BRAIN FOOD",
+            "text": "Vitamin K, Beta-Carotene, and Antioxidants from Kale and Spinach deliver essential nutrients.",
+            "icon": "brain-food"
+          }
+        }
+      },
+      "block_order": [
+        "40444aef-af53-4520-8094-575ad2ea0700",
+        "52dcb772-1d61-4ab2-9172-b240499ed829",
+        "9d953f82-519a-4622-b8c1-eb9e714934ac",
+        "6bbbd805-1770-4d25-9399-b077127ca3a5"
+      ],
+      "settings": {
+        "headline": "Benefits"
+      }
+    },
+    "oe-blocks-product": {
+      "type": "oe-blocks-product",
+      "disabled": true,
+      "settings": {
+        "shipping_notice": "Free Shipping on orders of 2 or more products",
+        "related_products_title": "Our Flavors",
+        "collection": "shakes",
+        "featured_product": "strawberry-breakfast-shake",
+        "show_rating": true,
+        "show_ingredients_anchor": false,
+        "show_nutrition_anchor": false,
+        "mobile_links": ""
+      }
+    },
     "oe-blocks-product-2": {
       "type": "oe-blocks-product",
       "settings": {
@@ -271,17 +247,6 @@
         "show_ingredients_anchor": false,
         "show_nutrition_anchor": false,
         "mobile_links": ""
-      }
-    },
-    "16631556027bfa8473": {
-      "type": "oe-comparison-chart",
-      "disabled": true,
-      "settings": {
-        "title_desktop": "Our Bars are Head and Shoulders Above the Competition!",
-        "title_mobile": "Above the Competition!",
-        "image_desktop": "shopify:\/\/shop_images\/oe_comparison_table.png",
-        "cta_url": "",
-        "cta_text": ""
       }
     },
     "1663281355fa8ec570": {
@@ -317,6 +282,16 @@
       "settings": {
         "headline": "Over 1 Million breakfasts served",
         "sub-headline": ""
+      }
+    },
+    "16631556027bfa8473": {
+      "type": "oe-comparison-chart",
+      "settings": {
+        "title_desktop": "Our Bars are Head and Shoulders Above the Competition!",
+        "title_mobile": "Above the Competition!",
+        "image_desktop": "shopify:\/\/shop_images\/NEW-ComparisonChart_Desktop_1.png",
+        "cta_url": "",
+        "cta_text": ""
       }
     },
     "oe-testimonials": {
@@ -428,14 +403,14 @@
   "order": [
     "166360256917f6db91",
     "1655845521c871c9b0",
-    "1661427940e35b089a",
     "oe-jumbotron",
+    "1661427940e35b089a",
+    "oe-ingredients",
     "oe-benefits",
     "oe-blocks-product",
-    "oe-ingredients",
     "oe-blocks-product-2",
-    "16631556027bfa8473",
     "1663281355fa8ec570",
+    "16631556027bfa8473",
     "oe-testimonials",
     "16614278019efa8d2e"
   ]
