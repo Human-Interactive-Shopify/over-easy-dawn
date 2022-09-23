@@ -128,25 +128,50 @@
   .oe-jumbotron__eye-cacther {
     position: absolute;
     z-index: 3;
-    width: 240px;
-    height: 240px;
+    width: 160px;
+    height: 160px;
   }
 
   .oe-jumbotron__eye-cacther-position--top-left {
-    top: 32px;
-    left: 32px;
-  }
-  .oe-jumbotron__eye-cacther-position--top-right {
-    top: 32px;
-    right: 32px;
-  }
-  .oe-jumbotron__eye-cacther-position--bottom-left {
-    bottom: 32px;
-    left: 32px;
-  }
-  .oe-jumbotron__eye-cacther-position--bottom-right {
-    bottom: 32px;
-    right: 32px;
+      top: 8px;
+      left: 8px;
+    }
+    .oe-jumbotron__eye-cacther-position--top-right {
+      top: 8px;
+      right: 8px;
+    }
+    .oe-jumbotron__eye-cacther-position--bottom-left {
+      bottom: 8px;
+      left: 8px;
+    }
+    .oe-jumbotron__eye-cacther-position--bottom-right {
+      bottom: 8px;
+      right: 8px;
+    }
+
+  @media screen and (min-width: 750px) {
+
+    .oe-jumbotron__eye-cacther {
+      width: 240px;
+      height: 240px;
+    }
+
+    .oe-jumbotron__eye-cacther-position--top-left {
+      top: 32px;
+      left: 32px;
+    }
+    .oe-jumbotron__eye-cacther-position--top-right {
+      top: 32px;
+      right: 32px;
+    }
+    .oe-jumbotron__eye-cacther-position--bottom-left {
+      bottom: 32px;
+      left: 32px;
+    }
+    .oe-jumbotron__eye-cacther-position--bottom-right {
+      bottom: 32px;
+      right: 32px;
+    }
   }
 
   .oe-jumbotron__eye-cacther .oe-shape {
@@ -169,6 +194,12 @@
     text-align: center;
     color: var(--oe-shape-text-color);
     padding: 24px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .oe-jumbotron__eye-cacther-text {
+      font-size: 24px;
+    }
   }
 
   .oe-jumbotron__eye-cacther-text p {
