@@ -36,7 +36,7 @@
         "list-item-2": {
           "type": "list_item",
           "settings": {
-            "text": "Colagen & Egg White Protein"
+            "text": "Collagen & Egg White Protein"
           }
         },
         "list-item-3": {
@@ -197,7 +197,8 @@
       "settings": {
         "title_desktop": "Our Bars are Head and Shoulders Above the Competition!",
         "title_mobile": "Above the Competition!",
-        "image_desktop": "shopify:\/\/shop_images\/oe_comparison_table.png",
+        "image_desktop": "shopify:\/\/shop_images\/NEW-ComparisonChart_Desktop_1.png",
+        "image_mobile": "shopify:\/\/shop_images\/Mobile_Competitor_Comparison.png",
         "cta_url": "",
         "cta_text": ""
       }

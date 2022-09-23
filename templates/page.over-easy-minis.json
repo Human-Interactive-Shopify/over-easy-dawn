@@ -51,12 +51,23 @@
             "button_label_1": "Shop now",
             "button_link_1": ""
           }
+        },
+        "934ca893-fe43-4ce7-8c80-6318e4d1b52b": {
+          "type": "eye-catcher",
+          "settings": {
+            "text": "<p>OVEREASY20<\/p><p>for<strong> 20% Off<\/strong><\/p><p>at checkout<\/p>",
+            "position": "top-right",
+            "shape": "round",
+            "color": "red",
+            "text_color": "white"
+          }
         }
       },
       "block_order": [
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
-        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81"
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81",
+        "934ca893-fe43-4ce7-8c80-6318e4d1b52b"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Minis_Labor_Day_LP.png",
@@ -123,7 +134,7 @@
           "type": "ingredients",
           "settings": {
             "icon": "glutten-free",
-            "heading": "GLUTTEN<br>FREE"
+            "heading": "GLUTEN<br>FREE"
           }
         },
         "8ee23ecf-27d8-4496-a6f7-b046b799ebb7": {

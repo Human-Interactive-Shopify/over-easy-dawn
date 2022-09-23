@@ -11,9 +11,88 @@
         "show_nutrition_anchor": false,
         "mobile_links": "wip-dawn-product-link-list"
       }
+    },
+    ,
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
+      "blocks": {
+        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
+          "type": "heading",
+          "settings": {
+            "heading": "Complete morning nutrition for full body and brain health",
+            "heading_size": "small"
+          }
+        },
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
+          "type": "text",
+          "settings": {
+            "text": "Made from wholesome and nutrient dense ingredients, our products have been designed to give your body exactly what you need to start your day right, every single morning."
+          }
+        },
+        "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Organic Oats & Fiber Blend"
+          }
+        },
+        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Collagen & Egg White Protein"
+          }
+        },
+        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Essential Vitamins & Minerals"
+          }
+        },
+        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Super Greens Blend"
+          }
+        },
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": "shopify:\/\/products\/strawberry-breakfast-shake"
+          }
+        },
+        "ba805c69-004b-47cb-a9f7-f9bd28410b5a": {
+          "type": "eye-catcher",
+          "settings": {
+            "text": "<p><strong>25% OFF <\/strong><br\/>on shakes<\/p><p>right now!<\/p>",
+            "position": "top-right",
+            "shape": "spikes",
+            "color": "red",
+            "text_color": "white"
+          }
+        }
+      },
+      "block_order": [
+        "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
+        "c59113f4-bd26-4777-8e39-c7b3feaf3193",
+        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
+        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
+        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81",
+        "ba805c69-004b-47cb-a9f7-f9bd28410b5a"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Complete_nutrition.png",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "white",
+        "button_color_scheme": "red",
+        "text_color_scheme": "black"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "oe-jumbotron"
   ]
 }

@@ -51,12 +51,23 @@
             "button_label_1": "Shop now",
             "button_link_1": ""
           }
+        },
+        "195c88a5-bcc4-48ee-8186-776e143b77ed": {
+          "type": "eye-catcher",
+          "settings": {
+            "text": "<p>OVEREASY20<\/p><p>for<strong> 20% off<\/strong><\/p><p>at checkout<\/p>",
+            "position": "top-right",
+            "shape": "round",
+            "color": "red",
+            "text_color": "white"
+          }
         }
       },
       "block_order": [
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
-        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81"
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81",
+        "195c88a5-bcc4-48ee-8186-776e143b77ed"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/right_image.png",
