@@ -4,7 +4,7 @@
       "type": "oe-klavyio-template",
       "settings": {
         "form_id": "TXNAup",
-        "form_image": "shopify:\/\/shop_images\/right_image.png",
+        "form_image": "shopify:\/\/shop_images\/ef8dc131e6de7c47c76cc7763d59c169.png",
         "bg_color": "{{ shop.brand.colors.primary[1].background }}"
       }
     },
