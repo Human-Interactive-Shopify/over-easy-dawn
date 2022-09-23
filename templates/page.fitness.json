@@ -49,52 +49,6 @@
       "settings": {
       }
     },
-    "oe-benefits": {
-      "type": "oe-benefits",
-      "blocks": {
-        "40444aef-af53-4520-8094-575ad2ea0700": {
-          "type": "benefits",
-          "settings": {
-            "heading": "BOOSTS ENERGY",
-            "text": "Slow burning complex carbs provide long lasting energy to keep your body fueled for hours.",
-            "icon": "boost-energy"
-          }
-        },
-        "52dcb772-1d61-4ab2-9172-b240499ed829": {
-          "type": "benefits",
-          "settings": {
-            "heading": "IMMUNITY SUPPORT",
-            "text": "Essential vitamins and minerals from plant nutrients promote a strong immune system.",
-            "icon": "immunity-support"
-          }
-        },
-        "9d953f82-519a-4622-b8c1-eb9e714934ac": {
-          "type": "benefits",
-          "settings": {
-            "heading": "GUT HEALTH",
-            "text": "Prebiotic Dietary Fiber and Beta Glucan aid in digestion and nourish a balanced gut biome.",
-            "icon": "gut-health"
-          }
-        },
-        "6bbbd805-1770-4d25-9399-b077127ca3a5": {
-          "type": "benefits",
-          "settings": {
-            "heading": "BRAIN FOOD",
-            "text": "Vitamin K, Beta-Carotene, and Antioxidants from Kale and Spinach deliver essential nutrients.",
-            "icon": "brain-food"
-          }
-        }
-      },
-      "block_order": [
-        "40444aef-af53-4520-8094-575ad2ea0700",
-        "52dcb772-1d61-4ab2-9172-b240499ed829",
-        "9d953f82-519a-4622-b8c1-eb9e714934ac",
-        "6bbbd805-1770-4d25-9399-b077127ca3a5"
-      ],
-      "settings": {
-        "headline": "Benefits"
-      }
-    },
     "oe-jumbotron": {
       "type": "oe-jumbotron",
       "blocks": {
@@ -159,6 +113,52 @@
         "background_color_scheme": "white",
         "button_color_scheme": "red",
         "text_color_scheme": "black"
+      }
+    },
+    "oe-benefits": {
+      "type": "oe-benefits",
+      "blocks": {
+        "40444aef-af53-4520-8094-575ad2ea0700": {
+          "type": "benefits",
+          "settings": {
+            "heading": "BOOSTS ENERGY",
+            "text": "Slow burning complex carbs provide long lasting energy to keep your body fueled for hours.",
+            "icon": "boost-energy"
+          }
+        },
+        "52dcb772-1d61-4ab2-9172-b240499ed829": {
+          "type": "benefits",
+          "settings": {
+            "heading": "IMMUNITY SUPPORT",
+            "text": "Essential vitamins and minerals from plant nutrients promote a strong immune system.",
+            "icon": "immunity-support"
+          }
+        },
+        "9d953f82-519a-4622-b8c1-eb9e714934ac": {
+          "type": "benefits",
+          "settings": {
+            "heading": "GUT HEALTH",
+            "text": "Prebiotic Dietary Fiber and Beta Glucan aid in digestion and nourish a balanced gut biome.",
+            "icon": "gut-health"
+          }
+        },
+        "6bbbd805-1770-4d25-9399-b077127ca3a5": {
+          "type": "benefits",
+          "settings": {
+            "heading": "BRAIN FOOD",
+            "text": "Vitamin K, Beta-Carotene, and Antioxidants from Kale and Spinach deliver essential nutrients.",
+            "icon": "brain-food"
+          }
+        }
+      },
+      "block_order": [
+        "40444aef-af53-4520-8094-575ad2ea0700",
+        "52dcb772-1d61-4ab2-9172-b240499ed829",
+        "9d953f82-519a-4622-b8c1-eb9e714934ac",
+        "6bbbd805-1770-4d25-9399-b077127ca3a5"
+      ],
+      "settings": {
+        "headline": "Benefits"
       }
     },
     "oe-blocks-product": {
@@ -409,8 +409,8 @@
   "order": [
     "166360256917f6db91",
     "1661427940e35b089a",
-    "oe-benefits",
     "oe-jumbotron",
+    "oe-benefits",
     "oe-blocks-product",
     "oe-ingredients",
     "oe-blocks-product-2",
