@@ -3,13 +3,10 @@
     "main": {
       "type": "oe-main-blog",
       "settings": {
-        "layout": "collage",
-        "show_image": true,
-        "image_height": "medium",
-        "show_date": true,
-        "show_author": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "Morning Nutrition News",
+        "text": "Read more below for information about Over Easy and healthy morning habits. Sign up below for special discounts, product announcements, and our weekly newsletter.",
+        "show_newsletter_subscribe": true,
+        "show_tags": true
       }
     }
   },
