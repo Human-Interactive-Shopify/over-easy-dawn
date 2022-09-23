@@ -1,7 +1,9 @@
 {
   "sections": {
     "oe-main": {
-      "type": "oe-main-article"
+      "type": "oe-main-article",
+      "settings": {
+      }
     }
   },
   "order": [
