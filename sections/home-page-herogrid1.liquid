@@ -1,12 +1,538 @@
+<section class="section-{{ section.id }}" data-section-name="Hero section">
+  <div class="container">
+    <div class="top-content top-content-hero-section-1 mb-w-set" style="margin: 0 auto; max-width: 1338px;">
+
+      <div class="flex-1 hero-text hero-text-content p-set-desktop">
+        <h1 class="uppercase habibi p-0-sm heroBlock">{{ section.settings.hero_heading }}</h1>
+        <h1 class="heroGrid-percentage heroBlock">{{ section.settings.hero-off-percentage }} </h1>
+        <p class="hero-header-first-paragraph gopher heroBlock">{{ section.settings.hero_text }}</p>
+
+        <a class="primary-btn" href="#product-wrap">{{- section.settings.hero_button_text -}}</a>
+
+        <p class="footnote">{{ section.settings.footnote }}</p>
+      </div>
+      <div class="flex-1 hero-image" style="position: relative; width: max-content; max-width:100%; margin-left: auto; margin-right: auto;">
+        <div>
+          {%- if section.settings.key_feature_first_line != blank -%}
+            {%- render 'badge', first_line: section.settings.key_feature_first_line, second_line: section.settings.key_feature_second_line, third_line: section.settings.key_feature_third_line -%}
+          {%- endif -%}
+
+          {%- if section.settings.full_hero_image != blank -%}
+            <img loading="lazy" class="heroBlock" src="{{ section.settings.full_hero_image | image_url: width: 600 }}" />
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Herogrid1",
+    "class": "home-page home-page-hero",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "full_hero_image",
+        "label": "Full-width Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "full_hero_image_mob",
+        "label": "Full-width Mobile Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "badge_image",
+        "label": "Badge Image"
+      },
+      {
+        "type": "select",
+        "id": "text_position_desk",
+        "label": "Text Position Desktop",
+        "options": [
+          {
+            "value": "1",
+            "label": "Left"
+          },
+          {
+            "value": "2",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "text_position_mob",
+        "label": "Text Position Mobile",
+        "options": [
+          {
+            "value": "1",
+            "label": "Top"
+          },
+          {
+            "value": "2",
+            "label": "Bottom"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "hero_heading",
+        "label": "Heading"
+      },
+      {
+        "id": "hero-off-percentage",
+        "type": "text",
+        "label": "Off Percentage",
+        "default": "Percentage"
+      },
+      {
+        "type": "html",
+        "id": "hero_text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "hero_button_text",
+        "label": "Button text"
+      },
+      {
+        "type": "url",
+        "id": "hero_button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "text",
+        "id": "footnote",
+        "label": "Footnote"
+      },
+      {
+        "type": "text",
+        "id": "key_feature_first_line",
+        "label": "Key feature first line"
+      },
+      {
+        "type": "text",
+        "id": "key_feature_second_line",
+        "label": "Key feature second line"
+      },
+      {
+        "type": "text",
+        "id": "key_feature_third_line",
+        "label": "Key feature third line"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero",
+        "category": "Layout"
+      }
+    ]
   }
 {% endschema %}
 
-{% stylesheet %}
-{% endstylesheet %}
+{%- if section.settings.text_position_mob == '1' -%}
+  {%- style -%}
+    @media (max-width: 7678px) {
+      .top-content > div {
+        order: {{ section.settings.text_position_mob }};
+      }
+      img.top-bar.lazyloaded:not(.desk) {
+        order: 2;
+        display: flex;
+      }
+      .desk {
+        display: none;
+      }
+      .mob {
+        display: block;
+      }
+    }
+  {%- endstyle -%}
+{%- elsif section.settings.text_position_mob == '2' -%}
+  {%- style -%}
+    @media (max-width: 768px) {
+      .top-content > div {
+        order: {{ section.settings.text_position_mob }};
+      }
+      img.top-bar.lazyloaded:not(.desk) {
+        order: 1;
+        display: flex;
+      }
 
-{% javascript %}
-{% endjavascript %}
+      .desk {
+        display: none;
+      }
+      .mob {
+        display: block;
+      }
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+{%- if section.settings.text_position_desk == '1' -%}
+  {%- style -%}
+    @media (min-width: 767px) {
+      .top-content > div {
+        order: {{ section.settings.text_position_desk }};
+      }
+
+      img.top-bar.lazyloaded:not(.mob) {
+        order: 2;
+        display: flex;
+      }
+      .desk {
+        display: block;
+      }
+      .mob {
+        display: none;
+      }
+    }
+  {%- endstyle -%}
+{%- elsif section.settings.text_position_desk == '2' -%}
+  {%- style -%}
+    @media (min-width: 767px) {
+      .top-content > div {
+        order: {{ section.settings.text_position_desk }};
+      }
+
+      img.top-bar.lazyloaded:not(.mob) {
+        order: 1;
+        display: flex;
+      }
+      .desk {
+        display: block;
+      }
+      .mob {
+        display: none;
+      }
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+{%- if section.settings.full_hero_image != blank -%}
+  {%- style -%}
+    div#shopify-section-home-page-hero-v {
+      background: #f64463;
+      height: 100%;
+    }
+    div#shopify-section-home-page-hero-v section.bg-secondary.relative.z1.lg-z3 {
+      padding: 0px;
+    }
+    div#shopify-section-home-page-hero-v .top-content {
+      align-items: center;
+      justify-content: end;
+    }
+    div#shopify-section-home-page-hero-v .top-content .hero-image img {
+      width: 100%;
+    }
+    div#shopify-section-home-page-hero-v .top-content .hero-text {
+      padding: 0 88px;
+    }
+    div#shopify-section-home-page-hero-v .top-content h1 {
+      font-size: 112px !important;
+      line-height: 1em !important;
+      margin-bottom: 24px;
+    }
+    div#shopify-section-home-page-hero-v .top-content p {
+      font-size: 40px;
+      line-height: 1.25em;
+      margin-bottom: 40px;
+    }
+    div#shopify-section-home-page-hero-v .top-content > div {
+      width: 50%;
+      max-width: 50%
+    }
+    div#shopify-section-home-page-hero-v .top-bar, div#shopify-section-home-page-hero-v .yellow-star {
+      display: none;
+    }
+    body.red-theme .section-home-page-hero-v.bg-secondary {
+      background: transparent;
+    }
+    body.red-theme .section-home-page-hero-v.bg-secondary .rip, body.red-theme .section-home-page-hero-v.bg-secondary .rip-up {
+      filter: none;
+    }
+    @media (max-width: 1919px) {
+      div#shopify-section-home-page-hero-v .top-content h1 {
+        font-size: 5.833vw !important;
+        margin-bottom: 1.250vw;
+      }
+      div#shopify-section-home-page-hero-v .top-content p {
+        font-size: 2.083vw;
+        margin-bottom: 2.500vw;
+      }
+      div#shopify-section-home-page-hero-v .top-content .hero-text {
+        padding: 0 4.583vw;
+      }
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+{%- if section.settings.full_hero_image_mob != blank -%}
+  {%- style -%}
+    div#shopify-section-home-page-hero-v .top-bar, div#shopify-section-home-page-hero-v .yellow-star {
+      display: none;
+    }
+    body.red-theme .section-home-page-hero-v.bg-secondary .rip, body.red-theme .section-home-page-hero-v.bg-secondary .rip-up {
+      filter: none;
+    }
+    body.red-theme .section-home-page-hero-v.bg-secondary {
+      background: transparent;
+    }
+    @media (max-width: 767px) {
+      div#shopify-section-home-page-hero-v .top-content > div {
+        width: 100%;
+        max-width: 100%
+      }
+      div#shopify-section-home-page-hero-v .top-content {
+        align-items: flex-end;
+        flex-direction:column;
+      }
+      div#shopify-section-home-page-hero-v .top-content h1 {
+        font-size: 13.021vw !important;
+        margin-bottom: 3.125vw;
+      }
+      div#shopify-section-home-page-hero-v .top-content p {
+        font-size: 4.297vw;
+        margin-bottom: 6.250vw;
+      }
+      div#shopify-section-home-page-hero-v .top-content .hero-text {
+        padding: 0 24px 70px;
+        text-align: center;
+        transform: translateY(-6.250vw);
+      }
+      div#shopify-section-home-page-hero-v section.bg-secondary.relative.z1.lg-z3 {
+        padding: 0px;
+      }
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+{%- style -%}
+  .section-{{ section.id }} {
+    background: var(--beige-refresh);
+    padding: 16px;
+    padding-top: 80px;
+  }
+  @media (min-width: 768px) {
+    .section-{{ section.id }} {
+      padding: 20px;
+      padding-top: 80px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-{{ section.id }} {
+      padding: 32px;
+      padding-top: 80px;
+    }
+  }
+
+  .heroGrid-percentage.heroGrid-percentage {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .heroGrid-percentage.heroGrid-percentage {
+      display: block;
+      padding-top: 0;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .section-{{ section.id }} h1 {
+      line-height: 32px;
+      padding-top: 2rem;
+    }
+  }
+  .section-{{ section.id }} h1 {
+    line-height: 72px;
+    padding-top: 4rem;
+  }
+
+  @media only screen and (max-width: 1500px) {
+    .wrap {
+      max-width: 91.8% !important;
+    }
+  }
+
+  @media only screen and (max-width: 1350px) {
+    .wrap{
+      max-width: 97.8% !important;
+    }
+  }
+  @media only screen and (max-width: 1250px) {
+    .product-purchase-type {
+      font-size: 12px !important;
+    }
+  }
+  @media only screen and (max-width:768px) {
+    .wrap.page-wrap {
+      max-width: 90% !important;
+    }
+  }
+  @media (min-width: 768px) {
+    #header-bg.set-h-mb {
+      height: 200px;
+    }
+  }
+  div#shopify-section-home-page-hero-v .top-content {
+    padding: 60px 0;
+  }
+
+  .top-content-hero-section-1 {
+    display: block;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .top-content-hero-section-1 {
+      display: flex;
+    }
+  }
+
+  .heroBlock {
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .heroBlock {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  .footnote {
+    color: rgba(76,76,76,0.5);
+    font-weight: 400;
+    letter-spacing: 0em;
+
+    font-size: 12px;
+    line-height: 15px;
+  }
+  @media (min-width: 640px) {
+    .footnote {
+      font-size: 14px;
+      line-height: 17.5px;
+    }
+  }
+  @media (min-width: 1090px) {
+    .footnote {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  @media (min-width: 1300px) {
+    .footnote {
+      font-size: 18px;
+      line-height: 22.5px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .footnote {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  .section-{{ section.id }} h1 {
+    font-family: 'Habibi' !important;
+    font-style: normal !important;
+    font-size: 60px !important;
+    line-height: 56px !important;
+    letter-spacing: 0.01em;
+    max-width:597px;
+  }
+  @media (min-width: 768px) {
+    .section-{{ section.id }} h1 {
+      font-size: 52px !important;
+      line-height: 48px !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-{{ section.id }} h1 {
+      font-size: 60px !important;
+      line-height: 56px !important;
+    }
+  }
+
+  .hero-header-first-paragraph {
+    color: var(--text-dark-refresh);
+    max-width:600px;
+    letter-spacing: 0.02em;
+    font-size: 28px;
+    line-height: 42px;
+
+    margin-bottom: 40px;
+  }
+  @media (min-width:768px) {
+    .p-set-desktop {
+      padding: 40px 0 0px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    #shopify-section-home-page-infobox .icon-wrapper h4 {
+      padding:5px 40px;
+    }
+    .section-{{ section.id }} h1 {
+      font-size: 46px !important;
+      line-height: 42px !important;
+    }
+    .mb-w-set {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  }
+
+  .hero-text-content {
+    color: var(--red-dark-refresh);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    .hero-text-content {
+      align-items: flex-start;
+    }
+  }
+
+  .hero-text-content p {
+    margin: 16px auto 32px;
+  }
+  @media (min-width: 1024px) {
+    .hero-text-content p {
+      margin: 40px 0;
+    }
+  }
+
+  @media (max-width:1100px) {
+    .hero-text-content p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    .section-{{ section.id }} h1.p-0-sm {
+      padding-top: 0;
+    }
+    .set-h-mb {
+      height: 180px !important;
+    }
+  }
+  @media (max-width:767px) {
+    .set-h-mb {
+      height: 128px !important;
+    }
+  }
+  @media only screen and (min-width:1024px) and (max-width:1420px) {
+    .main-hero-bottom-border {
+      margin-bottom: -1.9rem;
+    }
+  }
+  @media only screen and (min-width:1421px) and (max-width:1600px) {
+    .main-hero-bottom-border {
+      margin-bottom: -2.2rem;
+    }
+  }
+  .main-hero-bottom-border,.main-hero-bottom-border-last,.main-hero-bottom-border-top {
+    width: 100%;
+  }
+{%- endstyle -%}

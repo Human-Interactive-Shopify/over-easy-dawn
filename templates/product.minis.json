@@ -12,6 +12,25 @@
         "mobile_links": ""
       }
     },
+    "1655845521c871c9b0": {
+      "type": "home-page-herogrid1",
+      "settings": {
+        "full_hero_image": "shopify:\/\/shop_images\/Variety_Pack_Bars_LP.png",
+        "full_hero_image_mob": "shopify:\/\/shop_images\/Product_Image_w_bg.jpg",
+        "badge_image": "shopify:\/\/shop_images\/Group_3845_3.png",
+        "text_position_desk": "1",
+        "text_position_mob": "2",
+        "hero_heading": "COMPLETE MORNING NUTRITION",
+        "hero-off-percentage": "",
+        "hero_text": "Kick start your mornings with a deliciously crafted mix of vitamins, nutrients, and clean ingredients.",
+        "hero_button_text": "SHOP 20% OFF",
+        "hero_button_link": "",
+        "footnote": "",
+        "key_feature_first_line": "OverEasy20 for",
+        "key_feature_second_line": "20% OFF",
+        "key_feature_third_line": "at Checkout"
+      }
+    },
     "oe-jumbotron": {
       "type": "oe-jumbotron",
       "blocks": {
@@ -203,6 +222,7 @@
   },
   "order": [
     "main",
+    "1655845521c871c9b0",
     "oe-jumbotron",
     "16632686971a8b65e4",
     "1663186300c28e5e47",
