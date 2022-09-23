@@ -3,6 +3,8 @@
     "oe-main": {
       "type": "oe-main-404",
       "settings": {
+        "image": "shopify:\/\/shop_images\/Illustration.png",
+        "show_search": true
       }
     }
   },
