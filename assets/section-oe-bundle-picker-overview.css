@@ -263,7 +263,11 @@
   flex-direction: column;
 }
 
-.oe-bundle-picker__overview-wrap.is-disabled {
+.oe-bundle-picker__overview-wrap.is-disabled .oe-bundle-picker__section-heading {
+  opacity: 0.4;
+}
+
+.oe-bundle-picker__overview-wrap.is-disabled .oe-bundle-picker__overview-content {
   display: none;
 }
 

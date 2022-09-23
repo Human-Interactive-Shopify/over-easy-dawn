@@ -1,5 +1,9 @@
 
-.oe-bundle-picker__selling-plan.is-disabled {
+.oe-bundle-picker__selling-plan.is-disabled .oe-bundle-picker__section-heading {
+  opacity: 0.4;
+}
+
+.oe-bundle-picker__selling-plan.is-disabled .oe-bundle-picker__selling-plan-inner {
   display: none;
 }
 
