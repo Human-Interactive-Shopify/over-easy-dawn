@@ -4,7 +4,7 @@
       "type": "oe-main-product",
       "settings": {
         "shipping_notice": "Free Shipping on orders of 2 or more products",
-        "related_products_title": "Our Flavors",
+        "related_products_title": "Products family",
         "collection": "shakes",
         "show_rating": true,
         "show_ingredients_anchor": true,
