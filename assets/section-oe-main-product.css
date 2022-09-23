@@ -73,6 +73,10 @@
   position: relative;
 }
 
+.oe-product__slider:not(.swiper-initialized) .oe-product__slider-wrapper > :not(:first-child) {
+  display: none;
+}
+
 .oe-product__slider .oe-jumbotron__eye-cacther-text {
  font-size: 10px;
  line-height: 120%;
