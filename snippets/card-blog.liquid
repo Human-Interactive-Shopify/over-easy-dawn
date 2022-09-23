@@ -3,6 +3,7 @@
 
     Accepts:
     - article: {Object} Product Liquid object
+    - show_excerpt: {bool}
     - classes: {String}
 
     Usage:
@@ -27,7 +28,9 @@
       <span>{{ article.published_at | time_tag: format: 'date' }}</span>
     </div>
     <h3 class="oe-card-blog__title">{{ article.title }}</h3>
-    <p class="oe-card-blog__text">{{ article.excerpt }}</p>
+    {% if show_excerpt %}
+      <p class="oe-card-blog__text">{{ article.excerpt }}</p>
+    {% endif %}
     {% render 'button', variation: 'primary', color: 'red' , size: 'big', label: 'Shop now', classes: "oe-card-blog__button", label: "Read more" %}
   </div>
 </a>

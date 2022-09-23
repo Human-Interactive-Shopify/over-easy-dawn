@@ -30,7 +30,7 @@
     <div class="container">
       <div class="oe-main-blog__list">
         {%- for article in blog.articles -%}
-          {% render 'card-blog', article: article %}
+          {% render 'card-blog', article: article , show_excerpt: section.settings.show_card_excerpt %}
         {%- endfor -%}
       </div>
 
@@ -70,6 +70,12 @@
       "id": "show_tags",
       "default": true,
       "label": "Show tag buttons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_card_excerpt",
+      "default": true,
+      "label": "Show excerpts on cards"
     }
   ]
 }
