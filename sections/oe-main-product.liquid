@@ -195,9 +195,9 @@
                           <div class="smartrr-selling-plan-group-name">
                               <div>One Time Purchase</div>
                               <div class="showSavings" data-smartrr-product-id="4260785651778" data-smartrr-price-style="original-compare">
-                                  <span data-smartrr-compare-price="" class="hide">$INVALID</span>
+
                                   <span data-smartrr-regular-price="" class="hide"></span>
-                                  <span data-smartrr-subscribe-price="">$20.00</span>
+                                  <span data-smartrr-subscribe-price="{{ product.price | money }}">{{ product.price | money }}</span>
                                   
                               </div>
                           </div>
