@@ -11,9 +11,48 @@
         "show_nutrition_anchor": false,
         "mobile_links": "wip-dawn-product-link-list"
       }
+    },
+    "166394330074dd2dce": {
+      "type": "oe-jumbotron",
+      "disabled": true,
+      "blocks": {
+        "16639433003fa83f8b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Complete Nutrition",
+            "heading_size": "default"
+          }
+        },
+        "16639433003fa83f8b-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
+        "16639433003fa83f8b-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": ""
+          }
+        }
+      },
+      "block_order": [
+        "16639433003fa83f8b-0",
+        "16639433003fa83f8b-1",
+        "16639433003fa83f8b-2"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "red",
+        "button_color_scheme": "red",
+        "text_color_scheme": "white"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "166394330074dd2dce"
   ]
 }
