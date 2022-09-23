@@ -176,6 +176,10 @@
   background-color: currentColor;
 }
 
+.oe-product__meta-item a {
+  color: var(--oe-color-black);
+}
+
 .rating-count {
   font-size: 14px;
   line-height: 160%;
@@ -220,7 +224,7 @@
   text-align: center;
   color: var(--oe-color-black);
   text-decoration: none;
-  width: 90px;
+  width: max-content;
 }
 
 .oe-product__mobile-link-image-wrapper {
@@ -230,6 +234,10 @@
   border-radius: 50%;
   overflow: hidden;
   background-color: var(--oe-color-grey-300);
+}
+
+.oe-product__mobile-link--active .oe-product__mobile-link-image-wrapper {
+  background-color: var(--oe-color-red);
 }
 
 .oe-product__mobile-link-image {
