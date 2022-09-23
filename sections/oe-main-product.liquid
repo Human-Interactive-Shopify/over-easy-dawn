@@ -227,7 +227,11 @@
                 >
                   <span>
                     {%- if product.selected_or_first_available_variant.available -%}
+                      {%- if template.suffix == 'shakes' -%}
+                        Preorder
+                      {%- else -%}
                       {{ 'products.product.add_to_cart' | t }}
+                      {%- endif -%}
                     {%- else -%}
                       {{ 'products.product.sold_out' | t }}
                     {%- endif -%}
@@ -249,6 +253,12 @@
             {%- endform -%}
           </product-form>
         </div>
+        {%- if template.suffix == 'shakes' -%}
+        <span style="
+          margin-top: 14px;
+          display: block;">
+          * 25% off when you pre-order (Shipping on 10/6)</span>
+        {%- endif -%}
         {% if section.settings.shipping_notice != blank %}
           <p class="oe-product__shipping-notice">{% render 'icon-shipping' %} {{ section.settings.shipping_notice }}</p>
         {% endif %}

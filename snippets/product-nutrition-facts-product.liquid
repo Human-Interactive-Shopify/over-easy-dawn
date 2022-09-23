@@ -8,7 +8,7 @@
 <div class="nutrition-info">
     <div class="nutrition-info-content">
         {% assign product_ingredients = product.description | split: 'Ingredients:' | last %}
-        <div class="nutrition-info-description"><strong>Ingredients:</strong><br>{{ product_ingredients }}.</div>
+        <div class="nutrition-info-description"><strong>Ingredients:</strong><br>{{ props.ingredients }}.</div>
         <div class="nutrition-info-props">
             <div class="text-center m2-valprop-el">
                 <h2 class="m2-valprop-val">{{props.protein_count}}</h2>   
