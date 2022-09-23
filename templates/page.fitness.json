@@ -8,6 +8,47 @@
         "bg_color": "{{ shop.brand.colors.primary[1].background }}"
       }
     },
+    "1661427940e35b089a": {
+      "type": "oe-sources",
+      "blocks": {
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
+            "text": "\"Top Pick - Best Breakfast Bars 2022\""
+          }
+        },
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
+            "text": "\"Helping to make breakfast easy\""
+          }
+        },
+        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
+            "text": "\"The perfect grab-and-go meal\""
+          }
+        },
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
+            "text": "\"Enough fiber & protein to keep hunger at arm's length\""
+          }
+        }
+      },
+      "block_order": [
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
+        "9f72aff9-1cbe-4979-bae9-7973f162a636",
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
+      ],
+      "settings": {
+      }
+    },
     "oe-benefits": {
       "type": "oe-benefits",
       "blocks": {
@@ -52,6 +93,72 @@
       ],
       "settings": {
         "headline": "Benefits"
+      }
+    },
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
+      "blocks": {
+        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
+          "type": "heading",
+          "settings": {
+            "heading": "Complete morning nutrition for full body and brain health",
+            "heading_size": "small"
+          }
+        },
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
+          "type": "text",
+          "settings": {
+            "text": "Made from wholesome and nutrient dense ingredients, our products have been designed to give your body exactly what you need to start your day right, every single morning."
+          }
+        },
+        "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Organic Oats & Fiber Blend"
+          }
+        },
+        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Colagen & Egg White Protein"
+          }
+        },
+        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Essential Vitamins & Minerals"
+          }
+        },
+        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "settings": {
+            "text": "Super Greens Blend"
+          }
+        },
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": ""
+          }
+        }
+      },
+      "block_order": [
+        "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
+        "c59113f4-bd26-4777-8e39-c7b3feaf3193",
+        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
+        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
+        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/jumbotron-shakes.png",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "white",
+        "button_color_scheme": "red",
+        "text_color_scheme": "black"
       }
     },
     "oe-blocks-product": {
@@ -147,6 +254,17 @@
         "mobile_links": ""
       }
     },
+    "16631556027bfa8473": {
+      "type": "oe-comparison-chart",
+      "disabled": true,
+      "settings": {
+        "title_desktop": "Our Bars are Head and Shoulders Above the Competition!",
+        "title_mobile": "Above the Competition!",
+        "image_desktop": "shopify:\/\/shop_images\/oe_comparison_table.png",
+        "cta_url": "",
+        "cta_text": ""
+      }
+    },
     "1663281355fa8ec570": {
       "type": "oe-customer-quotes",
       "blocks": {
@@ -180,72 +298,6 @@
       "settings": {
         "headline": "Over 1 Million breakfasts served",
         "sub-headline": "and the reviews are in"
-      }
-    },
-    "oe-jumbotron": {
-      "type": "oe-jumbotron",
-      "blocks": {
-        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
-          "type": "heading",
-          "settings": {
-            "heading": "Complete morning nutrition for full body and brain health",
-            "heading_size": "small"
-          }
-        },
-        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
-          "type": "text",
-          "settings": {
-            "text": "Made from wholesome and nutrient dense ingredients, our products have been designed to give your body exactly what you need to start your day right, every single morning."
-          }
-        },
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Organic Oats & Fiber Blend"
-          }
-        },
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Colagen & Egg White Protein"
-          }
-        },
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Essential Vitamins & Minerals"
-          }
-        },
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Super Greens Blend"
-          }
-        },
-        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop now",
-            "button_link_1": ""
-          }
-        }
-      },
-      "block_order": [
-        "7cff6e7a-e90c-4fb9-9d42-476226636238",
-        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193",
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
-        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/jumbotron-shakes.png",
-        "desktop_content_position": "left",
-        "mobile_content_position": "bottom",
-        "background_color_scheme": "white",
-        "button_color_scheme": "red",
-        "text_color_scheme": "black"
       }
     },
     "16614278019efa8d2e": {
@@ -313,17 +365,6 @@
       "settings": {
       }
     },
-    "16631556027bfa8473": {
-      "type": "oe-comparison-chart",
-      "disabled": true,
-      "settings": {
-        "title_desktop": "Our Bars are Head and Shoulders Above the Competition!",
-        "title_mobile": "Above the Competition!",
-        "image_desktop": "shopify:\/\/shop_images\/oe_comparison_table.png",
-        "cta_url": "",
-        "cta_text": ""
-      }
-    },
     "oe-testimonials": {
       "type": "oe-testimonials",
       "blocks": {
@@ -339,7 +380,7 @@
         "d92c32c8-7744-40ba-a781-6c0e360b8608": {
           "type": "testimonials",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_174_1.jpg",
+            "image": "shopify:\/\/shop_images\/Verdi_April_652197_1.jpg",
             "text": "Working in a hospital, mornings are busy for me. OverEasy makes it simple... The combination of whole grains and protein sustains my energy levels all morning long.",
             "name": "April Verdi, MPH, RD, LD",
             "position": "Clinical Nutrition Manager"
@@ -363,60 +404,19 @@
       "settings": {
         "headline": "Over Easy Advisory Team"
       }
-    },
-    "1661427940e35b089a": {
-      "type": "oe-sources",
-      "blocks": {
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
-            "text": "\"Top Pick - Best Breakfast Bars 2022\""
-          }
-        },
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
-            "text": "\"Helping to make breakfast easy\""
-          }
-        },
-        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
-            "text": "\"The perfect grab-and-go meal\""
-          }
-        },
-        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
-            "text": "\"Enough fiber & protein to keep hunger at arm's length\""
-          }
-        }
-      },
-      "block_order": [
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
-        "9f72aff9-1cbe-4979-bae9-7973f162a636",
-        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
     "166360256917f6db91",
+    "1661427940e35b089a",
     "oe-benefits",
+    "oe-jumbotron",
     "oe-blocks-product",
     "oe-ingredients",
     "oe-blocks-product-2",
-    "1663281355fa8ec570",
-    "oe-jumbotron",
-    "16614278019efa8d2e",
     "16631556027bfa8473",
-    "oe-testimonials",
-    "1661427940e35b089a"
+    "1663281355fa8ec570",
+    "16614278019efa8d2e",
+    "oe-testimonials"
   ]
 }
