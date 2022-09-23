@@ -132,6 +132,7 @@
         },
         "ba805c69-004b-47cb-a9f7-f9bd28410b5a": {
           "type": "eye-catcher",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>25% OFF <\/strong><br\/>on shakes<\/p><p>right now!<\/p>",
             "position": "top-right",
