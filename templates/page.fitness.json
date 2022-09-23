@@ -95,6 +95,16 @@
             "button_label_1": "Shop now",
             "button_link_1": ""
           }
+        },
+        "4959b7d3-7353-42a1-b2ec-d59bef5a78e0": {
+          "type": "eye-catcher",
+          "settings": {
+            "text": "<p>25% OFF<\/p>",
+            "position": "top-left",
+            "shape": "spikes",
+            "color": "red",
+            "text_color": "white"
+          }
         }
       },
       "block_order": [
@@ -104,7 +114,8 @@
         "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
         "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
         "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
-        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81"
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81",
+        "4959b7d3-7353-42a1-b2ec-d59bef5a78e0"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/jumbotron-shakes.png",
