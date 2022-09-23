@@ -124,28 +124,28 @@
           "type": "ingredients",
           "settings": {
             "icon": "oats",
-            "heading": "ORGANIC OATS"
+            "heading": "ORGANIC<br>OATS"
           }
         },
         "bd1cf9c3-d9c7-45a1-818d-97561a1981e1": {
           "type": "ingredients",
           "settings": {
             "icon": "glutten-free",
-            "heading": "GLUTTEN FREE"
+            "heading": "GLUTTEN<br>FREE"
           }
         },
         "8ee23ecf-27d8-4496-a6f7-b046b799ebb7": {
           "type": "ingredients",
           "settings": {
             "icon": "soy-free",
-            "heading": "SOY FREE"
+            "heading": "SOY<br>FREE"
           }
         },
         "d5d8f806-116e-42df-bed2-516e6faaee78": {
           "type": "ingredients",
           "settings": {
             "icon": "dairy-free",
-            "heading": "DAIRY FREE"
+            "heading": "DAIRY<br>FREE"
           }
         },
         "c9e77f48-f92c-49c0-aa1d-9954bedbc01d": {
@@ -159,14 +159,7 @@
           "type": "ingredients",
           "settings": {
             "icon": "no-palm-oil",
-            "heading": "NO PALM OIL"
-          }
-        },
-        "b8642ba4-6685-48ef-9845-37c67c69ac50": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "egg",
-            "heading": "ORGANIC OATS"
+            "heading": "NO<br>PALM OIL"
           }
         }
       },
@@ -177,8 +170,7 @@
         "8ee23ecf-27d8-4496-a6f7-b046b799ebb7",
         "d5d8f806-116e-42df-bed2-516e6faaee78",
         "c9e77f48-f92c-49c0-aa1d-9954bedbc01d",
-        "96229dcb-86af-47fa-8c8d-28417e98b443",
-        "b8642ba4-6685-48ef-9845-37c67c69ac50"
+        "96229dcb-86af-47fa-8c8d-28417e98b443"
       ],
       "settings": {
         "headline": "Clean Ingredients. Made with Care.",
