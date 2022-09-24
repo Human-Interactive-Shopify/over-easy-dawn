@@ -69,28 +69,6 @@
     {%- endif -%}
     <div class="oe-product__gallery">
       <div class="oe-product__slider js-product-slider">
-        {%- for block in section.blocks -%}
-          {%- case block.type -%}
-            {%- when 'eye-catcher-pdp' -%}
-              <style>
-                #{{section.id}} {
-                  --oe-shape-color: var(--oe-color-{{ block.settings.color }});
-                  --oe-shape-text-color: var(--oe-color-{{ block.settings.text_color }});
-                }
-              </style>
-              <div id="{{ section.id }}" class="oe-jumbotron__eye-cacther oe-jumbotron__eye-cacther-shape--{{ block.settings.shape }} oe-jumbotron__eye-cacther-position--{{ block.settings.position }}">
-                {%- if block.settings.shape == 'spikes' -%}
-                  {% render 'spikes-shape' %}
-                {%- endif -%}
-                {%- if block.settings.shape == 'round' -%}
-                  {% render 'round-shape' %}
-                {%- endif -%}
-                <div class="oe-jumbotron__eye-cacther-text">
-                  {{ block.settings.text }}
-                </div>
-              </div>
-          {%- endcase -%}
-        {%- endfor -%}
         <div class="oe-product__slider-wrapper">
           {%- if product.selected_or_first_available_variant.featured_media != null -%}
             <div class="oe-product__slider-slide">
@@ -106,6 +84,30 @@
             {% if media.alt == "Xnutrition" or media.alt == "home" or media.alt == "table" or media.alt == "overover" or media.alt == "ingredient" or media.alt == "vertical" or media.alt == "naked_only" %}{% continue %}{% endif %}
             {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
               <div class="oe-product__slider-slide">
+                {% if forloop.index == 1 %}
+                {%- for block in section.blocks -%}
+                  {%- case block.type -%}
+                    {%- when 'eye-catcher-pdp' -%}
+                      <style>
+                        #{{section.id}} {
+                          --oe-shape-color: var(--oe-color-{{ block.settings.color }});
+                          --oe-shape-text-color: var(--oe-color-{{ block.settings.text_color }});
+                        }
+                      </style>
+                      <div id="{{ section.id }}" class="oe-jumbotron__eye-cacther oe-jumbotron__eye-cacther-shape--{{ block.settings.shape }} oe-jumbotron__eye-cacther-position--{{ block.settings.position }}">
+                        {%- if block.settings.shape == 'spikes' -%}
+                          {% render 'spikes-shape' %}
+                        {%- endif -%}
+                        {%- if block.settings.shape == 'round' -%}
+                          {% render 'round-shape' %}
+                        {%- endif -%}
+                        <div class="oe-jumbotron__eye-cacther-text">
+                          {{ block.settings.text }}
+                        </div>
+                      </div>
+                  {%- endcase -%}
+                {%- endfor -%}
+              {% endif %}
                 {{ media | image_url: width: 1050 | image_tag:
                   loading: 'lazy',
                   width: 700,
