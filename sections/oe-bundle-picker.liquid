@@ -460,7 +460,7 @@
           const modal = document.querySelector(trigger.getAttribute('href'))
 
           if (modal) {
-            modal.classList.add('is-open')
+            fadeIn(modal)
             document.body.classList.add('u-overflow-hidden')
           }
         })
@@ -473,9 +473,8 @@
           event.preventDefault();
 
           const modal = document.querySelector(trigger.getAttribute('data-href'))
-
           if (modal) {
-            modal.classList.remove('is-open')
+            fadeIn(modal)
             document.body.classList.remove('u-overflow-hidden')
           }
         })

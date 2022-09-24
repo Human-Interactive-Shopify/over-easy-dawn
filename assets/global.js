@@ -914,3 +914,25 @@ const slideOut = (container) => {
 		);
 	}
 };
+
+const fadeIn = (container) => {
+	if (!container.classList.contains('is-open')) {
+		container.classList.add('is-open');
+    
+		setTimeout(function () {
+      container.classList.add('is-faded-in');
+		}, 0);
+	} else {
+    container.classList.remove('is-faded-in');
+		
+		container.addEventListener(
+			'transitionend',
+			function () {
+				container.classList.remove('is-open');
+			},
+			{
+				once: true,
+			},
+		);
+	}
+};
