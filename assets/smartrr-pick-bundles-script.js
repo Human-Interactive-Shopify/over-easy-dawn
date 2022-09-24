@@ -95,9 +95,9 @@ if (typeof window.initSmartrr === 'undefined') {
 				this.$form,
 			);
 			groupInputs.forEach(function (input) {
-				console.log(groupInputs);
+				
 				input.addEventListener('change', function () {
-					console.log('change');
+				
 					that.logic.apiChangeGroup(input.value);
 				});
 			});

@@ -380,8 +380,7 @@
           },
           /* Called when the group (One time purchase / Subscribe & Save) is changed. */
           uiOnGroupChange: function (ui, currentInfo) {
-            console.log('uiOnGroupChange')
-            console.log(currentInfo)
+           
             /* Use this to implement active class on Groups */
             var groupDivs = ui.apiQuerySelectorAllDataTag('data-smartrr-selling-plan-group-id', ui.$form);
 
@@ -492,7 +491,7 @@
         const subscriptionProperties = document.querySelectorAll('.js-subscription-property')
 
         radios.forEach(radio => {
-          console.log(radio)
+         
           if (radio.checked && radio.id === 'radio-subscribe') {
             subscriptionProperties.forEach(prop => {
               prop.removeAttribute('disabled')
@@ -507,15 +506,11 @@
             })
           }
   
-          console.log('before')
-          console.log(radio)
           radio.addEventListener('change', () => {
             if (radio.checked && radio.id === 'radio-subscribe') {
-              console.log('if change radio')
               subscriptionProperties.forEach(prop => {
                 prop.removeAttribute('disabled')
 
-                console.log(document.querySelector('.js-smartrr-label-subscribe'))
                 document.querySelector('.js-smartrr-label-subscribe input[type="radio"]').click()
 
                 // this is needed for Safari browser
@@ -524,9 +519,7 @@
                 document.querySelector('.js-total-subs').classList.remove('is-disabled')
               })
             } else {
-              console.log('else change radio')
               subscriptionProperties.forEach(prop => {
-                console.log(document.querySelector('.js-smartrr-label-otp'))
                 document.querySelector('.js-smartrr-label-otp input[type="radio"]').click()
 
                 // this is needed for Safari browser
