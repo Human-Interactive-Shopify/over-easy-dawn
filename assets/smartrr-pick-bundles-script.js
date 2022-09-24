@@ -244,7 +244,7 @@ if (typeof window.initSmartrr === 'undefined') {
 					this.$form,
 				);
 
-				console.log(currentInfo);
+				
 
 				var that = this;
 				inputs &&
@@ -808,14 +808,14 @@ if (typeof window.initSmartrr === 'undefined') {
 			},
 
 			apiChangeGroup: function (newGroupId) {
-				console.log('apiChangeGroup', newGroupId);
+				
 				if (newGroupId === '') {
 					this.current.groupId = '';
 					this.current.planId = '';
 					this.ui.apiOnGroupChanged(this.apiGetCurrentCopy());
 					return true;
 				} else {
-					console.log('else');
+					
 					if (
 						this.apiGetAnySellingPlanAllocationByVariantGroupId(
 							this.current.variantId,

@@ -297,7 +297,7 @@
         centeredSlides: true,
          on: {
           slideChange: function(swiper){
-            console.log(swiper)
+            
             swiperThumbnails.slideTo(swiper.realIndex)
           }
         }
@@ -310,7 +310,7 @@
         slidesPerView: 5,
         on: {
           click: function(){
-            console.log(swiperThumbnails);
+            
             swiper.slideTo(swiperThumbnails.clickedIndex)
           }
         }

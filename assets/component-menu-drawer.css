@@ -18,7 +18,6 @@
   height: calc(100vh - 115px);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   background-color: var(--oe-color-white);
-  overflow-y: auto;
   z-index: 999;
 }
 
@@ -26,6 +25,7 @@
   opacity: 1;
   pointer-events: unset;
   transform: translate3d(0, 0, 0);
+  height: calc(100vh - 106px);
 }
 
 .header__icon--menu {
@@ -87,7 +87,9 @@
 }
 
 .header__menu-drawer-menu.list-menu {
-  padding: 24px 16px;
+  padding: 24px 16px 60px;
+  overflow-y: auto;
+  max-height: calc(100vh - 188px);
 }
 
 .header__menu-drawer-menu .header__menu-item {

@@ -384,10 +384,7 @@
             var groupDivs = ui.apiQuerySelectorAllDataTag('data-smartrr-selling-plan-group-id', ui.$form);
 
             groupDivs.forEach(function(group) {
-              console.log('uiOnGroupChange');
-              console.log(currentInfo.groupId);
-              console.log(group);
-              console.log(ui.apiGetAttribute(group, 'data-smartrr-selling-plan-group-id'));
+              
 
               if (currentInfo.groupId === ui.apiGetAttribute(group, 'data-smartrr-selling-plan-group-id')) {
                 group.classList.add('smartrr-group-active');
@@ -562,7 +559,6 @@
         document.querySelectorAll('[data-smartrr-product-id]').forEach(attr => attr.setAttribute('data-smartrr-product-id', currentBundle ? currentBundle.id : ''))
 
         if (currentBundle) {
-          console.log(currentBundle)
           window.initSmartrr(currentBundle.id, true)
         }
 

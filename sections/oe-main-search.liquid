@@ -384,7 +384,6 @@
           {% if section.settings.show_latest_products %}
             <div id="search-latest-products" class="template-search__related-list-wrapper template-search__related-list-wrapper--tabs is-active js-latest-product-slider">
               <div class="template-search__related-list">
-                <script>console.log({{ articles | json }});</script>
                 {% for product in collections[section.settings.latest_products_collection].products limit: 4 %}
                   {% render 'card-search-product', card_product: product, variation: 'small', classes: 'template-search__related-list-item' button_label: 'Shop now' %}
                 {% endfor %}
