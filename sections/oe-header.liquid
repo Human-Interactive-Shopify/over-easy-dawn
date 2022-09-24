@@ -278,7 +278,7 @@
                             {%- for childLink in link.links -%}
                               <li>
                                 {%- if childLink.type == 'collection_link' -%}
-                                   {% assign firstProduct = collections[block.settings.collection].products | first %}
+                                   {% assign firstProduct = collections[childLink.object.handle].products | first %}
                                    <a href="{{ firstProduct.url }}" class="header__submenu-link{% if childLink.current %} header__submenu-link--active{% endif %}"{% if childLink.current %} aria-current="page"{% endif %}>
                                 {%- else -%}
                                 <a href="{{ childLink.url }}" class="header__submenu-link{% if childLink.current %} header__submenu-link--active{% endif %}"{% if childLink.current %} aria-current="page"{% endif %}>
