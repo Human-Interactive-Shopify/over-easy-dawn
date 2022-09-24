@@ -107,10 +107,10 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Congratulations! $20 GIFT CARD applied at checkout!",
+              "text": "New Product: SHAKES 25% OFF right now!",
               "text_alignment": "center",
               "color_scheme": "accent-1",
-              "link": ""
+              "link": "shopify:\/\/products\/chocolate-breakfast-shake"
             }
           }
         },
