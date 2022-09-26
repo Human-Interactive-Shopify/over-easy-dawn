@@ -59,7 +59,7 @@
         "bundle-overview": {
           "type": "bundle-overview",
           "settings": {
-            "section_heading": "Overview & Checkout",
+            "section_heading": "Overview and Checkout",
             "section_heading_number": "3",
             "overview_headline": "Your bundle",
             "empty_text": "Your bundle is empty"
