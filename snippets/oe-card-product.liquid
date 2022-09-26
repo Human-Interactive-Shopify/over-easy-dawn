@@ -171,7 +171,7 @@
                 </quantity-input>
               </div>
               <product-form>
-                {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form', onsubmit: 'submitAddToCart();' -%}
                   <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
                   {%- if show_add_to_cart -%}
                     <button
