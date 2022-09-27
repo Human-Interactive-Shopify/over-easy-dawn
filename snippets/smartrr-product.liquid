@@ -42,6 +42,17 @@ assign smartrr_unique_id = product.id
 <!-- Make sure your cart/add.js AJAX call gets this value. Older/Custom carts may not extract this input from the form. -->
 {% endcomment %}
 
+{%- if template.suffix == 'minis' -%}
+    {% assign showSavings = true %}
+    {% assign qty = 20 %}
+{%- elsif template.suffix == 'shakes' -%}
+    {% assign showSavings = false %}
+    {% assign qty = 12 %}
+{%- else -%}
+    {% assign showSavings = true %}
+    {% assign qty = 12 %}
+{% endif %}
+
 
 <div class="hide" data-smartrr-page-load-variant="{{ current_variant.id }}"></div>
 
@@ -60,12 +71,14 @@ assign smartrr_unique_id = product.id
                     <div class="smartrr-selling-plan-group-input-display"></div>
                     <div class="smartrr-selling-plan-group-name">
                         <div>One Time Purchase</div>
-                        <div class="showSavings" data-smartrr-product-id="{{ smartrr_unique_id }}"
+                        <div class="{% if showSavings %}showSavings{% endif %}" data-smartrr-product-id="{{ smartrr_unique_id }}"
                             data-smartrr-price-style="original-compare">
                             <span data-smartrr-compare-price></span>
                             <span data-smartrr-regular-price></span>
                             <span data-smartrr-subscribe-price></span>
+                            {% if showSavings %}
                             <span class="smartrr-brackets">(<span data-smartrr-per-bar-price></span>)</span>
+                            {% endif %}
                         </div>
                     </div>
                   </div>
@@ -95,12 +108,14 @@ assign smartrr_unique_id = product.id
                       <div class="smartrr-selling-plan-group-input-display"></div>
                       <div class="smartrr-selling-plan-group-name">
                           <div>{{ group.name }}</div>
-                          <div class="showSavings" data-smartrr-product-id="{{ smartrr_unique_id }}"
+                          <div class="{% if showSavings %}showSavings{% endif %}" data-smartrr-product-id="{{ smartrr_unique_id }}"
                               data-smartrr-price-style="strike" data-smartrr-constant="{{ group.id }}">
                               <span data-smartrr-compare-price></span>
                               <span data-smartrr-regular-price></span>
                               <span data-smartrr-subscribe-price></span>
+                              {% if showSavings %}
                               <span class="smartrr-brackets">(<span data-smartrr-per-bar-price></span>)</span>
+                                {% endif %}
                           </div>
                       </div>
                     </div>
@@ -307,8 +322,9 @@ assign smartrr_unique_id = product.id
      money.regular: amount that shows up when strike display is chosen. This is the original un-discounted price.
      money.subscribe: the final discounted price or one-time price that shows up in the checkout.
      */
+
         if ($div.classList.contains("showSavings")) {
-             var perSaving = Number(money.subscribe) / 12;
+            var perSaving = Number(money.subscribe) / {{ qty }} ;
             var formattedSavings = ui.logic.apiFormatMoney(perSaving);
             var $saving = $div.querySelector('[data-smartrr-per-bar-price]');
             if ($saving) {
