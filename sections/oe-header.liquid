@@ -269,7 +269,7 @@
                   <li>
                     {%- if link.links != blank -%}
                       <header-menu>
-                        <details id="Details-HeaderMenu-{{ forloop.index }}">
+                        <details id="Details-HeaderMenu-{{ forloop.index }}" {%- if forloop.index == 1 -%} open {%-endif -%}>
                           <summary class="header__menu-item list-menu__item link focus-inset">
                             <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                             {% render 'icon-accordion-plus' %}
