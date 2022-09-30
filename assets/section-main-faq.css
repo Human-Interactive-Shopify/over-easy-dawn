@@ -40,7 +40,6 @@
   margin-bottom: 40px;
   display: flex;
   overflow-x: auto;
-  gap: 24px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -131,13 +130,12 @@
 
   .oe-faq-blog__list-filters {
     margin-bottom: 64px;
-    gap: 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .oe-faq-blog__list-filter {
     font-size: 18px;
     line-height: 130%;
-    padding: 0 55px 12px;
+    padding: 0 42px 12px;
   }
 }

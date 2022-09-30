@@ -2562,7 +2562,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   .header__inline-menu {
     margin-left: -1.2rem;
     display: block;
-    padding-left: 48px;
+    padding-left: 32px;
   }
 
   .header--top-center .header__inline-menu {
@@ -2588,7 +2588,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 .header__menu-item {
-  padding: 1.2rem;
+  padding: 28px;
   text-decoration: none;
   color: var(--oe-color-black);
   font-weight: 700;
