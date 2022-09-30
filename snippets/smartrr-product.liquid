@@ -63,9 +63,9 @@ assign smartrr_unique_id = product.id
     </div>
     <div data-smartrr-selling-plan-groups>
         {% unless product.requires_selling_plan %}
-        <div data-smartrr-selling-plan-group-id class="smartrr-otp">
+        <label data-smartrr-selling-plan-group-id class="smartrr-otp">
             <div class="smartrr-selling-plan-group-header">
-                <label class="smartrr-selling-plan-group-label">
+                <div class="smartrr-selling-plan-group-label">
                   <div class="smartrr-selling-plan-group-label-inner">
                     <input type="radio" data-smartrr-selling-plan-group-input name="purchase_option" value="">
                     <div class="smartrr-selling-plan-group-input-display"></div>
@@ -88,18 +88,18 @@ assign smartrr_unique_id = product.id
                     <div>{% render 'icon-shaker' %}Free Shaker – on orders of 2+ shakes – add a shaker to your cart and use code FREESHAKER</div>
                     {%- endif -%}
                 </div>
-                </label>
+                </div>
                 
             </div>
             <div data-smartrr-selling-plan-group-contents class="hide"></div>
-        </div>
+        </label>
         {% endunless %}
 
         {% for group in filtered_selling_plan_groups %}
         {% unless group.name contains "[hidden]" %}
-        <div data-smartrr-sub data-smartrr-selling-plan-group-id="{{ group.id }}">
+        <label data-smartrr-sub data-smartrr-selling-plan-group-id="{{ group.id }}">
             <div class="smartrr-selling-plan-group-header">
-                <label class="smartrr-selling-plan-group-label">
+                <div class="smartrr-selling-plan-group-label">
                     <div class="smartrr-selling-plan-group-label-inner">
                       <input type="radio" data-smartrr-selling-plan-group-input="{{ group.id }}" name="purchase_option"
                           value="{{ group.id }}"
@@ -127,7 +127,7 @@ assign smartrr_unique_id = product.id
                         <div>{% render 'icon-shaker' %}Free shaker with your first subscription order – No action necessary!</div>
                         {%- endif -%}
                     </div>
-                </label>
+                </div>
                </div>
             <div data-smartrr-selling-plan-group-contents="{{ group.id }}" class="hide">
                 <div data-smartrr-selling-plan-group-plans>
@@ -166,7 +166,7 @@ assign smartrr_unique_id = product.id
                 </div>
 
             </div>
-        </div>
+        </label>
 
         {%endunless %}
         {%endfor %}
