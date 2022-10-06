@@ -106,6 +106,7 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "New Product: SHAKES 25% OFF right now!",
               "text_alignment": "center",
