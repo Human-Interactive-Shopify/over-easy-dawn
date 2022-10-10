@@ -241,6 +241,21 @@
     </script>
     {% comment %} <!-- End Reddit Pixel --> {% endcomment %}
     <script>
+      window['friendbuy'] = window['friendbuy'] || [];
+      window['friendbuy'].push(['site', 'site-e855ff38-www.overeasyfoods.com']);
+      window['friendbuy'].push(['track', 'customer',
+          {
+              id: '{{ customer.id }}',
+              email: '{{ customer.email }}',
+              first_name: '{{ customer.first_name }}',
+              last_name: '{{ customer.last_name }}'
+          }
+      ]);
+      (function (f, r, n, d, b, y) {
+          b = f.createElement(r), y = f.getElementsByTagName(r)[0];b.async = 1;b.src = n;y.parentNode.insertBefore(b, y);
+      })(document, 'script', '//djnf6e5yyirys.cloudfront.net/js/friendbuy.min.js');
+    </script>
+    <script>
       function submitAddToCart() {
         rdt('track', 'AddToCart');
       }
