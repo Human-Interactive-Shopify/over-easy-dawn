@@ -274,15 +274,15 @@
                   type="submit"
                   name="add"
                   class="button button--primary button-color--red is-full-width"
-                  {% if product.selected_or_first_available_variant.available == false %}
+                  {% if product.metafields.custom.out-of-stock == true %}
                     disabled
                   {% endif %}
                 >
                   <span>
-                    {%- if product.selected_or_first_available_variant.available -%}
-                      {{ 'products.product.add_to_cart' | t }}
-                    {%- else -%}
+                    {%- if product.metafields.custom.out-of-stock == true  -%}
                       {{ 'products.product.sold_out' | t }}
+                    {%- else -%}
+                      {{ 'products.product.add_to_cart' | t }}
                     {%- endif -%}
                   </span>
                   <div class="loading-overlay__spinner hidden">
