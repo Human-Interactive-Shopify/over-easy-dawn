@@ -177,7 +177,7 @@
           <h3 class="oe-product__variations-title">{{ section.settings.related_products_title }}</h3>
           <div class="oe-product__variations-list">
             {% for relatedProduct in collections[section.settings.collection].products %}
-              <a href="{{ relatedProduct.url }}" class="oe-product__variations-list-item {% if relatedProduct.id == product.id %}is-active{% endif %}">
+              <a href="{{ relatedProduct.url }}" class="oe-product__variations-list-item {% if relatedProduct.id == product.id %}is-active{% endif %} {% if relatedProduct.metafields.custom.out-of-stock == true %}is-oos{% endif %}">
                {{ relatedProduct.title }}
               </a>
             {% endfor %}
@@ -279,7 +279,7 @@
                   {% endif %}
                 >
                   <span>
-                    {%- if product.metafields.custom.out-of-stock == true  -%}
+                    {%- if product.metafields.custom.out-of-stock == true -%}
                       {{ 'products.product.sold_out' | t }}
                     {%- else -%}
                       {{ 'products.product.add_to_cart' | t }}
