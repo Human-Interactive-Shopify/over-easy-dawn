@@ -58,6 +58,7 @@
         },
         "4959b7d3-7353-42a1-b2ec-d59bef5a78e0": {
           "type": "eye-catcher",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>25% OFF<\/strong><\/p><p>all shakes<\/p><p>right now!<\/p>",
             "position": "top-right",
