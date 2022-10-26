@@ -305,6 +305,10 @@
             {%- endform -%}
           </product-form>
         </div>
+        {%- if product.metafields.custom.shipping_note -%}
+          <span style="display: block; margin-top: 14px; margin-left: 12px;">
+          * {{ product.title }} {{ product.metafields.custom.shipping_note }}</span>
+        {%- endif -%}  
         {% if section.settings.shipping_notice != blank %}
           <p class="oe-product__shipping-notice">{% render 'icon-shipping' %} {{ section.settings.shipping_notice }}</p>
         {% endif %}
