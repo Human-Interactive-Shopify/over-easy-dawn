@@ -35,14 +35,14 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Complete morning nutrition for full body and brain health",
-            "heading_size": "small"
+            "heading": "Supercharge your Mornings!",
+            "heading_size": "medium"
           }
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
           "settings": {
-            "text": "Kick start your mornings with a deliciously crafted mix of vitamins, nutrients, and clean ingredients."
+            "text": "Discover Over Easy's delicious and nutritious Breakfast Bars and Shakes in a variety of flavors!"
           }
         },
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
@@ -54,6 +54,7 @@
         },
         "195c88a5-bcc4-48ee-8186-776e143b77ed": {
           "type": "eye-catcher",
+          "disabled": true,
           "settings": {
             "text": "<p>OVEREASY20<\/p><p>for<strong> 20% off<\/strong><\/p><p>at checkout<\/p>",
             "position": "top-right",
@@ -70,7 +71,7 @@
         "195c88a5-bcc4-48ee-8186-776e143b77ed"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/right_image.png",
+        "image": "shopify:\/\/shop_images\/Complete_nutrition.png",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
@@ -233,20 +234,6 @@
         "headline": "Benefits"
       }
     },
-    "oe-blocks-product": {
-      "type": "oe-blocks-product",
-      "disabled": true,
-      "settings": {
-        "shipping_notice": "Free Shipping on orders of 2 or more products",
-        "related_products_title": "Our Flavors",
-        "collection": "shakes",
-        "featured_product": "strawberry-breakfast-shake",
-        "show_rating": true,
-        "show_ingredients_anchor": false,
-        "show_nutrition_anchor": false,
-        "mobile_links": ""
-      }
-    },
     "oe-blocks-product-2": {
       "type": "oe-blocks-product",
       "settings": {
@@ -293,6 +280,19 @@
       "settings": {
         "headline": "Over 1 Million breakfasts served",
         "sub-headline": ""
+      }
+    },
+    "oe-blocks-product": {
+      "type": "oe-blocks-product",
+      "settings": {
+        "shipping_notice": "Free Shipping on orders of 2 or more products",
+        "related_products_title": "Our Flavors",
+        "collection": "shakes",
+        "featured_product": "strawberry-breakfast-shake",
+        "show_rating": true,
+        "show_ingredients_anchor": false,
+        "show_nutrition_anchor": false,
+        "mobile_links": ""
       }
     },
     "16631556027bfa8473": {
@@ -418,9 +418,9 @@
     "1661427940e35b089a",
     "oe-ingredients",
     "oe-benefits",
-    "oe-blocks-product",
     "oe-blocks-product-2",
     "1663281355fa8ec570",
+    "oe-blocks-product",
     "16631556027bfa8473",
     "oe-testimonials",
     "16614278019efa8d2e"
