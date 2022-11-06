@@ -31,7 +31,7 @@
 
   <div class="cart__warnings">
     <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
-    <a href="{{ routes.all_products_collection_url }}" class="button">
+    <a href="{{ routes.all_products_collection_url }}" class="button button--primary button-color--red">
       {{ 'general.continue_shopping' | t }}
     </a>
 
@@ -141,7 +141,7 @@
                     <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
                       {%- for discount in item.discounts -%}
                         <li class="discounts__discount">
-                          {%- render 'icon-discount' -%}
+                          {%- render 'icon-discount_o' -%}
                           {{ discount.title }}
                         </li>
                       {%- endfor -%}

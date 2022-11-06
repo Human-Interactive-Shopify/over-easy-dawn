@@ -138,7 +138,22 @@
                     {% assign bundleProduct = all_products[product.metafields.sf_bundle_products[bp-key]] %}
                     {% unless bundleProduct.empty? %}
                         <span class="oe-featured-product__contains">
-                            <div class="oe-featured-product__contains-icon">{% render 'icon-bar' %}</div>
+                            <div class="oe-featured-product__contains-icon">
+                                {% liquid 
+                                    case bundleProduct.metafields.custom.product_icon
+                                    when 'bar' 
+                                        render 'icon-bar'
+                                    when 'chocolate' 
+                                        render 'icon-chocolate'
+                                    when 'peanuts' 
+                                        render 'icon-peanuts'
+                                    when 'shake' 
+                                        render 'icon-shake'
+                                    when 'vanilla' 
+                                        render 'icon-vanilla'
+                                   endcase 
+                                  %}
+                            </div>
                             <div class="oe-featured-product__contains-title">{{ bundleProduct.title }}</div>
                         </span>
                     {% endunless %}
