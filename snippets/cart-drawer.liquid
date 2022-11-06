@@ -23,7 +23,7 @@
             <div class="cart-drawer__empty-content">
               <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
               <button class="drawer__close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
-              <a href="{{ routes.all_products_collection_url }}" class="button">
+              <a href="{{ routes.all_products_collection_url }}" class="button button--primary button-color--red">
                 {{ 'general.continue_shopping' | t }}
               </a>
 
@@ -145,7 +145,7 @@
                           <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
                             {%- for discount in item.discounts -%}
                               <li class="discounts__discount">
-                                {%- render 'icon-discount' -%}
+                                {%- render 'icon-discount_o' -%}
                                 {{ discount.title }}
                               </li>
                             {%- endfor -%}
@@ -279,7 +279,7 @@
               <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
                 {%- for discount in cart.cart_level_discount_applications -%}
                   <li class="discounts__discount discounts__discount--end">
-                    {%- render 'icon-discount' -%}
+                    {%- render 'icon-discount_o' -%}
                     {{ discount.title }}
                     (-{{ discount.total_allocated_amount | money }})
                   </li>
