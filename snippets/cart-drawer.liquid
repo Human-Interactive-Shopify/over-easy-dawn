@@ -50,7 +50,7 @@
         <button class="drawer__close" type="button" onclick="this.closest('cart-drawer').close()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
       </div>
       {% if settings.show_value_builder and cart != empty %}
-        {% render 'value-builder', cart: cart, heading: settings.value_builder_heading, text: settings.value_builder_text, message: settings.value_builder_message %}
+        {% render 'value-builder', cart: cart, heading: settings.value_builder_heading, text: settings.value_builder_text, message: settings.value_builder_message, isCart: true %}
       {% endif %}
       <cart-drawer-items {% if cart == empty %}class=" is-empty"{% endif %}>
         <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">

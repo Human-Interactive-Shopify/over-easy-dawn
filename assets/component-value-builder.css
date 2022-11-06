@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.oe-value-builder.is-hidden {
+  display: none;
+}
+
 .oe-value-builder__content {
   display: flex;
   flex-direction: column;

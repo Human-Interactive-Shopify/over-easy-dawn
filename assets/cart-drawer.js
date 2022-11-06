@@ -95,10 +95,13 @@ class CartDrawer extends HTMLElement {
     return [
       {
         id: 'cart-drawer',
-        selector: '#CartDrawer'
+        selector: '#CartDrawer',
       },
       {
-        id: 'cart-icon-bubble'
+        id: 'cart-icon-bubble',
+      },
+      {
+        id: 'value-builder'
       }
     ];
   }
@@ -130,7 +133,7 @@ class CartDrawerItems extends CartItems {
         selector: '.shopify-section'
       },
       {
-        id: 'product-value-builder',
+        id: 'value-builder',
         section: 'value-builder',
         selector: '.oe-value-builder',
       },

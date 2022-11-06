@@ -7,6 +7,7 @@
     - text: {String}
     - message: {String}
     - id: {String}
+    - isCart: {bool}
 
     Usage:
     {% render 'value-builder', cart: cart, heading: heading, text: text %}
@@ -17,7 +18,7 @@
 
 
 {% for cartItem in cart.items %}
-  {% if cartItem.product.metafields.custom.product_type == "Bar"  %}
+  {% if cartItem.product.metafields.custom.product_type == "Bar" and cartItem.selling_plan_allocation == blank %}
     {% assign quantity = cartItem.quantity %}
       
     {% for i in (1..quantity) %}
@@ -29,14 +30,18 @@
   {% endif %}
 {% endfor %}
 
-<section id="{{ id }}" class="oe-value-builder">
+{% if isCart and pre_counter == null %}
+  {% continue %}
+{% endif %}
+
+<section id="{{ id }}" class="oe-value-builder {% if product.metafields.custom.product_type != 'Bar' and  isCart == false %}is-hidden{% endif %}">
   {% if pre_counter < 5 or pre_counter == null %}
     <div class="oe-value-builder__content">
       <h3 class="oe-value-builder__heading">{{ heading }}</h3>
       <p class="oe-value-builder__text">{{ text }}</p>
       <div class="oe-value-builder__items">
         {% for cartItem in cart.items %}
-          {%- if cartItem.product.metafields.custom.product_type == "Bar" -%}
+          {%- if cartItem.product.metafields.custom.product_type == "Bar" and cartItem.selling_plan_allocation == blank -%}
             {%- assign quantity = cartItem.quantity -%}
             
             {% for i in (1..quantity) %}

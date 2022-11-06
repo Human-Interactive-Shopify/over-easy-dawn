@@ -52,6 +52,11 @@ class CartItems extends HTMLElement {
         id: 'main-cart-footer',
         section: document.getElementById('main-cart-footer').dataset.id,
         selector: '.js-contents',
+      },
+      {
+        id: 'value-builder',
+        section: 'oe-value-builder',
+        selector: '.oe-value-builder',
       }
     ];
   }
