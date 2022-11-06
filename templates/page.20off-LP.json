@@ -123,8 +123,8 @@
     "oe-featured-product": {
       "type": "oe-featured-product",
       "settings": {
-        "featured_product": "variety-pack",
-        "subheadline": "Discover our full line of Breakfast Bars!"
+        "featured_product": "best-sellers-bundle",
+        "subheadline": "Discover our full line of Breakfast Bars and Shakes in the most popular flavors!"
       }
     },
     "oe-ingredients": {
