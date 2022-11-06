@@ -23,6 +23,12 @@
   endif
 %}
 
+{% if product.metafields.custom.product_type == 'Bar'%}
+  {% if settings.show_value_builder %}
+    {% render 'value-builder', cart: cart, heading: settings.value_builder_heading, text: settings.value_builder_text, message: settings.value_builder_message, id: 'product-value-builder' %}
+  {% endif %}
+{% endif %}
+
 <section
   id="oe-main-product-{{ section.id }}"
   class="oe-product__section"

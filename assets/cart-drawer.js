@@ -128,7 +128,12 @@ class CartDrawerItems extends CartItems {
         id: 'cart-icon-bubble',
         section: 'cart-icon-bubble',
         selector: '.shopify-section'
-      }
+      },
+      {
+        id: 'product-value-builder',
+        section: 'value-builder',
+        selector: '.oe-value-builder',
+      },
     ];
   }
 }

@@ -20,7 +20,6 @@
   width: 44rem;
   max-width: calc(100vw - 3rem);
   padding: 0 1.5rem;
-  border: 0.1rem solid rgba(var(--color-foreground), 0.2);
   border-right: 0;
   background-color: rgb(var(--color-background));
   overflow: hidden;
@@ -28,6 +27,14 @@
   flex-direction: column;
   transform: translateX(100%);
   transition: transform var(--duration-default) ease;
+}
+
+.drawer__inner .oe-value-builder {
+  margin: 0 -1.5rem 40px;
+}
+
+.drawer__inner .oe-value-builder__items {
+  width: 100%;
 }
 
 .drawer__inner-empty {

@@ -1,0 +1,112 @@
+.oe-value-builder {
+  padding: 12px 24px;
+  background-color: var(--oe-color-red);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.oe-value-builder__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.oe-value-builder__heading {
+  text-align: center;
+  color: var(--oe-color-white);
+  font-size: 18px;
+  line-height: 100%;
+  margin: 0 0 12px;
+}
+
+.oe-value-builder__text {
+  text-align: center;
+  display: none;
+}
+
+.oe-value-builder__message {
+  color: var(--oe-color-white);
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+}
+
+.oe-value-builder__items {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.oe-value-builder__item {
+  padding-top: calc(64% / 5);
+  position: relative;
+  /* width: calc(100% / 5 - ((12px * 4) / 5)); */
+  width: 100%;
+  max-width: 80px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--oe-color-white);
+}
+
+.oe-value-builder__item--empty {
+  background: rgba(217, 217, 217, 0.5);
+  border: 1px dashed #FFFFFF;
+}
+
+.oe-value-builder__item span {
+  display: none;
+}
+
+.oe-value-builder__item-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.oe-value-builder__item-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 12px;
+  line-height: 120%;
+  color: var(--oe-color-white);
+  margin: 0;
+  width: 80%;
+}
+
+@media screen and (min-width: 750px) {
+  .oe-value-builder {
+    padding: 12px 24px;
+    background-color: var(--oe-color-red);
+  }
+  
+  .oe-value-builder__heading {
+    font-size: 16px;
+    line-height: 160%;
+    margin: 0;
+  }
+  
+  .oe-value-builder__text {
+    color: var(--oe-color-white);
+    display: inline-block;
+    font-size: 14px;
+    line-height: 160%;
+    margin: 0 0 12px;
+  }
+
+  .oe-value-builder__items {
+    width: 450px;
+  }
+}

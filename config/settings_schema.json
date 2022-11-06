@@ -1151,6 +1151,31 @@
         "id": "cart_drawer_collection",
         "label": "t:settings_schema.cart.settings.cart_drawer.collection.label",
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
+      },
+      {
+        "type": "header",
+        "content": "Value builder"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_value_builder",
+        "label": "Show value builder",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "value_builder_heading",
+        "label": "Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "value_builder_text",
+        "label": "Text"
+      },
+      {
+        "type": "textarea",
+        "id": "value_builder_message",
+        "label": "Message"
       }
     ]
   }
