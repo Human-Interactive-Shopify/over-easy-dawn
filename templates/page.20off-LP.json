@@ -120,6 +120,13 @@
       "settings": {
       }
     },
+    "oe-featured-product": {
+      "type": "oe-featured-product",
+      "settings": {
+        "featured_product": "variety-pack",
+        "subheadline": "Discover our full line of Breakfast Bars and Shakes in the most popular flavors!"
+      }
+    },
     "oe-ingredients": {
       "type": "oe-ingredients",
       "blocks": {
@@ -184,7 +191,7 @@
       ],
       "settings": {
         "headline": "Clean Ingredients. Made with Care.",
-        "background_color": "white"
+        "background_color": "grey-100"
       }
     },
     "oe-benefits": {
@@ -416,6 +423,7 @@
     "1655845521c871c9b0",
     "oe-jumbotron",
     "1661427940e35b089a",
+    "oe-featured-product",
     "oe-ingredients",
     "oe-benefits",
     "oe-blocks-product-2",

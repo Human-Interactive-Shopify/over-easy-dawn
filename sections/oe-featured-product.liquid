@@ -1,0 +1,231 @@
+{%- liquid
+    assign product = all_products[section.settings.featured_product]
+
+    assign isBundleProduct = false
+    assign bundle_product_1 = all_products[product.metafields.sf_bundle_products.product_1]
+    unless bundle_product_1.empty?
+        assign isBundleProduct = true
+    endunless
+
+-%}
+{%- style -%}
+.oe-featured-product__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.oe-featured-product__content-wrapper {
+    padding: 0 0 32px 0;
+}
+.oe-featured-product__headline{
+    font-size: 32px;
+    margin:0 0 16px 0;
+    color: #171717;
+}
+.oe-featured-product__subheadline{
+    font-size: 16px;
+    color: #171717;
+}
+.oe-featured-product__contains {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.oe-featured-product__contains-icon {
+    display: inline;
+    width: 32px;
+    height: 32px;
+}
+.oe-featured-product__contains-icon svg {
+    margin: 0 auto;
+    display: block;
+}
+.oe-featured-product__contains-title {
+    display: inline;
+    margin-left: 12px;
+}
+[class~='oe-featured-product__contains']:last-of-type { 
+    margin-bottom: 24px;
+}
+.oe-featured-product__meta-divider {
+    margin:0;
+}
+.oe-featured-product__pricing{
+    margin: 16px 0;
+}
+.oe-featured-product__compare_at_price {
+    color: #888888;
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-left: 8px;
+}
+.oe-featured-product__price {
+    font-weight: 700;
+    font-size: 22px;
+}
+.oe-featured-product__media-wrapper {
+    width: 100vw;
+    position: relative;
+    padding-top: 100%;
+    margin: 0 calc(var(--oe-gutter) * -1);
+}
+
+.oe-featured-product__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 750px) {
+    .oe-featured-product__container {
+        flex-direction: row;
+    }
+    .oe-featured-product__headline{
+        font-size: 40px;
+    }
+    .oe-featured-product__subheadline{
+        font-size: 18px;
+    }
+    .oe-featured-product__contains {
+        font-size:16px
+    }
+    .oe-featured-product__content-wrapper {
+        padding: 64px 0;
+        width: 45%;
+        order:1;
+    }
+    .oe-featured-product__media-wrapper {
+        padding-top: 50%;
+        width: 55%;
+        order:2;
+    }
+    .oe-featured-product__meta-wrapper {
+        max-width:330px;
+    }
+    .oe-featured-product__pricing{
+        margin: 24px 0;
+    }
+}
+{%- endstyle -%}
+
+<div class="oe-featured-product section-{{ section.id }}" data-section-name="Featured Product">
+    <div class="oe-featured-product__container container">
+        <div class="oe-featured-product__media-wrapper">
+            {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
+            <a href="{{ product.url }}" class="" tabindex="-1" aria-hidden="true"> </a>
+            <img class="oe-featured-product__media"
+                src="{{ product.featured_image | image_url: width: 800 }}"
+                alt="{{ product.featured_image.alt | escape }}"
+                loading="lazy"
+                width="800"
+                height="{{ 800 | divided_by: product.featured_image.aspect_ratio | ceil }}"
+            >
+        </div>
+        <div class="oe-featured-product__content-wrapper">
+            <div class="oe-featured-product__content">
+                <h2 class="oe-featured-product__headline">{{ product.title | escape }}</h2>
+                <p class="oe-featured-product__subheadline">{{ section.settings.subheadline }}</p>
+
+                {% if isBundleProduct %}
+                    <p class="oe-featured-product__subheadline">Bundle contains:</p>
+                    {% for i in (1..5) %}
+                    {% assign bp-key = "product_" | append: i %}
+                    {% assign bundleProduct = all_products[product.metafields.sf_bundle_products[bp-key]] %}
+                    {% unless bundleProduct.empty? %}
+                        <span class="oe-featured-product__contains">
+                            <div class="oe-featured-product__contains-icon">{% render 'icon-shake' %}</div>
+                            <div class="oe-featured-product__contains-title">{{ bundleProduct.title }}</div>
+                        </span>
+                    {% endunless %}
+                    {% endfor %}
+                {% endif %}
+
+                <div class="oe-featured-product__meta-wrapper">
+                    <hr class="oe-featured-product__meta-divider">
+                    <div class="oe-featured-product__pricing">
+                        <span class="oe-featured-product__price">{{ product.price | money }}</span>
+                        {%- if product.compare_at_price > product.price -%}
+                            <span class="oe-featured-product__compare_at_price">{{ product.compare_at_price | money }}</span>
+                        {%- endif -%}
+                    </div>
+                    {%- assign product_form_id = 'product-form-' | append: section.id -%}
+                    <product-form>
+                    {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form', onsubmit: 'submitAddToCart();' -%}
+                        <input
+                            type="hidden"
+                            name="id"
+                            value="{{ product.selected_or_first_available_variant.id }}"
+                        >
+                        <div class="product-form__buttons">
+                            <button
+                            type="submit"
+                            name="add"
+                            class="product-form__submit button button--primary button-color--red is-full-width"
+                            {% if product.selected_or_first_available_variant.available == false %}
+                                disabled
+                            {% endif %}
+                            >
+                            <span>
+                                {%- if product.selected_or_first_available_variant.available -%}
+                                {{ 'products.product.add_to_cart' | t }}
+                                {%- else -%}
+                                {{ 'products.product.sold_out' | t }}
+                                {%- endif -%}
+                            </span>
+                            <div class="loading-overlay__spinner hidden">
+                                <svg
+                                aria-hidden="true"
+                                focusable="false"
+                                role="presentation"
+                                class="spinner"
+                                viewBox="0 0 66 66"
+                                xmlns="http://www.w3.org/2000/svg"
+                                >
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                </svg>
+                            </div>
+                            </button>
+                        </div>
+                    {%- endform -%}
+                    </product-form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "OE Featured Product",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "headline",
+        "default": "Best Seller Bundle",
+        "label": "Headline"
+      },
+      {
+        "type": "text",
+        "id": "subheadline",
+        "label": "Subheadline"
+      },
+      {
+        "type": "product",
+        "id": "featured_product",
+        "label": "Product"
+      }
+    ],
+    "presets": [
+      {
+        "name": "OE Featured Product"
+      }
+    ]
+  }
+{% endschema %}
