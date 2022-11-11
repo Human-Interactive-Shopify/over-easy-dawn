@@ -149,6 +149,8 @@
                                         render 'icon-peanuts'
                                     when 'shake' 
                                         render 'icon-shake'
+                                    when 'shaker' 
+                                        render 'icon-shaker'
                                     when 'vanilla' 
                                         render 'icon-vanilla'
                                    endcase 
@@ -176,6 +178,9 @@
                             name="id"
                             value="{{ product.selected_or_first_available_variant.id }}"
                         >
+                        {% for field in product.metafields.custom.bundle.value %}
+                        <input type="hidden" name="properties[{{ field | escape }}]" value="1">
+                        {% endfor %}
                         <div class="product-form__buttons">
                             <button
                             type="submit"
