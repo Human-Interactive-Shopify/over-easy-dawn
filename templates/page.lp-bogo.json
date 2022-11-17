@@ -6,14 +6,14 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Supercharge your Mornings!",
-            "heading_size": "medium"
+            "heading": "Buy One Get One Free– on all Breakfast Bars!",
+            "heading_size": "small"
           }
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
           "settings": {
-            "text": "Discover Over Easy's delicious and nutritious Breakfast Bars and Shakes in a variety of flavors!"
+            "text": "Pre-Black Friday Friends and Family Sale is LIVE until November 24, 11:59pm PST"
           }
         },
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
@@ -25,9 +25,8 @@
         },
         "195c88a5-bcc4-48ee-8186-776e143b77ed": {
           "type": "eye-catcher",
-          "disabled": true,
           "settings": {
-            "text": "<p>OVEREASY20<\/p><p>for<strong> 20% off<\/strong><\/p><p>at checkout<\/p>",
+            "text": "<p>USE CODE BOGOBF AT CHECKOUT. Valid on the purchase of up to 6 boxes. <\/p>",
             "position": "top-right",
             "shape": "round",
             "color": "red",
@@ -88,7 +87,8 @@
         "9f72aff9-1cbe-4979-bae9-7973f162a636",
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "oe-blocks-product-2": {
       "type": "oe-blocks-product",
