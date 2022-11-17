@@ -1,0 +1,216 @@
+{
+  "sections": {
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
+      "blocks": {
+        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
+          "type": "heading",
+          "settings": {
+            "heading": "Supercharge your Mornings!",
+            "heading_size": "medium"
+          }
+        },
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
+          "type": "text",
+          "settings": {
+            "text": "Discover Over Easy's delicious and nutritious Breakfast Bars and Shakes in a variety of flavors!"
+          }
+        },
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": "https:\/\/overeasyfoods.com\/pages\/welcome-to-over-easy#product-section"
+          }
+        },
+        "195c88a5-bcc4-48ee-8186-776e143b77ed": {
+          "type": "eye-catcher",
+          "disabled": true,
+          "settings": {
+            "text": "<p>OVEREASY20<\/p><p>for<strong> 20% off<\/strong><\/p><p>at checkout<\/p>",
+            "position": "top-right",
+            "shape": "round",
+            "color": "red",
+            "text_color": "white"
+          }
+        }
+      },
+      "block_order": [
+        "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81",
+        "195c88a5-bcc4-48ee-8186-776e143b77ed"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Complete_nutrition.png",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "white",
+        "button_color_scheme": "red",
+        "text_color_scheme": "black"
+      }
+    },
+    "1661427940e35b089a": {
+      "type": "oe-sources",
+      "blocks": {
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
+            "text": "\"Top Pick - Best Breakfast Bars 2022\""
+          }
+        },
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
+            "text": "\"Helping to make breakfast easy\""
+          }
+        },
+        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
+            "text": "\"The perfect grab-and-go meal\""
+          }
+        },
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
+            "text": "\"Enough fiber & protein to keep hunger at arm's length\""
+          }
+        }
+      },
+      "block_order": [
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
+        "9f72aff9-1cbe-4979-bae9-7973f162a636",
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
+      ],
+      "settings": {}
+    },
+    "oe-blocks-product-2": {
+      "type": "oe-blocks-product",
+      "settings": {
+        "shipping_notice": "Free Shipping on orders of 2 or more products",
+        "related_products_title": "Our Flavors",
+        "collection": "breakfast-bars",
+        "featured_product": "peanut-butter-breakfast-bar",
+        "show_rating": true,
+        "show_ingredients_anchor": false,
+        "show_nutrition_anchor": false,
+        "mobile_links": ""
+      }
+    },
+    "oe-ingredients": {
+      "type": "oe-ingredients",
+      "blocks": {
+        "037943ff-e6f2-4e31-9264-a51271ab8477": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "egg",
+            "heading": "CAGE-FREE EGG WHITES"
+          }
+        },
+        "e070b7a8-8707-47da-8b33-42d31fcaea9e": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "oats",
+            "heading": "ORGANIC<br>OATS"
+          }
+        },
+        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "glutten-free",
+            "heading": "GLUTTEN<br>FREE"
+          }
+        },
+        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "soy-free",
+            "heading": "SOY<br>FREE"
+          }
+        },
+        "d5d8f806-116e-42df-bed2-516e6faaee78": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "dairy-free",
+            "heading": "DAIRY<br>FREE"
+          }
+        },
+        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "no-preservatives",
+            "heading": "NO PRESERVATIVES"
+          }
+        },
+        "96229dcb-86af-47fa-8c8d-28417e98b443": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "no-palm-oil",
+            "heading": "NO<br>PALM OIL"
+          }
+        }
+      },
+      "block_order": [
+        "037943ff-e6f2-4e31-9264-a51271ab8477",
+        "e070b7a8-8707-47da-8b33-42d31fcaea9e",
+        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1",
+        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7",
+        "d5d8f806-116e-42df-bed2-516e6faaee78",
+        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d",
+        "96229dcb-86af-47fa-8c8d-28417e98b443"
+      ],
+      "settings": {
+        "headline": "Clean Ingredients. Made with Care.",
+        "background_color": "grey-100"
+      }
+    },
+    "1663281355fa8ec570": {
+      "type": "oe-customer-quotes",
+      "blocks": {
+        "3064b63c-3bda-4278-ae10-3da08d9d5002": {
+          "type": "quote",
+          "settings": {
+            "text": "\"I can confidently say that these are the best bars I've ever tried! Awesome product!\"",
+            "customer": "Emily P."
+          }
+        },
+        "b8aceaca-76da-4ac8-9346-75cdfda12de3": {
+          "type": "quote",
+          "settings": {
+            "text": "\"These are VERY tasty and I absolutely love the ingredient makeup!\"",
+            "customer": "Erin S."
+          }
+        },
+        "82bdc55b-0b95-4e13-bcd9-899321262b7a": {
+          "type": "quote",
+          "settings": {
+            "text": "\"As a dietician, I'm a huge fan of healthy carbs, especially whole grains like oats. They also taste delicious!\"",
+            "customer": "Adrienne D."
+          }
+        }
+      },
+      "block_order": [
+        "3064b63c-3bda-4278-ae10-3da08d9d5002",
+        "b8aceaca-76da-4ac8-9346-75cdfda12de3",
+        "82bdc55b-0b95-4e13-bcd9-899321262b7a"
+      ],
+      "settings": {
+        "headline": "Over 1 Million breakfasts served",
+        "sub-headline": ""
+      }
+    }
+  },
+  "order": [
+    "oe-jumbotron",
+    "1661427940e35b089a",
+    "oe-blocks-product-2",
+    "oe-ingredients",
+    "1663281355fa8ec570"
+  ]
+}
