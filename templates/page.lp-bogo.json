@@ -6,8 +6,8 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Buy One Get One Free– on all Breakfast Bars!",
-            "heading_size": "small"
+            "heading": "Buy One Get One Free - on selected Breakfast Bars!",
+            "heading_size": "medium"
           }
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
@@ -19,9 +19,9 @@
         "195c88a5-bcc4-48ee-8186-776e143b77ed": {
           "type": "eye-catcher",
           "settings": {
-            "text": "<p>USE CODE BOGOBF AT CHECKOUT. Valid on the purchase of up to 6 boxes. <\/p>",
-            "position": "top-right",
-            "shape": "round",
+            "text": "<p>Use code <\/p><p><strong>BOGOBF <\/strong>at checkout<\/p>",
+            "position": "top-left",
+            "shape": "spikes",
             "color": "red",
             "text_color": "white"
           }
