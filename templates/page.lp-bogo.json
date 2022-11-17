@@ -12,6 +12,7 @@
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Pre-Black Friday Friends and Family Sale is LIVE until November 24, 11:59pm PST"
           }
@@ -19,13 +20,13 @@
         "ceef03ea-f1cc-41a9-9583-99b08b5136cf": {
           "type": "text",
           "settings": {
-            "text": "*Valid on the purchase of select breakfast bar flavors."
+            "text": "Valid on the purchase of select breakfast bar flavors. Promo can be used to purchase up to 6 boxes. Valid until 11\/23 at 11:59pm PST."
           }
         },
         "195c88a5-bcc4-48ee-8186-776e143b77ed": {
           "type": "eye-catcher",
           "settings": {
-            "text": "<p>Use code <\/p><p><strong>BOGOBF <\/strong>at checkout<\/p>",
+            "text": "<p>Use code <\/p><p><strong>BOGOBF <\/strong>at Checkout! <\/p>",
             "position": "top-left",
             "shape": "spikes",
             "color": "red",
