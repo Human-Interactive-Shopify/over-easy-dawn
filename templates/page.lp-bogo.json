@@ -16,6 +16,12 @@
             "text": "Pre-Black Friday Friends and Family Sale is LIVE until November 24, 11:59pm PST"
           }
         },
+        "ceef03ea-f1cc-41a9-9583-99b08b5136cf": {
+          "type": "text",
+          "settings": {
+            "text": "*Valid on the purchase of select breakfast bar flavors."
+          }
+        },
         "195c88a5-bcc4-48ee-8186-776e143b77ed": {
           "type": "eye-catcher",
           "settings": {
@@ -30,6 +36,7 @@
       "block_order": [
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
+        "ceef03ea-f1cc-41a9-9583-99b08b5136cf",
         "195c88a5-bcc4-48ee-8186-776e143b77ed"
       ],
       "settings": {
