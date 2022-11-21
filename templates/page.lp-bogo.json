@@ -6,8 +6,8 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Buy One Get One Free - on select Breakfast Bars!",
-            "heading_size": "small"
+            "heading": "Buy One Get One Free - on selected Breakfast Bars!",
+            "heading_size": "medium"
           }
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
@@ -28,7 +28,7 @@
           "settings": {
             "text": "<p>Use code <\/p><p><strong>BOGOBF <\/strong>at Checkout! <\/p>",
             "is_offset": true,
-            "position": "top-left",
+            "position": "top-right",
             "shape": "spikes",
             "color": "red",
             "text_color": "white"
@@ -94,7 +94,7 @@
     "oe-blocks-product-2": {
       "type": "oe-blocks-product",
       "settings": {
-        "shipping_notice": "Free Shipping on orders of 2 or more products",
+        "shipping_notice": "Free Shipping for orders over $50",
         "related_products_title": "Our Flavors",
         "collection": "bogobf",
         "featured_product": "peanut-butter-breakfast-bar",
