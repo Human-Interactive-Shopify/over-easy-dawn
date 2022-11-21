@@ -137,21 +137,38 @@
   }
 
   .oe-jumbotron__eye-cacther-position--top-left {
-      top: 8px;
-      left: 8px;
-    }
-    .oe-jumbotron__eye-cacther-position--top-right {
-      top: 8px;
-      right: 8px;
-    }
-    .oe-jumbotron__eye-cacther-position--bottom-left {
-      bottom: 8px;
-      left: 8px;
-    }
-    .oe-jumbotron__eye-cacther-position--bottom-right {
-      bottom: 8px;
-      right: 8px;
-    }
+    top: 8px;
+    left: 8px;
+  }
+  .oe-jumbotron__eye-cacther-position--top-right {
+    top: 8px;
+    right: 8px;
+  }
+  .oe-jumbotron__eye-cacther-position--bottom-left {
+    bottom: 8px;
+    left: 8px;
+  }
+  .oe-jumbotron__eye-cacther-position--bottom-right {
+    bottom: 8px;
+    right: 8px;
+  }
+  
+  .oe-jumbotron__eye-cacther-position--top-left.oe-jumbotron__eye-cacther--is-offset {
+    top: 0;
+    left: 0;
+  }
+  .oe-jumbotron__eye-cacther-position--top-right.oe-jumbotron__eye-cacther--is-offset {
+    top: 0;
+    right: 0;
+  }
+  .oe-jumbotron__eye-cacther-position--bottom-left.oe-jumbotron__eye-cacther--is-offset {
+    bottom: 0;
+    left: 0;
+  }
+  .oe-jumbotron__eye-cacther-position--bottom-right.oe-jumbotron__eye-cacther--is-offset {
+    bottom: 0;
+    right: 0;
+  }
 
   @media screen and (min-width: 750px) {
 
@@ -175,6 +192,23 @@
     .oe-jumbotron__eye-cacther-position--bottom-right {
       bottom: 32px;
       right: 32px;
+    }
+    
+    .oe-jumbotron__eye-cacther-position--top-left.oe-jumbotron__eye-cacther--is-offset {
+      top: -8px;
+      left: -8px;
+    }
+    .oe-jumbotron__eye-cacther-position--top-right.oe-jumbotron__eye-cacther--is-offset {
+      top: -8px;
+      right: -8px;
+    }
+    .oe-jumbotron__eye-cacther-position--bottom-left.oe-jumbotron__eye-cacther--is-offset {
+      bottom: -8px;
+      left: -8px;
+    }
+    .oe-jumbotron__eye-cacther-position--bottom-right.oe-jumbotron__eye-cacther--is-offset {
+      bottom: -8px;
+      right: -8px;
     }
   }
 
@@ -293,7 +327,7 @@
                   --oe-shape-text-color: var(--oe-color-{{ block.settings.text_color }});
                 }
               </style>
-              <div id="{{ section.id }}" class="oe-jumbotron__eye-cacther oe-jumbotron__eye-cacther-shape--{{ block.settings.shape }} oe-jumbotron__eye-cacther-position--{{ block.settings.position }}">
+              <div id="{{ section.id }}" class="oe-jumbotron__eye-cacther oe-jumbotron__eye-cacther-shape--{{ block.settings.shape }} oe-jumbotron__eye-cacther-position--{{ block.settings.position }} {% if block.settings.is_offset %} oe-jumbotron__eye-cacther--is-offset {% endif %}">
                 {%- if block.settings.shape == 'spikes' -%}
                   {% render 'spikes-shape' %}
                 {%- endif -%}
@@ -516,6 +550,12 @@
           "type": "richtext",
           "id": "text",
           "label": "Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_offset",
+          "label": "Offset position",
+          "default": false
         },
         {
           "type": "select",
