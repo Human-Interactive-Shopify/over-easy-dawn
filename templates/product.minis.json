@@ -3,7 +3,7 @@
     "main": {
       "type": "oe-main-product",
       "settings": {
-        "shipping_notice": "Free Shipping on orders of 2 or more products",
+        "shipping_notice": "Free Shipping for orders over $50",
         "related_products_title": "Our Flavors",
         "collection": "minis",
         "show_rating": true,
