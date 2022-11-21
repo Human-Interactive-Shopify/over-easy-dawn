@@ -12,7 +12,6 @@
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
-          "disabled": false,
           "settings": {
             "text": "30% off all Breakfast Bars and Shakes!"
           }
@@ -32,11 +31,10 @@
       "block_order": [
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
-        "ceef03ea-f1cc-41a9-9583-99b08b5136cf",
         "195c88a5-bcc4-48ee-8186-776e143b77ed"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Black_Friday_LP_Bar_Graphic.png",
+        "image": "shopify:\/\/shop_images\/Black_Friday_LP_2.png",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
