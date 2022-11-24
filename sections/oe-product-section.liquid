@@ -1,20 +1,34 @@
+{{ 'section-oe-main-product.css' | asset_url | stylesheet_tag }}
+{{ 'component-rating.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{% comment %} Use string splitting to pull the value from content_for_header and apply some string clean up {% endcomment %}
+{%- assign pageUrl = contentForQuerystring | split: '"pageurl":"' | last | split: '"' | first | split: '.myshopify.com' | last |
+   replace: '\/', '/' | 
+   replace: '%20', ' ' | 
+   replace: '\u0026', '&'
+-%}
+
+{%- assign pageQuerystring = pageUrl | split: '?' | last -%}
+
+{%- if pageQuerystring contains "product" -%}
+  {%- assign productSlug = pageQuerystring | split: 'product=' | last | split: '&' | first -%}
+{% else %}
+  {%- assign productSlug = section.settings.featured_product -%}
+{%- endif -%}
+  
 {%- liquid
-  assign product = all_products[section.settings.featured_product]
+  assign product = all_products[productSlug]
   assign current_variant = product.selected_or_first_available_variant
   assign current_selling_plan_allocation = current_variant.selected_selling_plan_allocation
   if current_selling_plan_allocation == nil and current_variant.requires_selling_plan
     assign current_selling_plan_allocation = current_variant.selling_plan_allocations | first
   endif
-  assign offer = current_selling_plan_allocation | default: current_variant
   assign filtered_selling_plan_groups = product.selling_plan_groups | where: "app_id", "4836205"
   assign hiddenGroups = filtered_selling_plan_groups | map: "name" | where: "[hidden]"
-  assign visibleGroupsSize = filtered_selling_plan_groups.size | minus: hiddenGroups.size
-  assign smartrr_unique_id = product.id
--%}
-{{ 'section-oe-main-product.css' | asset_url | stylesheet_tag }}
-{{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
-{% liquid
   assign rating_decimal = 0
   assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
   if decimal >= 0.3 and decimal <= 0.7
@@ -23,9 +37,7 @@
     assign rating_decimal = 1
   endif
 %}
-
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-
+  
 <section
   id="oe-main-product-{{ section.id }}"
   class="oe-product__section"
@@ -41,43 +53,14 @@
     }
   </style>
   <div class="oe-product container" data-smartrr-form-id="{{ product.id }}" id="product-section">
-    {% if section.settings.mobile_links != blank %}
-    <div class="oe-product__mobile-links">
-      <ul class="oe-product__mobile-links-list">
-        {%- for childLink in section.settings.mobile_links.links -%}
-          <li>
-            <a href="{{ childLink.url }}" class="oe-product__mobile-link {% if childLink.current %} oe-product__mobile-link--active{% endif %}">
-              <div class="oe-product__mobile-link-image-wrapper">
-                {%- if childLink.type == 'collection_link' or childLink.type == 'article_link' -%}
-                  {%- if childLink.object.image != blank -%}
-                    <img class="oe-product__mobile-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.image.src | image_url }}" alt="{{ childLink.object.image.alt }}" />
-                  {%- endif -%}
-                {%- endif -%}
-                {%- if childLink.type == 'page_link' or childLink.type == 'blog_link' -%}
-                  {%- if childLink.object.metafields.custom.featured_image.value != blank -%}
-                    <img class="oe-product__mobile-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.metafields.custom.featured_image.value.src | image_url }}" alt="{{ childLink.object.metafields.custom.featured_image.value.alt }}" />
-                  {%- endif -%}
-                {%- endif -%}
-                {%- if childLink.type == 'product_link' -%}
-                  {%- if childLink.object.featured_image != blank -%}
-                    <img class="oe-product__mobile-link-image" width="400" height="220" loading="lazy" src="{{ childLink.object.featured_image | image_url }}" alt="{{ childLink.object.title }}" />
-                  {%- endif -%}
-                {%- endif -%}
-              </div>
-              <p class="oe-product__mobile-link-title">{{ childLink.title | strip_html | truncatewords: 4, '...' }}</p>
-            </a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </div>
-    {%- endif -%}
+    
     <div class="oe-product__gallery">
       <div class="oe-product__slider js-product-slider">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'eye-catcher-pdp' -%}
               <style>
-                #{{section.id}} {
+                #{{ section.id }} {
                   --oe-shape-color: var(--oe-color-{{ block.settings.color }});
                   --oe-shape-text-color: var(--oe-color-{{ block.settings.text_color }});
                 }
@@ -179,8 +162,8 @@
           <h3 class="oe-product__variations-title">{{ section.settings.related_products_title }}</h3>
           <div class="oe-product__variations-list">
             {% for relatedProduct in collections[section.settings.collection].products %}
-              <a href="{{ relatedProduct.url }}" class="oe-product__variations-list-item {% if relatedProduct.id == product.id %}is-active{% endif %}">
-               {{ relatedProduct.title }}
+              <a href="?product={{ relatedProduct.handle }}" class="oe-product__variations-list-item {% if relatedProduct.id == product.id %}is-active{% endif %}">
+                {{ relatedProduct.title }}
               </a>
             {% endfor %}
           </div>
@@ -283,7 +266,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const swiper = new Swiper('.js-product-slider', {
+      const swiper = new Swiper('#oe-main-product-{{ section.id }} .js-product-slider', {
         slideClass: 'oe-product__slider-slide',
         wrapperClass: 'oe-product__slider-wrapper',
         slideActiveClass: 'is-active',
@@ -298,7 +281,7 @@
           prevEl: '.oe-product__slider-button--prev',
         },
         centeredSlides: true,
-         on: {
+          on: {
           slideChange: function(swiper){
             
             swiperThumbnails.slideTo(swiper.realIndex)
@@ -306,7 +289,7 @@
         }
       });
       
-      const swiperThumbnails = new Swiper('.js-thumbnail-slider', {
+      const swiperThumbnails = new Swiper('#oe-main-product-{{ section.id }} .js-thumbnail-slider', {
         slideClass: 'oe-product__thumbnails-thumbnail',
         wrapperClass: 'oe-product__thumbnails-wrapper',
         slideActiveClass: 'is-active',
@@ -377,7 +360,7 @@
 
 {% schema %}
 {
-  "name": "OE Blocks product",
+  "name": "OE Product section",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -424,11 +407,6 @@
       "id": "show_nutrition_anchor",
       "label": "Show nutrition anchor",
       "default": true
-    },
-    {
-      "type": "link_list",
-      "id": "mobile_links",
-      "label": "Mobile links"
     }
   ],
   "blocks": [
@@ -510,7 +488,6 @@
               "value": "orange",
               "label": "Orange"
             }
-            
           ],
           "default": "red",
           "label": "Shape color"
@@ -551,7 +528,6 @@
               "value": "orange",
               "label": "Orange"
             }
-            
           ],
           "default": "white",
           "label": "Text color"
@@ -561,7 +537,7 @@
   ],
   "presets": [
     {
-      "name": "OE Blocks product"
+      "name": "OE Product section"
     }
   ]
 }
