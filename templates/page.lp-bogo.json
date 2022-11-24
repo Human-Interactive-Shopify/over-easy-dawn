@@ -93,7 +93,6 @@
     },
     "oe-blocks-product-2": {
       "type": "oe-blocks-product",
-      "disabled": true,
       "settings": {
         "shipping_notice": "Free Shipping for orders over $50",
         "related_products_title": "Our Flavors",
@@ -107,6 +106,7 @@
     },
     "5e110df1-fd00-4bdb-ae9d-80cd47459a58": {
       "type": "oe-product-section",
+      "disabled": true,
       "settings": {
         "shipping_notice": "Free Shipping for orders over $50",
         "related_products_title": "Our Flavors",
