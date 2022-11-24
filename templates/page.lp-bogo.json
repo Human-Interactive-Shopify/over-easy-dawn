@@ -93,6 +93,7 @@
     },
     "oe-blocks-product-2": {
       "type": "oe-blocks-product",
+      "disabled": true,
       "settings": {
         "shipping_notice": "Free Shipping for orders over $50",
         "related_products_title": "Our Flavors",
@@ -102,6 +103,18 @@
         "show_ingredients_anchor": false,
         "show_nutrition_anchor": false,
         "mobile_links": ""
+      }
+    },
+    "5e110df1-fd00-4bdb-ae9d-80cd47459a58": {
+      "type": "oe-product-section",
+      "settings": {
+        "shipping_notice": "Free Shipping for orders over $50",
+        "related_products_title": "Our Flavors",
+        "collection": "bogobf",
+        "featured_product": "peanut-butter-breakfast-bar",
+        "show_rating": true,
+        "show_ingredients_anchor": true,
+        "show_nutrition_anchor": true
       }
     },
     "oe-ingredients": {
@@ -211,6 +224,7 @@
     "oe-jumbotron",
     "1661427940e35b089a",
     "oe-blocks-product-2",
+    "5e110df1-fd00-4bdb-ae9d-80cd47459a58",
     "oe-ingredients",
     "1663281355fa8ec570"
   ]
