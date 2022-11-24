@@ -11,6 +11,9 @@
    replace: '\u0026', '&'
 -%}
 
+<script>console.log({{ contentForQuerystring | json }});</script>
+<script>console.log({{ pageUrl | json }});</script>
+
 {%- assign pageQuerystring = pageUrl | split: '?' | last -%}
 
 {%- if pageQuerystring contains "product" -%}
@@ -19,8 +22,6 @@
   {%- assign productSlug = section.settings.featured_product -%}
 {%- endif -%}
   
-<script>console.log({{ contentForQuerystring | json }});</script>
-<script>console.log({{ pageUrl | json }});</script>
 <script>console.log({{ productSlug | json }});</script>
 
 {%- liquid
