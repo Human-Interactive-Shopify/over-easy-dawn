@@ -168,8 +168,11 @@
           <h3 class="oe-product__variations-title">{{ section.settings.related_products_title }}</h3>
           <div class="oe-product__variations-list">
             {% for relatedProduct in collections[section.settings.collection].products %}
-              {% assign random_number = "now" | date: "%N" | modulo: 10000000 | plus: min %}
-              <a href="?product={{ relatedProduct.handle }}&cache={{ random_number }}#oe-main-product-{{ section.id }}" class="oe-product__variations-list-item {% if relatedProduct.id == product.id %}is-active{% endif %}">
+              {% assign min = 100000000 %}
+              {% assign max = 999999999 %}
+              {% assign diff = max | minus: min %}
+              {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+              <a href="?product={{ relatedProduct.handle }}&cache={{ randomNumber }}#oe-main-product-{{ section.id }}" class="oe-product__variations-list-item {% if relatedProduct.id == product.id %}is-active{% endif %}">
                 {{ relatedProduct.title }}
               </a>
             {% endfor %}
