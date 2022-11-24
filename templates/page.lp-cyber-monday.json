@@ -85,6 +85,7 @@
     },
     "oe-blocks-product-2": {
       "type": "oe-blocks-product",
+      "disabled": true,
       "settings": {
         "shipping_notice": "Free Shipping for orders over $50",
         "related_products_title": "Our Flavors",
@@ -175,8 +176,21 @@
         "background_color": "grey-100"
       }
     },
+    "f31531d9-b651-4b5e-8c88-264a24549aee": {
+      "type": "oe-product-section",
+      "settings": {
+        "shipping_notice": "Free Shipping for orders over $50",
+        "related_products_title": "Our Flavors",
+        "collection": "shakes",
+        "featured_product": "strawberry-breakfast-shake",
+        "show_rating": true,
+        "show_ingredients_anchor": true,
+        "show_nutrition_anchor": true
+      }
+    },
     "oe-blocks-product": {
       "type": "oe-blocks-product",
+      "disabled": true,
       "settings": {
         "shipping_notice": "Free Shipping for orders over $50",
         "related_products_title": "Our Flavors",
@@ -230,6 +244,7 @@
     "oe-blocks-product-2",
     "b014f5c6-b74e-4cd7-923b-82bfcf2a2597",
     "oe-ingredients",
+    "f31531d9-b651-4b5e-8c88-264a24549aee",
     "oe-blocks-product",
     "1663281355fa8ec570"
   ]
