@@ -19,6 +19,7 @@
   {%- assign productSlug = section.settings.featured_product -%}
 {%- endif -%}
   
+<script>console.log({{ productSlug | json }});</script>
 {%- liquid
   assign product = all_products[productSlug]
   assign current_variant = product.selected_or_first_available_variant
