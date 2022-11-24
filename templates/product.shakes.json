@@ -18,7 +18,7 @@
         "b5408bef-8cc3-4003-9a59-a57f2b605a50"
       ],
       "settings": {
-        "shipping_notice": "Free Shipping on orders of 2 or more products",
+        "shipping_notice": "Free Shipping for orders over $50",
         "related_products_title": "Flavors",
         "collection": "shakes",
         "show_rating": true,
