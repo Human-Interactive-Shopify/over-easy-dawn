@@ -42,13 +42,20 @@
   elsif decimal > 0.7
     assign rating_decimal = 1
   endif
+
+  assign min = 1 
+  assign max = 999999999 
+  assign diff = max | minus: min 
+  assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min 
 %}
-  
+
+
 <section
   id="oe-main-product-{{ section.id }}"
   class="oe-product__section"
   data-section="{{ section.id }}"
   data-section-name="Product"
+  data-cache-bust="{{ randomNumber }}"
 >
   <style>
     #oe-main-product-{{ section.id }} {
