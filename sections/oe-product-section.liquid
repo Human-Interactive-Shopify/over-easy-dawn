@@ -2,378 +2,398 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
-{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
-
-{% comment %} Use string splitting to pull the value from content_for_header and apply some string clean up {% endcomment %}
-{%- assign pageUrl = contentForQuerystring | split: '"pageurl":"' | last | split: '"' | first | split: '.myshopify.com' | last |
-   replace: '\/', '/' | 
-   replace: '%20', ' ' | 
-   replace: '\u0026', '&'
--%}
-
-<script>console.log({{ 'v1' | json }});</script>
-<script>console.log({{ contentForQuerystring | json }});</script>
-<script>console.log({{ pageUrl | json }});</script>
-
-{%- assign pageQuerystring = pageUrl | split: '?' | last -%}
-
-{%- if pageQuerystring contains "product" -%}
-  {%- assign productSlug = pageQuerystring | split: 'product=' | last | split: '&' | first -%}
-{% else %}
-  {%- assign productSlug = section.settings.featured_product -%}
-{%- endif -%}
-  
-<script>console.log({{ productSlug | json }});</script>
-
-{%- liquid
-  assign product = all_products[productSlug]
-  assign current_variant = product.selected_or_first_available_variant
-  assign current_selling_plan_allocation = current_variant.selected_selling_plan_allocation
-  if current_selling_plan_allocation == nil and current_variant.requires_selling_plan
-    assign current_selling_plan_allocation = current_variant.selling_plan_allocations | first
-  endif
-  assign filtered_selling_plan_groups = product.selling_plan_groups | where: "app_id", "4836205"
-  assign hiddenGroups = filtered_selling_plan_groups | map: "name" | where: "[hidden]"
-
-  assign rating_decimal = 0
-  assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
-  if decimal >= 0.3 and decimal <= 0.7
-    assign rating_decimal = 0.5
-  elsif decimal > 0.7
-    assign rating_decimal = 1
-  endif
-
-  assign min = 1 
-  assign max = 999999999 
-  assign diff = max | minus: min 
-  assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min 
-%}
-
-
-<section
-  id="oe-main-product-{{ section.id }}"
-  class="oe-product__section"
-  data-section="{{ section.id }}"
-  data-section-name="Product"
-  data-cache-bust="{{ randomNumber }}"
->
-  <style>
-    #oe-main-product-{{ section.id }} {
-      --oe-product-background: {{ product.metafields.sf_oe.product_color }};
-      --rating: {{ product.metafields.reviews.rating.value.rating | floor }};
-      --rating-max: {{ product.metafields.reviews.rating.value.scale_max }};
-      --rating-decimal: {{ rating_decimal }};
-    }
-  </style>
-  <div class="oe-product container" data-smartrr-form-id="{{ product.id }}" id="product-section">
-    
-    <div class="oe-product__gallery">
-      <div class="oe-product__slider js-product-slider">
-        {%- for block in section.blocks -%}
-          {%- case block.type -%}
-            {%- when 'eye-catcher-pdp' -%}
-              <style>
-                #{{ section.id }} {
-                  --oe-shape-color: var(--oe-color-{{ block.settings.color }});
-                  --oe-shape-text-color: var(--oe-color-{{ block.settings.text_color }});
-                }
-              </style>
-              <div id="{{ section.id }}" class="oe-jumbotron__eye-cacther oe-jumbotron__eye-cacther-shape--{{ block.settings.shape }} oe-jumbotron__eye-cacther-position--{{ block.settings.position }}">
-                {%- if block.settings.shape == 'spikes' -%}
-                  {% render 'spikes-shape' %}
-                {%- endif -%}
-                {%- if block.settings.shape == 'round' -%}
-                  {% render 'round-shape' %}
-                {%- endif -%}
-                <div class="oe-jumbotron__eye-cacther-text">
-                  {{ block.settings.text }}
-                </div>
-              </div>
-          {%- endcase -%}
-        {%- endfor -%}
-        <div class="oe-product__slider-wrapper">
-          {%- if product.selected_or_first_available_variant.featured_media != null -%}
-            <div class="oe-product__slider-slide">
-              {{ media | image_url: width: 800 | image_tag:
-                loading: 'lazy',
-                width: media.width,
-                class: "oe-product__image",
-                alt: media.alt | escape
-              }}
-            </div>
-          {%- endif -%}
-          {%- for media in product.media -%}
-            {% if media.alt == "Xnutrition" or media.alt == "home" or media.alt == "table" or media.alt == "overover" or media.alt == "ingredient" or media.alt == "vertical" or media.alt == "naked_only" %}{% continue %}{% endif %}
-            {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-              <div class="oe-product__slider-slide">
-                {{ media | image_url: width: 1050 | image_tag:
-                  loading: 'lazy',
-                  width: 700,
-                  class: "oe-product__image",
-                  alt: media.alt | escape
-                }}
-              </div>
-            {%- endunless -%}
-          {%- endfor -%}
-        </div>
-        <div class="oe-product__slider-pagination"></div>
-        <button class="oe-product__slider-button oe-product__slider-button--prev">
-          {% render 'icon-slider-arrow-left' %}
-        </button>
-        <button class="oe-product__slider-button oe-product__slider-button--next">
-          {% render 'icon-slider-arrow-right' %}
-        </button>
-      </div>
-      <div class="oe-product__thumbnails js-thumbnail-slider">
-        <div class="oe-product__thumbnails-wrapper">
-          {%- for media in product.media -%}
-            {% if media.alt == "Xnutrition" or media.alt == "home" or media.alt == "table" or media.alt == "overover" or media.alt == "ingredient" or media.alt == "vertical" or media.alt == "naked_only" %}{% continue %}{% endif %}
-            <div class="oe-product__thumbnails-thumbnail">
-              {{ media | image_url: width: 150 | image_tag:
-                loading: 'lazy',
-                width: 100,
-                class: "oe-product__image",
-                alt: media.alt | escape
-              }}
-            </div>
-          {%- endfor -%}
-        </div>
-      </div>
-    </div>
-    <div class="oe-product__info-wrapper">
-        <h1 class="oe-product__title">{{ product.title | escape }}</h1>
-        <div class="oe-product__meta">
-        {%- if section.settings.show_rating and product.metafields.reviews.rating.value != blank -%}
-          <div class="oe-product__meta-item">
-            <div class="rating" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
-              <span aria-hidden="true" class="rating-star color-icon-{{ settings.accent_icons }}" style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"></span>
-            </div>
-            <p class="rating-text caption">
-              <span aria-hidden="true">{{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}</span>
-            </p>
-            <a href="#product-reviews" class="rating-count caption">
-              <span aria-hidden="true">{{ product.metafields.reviews.rating_count }} Reviews</span>
-              <span class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "accessibility.total_reviews" | t }}</span>
-            </a>
-          </div>
-        {%- endif -%}
-        {%- if section.settings.show_ingredients_anchor -%}
-          <a href="#product-ingredients" class="oe-product__meta-item">
-            Ingredients
-          </a>
-        {%- endif -%}
-        {%- if section.settings.show_nutrition_anchor -%}
-          <a href="#product-nutrition" class="oe-product__meta-item">
-            Nutrition facts
-          </a>
-        {%- endif -%}
-        </div>
-        <div class="oe-product__content">
-          {{ product.description }}
-        </div>
-        <div class="oe-product__variations">
-          <h3 class="oe-product__variations-title">{{ section.settings.related_products_title }}</h3>
-          <div class="oe-product__variations-list">
-            {% for relatedProduct in collections[section.settings.collection].products %}
-              {% assign min = 1 %}
-              {% assign max = 999999999 %}
-              {% assign diff = max | minus: min %}
-              {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
-              <a href="?product={{ relatedProduct.handle }}&cache={{ randomNumber }}#oe-main-product-{{ section.id }}" class="oe-product__variations-list-item {% if relatedProduct.id == product.id %}is-active{% endif %}">
-                {{ relatedProduct.title }}
-              </a>
-            {% endfor %}
-          </div>
-          
-        </div>
-        {% render 'smartrr-product' %}
-        {%- assign product_form_id = 'product-form-' | append: section.id -%}
-
-        <div class="oe-product__actions">
-          <div
-            class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
-            {{ block.shopify_attributes }}
-          >
-            <quantity-input class="quantity">
-              <button class="quantity__button no-js-hidden" name="minus" type="button">
-                <span class="visually-hidden">
-                  {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
-                </span>
-                {% render 'icon-minus' %}
-              </button>
-              <input
-                class="quantity__input"
-                type="number"
-                name="quantity"
-                id="Quantity-{{ section.id }}"
-                min="1"
-                value="1"
-                form="{{ product_form_id }}"
-              >
-              <button class="quantity__button no-js-hidden" name="plus" type="button">
-                <span class="visually-hidden">
-                  {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
-                </span>
-                {% render 'icon-plus' %}
-              </button>
-            </quantity-input>
-          </div>
-          <product-form class="product-form">
-            <div class="product-form__error-message-wrapper" role="alert" hidden>
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                role="presentation"
-                class="icon icon-error"
-                viewBox="0 0 13 13"
-              >
-                <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-                <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-                <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-                <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
-              </svg>
-              <span class="product-form__error-message"></span>
-            </div>
-
-            {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form', onsubmit: 'submitAddToCart();' -%}
-              <input type="hidden" name="selling_plan" data-smartrr-selling-plan-input value="{{ current_selling_plan_allocation.selling_plan.id | default: '' }}">
-              <input
-                type="hidden"
-                name="id"
-                value="{{ product.selected_or_first_available_variant.id }}"
-              >
-              <div class="product-form__buttons">
-                <button
-                  type="submit"
-                  name="add"
-                  class="product-form__submit button button--primary button-color--red is-full-width"
-                  {% if product.selected_or_first_available_variant.available == false %}
-                    disabled
-                  {% endif %}
-                >
-                  <span>
-                    {%- if product.selected_or_first_available_variant.available -%}
-                      {{ 'products.product.add_to_cart' | t }}
-                    {%- else -%}
-                      {{ 'products.product.sold_out' | t }}
-                    {%- endif -%}
-                  </span>
-                  <div class="loading-overlay__spinner hidden">
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      role="presentation"
-                      class="spinner"
-                      viewBox="0 0 66 66"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                    </svg>
-                  </div>
-                </button>
-              </div>
-            {%- endform -%}
-          </product-form>
-        </div>
-        {% if section.settings.shipping_notice != blank %}
-          <p class="oe-product__shipping-notice">{% render 'icon-shipping' %} {{ section.settings.shipping_notice }}</p>
-        {% endif %}
-      </div>
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const swiper = new Swiper('#oe-main-product-{{ section.id }} .js-product-slider', {
-        slideClass: 'oe-product__slider-slide',
-        wrapperClass: 'oe-product__slider-wrapper',
-        slideActiveClass: 'is-active',
-        slidesPerView: 1,
-        pagination: {
-          el: '.oe-product__slider-pagination',
-          bulletClass: 'oe-product__slider-pagination-bullet',
-          bulletActiveClass: 'is-active'
-        },
-        navigation: {
-          nextEl: '.oe-product__slider-button--next',
-          prevEl: '.oe-product__slider-button--prev',
-        },
-        centeredSlides: true,
-          on: {
-          slideChange: function(swiper){
-            
-            swiperThumbnails.slideTo(swiper.realIndex)
-          }
-        }
-      });
+<div class="oe-product__section-wrapper js-oe-product__section-wrapper-{{ section.id }}">
+  {% for product in collections[section.settings.collection].products %}
+    {%- liquid
       
-      const swiperThumbnails = new Swiper('#oe-main-product-{{ section.id }} .js-thumbnail-slider', {
-        slideClass: 'oe-product__thumbnails-thumbnail',
-        wrapperClass: 'oe-product__thumbnails-wrapper',
-        slideActiveClass: 'is-active',
-        slidesPerView: 5,
-        on: {
-          click: function(){
-            
-            swiper.slideTo(swiperThumbnails.clickedIndex)
-          }
+      assign current_variant = product.selected_or_first_available_variant
+      assign current_selling_plan_allocation = current_variant.selected_selling_plan_allocation
+      if current_selling_plan_allocation == nil and current_variant.requires_selling_plan
+        assign current_selling_plan_allocation = current_variant.selling_plan_allocations | first
+      endif
+      assign filtered_selling_plan_groups = product.selling_plan_groups | where: "app_id", "4836205"
+      assign hiddenGroups = filtered_selling_plan_groups | map: "name" | where: "[hidden]"
+    
+      assign rating_decimal = 0
+      assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+      if decimal >= 0.3 and decimal <= 0.7
+        assign rating_decimal = 0.5
+      elsif decimal > 0.7
+        assign rating_decimal = 1
+      endif
+    
+    %}
+    
+    
+    <section
+      id="oe-main-product-{{ section.id }}-{{ forloop.index}}"
+      class="oe-product__section {% if forloop.index == 1 %} is-active {% endif %}"
+      data-section="{{ section.id }}-{{ forloop.index}}"
+      data-section-name="Product"
+      data-product-handle="{{ product.handle }}"
+    >
+      <style>
+        #oe-main-product-{{ section.id }}-{{ forloop.index}} {
+          --oe-product-background: {{ product.metafields.sf_oe.product_color }};
+          --rating: {{ product.metafields.reviews.rating.value.rating | floor }};
+          --rating-max: {{ product.metafields.reviews.rating.value.scale_max }};
+          --rating-decimal: {{ rating_decimal }};
         }
-      });
-    });
-  </script>
 
-  {%- liquid
-    if product.selected_or_first_available_variant.featured_media
-      assign seo_media = product.selected_or_first_available_variant.featured_media
-    else
-      assign seo_media = product.featured_media
-    endif
-  -%}
+        #oe-main-product-{{ section.id }}-{{ forloop.index}}:not(.is-active) {
+          display: none;
+        }
+      </style>
+      <div class="oe-product container" data-smartrr-form-id="{{ product.id }}" id="product-section">
+        
+        <div class="oe-product__gallery">
+          <div class="oe-product__slider js-product-slider">
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'eye-catcher-pdp' -%}
+                  <style>
+                    #{{ section.id }}-{{ forloop.index}} {
+                      --oe-shape-color: var(--oe-color-{{ block.settings.color }});
+                      --oe-shape-text-color: var(--oe-color-{{ block.settings.text_color }});
+                    }
+                  </style>
+                  <div id="{{ section.id }}-{{ forloop.index}}" class="oe-jumbotron__eye-cacther oe-jumbotron__eye-cacther-shape--{{ block.settings.shape }} oe-jumbotron__eye-cacther-position--{{ block.settings.position }}">
+                    {%- if block.settings.shape == 'spikes' -%}
+                      {% render 'spikes-shape' %}
+                    {%- endif -%}
+                    {%- if block.settings.shape == 'round' -%}
+                      {% render 'round-shape' %}
+                    {%- endif -%}
+                    <div class="oe-jumbotron__eye-cacther-text">
+                      {{ block.settings.text }}
+                    </div>
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+            <div class="oe-product__slider-wrapper">
+              {%- if product.selected_or_first_available_variant.featured_media != null -%}
+                <div class="oe-product__slider-slide">
+                  {{ media | image_url: width: 800 | image_tag:
+                    loading: 'lazy',
+                    width: media.width,
+                    class: "oe-product__image",
+                    alt: media.alt | escape
+                  }}
+                </div>
+              {%- endif -%}
+              {%- for media in product.media -%}
+                {% if media.alt == "Xnutrition" or media.alt == "home" or media.alt == "table" or media.alt == "overover" or media.alt == "ingredient" or media.alt == "vertical" or media.alt == "naked_only" %}{% continue %}{% endif %}
+                {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
+                  <div class="oe-product__slider-slide">
+                    {{ media | image_url: width: 1050 | image_tag:
+                      loading: 'lazy',
+                      width: 700,
+                      class: "oe-product__image",
+                      alt: media.alt | escape
+                    }}
+                  </div>
+                {%- endunless -%}
+              {%- endfor -%}
+            </div>
+            <div class="oe-product__slider-pagination"></div>
+            <button class="oe-product__slider-button oe-product__slider-button--prev">
+              {% render 'icon-slider-arrow-left' %}
+            </button>
+            <button class="oe-product__slider-button oe-product__slider-button--next">
+              {% render 'icon-slider-arrow-right' %}
+            </button>
+          </div>
+          <div class="oe-product__thumbnails js-thumbnail-slider">
+            <div class="oe-product__thumbnails-wrapper">
+              {%- for media in product.media -%}
+                {% if media.alt == "Xnutrition" or media.alt == "home" or media.alt == "table" or media.alt == "overover" or media.alt == "ingredient" or media.alt == "vertical" or media.alt == "naked_only" %}{% continue %}{% endif %}
+                <div class="oe-product__thumbnails-thumbnail">
+                  {{ media | image_url: width: 150 | image_tag:
+                    loading: 'lazy',
+                    width: 100,
+                    class: "oe-product__image",
+                    alt: media.alt | escape
+                  }}
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+        <div class="oe-product__info-wrapper">
+            <h1 class="oe-product__title">{{ product.title | escape }}</h1>
+            <div class="oe-product__meta">
+            {%- if section.settings.show_rating and product.metafields.reviews.rating.value != blank -%}
+              <div class="oe-product__meta-item">
+                <div class="rating" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
+                  <span aria-hidden="true" class="rating-star color-icon-{{ settings.accent_icons }}" style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"></span>
+                </div>
+                <p class="rating-text caption">
+                  <span aria-hidden="true">{{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}</span>
+                </p>
+                <a href="#product-reviews" class="rating-count caption">
+                  <span aria-hidden="true">{{ product.metafields.reviews.rating_count }} Reviews</span>
+                  <span class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "accessibility.total_reviews" | t }}</span>
+                </a>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.show_ingredients_anchor -%}
+              <a href="#product-ingredients" class="oe-product__meta-item">
+                Ingredients
+              </a>
+            {%- endif -%}
+            {%- if section.settings.show_nutrition_anchor -%}
+              <a href="#product-nutrition" class="oe-product__meta-item">
+                Nutrition facts
+              </a>
+            {%- endif -%}
+            </div>
+            <div class="oe-product__content">
+              {{ product.description }}
+            </div>
+            <div class="oe-product__variations">
+              <h3 class="oe-product__variations-title">{{ section.settings.related_products_title }}</h3>
+              <div class="oe-product__variations-list">
+                {% for relatedProduct in collections[section.settings.collection].products %}
+                 
+                  <a href="?product={{ relatedProduct.handle }}" class="oe-product__variations-list-item {% if relatedProduct.id == product.id %}is-active{% endif %}">
+                    {{ relatedProduct.title }}
+                  </a>
+                {% endfor %}
+              </div>
+              
+            </div>
+            {% render 'smartrr-product' %}
+            {%- assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: forloop.index -%}
+    
+            <div class="oe-product__actions">
+              <div
+                class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                <quantity-input class="quantity">
+                  <button class="quantity__button no-js-hidden" name="minus" type="button">
+                    <span class="visually-hidden">
+                      {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
+                    </span>
+                    {% render 'icon-minus' %}
+                  </button>
+                  <input
+                    class="quantity__input"
+                    type="number"
+                    name="quantity"
+                    id="Quantity-{{ section.id }}-{{ forloop.index}}"
+                    min="1"
+                    value="1"
+                    form="{{ product_form_id }}"
+                  >
+                  <button class="quantity__button no-js-hidden" name="plus" type="button">
+                    <span class="visually-hidden">
+                      {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
+                    </span>
+                    {% render 'icon-plus' %}
+                  </button>
+                </quantity-input>
+              </div>
+              <product-form class="product-form">
+                <div class="product-form__error-message-wrapper" role="alert" hidden>
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    role="presentation"
+                    class="icon icon-error"
+                    viewBox="0 0 13 13"
+                  >
+                    <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                    <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                    <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                    <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                  </svg>
+                  <span class="product-form__error-message"></span>
+                </div>
+    
+                {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form', onsubmit: 'submitAddToCart();' -%}
+                  <input type="hidden" name="selling_plan" data-smartrr-selling-plan-input value="{{ current_selling_plan_allocation.selling_plan.id | default: '' }}">
+                  <input
+                    type="hidden"
+                    name="id"
+                    value="{{ product.selected_or_first_available_variant.id }}"
+                  >
+                  <div class="product-form__buttons">
+                    <button
+                      type="submit"
+                      name="add"
+                      class="product-form__submit button button--primary button-color--red is-full-width"
+                      {% if product.selected_or_first_available_variant.available == false %}
+                        disabled
+                      {% endif %}
+                    >
+                      <span>
+                        {%- if product.selected_or_first_available_variant.available -%}
+                          {{ 'products.product.add_to_cart' | t }}
+                        {%- else -%}
+                          {{ 'products.product.sold_out' | t }}
+                        {%- endif -%}
+                      </span>
+                      <div class="loading-overlay__spinner hidden">
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          role="presentation"
+                          class="spinner"
+                          viewBox="0 0 66 66"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                {%- endform -%}
+              </product-form>
+            </div>
+            {% if section.settings.shipping_notice != blank %}
+              <p class="oe-product__shipping-notice">{% render 'icon-shipping' %} {{ section.settings.shipping_notice }}</p>
+            {% endif %}
+          </div>
+      </div>
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const swiper = new Swiper('#oe-main-product-{{ section.id }}-{{ forloop.index}} .js-product-slider', {
+            slideClass: 'oe-product__slider-slide',
+            wrapperClass: 'oe-product__slider-wrapper',
+            slideActiveClass: 'is-active',
+            slidesPerView: 1,
+            pagination: {
+              el: '.oe-product__slider-pagination',
+              bulletClass: 'oe-product__slider-pagination-bullet',
+              bulletActiveClass: 'is-active'
+            },
+            navigation: {
+              nextEl: '.oe-product__slider-button--next',
+              prevEl: '.oe-product__slider-button--prev',
+            },
+            centeredSlides: true,
+              on: {
+              slideChange: function(swiper){
+                
+                swiperThumbnails.slideTo(swiper.realIndex)
+              }
+            }
+          });
+          
+          const swiperThumbnails = new Swiper('#oe-main-product-{{ section.id }}-{{ forloop.index}} .js-thumbnail-slider', {
+            slideClass: 'oe-product__thumbnails-thumbnail',
+            wrapperClass: 'oe-product__thumbnails-wrapper',
+            slideActiveClass: 'is-active',
+            slidesPerView: 5,
+            on: {
+              click: function(){
+                
+                swiper.slideTo(swiperThumbnails.clickedIndex)
+              }
+            }
+          });
+        });
+      </script>
+    
+      {%- liquid
+        if product.selected_or_first_available_variant.featured_media
+          assign seo_media = product.selected_or_first_available_variant.featured_media
+        else
+          assign seo_media = product.featured_media
+        endif
+      -%}
+    
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org/",
+          "@type": "Product",
+          "name": {{ product.title | json }},
+          "url": {{ request.origin | append: product.url | json }},
+          {% if seo_media -%}
+            "image": [
+              {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
+            ],
+          {%- endif %}
+          "description": {{ product.description | strip_html | json }},
+          {% if product.selected_or_first_available_variant.sku != blank -%}
+            "sku": {{ product.selected_or_first_available_variant.sku | json }},
+          {%- endif %}
+          "brand": {
+            "@type": "Brand",
+            "name": {{ product.vendor | json }}
+          },
+          "offers": [
+            {%- for variant in product.variants -%}
+              {
+                "@type" : "Offer",
+                {%- if variant.sku != blank -%}
+                  "sku": {{ variant.sku | json }},
+                {%- endif -%}
+                {%- if variant.barcode.size == 12 -%}
+                  "gtin12": {{ variant.barcode }},
+                {%- endif -%}
+                {%- if variant.barcode.size == 13 -%}
+                  "gtin13": {{ variant.barcode }},
+                {%- endif -%}
+                {%- if variant.barcode.size == 14 -%}
+                  "gtin14": {{ variant.barcode }},
+                {%- endif -%}
+                "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+                "price" : {{ variant.price | divided_by: 100.00 | json }},
+                "priceCurrency" : {{ cart.currency.iso_code | json }},
+                "url" : {{ request.origin | append: variant.url | json }}
+              }{% unless forloop.last %},{% endunless %}
+            {%- endfor -%}
+          ]
+        }
+      </script>
+    </section>
+  {% endfor %}
+</div>
 
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org/",
-      "@type": "Product",
-      "name": {{ product.title | json }},
-      "url": {{ request.origin | append: product.url | json }},
-      {% if seo_media -%}
-        "image": [
-          {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
-        ],
-      {%- endif %}
-      "description": {{ product.description | strip_html | json }},
-      {% if product.selected_or_first_available_variant.sku != blank -%}
-        "sku": {{ product.selected_or_first_available_variant.sku | json }},
-      {%- endif %}
-      "brand": {
-        "@type": "Brand",
-        "name": {{ product.vendor | json }}
-      },
-      "offers": [
-        {%- for variant in product.variants -%}
-          {
-            "@type" : "Offer",
-            {%- if variant.sku != blank -%}
-              "sku": {{ variant.sku | json }},
-            {%- endif -%}
-            {%- if variant.barcode.size == 12 -%}
-              "gtin12": {{ variant.barcode }},
-            {%- endif -%}
-            {%- if variant.barcode.size == 13 -%}
-              "gtin13": {{ variant.barcode }},
-            {%- endif -%}
-            {%- if variant.barcode.size == 14 -%}
-              "gtin14": {{ variant.barcode }},
-            {%- endif -%}
-            "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
-            "price" : {{ variant.price | divided_by: 100.00 | json }},
-            "priceCurrency" : {{ cart.currency.iso_code | json }},
-            "url" : {{ request.origin | append: variant.url | json }}
-          }{% unless forloop.last %},{% endunless %}
-        {%- endfor -%}
-      ]
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const productSection = document.querySelector('.js-oe-product__section-wrapper-{{ section.id }}')
+
+    if (productSection) {
+      const flavourButtons = productSection.querySelectorAll('.oe-product__variations-list-item')
+      const paramsString = window.location.search;
+      const searchParams = new URLSearchParams(paramsString);
+
+      updateProductSection(searchParams)
+
+      if (flavourButtons.length) {
+        flavourButtons.forEach(button => {
+          button.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            searchParams.set('product', button.href.split('?product=')[1])
+
+            const newUrl = window.location.origin 
+                      + window.location.pathname 
+                      + '?' + searchParams.toString();
+            
+            window.history.pushState({path:newUrl},'',newUrl);
+
+            updateProductSection(searchParams)
+          })
+        })
+      }
     }
-  </script>
-</section>
+    
+    function updateProductSection(searchParams) {
+      const products = productSection.querySelectorAll('.oe-product__section')
+  
+      if (searchParams.has('product') && products.length) {
+        products.forEach(prod => prod.classList.toggle('is-active', prod.dataset.productHandle == searchParams.get('product')))
+      }
+    }
+  })
+
+</script>
+
 
 {% schema %}
 {
