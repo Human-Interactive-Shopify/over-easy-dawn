@@ -11,6 +11,7 @@
    replace: '\u0026', '&'
 -%}
 
+<script>console.log({{ 'v1' | json }});</script>
 <script>console.log({{ contentForQuerystring | json }});</script>
 <script>console.log({{ pageUrl | json }});</script>
 
