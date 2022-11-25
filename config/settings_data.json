@@ -115,12 +115,11 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "New Product: SHAKES 25% OFF right now!",
+              "text": "BLACK FRIDAY SALE: 30% off all products",
               "text_alignment": "center",
               "color_scheme": "accent-1",
-              "link": "shopify:\/\/products\/chocolate-breakfast-shake"
+              "link": "shopify:\/\/pages\/bfcm"
             }
           }
         },
