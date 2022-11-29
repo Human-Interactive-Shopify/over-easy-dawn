@@ -115,6 +115,7 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "BLACK FRIDAY SALE: 30% off all products - use code \"BF30\" at checkout!",
               "text_alignment": "center",
