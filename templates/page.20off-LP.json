@@ -57,6 +57,7 @@
           "disabled": true,
           "settings": {
             "text": "<p>OVEREASY20<\/p><p>for<strong> 20% off<\/strong><\/p><p>at checkout<\/p>",
+            "is_offset": false,
             "position": "top-right",
             "shape": "round",
             "color": "red",
@@ -123,7 +124,8 @@
     "oe-featured-product": {
       "type": "oe-featured-product",
       "settings": {
-        "subheadline": "Discover our full line of Breakfast Bars and Shakes in the most popular flavors!",
+        "headline": "Best Seller Bundle",
+        "subheadline": "Introducing: a bundle with our best selling flavors of Breakfast Bars and Shakes, a receive a free shaker!",
         "featured_product": "best-sellers-bundle"
       }
     },
