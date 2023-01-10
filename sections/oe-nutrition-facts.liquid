@@ -338,7 +338,7 @@
         <div class="product-nutrition-packs">
         {% assign isFirst = true %}
         {% if isBundleProduct %}
-            {% for i in (1..5) %}
+            {% for i in (1..6) %}
             {% assign bp-key = "product_" | append: i %}
             {% assign bundleProduct = all_products[product.metafields.sf_bundle_products[bp-key]] %}
             {% unless bundleProduct.empty? %}
