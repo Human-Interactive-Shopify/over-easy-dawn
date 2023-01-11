@@ -6,7 +6,7 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Black Friday Sale",
+            "heading": "Health Routines Start Now!",
             "heading_size": "medium"
           }
         },
@@ -19,7 +19,7 @@
         "195c88a5-bcc4-48ee-8186-776e143b77ed": {
           "type": "eye-catcher",
           "settings": {
-            "text": "<p>Use code <\/p><p><strong>BF30 <\/strong>at Checkout! <\/p>",
+            "text": "<p>Use code <\/p><p><strong>BFAST30 <\/strong>at Checkout! <\/p>",
             "is_offset": true,
             "position": "top-right",
             "shape": "spikes",
@@ -34,7 +34,7 @@
         "195c88a5-bcc4-48ee-8186-776e143b77ed"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Black_Friday_LP_2.png",
+        "image": "shopify:\/\/shop_images\/Burst-All.png",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
@@ -102,7 +102,7 @@
       "settings": {
         "shipping_notice": "Free Shipping for orders over $50",
         "related_products_title": "Our Flavors",
-        "collection": "bogobf",
+        "collection": "breakfast-bars",
         "featured_product": "peanut-butter-breakfast-bar",
         "show_rating": true,
         "show_ingredients_anchor": true,
