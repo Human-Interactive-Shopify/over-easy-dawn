@@ -6,7 +6,7 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Buy One Get One Free - on select Breakfast Bars!",
+            "heading": "Healthy Routines Start Now! Buy One, Get One FREE Breakfast Bars!",
             "heading_size": "small"
           }
         },
@@ -20,13 +20,13 @@
         "ceef03ea-f1cc-41a9-9583-99b08b5136cf": {
           "type": "text",
           "settings": {
-            "text": "Valid on the purchase of select Breakfast Bar flavors. Promo can be used to purchase up to 6 boxes. Valid until 11\/24 at 11:59pm PST."
+            "text": "Valid on the purchase of select Breakfast Bar flavors. Promo can be used to purchase up to 6 boxes. Valid until 1\/16 at 11:59pm PST."
           }
         },
         "195c88a5-bcc4-48ee-8186-776e143b77ed": {
           "type": "eye-catcher",
           "settings": {
-            "text": "<p>Use code <\/p><p><strong>BOGOBF <\/strong>at Checkout! <\/p>",
+            "text": "<p>Use code <\/p><p><strong>BOGOJAN <\/strong>at Checkout! <\/p>",
             "is_offset": true,
             "position": "top-right",
             "shape": "spikes",
@@ -42,7 +42,7 @@
         "195c88a5-bcc4-48ee-8186-776e143b77ed"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Black_Friday_LP_Bar_Graphic.png",
+        "image": "shopify:\/\/shop_images\/Burst-Bar.png",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
@@ -110,7 +110,7 @@
       "settings": {
         "shipping_notice": "Free Shipping for orders over $50",
         "related_products_title": "Our Flavors",
-        "collection": "bogobf",
+        "collection": "breakfast-bars",
         "featured_product": "peanut-butter-dark-chocolate",
         "show_rating": true,
         "show_ingredients_anchor": true,
