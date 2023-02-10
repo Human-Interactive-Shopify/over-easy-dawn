@@ -115,12 +115,11 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "BLACK FRIDAY SALE: 30% off all products - use code \"BF30\" at checkout!",
+              "text": "Over Easy is donating 100% of profits from overeasyfoods.com to Children of Fallen Patriots Foundation through Sunday 2\/11",
               "text_alignment": "center",
               "color_scheme": "accent-1",
-              "link": "shopify:\/\/pages\/healthy-routines-sale-30"
+              "link": ""
             }
           }
         },
