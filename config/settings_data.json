@@ -115,6 +115,7 @@
         "blocks": {
           "announcement-bar-0": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Over Easy is donating 100% of profits from overeasyfoods.com to Children of Fallen Patriots Foundation through Sunday 2\/11",
               "text_alignment": "center",
