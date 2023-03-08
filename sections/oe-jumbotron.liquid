@@ -376,9 +376,9 @@
         {%- endfor -%}
       </div>
     </div>
-    {%- if section.settings.klaviyo_id != blank -%}
+    {%- if section.settings.form_id != blank -%}
     <div class="oe-jumbotron__klaviyo-wrapper">
-      <div class="klaviyo-form-{{ section.settings.klaviyo_id }}"></div>
+      <div class="klaviyo-form-{{ section.settings.form_id }}"></div>
     </div>
     {%- endif -%}
   </div>
@@ -395,7 +395,7 @@
     },
     {
       "type": "text",
-      "id": "klaviyo_id",
+      "id": "form_id",
       "label": "Klaviyo form ID"
     },
     {
