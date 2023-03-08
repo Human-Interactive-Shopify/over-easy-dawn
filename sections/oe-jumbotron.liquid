@@ -68,6 +68,10 @@
   .oe-jumbotron-content-mobile-position--bottom .oe-jumbotron__content-wrapper {
     order: 2;
   }
+
+  .oe-jumbotron-content-mobile-position--bottom .oe-jumbotron__klaviyo-wrapper {
+    order: 1;
+  }
   
   .oe-jumbotron-content-mobile-position--bottom .oe-jumbotron__media-wrapper {
     order: 1;
@@ -76,6 +80,10 @@
   .oe-jumbotron-content-mobile-position--top .oe-jumbotron__content-wrapper {
     order: 1;
   }
+
+  .oe-jumbotron-content-mobile-position--top .oe-jumbotron__klaviyo-wrapper {
+    order: 2;
+}
   
   .oe-jumbotron-content-mobile-position--top .oe-jumbotron__media-wrapper {
     order: 2;
@@ -293,12 +301,20 @@
     .oe-jumbotron-content-position--left .oe-jumbotron__media-wrapper {
       order: 2;
     }
+
+    .oe-jumbotron-content-position--left .oe-jumbotron__klaviyo-wrapper {
+      order: 2;
+    }
     
     .oe-jumbotron-content-position--right .oe-jumbotron__content-wrapper {
       order: 2;
     }
     
     .oe-jumbotron-content-position--right .oe-jumbotron__media-wrapper {
+      order: 1;
+    }
+
+    .oe-jumbotron-content-position--right .oe-jumbotron__klaviyo-wrapper {
       order: 1;
     }
   }
@@ -360,6 +376,11 @@
         {%- endfor -%}
       </div>
     </div>
+    {%- if section.settings.klaviyo_id != blank -%}
+    <div class="oe-jumbotron__klaviyo-wrapper">
+      <div class="klaviyo-form-{{ section.settings.klaviyo_id }}"></div>
+    </div>
+    {%- endif -%}
   </div>
 </div>
 
@@ -371,6 +392,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_id",
+      "label": "Klaviyo form ID"
     },
     {
       "type": "select",
