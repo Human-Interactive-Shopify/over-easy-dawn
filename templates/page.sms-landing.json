@@ -403,6 +403,7 @@
       "blocks": {
         "26ec04b5-d6ec-420e-adbf-314d6f766528": {
           "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "disabled": true,
           "settings": {
             "formId": "Skct5H"
           }
