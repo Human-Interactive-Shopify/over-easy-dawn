@@ -47,6 +47,7 @@
         },
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Shop now",
             "button_link_1": "https:\/\/overeasyfoods.com\/pages\/welcome-to-over-easy#product-section"
