@@ -13,7 +13,7 @@
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-1": {
           "type": "text",
           "settings": {
-            "text": "Real & Simple Ingredients"
+            "text": "Made With Real & Simple Ingredients"
           }
         },
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-2": {
@@ -182,7 +182,7 @@
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop now",
+            "button_label_1": "LEARN MORE",
             "button_link_1": "shopify:\/\/pages\/our-story"
           }
         },
@@ -210,7 +210,7 @@
         "ba805c69-004b-47cb-a9f7-f9bd28410b5a"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Complete_nutrition.png",
+        "image": "shopify:\/\/shop_images\/OE-Taste.jpg",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
