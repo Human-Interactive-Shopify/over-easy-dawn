@@ -1,7 +1,47 @@
 {
   "sections": {
+    "d819cd7a-de30-40f9-a32f-3f5fd87c770e": {
+      "type": "oe-jumbotron",
+      "blocks": {
+        "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Clean Oatmeal Bars",
+            "heading_size": "medium"
+          }
+        },
+        "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-1": {
+          "type": "text",
+          "settings": {
+            "text": "Real & Simple Ingredients"
+          }
+        },
+        "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop now",
+            "button_link_1": "shopify:\/\/products\/oatmeal-raisin"
+          }
+        }
+      },
+      "block_order": [
+        "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-0",
+        "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-1",
+        "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Over-Easy-Variants.jpg",
+        "form_id": "",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "white",
+        "button_color_scheme": "red",
+        "text_color_scheme": "black"
+      }
+    },
     "oe-hero-banner": {
       "type": "oe-hero-banner",
+      "disabled": true,
       "blocks": {
         "492b49ef-d613-46a4-bdd7-0bfc3c7ca045": {
           "type": "heading",
@@ -48,6 +88,13 @@
         "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
           "type": "source",
           "settings": {
+            "source_image": "shopify:\/\/shop_images\/FirstTake.png",
+            "text": "First Take talk show"
+          }
+        },
+        "ecb02dc7-d49e-49c8-8ff8-125d1ac97835": {
+          "type": "source",
+          "settings": {
             "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
             "text": "\"Top Pick - Best Breakfast Bars 2022\""
           }
@@ -72,13 +119,22 @@
             "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
             "text": "\"Enough fiber & protein to keep hunger at arm's length\""
           }
+        },
+        "99073ae9-0c94-475a-95ab-8172c2ba02d7": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/ThePatMCafee.png",
+            "text": "The Pat McAfee Show"
+          }
         }
       },
       "block_order": [
         "096f850d-ce30-4c92-8e9b-8d7af405bffb",
+        "ecb02dc7-d49e-49c8-8ff8-125d1ac97835",
         "89d3e7b6-137d-40a5-88a6-2b279d2766db",
         "9f72aff9-1cbe-4979-bae9-7973f162a636",
-        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
+        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65",
+        "99073ae9-0c94-475a-95ab-8172c2ba02d7"
       ],
       "settings": {
       }
@@ -89,7 +145,7 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Complete morning nutrition for body and brain health",
+            "heading": "Your Tastebuds Will Thank Us",
             "heading_size": "small"
           }
         },
@@ -102,32 +158,32 @@
         "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
           "type": "list_item",
           "settings": {
-            "text": "Organic Oats & Fiber Blend"
+            "text": "Gluten-Free Oats + Fiber Blend"
           }
         },
         "c59113f4-bd26-477ew7-8e39-c7b3feaf3193": {
           "type": "list_item",
           "settings": {
-            "text": "Collagen & Egg White Protein"
+            "text": "Cage-Free Egg White Protein"
           }
         },
         "c59113f4-bd26-47qw77-8e39-c7b3feaf3193": {
           "type": "list_item",
           "settings": {
-            "text": "Essential Vitamins & Minerals"
+            "text": "Sustained Energy Without The Crash"
           }
         },
         "c59113f4-bd26-47rc77-8e39-c7b3feaf3193": {
           "type": "list_item",
           "settings": {
-            "text": "Super Greens Blend"
+            "text": "No Gluten, Dairy, or Soy"
           }
         },
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop now",
-            "button_link_1": "shopify:\/\/products\/strawberry-breakfast-shake"
+            "button_link_1": "shopify:\/\/pages\/our-story"
           }
         },
         "ba805c69-004b-47cb-a9f7-f9bd28410b5a": {
@@ -135,6 +191,7 @@
           "disabled": true,
           "settings": {
             "text": "<p><strong>25% OFF <\/strong><br\/>on shakes<\/p><p>right now!<\/p>",
+            "is_offset": false,
             "position": "top-right",
             "shape": "spikes",
             "color": "red",
@@ -154,6 +211,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Complete_nutrition.png",
+        "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
@@ -227,7 +285,7 @@
         "65b62c2d-2238-4120-8e65-ba4820b7ff28": {
           "type": "featured-collection",
           "settings": {
-            "collection": "minis",
+            "collection": "custom-bundles",
             "button_label": "Shop now"
           }
         }
@@ -269,14 +327,14 @@
           "type": "ingredients",
           "settings": {
             "icon": "soy-free",
-            "heading": "SOY<br>FREE"
+            "heading": "NO<br>SOY"
           }
         },
         "d5d8f806-116e-42df-bed2-516e6faaee78": {
           "type": "ingredients",
           "settings": {
             "icon": "dairy-free",
-            "heading": "DAIRY<br>FREE"
+            "heading": "NO<br>DAIRY"
           }
         },
         "c9e77f48-f92c-49c0-aa1d-9954bedbc01d": {
@@ -478,6 +536,7 @@
     }
   },
   "order": [
+    "d819cd7a-de30-40f9-a32f-3f5fd87c770e",
     "oe-hero-banner",
     "1661427940e35b089a",
     "oe-jumbotron",

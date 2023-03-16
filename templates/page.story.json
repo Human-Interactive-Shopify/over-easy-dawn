@@ -97,7 +97,7 @@
         "text-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/afc0faf37d5172a147ec6f08766673f0.jpg",
+        "image": "shopify:\/\/shop_images\/Breakfast.jpg",
         "desktop_content_position": "right",
         "mobile_content_position": "bottom"
       }
@@ -138,7 +138,7 @@
         "text-3"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/c63e48ee5b0f525d186d922c070f16c7.jpg",
+        "image": "shopify:\/\/shop_images\/Athletic.jpg",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom"
       }
@@ -187,6 +187,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/61c4b0fa36c20bc2e79e090b2681563e.jpg",
+        "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "red",
