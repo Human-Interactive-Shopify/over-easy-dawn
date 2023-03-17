@@ -268,17 +268,17 @@
     "oe-featured-collections": {
       "type": "oe-featured-collections",
       "blocks": {
-        "cc47b51b-9d1c-43fc-96ec-bcb30f596641": {
-          "type": "featured-collection",
-          "settings": {
-            "collection": "shakes",
-            "button_label": "Shop now"
-          }
-        },
         "d0937394-2916-4718-bf42-04d77c58060a": {
           "type": "featured-collection",
           "settings": {
             "collection": "breakfast-bars",
+            "button_label": "Shop now"
+          }
+        },
+        "cc47b51b-9d1c-43fc-96ec-bcb30f596641": {
+          "type": "featured-collection",
+          "settings": {
+            "collection": "minis",
             "button_label": "Shop now"
           }
         },
@@ -291,8 +291,8 @@
         }
       },
       "block_order": [
-        "cc47b51b-9d1c-43fc-96ec-bcb30f596641",
         "d0937394-2916-4718-bf42-04d77c58060a",
+        "cc47b51b-9d1c-43fc-96ec-bcb30f596641",
         "65b62c2d-2238-4120-8e65-ba4820b7ff28"
       ],
       "settings": {
