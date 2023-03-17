@@ -30,7 +30,7 @@
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Over_Easy_Bars.jpg",
+        "image": "shopify:\/\/shop_images\/OverEasy_Bars.jpg",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
@@ -323,8 +323,8 @@
         "65b62c2d-2238-4120-8e65-ba4820b7ff28": {
           "type": "featured-collection",
           "settings": {
-            "collection": "custom-bundles",
-            "button_label": "Shop now"
+            "collection": "bundle-builder",
+            "button_label": "Build now"
           }
         }
       },
