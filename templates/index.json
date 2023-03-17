@@ -30,7 +30,7 @@
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Over-Easy-Variants.jpg",
+        "image": "shopify:\/\/shop_images\/Over_Easy_Bars.jpg",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
@@ -218,65 +218,10 @@
         "button_color_scheme": "red",
         "text_color_scheme": "black"
       }
-    },"1661427940e35b089b": {
-      "type": "oe-sponsorship",
-      "blocks": {
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/FirstTake_c7cb4148-59c8-4290-a399-379dd7a8920b.png",
-            "text": "First Take talk show"
-          }
-        },
-        "ecb02dc7-d49e-49c8-8ff8-125d1ac97835": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
-            "text": "\"Top Pick - Best Breakfast Bars 2022\""
-          }
-        },
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
-            "text": "\"Helping to make breakfast easy\""
-          }
-        },
-        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
-            "text": "\"The perfect grab-and-go meal\""
-          }
-        },
-        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
-            "text": "\"Enough fiber & protein to keep hunger at arm's length\""
-          }
-        },
-        "99073ae9-0c94-475a-95ab-8172c2ba02d7": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/ThePatMCafee.png",
-            "text": "The Pat McAfee Show"
-          }
-        }
-      },
-      "block_order": [
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
-        "ecb02dc7-d49e-49c8-8ff8-125d1ac97835",
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
-        "9f72aff9-1cbe-4979-bae9-7973f162a636",
-        "71fce1dc-2acd-4ae4-9371-8ca44a82fa65",
-        "99073ae9-0c94-475a-95ab-8172c2ba02d7"
-      ],
-      "settings": {
-      }
     },
     "oe-benefits": {
       "type": "oe-benefits",
+      "disabled": true,
       "blocks": {
         "40444aef-af53-4520-8094-575ad2ea0700": {
           "type": "benefits",
@@ -319,6 +264,43 @@
       ],
       "settings": {
         "headline": "Benefits of Daily Use"
+      }
+    },
+    "1661427940e35b089b": {
+      "type": "oe-sponsorship",
+      "blocks": {
+        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/RoseBowl.png"
+          }
+        },
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/LAMarathon_17f9bd4c-d5c5-4949-9f21-a42eef36f642.png"
+          }
+        },
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/ClevelandMarathon.png"
+          }
+        },
+        "c698cb9f-7c67-4979-871a-e994525bab48": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/SantaMonica.png"
+          }
+        }
+      },
+      "block_order": [
+        "9f72aff9-1cbe-4979-bae9-7973f162a636",
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
+        "c698cb9f-7c67-4979-871a-e994525bab48"
+      ],
+      "settings": {
       }
     },
     "oe-featured-collections": {
