@@ -34,6 +34,7 @@
       "blocks": {
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Win Over Easy Clean Oatmeal Bars for a Year",
             "heading_size": "small"
@@ -41,6 +42,7 @@
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Here is a little sneak peak into what it is like to be a VIP. Sign up for texts by 3\/15 for a chance to win free Over Easy Bars for a year."
           }
