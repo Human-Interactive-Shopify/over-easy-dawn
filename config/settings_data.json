@@ -125,6 +125,7 @@
           },
           "10f48b9d-720e-4092-9366-b23d208fa479": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Happy Birthday to our Marketing Associate, Sam! 22% Off Sitewide with code SAMSBDAY all weekend!",
               "text_alignment": "center",
