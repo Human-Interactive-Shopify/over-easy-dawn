@@ -62,7 +62,8 @@
         "list-item-4"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Complete_nutrition.png",
+        "image": "shopify:\/\/shop_images\/OE-Taste.jpg",
+        "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
