@@ -68,6 +68,9 @@
         "9f31ef22-ad2a-4d6f-ab16-a7f0bb434bd6",
         "55e5f5f7-e248-43c1-920c-2bcd3e022d02"
       ],
+      "custom_css": [
+        ".banner__heading,.banner__text {text-shadow: 4px 4px 4px #0000001a;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/12_Boxes_03_1080x1350_c2a27b06-8ce3-48e5-841d-25436db3109f.jpg",
         "use_overlay": true,
@@ -76,7 +79,7 @@
         "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c957b4103ab44c39a1dd3f0e243c9138.mp4",
         "desktop_content_position": "center",
         "desktop_content_alignment": "left",
-        "mobile_content_position": "center",
+        "mobile_content_position": "top",
         "mobile_content_alignment": "center",
         "color_scheme": "white",
         "button_color_scheme": "red"
