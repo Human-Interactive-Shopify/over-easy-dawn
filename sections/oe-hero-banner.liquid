@@ -1,7 +1,7 @@
 {%- style -%}
   .banner {
     position: relative;
-    min-height: 700px;
+    min-height: 600px;
     display: flex;
   }
 
@@ -13,7 +13,7 @@
     height: 100%;
     object-fit: cover;
     z-index: 2;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(18, 18, 18, 0.26) 50.52%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(18, 18, 18, 0.33) 50.52%);
   }
 
   .banner__media {
@@ -33,15 +33,16 @@
     position: relative;
     z-index: 3;
     width: 100%;
+    margin: 2rem 0;
   }
 
   .banner__content-wrapper {
-    max-width: 1400px;
+    max-width: calc(1260px + (2 * var(--oe-gutter)));
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 48px 16px;
+    padding: 0 var(--oe-gutter);
   }
 
   .banner--content-mobile-position-top {
@@ -87,25 +88,45 @@
     margin: 0;
     padding-bottom: 16px;
     font-weight: 500;
-    font-size: 48px;
+    font-size: 42px;
     line-height: 110%;
     color: inherit;
     max-width: calc(100% - 32px);
+    text-shadow: 4px 4px 4px #0000001a;
   }
+
+  .banner__heading {
+    transform: translateX(-2px);
+}
   
   .banner__text {
     color: inherit;
     margin-bottom: 40px;
     max-width: 780px;
+    text-shadow: 4px 4px 4px #0000001a;
   }
 
   .banner__buttons .button {
     padding: 12px 80px;
   }
 
+  .banner__content.medium .banner__heading {
+    font-size: 45px;
+    padding-bottom: 20px;
+  }
+
+  .banner__content.medium .banner__text {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 749px) {
+   
+  }
+
   @media screen and (min-width: 750px) {
     .banner {
-      min-height: 800px
+      min-height: 660px
     }
     
     .banner__heading {
@@ -196,7 +217,7 @@
     </div>
   {%- endif -%}
   <div class="banner__content-wrapper">
-    <div class="banner__content color-{{ section.settings.color_scheme }}">
+    <div class="banner__content color-{{ section.settings.color_scheme }} {{ section.settings.content_size }}">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
@@ -327,6 +348,22 @@
       ],
       "default": "center",
       "label": "t:sections.image-banner.settings.mobile_content_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "content_size",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ],
+      "default": "default",
+      "label": "Typo Size"
     },
     {
       "type": "select",
