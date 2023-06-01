@@ -18,7 +18,7 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Complete morning nutrition for full body and brain health",
+            "heading": "Your Tastebuds Will Thank Us",
             "heading_size": "small"
           }
         },
@@ -37,19 +37,19 @@
         "list-item-2": {
           "type": "list_item",
           "settings": {
-            "text": "Collagen & Egg White Protein"
+            "text": "Cage-Free Egg White Protein"
           }
         },
         "list-item-3": {
           "type": "list_item",
           "settings": {
-            "text": "Essential Vitamins & Minerals"
+            "text": "Sustained Energy Without The Crash"
           }
         },
         "list-item-4": {
           "type": "list_item",
           "settings": {
-            "text": "Super Greens Blend"
+            "text": "No Gluten, Dairy, or Soy"
           }
         }
       },
@@ -62,7 +62,8 @@
         "list-item-4"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Complete_nutrition.png",
+        "image": "shopify:\/\/shop_images\/OE-Taste.jpg",
+        "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",

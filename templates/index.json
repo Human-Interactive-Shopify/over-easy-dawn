@@ -2,6 +2,7 @@
   "sections": {
     "d819cd7a-de30-40f9-a32f-3f5fd87c770e": {
       "type": "oe-jumbotron",
+      "disabled": true,
       "blocks": {
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-0": {
           "type": "heading",
@@ -41,25 +42,24 @@
     },
     "oe-hero-banner": {
       "type": "oe-hero-banner",
-      "disabled": true,
       "blocks": {
         "492b49ef-d613-46a4-bdd7-0bfc3c7ca045": {
           "type": "heading",
           "settings": {
-            "heading": "Healthy Morning. Healthy Life."
+            "heading": "Clean Oatmeal Bars"
           }
         },
         "9f31ef22-ad2a-4d6f-ab16-a7f0bb434bd6": {
           "type": "text",
           "settings": {
-            "text": "Complete nutrition breakfast shakes and bars to supercharge your morning routine."
+            "text": "Made With Real & Simple Ingredients"
           }
         },
         "55e5f5f7-e248-43c1-920c-2bcd3e022d02": {
           "type": "buttons",
           "settings": {
             "button_label_1": "SHOP NOW",
-            "button_link_1": "shopify:\/\/products\/strawberry-breakfast-shake"
+            "button_link_1": "shopify:\/\/products\/apple-cinnamon-breakfast-bar"
           }
         }
       },
@@ -68,15 +68,18 @@
         "9f31ef22-ad2a-4d6f-ab16-a7f0bb434bd6",
         "55e5f5f7-e248-43c1-920c-2bcd3e022d02"
       ],
+      "custom_css": [
+        ".banner__heading,.banner__text {text-shadow: 4px 4px 4px #0000001a;}"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Jonathan_-_Drinking_the_Shake.jpg",
+        "image": "shopify:\/\/shop_images\/12_Boxes_03_1080x1350_c2a27b06-8ce3-48e5-841d-25436db3109f.jpg",
         "use_overlay": true,
         "use_image_as_thumbnail": true,
-        "use_video": true,
+        "use_video": false,
         "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c957b4103ab44c39a1dd3f0e243c9138.mp4",
         "desktop_content_position": "center",
-        "desktop_content_alignment": "center",
-        "mobile_content_position": "center",
+        "desktop_content_alignment": "left",
+        "mobile_content_position": "top",
         "mobile_content_alignment": "center",
         "color_scheme": "white",
         "button_color_scheme": "red"
