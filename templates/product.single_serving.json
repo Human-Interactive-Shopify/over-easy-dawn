@@ -1,0 +1,215 @@
+{
+  "sections": {
+    "main": {
+      "type": "oe-main-product",
+      "blocks": {
+        "b5408bef-8cc3-4003-9a59-a57f2b605a50": {
+          "type": "eye-catcher-pdp",
+          "settings": {
+            "text": "<p>Limited Time<br\/>Enter <\/p><p><strong>FREESHAKER<\/strong> <\/p><p>when<br\/>ordering 2<\/p>",
+            "position": "top-left",
+            "shape": "spikes",
+            "color": "red",
+            "text_color": "white"
+          }
+        }
+      },
+      "block_order": [
+        "b5408bef-8cc3-4003-9a59-a57f2b605a50"
+      ],
+      "settings": {
+        "shipping_notice": "Free Shipping for orders over $50",
+        "related_products_title": "Flavors",
+        "collection": "shakes",
+        "show_rating": true,
+        "show_ingredients_anchor": true,
+        "show_nutrition_anchor": true,
+        "mobile_links": "wip-dawn-product-link-list"
+      }
+    },
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
+      "blocks": {
+        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
+          "type": "heading",
+          "settings": {
+            "heading": "Complete morning nutrition for full body and brain health",
+            "heading_size": "small"
+          }
+        },
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
+          "type": "text",
+          "settings": {
+            "text": "Made from wholesome and nutrient dense ingredients, our products have been designed to give your body exactly what it needs to start the day right, every morning."
+          }
+        },
+        "list-item-1": {
+          "type": "list_item",
+          "settings": {
+            "text": "Organic Oats & Fiber Blend"
+          }
+        },
+        "list-item-2": {
+          "type": "list_item",
+          "settings": {
+            "text": "Collagen & Egg White Protein"
+          }
+        },
+        "list-item-3": {
+          "type": "list_item",
+          "settings": {
+            "text": "Essential Vitamins & Minerals"
+          }
+        },
+        "list-item-4": {
+          "type": "list_item",
+          "settings": {
+            "text": "Super Greens Blend"
+          }
+        }
+      },
+      "block_order": [
+        "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
+        "list-item-1",
+        "list-item-2",
+        "list-item-3",
+        "list-item-4"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/jumbotron-shakes.png",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "white",
+        "button_color_scheme": "red",
+        "text_color_scheme": "black"
+      }
+    },
+    "16632686971a8b65e4": {
+      "type": "oe-customer-quotes",
+      "blocks": {
+        "b1afe1ab-5065-411e-afed-c907d6856b5b": {
+          "type": "quote",
+          "settings": {
+            "text": "\"I can confidently say that these are the best bars I've ever tried! Awesome product!\"",
+            "customer": "Emily P."
+          }
+        },
+        "cf879779-9667-414e-a98b-40a845c88911": {
+          "type": "quote",
+          "settings": {
+            "text": "\"These are VERY tasty and I absolutely love the ingredient makeup!\"",
+            "customer": "Erin S."
+          }
+        },
+        "324e6dd1-c3de-4e97-97cf-92c58f916ca4": {
+          "type": "quote",
+          "settings": {
+            "text": "\"As a dietician, I'm a huge fan of healthy carbs, especially whole grains like oats. They also taste delicious!\"",
+            "customer": "Adrienne D."
+          }
+        }
+      },
+      "block_order": [
+        "b1afe1ab-5065-411e-afed-c907d6856b5b",
+        "cf879779-9667-414e-a98b-40a845c88911",
+        "324e6dd1-c3de-4e97-97cf-92c58f916ca4"
+      ],
+      "settings": {
+        "headline": "Over 1 Million Breakfasts Served",
+        "sub-headline": ""
+      }
+    },
+    "oe-ingredients": {
+      "type": "oe-ingredients",
+      "blocks": {
+        "037943ff-e6f2-4e31-9264-a51271ab8477": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "egg",
+            "heading": "CAGE-FREE EGG WHITES"
+          }
+        },
+        "e070b7a8-8707-47da-8b33-42d31fcaea9e": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "oats",
+            "heading": "ORGANIC<br>OATS"
+          }
+        },
+        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "glutten-free",
+            "heading": "GLUTEN<br>FREE"
+          }
+        },
+        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "soy-free",
+            "heading": "SOY<br>FREE"
+          }
+        },
+        "d5d8f806-116e-42df-bed2-516e6faaee78": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "dairy-free",
+            "heading": "DAIRY<br>FREE"
+          }
+        },
+        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "no-preservatives",
+            "heading": "NO PRESERVATIVES"
+          }
+        },
+        "96229dcb-86af-47fa-8c8d-28417e98b443": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "no-palm-oil",
+            "heading": "NO<br>PALM OIL"
+          }
+        }
+      },
+      "block_order": [
+        "037943ff-e6f2-4e31-9264-a51271ab8477",
+        "e070b7a8-8707-47da-8b33-42d31fcaea9e",
+        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1",
+        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7",
+        "d5d8f806-116e-42df-bed2-516e6faaee78",
+        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d",
+        "96229dcb-86af-47fa-8c8d-28417e98b443"
+      ],
+      "settings": {
+        "headline": "Clean Ingredients. Made with Care.",
+        "background_color": "white"
+      }
+    },
+    "16631556027bfa8473": {
+      "type": "oe-comparison-chart",
+      "disabled": true,
+      "settings": {
+        "title_desktop": "Our Bars are Head and Shoulders Above the Competition!",
+        "title_mobile": "Above the Competition!",
+        "image_desktop": "shopify:\/\/shop_images\/oe_comparison_table.png",
+        "cta_url": "",
+        "cta_text": ""
+      }
+    },
+    "16631570203f45fb2a": {
+      "type": "oe-reviews",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "oe-jumbotron",
+    "16632686971a8b65e4",
+    "oe-ingredients",
+    "16631556027bfa8473",
+    "16631570203f45fb2a"
+  ]
+}
