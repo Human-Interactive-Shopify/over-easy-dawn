@@ -97,7 +97,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "show_value_builder": true,
+    "show_value_builder": false,
     "value_builder_heading": "Value Bundle Builder",
     "value_builder_text": "When you add 5 boxes, one is free.",
     "value_builder_message": "Nice! Your value bundle has been created! One box is free.",
