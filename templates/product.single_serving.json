@@ -5,6 +5,7 @@
       "blocks": {
         "b5408bef-8cc3-4003-9a59-a57f2b605a50": {
           "type": "eye-catcher-pdp",
+          "disabled": true,
           "settings": {
             "text": "<p>Limited Time<br\/>Enter <\/p><p><strong>FREESHAKER<\/strong> <\/p><p>when<br\/>ordering 2<\/p>",
             "position": "top-left",
@@ -20,7 +21,7 @@
       "settings": {
         "shipping_notice": "Free Shipping for orders over $50",
         "related_products_title": "Flavors",
-        "collection": "shakes",
+        "collection": "single-serving-breakfast-shakes",
         "show_rating": true,
         "show_ingredients_anchor": true,
         "show_nutrition_anchor": true,
@@ -78,6 +79,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/jumbotron-shakes.png",
+        "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
