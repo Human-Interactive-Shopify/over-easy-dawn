@@ -214,7 +214,34 @@
                   <div data-smartrr-selling-plan-group-contents="" class=""></div>
                 </div>
               </div>
-          </fieldset>  
+          </fieldset>
+          {% elsif product.metafields.custom.product_type == 'SingleServing' %}
+            {% render 'smartrr-product-styles' %}
+            <fieldset class="smartrr-purchase-options" data-smartrr-purchase-options="4260785651778">
+              <div data-smartrr-selling-plan-groups="">
+                <div data-smartrr-selling-plan-group-id="" class="smartrr-otp smartrr-group-active">
+                    <div class="smartrr-selling-plan-group-header">
+                        <label class="smartrr-selling-plan-group-label">
+                          <div class="smartrr-selling-plan-group-label-inner">
+                            <input type="radio" data-smartrr-selling-plan-group-input="" name="purchase_option" value="">
+                            <div class="smartrr-selling-plan-group-input-display"></div>
+                            <div class="smartrr-selling-plan-group-name">
+                                <div>One Time Purchase</div>
+                                <div class="showSavings" data-smartrr-product-id="4260785651778" data-smartrr-price-style="original-compare">
+                                  <span data-smartrr-compare-price>{{ product.compare_at_price | money }}</span>
+                                    <span data-smartrr-regular-price=""></span>
+                                    <span data-smartrr-subscribe-price="{{ product.price | money }}">{{ product.price | money }}</span>
+                                    <span class="smartrr-brackets"><span data-smartrr-per-bar-price>($3.19/serving)</span></span>
+                                </div>
+                            </div>
+                          </div>
+                          <div data-smartrr-border=""></div>
+                        </label>
+                    </div>
+                    <div data-smartrr-selling-plan-group-contents="" class=""></div>
+                  </div>
+                </div>
+            </fieldset>    
         {% else %}
           {% render 'smartrr-product' %}
         {% endif %}
