@@ -181,7 +181,7 @@
           <h3 class="oe-product__variations-title">{{ section.settings.related_products_title }}</h3>
           <div class="oe-product__variations-list">
             {% for relatedProduct in collections[section.settings.collection].products %}
-              <a href="{{ relatedProduct.url }}" class="oe-product__variations-list-item {% if relatedProduct.id == product.id %}is-active{% endif %} {% if relatedProduct.metafields.custom.out-of-stock == true %}is-oos{% endif %}">
+              <a href="{{ relatedProduct.url }}" class="oe-product__variations-list-item {% if relatedProduct.id == product.id %}is-active{% endif %} {% if relatedProduct.metafields.custom.out-of-stock == true or quantity_rule_soldout%}is-oos{% endif %}">
                {{ relatedProduct.title }}
               </a>
             {% endfor %}
@@ -304,16 +304,25 @@
                 <input type="hidden" name="properties[{{ field | escape }}]" value="1">
               {% endfor %}
               <div class="product-form__buttons">
+                {%- liquid
+                  assign check_against_inventory = true
+                  if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+                    assign check_against_inventory = false
+                  endif
+                  if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+                    assign quantity_rule_soldout = true
+                  endif
+                -%}
                 <button
                   type="submit"
                   name="add"
                   class="button button--primary button-color--red is-full-width"
-                  {% if product.metafields.custom.out-of-stock == true %}
+                  {% if product.metafields.custom.out-of-stock == true or quantity_rule_soldout %}
                     disabled
                   {% endif %}
                 >
                   <span>
-                    {%- if product.metafields.custom.out-of-stock == true -%}
+                    {%- if product.metafields.custom.out-of-stock == true or quantity_rule_soldout -%}
                       {{ 'products.product.sold_out' | t }}
                     {%- else -%}
                       {{ 'products.product.add_to_cart' | t }}
