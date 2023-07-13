@@ -188,7 +188,7 @@
           </div>
           
         </div>
-        {% if product.metafields.custom.product_type == 'Bottle' %}
+       {% comment %}  {% if product.metafields.custom.product_type == 'Bottle' %}
           {% render 'smartrr-product-styles' %}
           <fieldset class="smartrr-purchase-options" data-smartrr-purchase-options="4260785651778">
             <div data-smartrr-selling-plan-groups="">
@@ -245,9 +245,9 @@
         {% else %}
           {% render 'smartrr-product' %}
         {% endif %}
-        {%- assign product_form_id = 'product-form-' | append: section.id -%}
+        {%- assign product_form_id = 'product-form-' | append: section.id -%} {% endcomment %}
 
-        <div class="oe-product__actions">
+        {% comment %} <div class="oe-product__actions">
           <div
             class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
             {{ block.shopify_attributes }}
@@ -344,7 +344,12 @@
               </div>
             {%- endform -%}
           </product-form>
+        </div> {% endcomment %}
+        {%- if product.metafields.custom.asin -%}
+        <div class="oe-amazon-wrapper" style="text-align: center;">
+          <a href="https://www.amazon.com/gp/aws/cart/add.html?AssociateTag=overeasy&ASIN.1={{ product.metafields.custom.asin }}&Quantity.1=1" class="button button--primary button-size--big button-color--red ">Buy on Amazon</a>
         </div>
+      {%- endif -%} 
         {%- if product.metafields.custom.shipping_note -%}
           <span style="display: block; margin-top: 14px; margin-left: 12px;">
           * {{ product.title }} {{ product.metafields.custom.shipping_note }}</span>
