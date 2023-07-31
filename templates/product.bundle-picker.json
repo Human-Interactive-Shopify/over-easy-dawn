@@ -1,87 +1,14 @@
 {
   "sections": {
-    "main": {
-      "type": "oe-bundle-picker",
-      "blocks": {
-        "intro-heading": {
-          "type": "heading",
-          "settings": {
-          }
-        },
-        "intro-text": {
-          "type": "text",
-          "settings": {
-          }
-        },
-        "intro-discount-row-1": {
-          "type": "discount-row",
-          "settings": {
-            "discount_text": "Buy 2 = 10% off",
-            "discount_price": "$29.99"
-          }
-        },
-        "intro-discount-row-2": {
-          "type": "discount-row",
-          "settings": {
-            "discount_text": "Buy 3 = 15% off",
-            "discount_price": "$27.49"
-          }
-        },
-        "intro-discount-row-3": {
-          "type": "discount-row",
-          "settings": {
-            "discount_text": "Buy 4 = 20% off",
-            "discount_price": "$26.39"
-          }
-        },
-        "intro-discount-row-4": {
-          "type": "discount-row",
-          "settings": {
-            "discount_text": "Buy 5 = 25% off",
-            "discount_price": "$24.79"
-          }
-        },
-        "bundle-picker-products": {
-          "type": "bundle-picker-products",
-          "settings": {
-            "section_heading": "Select Products",
-            "section_heading_number": "1",
-            "collection": "custom-bundles-flavors"
-          }
-        },
-        "bundle-selling-plan": {
-          "type": "bundle-selling-plan",
-          "settings": {
-            "section_heading": "Select Your Plan",
-            "section_heading_number": "2"
-          }
-        },
-        "bundle-overview": {
-          "type": "bundle-overview",
-          "settings": {
-            "section_heading": "Overview and Checkout",
-            "section_heading_number": "3",
-            "overview_headline": "Your bundle",
-            "empty_text": "Your bundle is empty"
-          }
-        }
-      },
-      "block_order": [
-        "intro-heading",
-        "intro-text",
-        "intro-discount-row-1",
-        "intro-discount-row-2",
-        "intro-discount-row-3",
-        "intro-discount-row-4",
-        "bundle-picker-products",
-        "bundle-selling-plan",
-        "bundle-overview"
-      ],
+    "c0b81431-19df-4c62-ade6-a46b36032667": {
+      "type": "oe-amazon-bundle",
       "settings": {
+        "image": "shopify:\/\/shop_images\/Bundle_Builder_1.jpg",
+        "use_overlay": false
       }
     }
   },
   "order": [
-    "main"
+    "c0b81431-19df-4c62-ade6-a46b36032667"
   ]
 }
