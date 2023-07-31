@@ -27,6 +27,8 @@
   {% render 'value-builder', cart: cart, heading: settings.value_builder_heading, text: settings.value_builder_text, message: settings.value_builder_message, id: 'value-builder', isCart: false %}
 {% endif %}
 
+{% render 'bundle-bar' %}
+
 <section
   id="oe-main-product-{{ section.id }}"
   class="oe-product__section"
@@ -176,6 +178,7 @@
         </div>
         <div class="oe-product__content">
           {{ product.description }}
+          <a href="/products/pick-your-own-bundle" style="display:block; text-transform:uppercase; color:#E8173A; margin-top:1em;">Save up to 25% with bundles &#8594;</a>
         </div>
         <div class="oe-product__variations">
           <h3 class="oe-product__variations-title">{{ section.settings.related_products_title }}</h3>
@@ -188,7 +191,7 @@
           </div>
           
         </div>
-       {% comment %}  {% if product.metafields.custom.product_type == 'Bottle' %}
+        {% if product.metafields.custom.product_type == 'Bottle' %}
           {% render 'smartrr-product-styles' %}
           <fieldset class="smartrr-purchase-options" data-smartrr-purchase-options="4260785651778">
             <div data-smartrr-selling-plan-groups="">
@@ -245,10 +248,10 @@
         {% else %}
           {% render 'smartrr-product' %}
         {% endif %}
-        {%- assign product_form_id = 'product-form-' | append: section.id -%} {% endcomment %}
+        {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
-        {% comment %} <div class="oe-product__actions">
-          <div
+        <div class="oe-product__actions">
+          {% comment %} <div
             class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
             {{ block.shopify_attributes }}
           >
@@ -275,7 +278,7 @@
                 {% render 'icon-plus' %}
               </button>
             </quantity-input>
-          </div>
+          </div> {% endcomment %}
           <product-form class="product-form">
             <div class="product-form__error-message-wrapper" role="alert" hidden>
               <svg
@@ -303,7 +306,7 @@
               {% for field in product.metafields.custom.bundle.value %}
                 <input type="hidden" name="properties[{{ field | escape }}]" value="1">
               {% endfor %}
-              <div class="product-form__buttons">
+              {% comment %} <div class="product-form__buttons">
                 {%- liquid
                   assign check_against_inventory = true
                   if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
@@ -337,17 +340,17 @@
                       viewBox="0 0 66 66"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle> 
                     </svg>
                   </div>
                 </button>
-              </div>
+              </div> {% endcomment %}
             {%- endform -%}
           </product-form>
-        </div> {% endcomment %}
+        </div>
         {%- if product.metafields.custom.asin -%}
         <div class="oe-amazon-wrapper" style="text-align: center;">
-          <a href="https://www.amazon.com/Peanut-Breakfast-Natural-Ingredient-Protein/dp/{{ product.metafields.custom.asin }}" target=”_blank” class="button button--primary button-size--big button-color--red ">Buy on Amazon</a>
+          <a href="https://www.amazon.com/dp/{{ product.metafields.custom.asin }}" target=”_blank” class="button button--primary button-size--big button-color--red " style="width: 100%;">Shop now on Amazon</a>
         </div>
       {%- endif -%} 
         {%- if product.metafields.custom.shipping_note -%}

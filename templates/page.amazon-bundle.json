@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "c0b81431-19df-4c62-ade6-a46b36032667": {
+      "type": "oe-amazon-bundle",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Bundle_Builder_1.jpg",
+        "use_overlay": false
+      }
+    }
+  },
+  "order": [
+    "c0b81431-19df-4c62-ade6-a46b36032667"
+  ]
+}

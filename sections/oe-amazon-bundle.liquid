@@ -1,0 +1,415 @@
+{%- style -%}
+  .banner {
+    position: relative;
+    min-height: 360px;
+    display: flex;
+  }
+
+  .banner__media-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(18, 18, 18, 0.33) 50.52%);
+  }
+
+  .banner__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .amazon-hero {
+    margin-top: -140px;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .amazon-hero-content {
+    display: flex;
+    padding: 24px 16px 32px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+
+    border-radius: 5px 5px 0px 0px;
+    background: #FEF9EF;
+  }
+
+  .amazon-hero-content h1 {
+    margin: initial;
+   }
+  
+  .amazon-hero-footer {
+    text-align: center;
+    padding: 12px;
+    color: #BDBDBD;
+    font-weight: 700;
+
+    border-radius: 0px 0px 5px 5px;
+    background: #EEEEEE;
+  }
+
+  .amazon-hero-footer-container {
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .amazon-hero-footer-container span {
+   line-height: 20px;
+  }
+
+  .amazon-headline-separator {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .amazon-headline-separator span{
+    font-size:18px;
+    line-height: 38px;
+  }
+
+  @media screen and (max-width: 749px) {
+   .amazon-hero-content h1 {
+    font-size: 25px;
+   }
+
+   .amazon-hero-content>img{
+    display:none;
+   }
+
+   .amazon-hero-content>div>div{
+    display:flex;
+    gap:12px;
+   }
+
+   .amazon-button {
+    width:100%;
+    padding: 16px 0;
+   }
+  }
+
+  @media screen and (min-width: 750px) {
+    .banner {
+      min-height: 480px
+    }
+
+    .amazon-hero {
+    margin-bottom: 80px;
+  }
+
+    .amazon-hero-content {
+      justify-content: space-between;
+      align-items: center;
+      flex-direction:row;
+
+      padding: 56px 80px;
+      gap: 32px;
+    }
+
+    .amazon-hero-content>div>div>img{
+    display:none;
+   }
+
+   .amazon-hero-content p{
+      margin: 0;
+  }
+
+    .amazon-hero-footer {
+      padding: 24px 80px;
+      text-align: right;
+  }
+
+  .amazon-hero-footer-container {;
+    justify-content: flex-end;
+  }
+
+  .amazon-headline-separator {
+  }
+
+  .amazon-headline-separator span{
+    font-size:20px;
+    line-height: 36px;
+  }
+    
+  }
+
+  .oe-text-image__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .oe-text-image__media-wrapper {
+    width: 100%;
+    position: relative;
+    padding-top: 62%;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .oe-text-image__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .oe-text-image__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+
+  .oe-text-image__content-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 0;
+  }
+
+  .oe-text-image-content-mobile-position--bottom .oe-text-image__content-wrapper {
+    order: 2;
+  }
+  
+  .oe-text-image-content-mobile-position--bottom .oe-text-image__media-wrapper {
+    order: 1;
+  }
+  
+  .oe-text-image-content-mobile-position--top .oe-text-image__content-wrapper {
+    order: 1;
+  }
+  
+  .oe-text-image-content-mobile-position--top .oe-text-image__media-wrapper {
+    order: 2;
+  }
+
+  .oe-text-image__heading {
+    margin: 0;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    color: var(--oe-color-black);
+  }
+
+  .oe-text-image__heading-size--small {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+  }
+  
+  .oe-text-image__text {
+    margin-top: 0;
+    color: var(--oe-color-black);
+    margin-bottom: 16px;
+  }
+  
+  .oe-text-image__text:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .oe-text-image__list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .oe-text-image__list-item svg {
+    width: 20px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .oe-text-image__container {
+      flex-direction: row;
+      gap: 100px;
+      margin-bottom: 56px;
+    }
+
+    .oe-text-image__content-wrapper {
+      min-width: 40%;
+    }
+    
+    .oe-text-image__content-wrapper {
+      padding: 32px 0;
+    }
+
+    .oe-text-image__media-wrapper {
+      padding-top: calc(50% * 0.64);
+      border-radius: 10px;
+      min-width: 48% !important;
+    }
+    
+    .oe-text-image__heading {
+      font-weight: 500;
+      font-size: 55px;
+      line-height: 120%;
+      margin: 0 0 16px;
+    }
+
+    .oe-text-image__heading-size--small {
+      font-size: 32px;
+      line-height: 120%;
+    }
+    
+    .oe-text-image__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+    }
+
+    .oe-text-image-content-position--left .oe-text-image__content-wrapper {
+      order: 1;
+    }
+    
+    .oe-text-image-content-position--left .oe-text-image__media-wrapper {
+      order: 2;
+    }
+    
+    .oe-text-image-content-position--right .oe-text-image__content-wrapper {
+      order: 2;
+    }
+    
+    .oe-text-image-content-position--right .oe-text-image__media-wrapper {
+      order: 1;
+    }
+  }
+{%- endstyle -%}
+
+<div class="banner">
+  {%- if section.settings.image != blank -%}
+    <div class="banner__media-wrapper">
+      {%- if section.settings.use_overlay -%}
+        <div class="banner__media-overlay"></div>
+      {%- endif -%}
+      {%-liquid
+        assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+      -%}
+
+        {{ section.settings.image | image_url: width: 1500 | image_tag:
+          loading: 'lazy',
+          width: section.settings.image.width,
+          height: image_height,
+          class: "banner__media",
+          alt: section.settings.image.alt | escape
+        }}
+      
+    </div>
+  {%- endif -%}
+</div>
+
+<div class="amazon-hero container">
+  <div class="amazon-hero-content">
+    <img loading="lazy" width="118" height="136" src="https://cdn.shopify.com/s/files/1/0115/3626/9378/files/BestBreakfastBar.png?v=1690774577" alt="Best Breakfast Bar Award">
+    <div>
+      <div>
+        <img loading="lazy" width="60" height="68" src="https://cdn.shopify.com/s/files/1/0115/3626/9378/files/BestBreakfastBar.png?v=1690774577" alt="Best Breakfast Bar Award">
+        <h1>Save up to 25% with Bundles</h1>
+      </div>
+    <p>Pick all of your favorites and save!</p>
+    </div>
+    <a href="https://www.amazon.com/stores/OverEasy/page/379E41AD-D8D3-4221-BF7E-903331D96960" target=”_blank” class="button button--primary button-size--big button-color--red amazon-button" style="white-space: nowrap;">Build your bundle {% render 'icon-external-link' %}</a>
+  </div>
+  <div class="amazon-hero-footer">
+    <div class="amazon-hero-footer-container">
+      <span>powered by</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="66" height="21" viewBox="0 0 66 21" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M41.4966 18.9269C41.9611 17.7348 42.9947 15.0632 42.5032 14.4158H42.5068C42.0174 13.7671 39.2706 14.1075 38.0351 14.2607L38.0325 14.261C37.6566 14.3076 37.5988 13.97 37.9367 13.7256C40.1305 12.1342 43.7248 12.5894 44.1422 13.1267C44.5596 13.664 44.0284 17.384 41.9737 19.1601C41.6575 19.4325 41.3557 19.287 41.4966 18.9269ZM26.7337 20.7665C31.5116 20.7665 37.0756 19.2087 40.9084 16.289V16.2946C41.5427 15.802 40.9988 15.0782 40.3518 15.3618C36.1682 17.1836 31.6772 18.1346 27.1367 18.1602C20.8372 18.1602 14.7438 16.3767 9.81408 13.4159C9.38219 13.1566 9.06053 13.6137 9.42195 13.9476C14.1679 18.3683 20.3417 20.8001 26.7337 20.7665Z" fill="#BDBDBD"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M57.9769 12.0242H60.0116H60.0134C60.2263 12.0283 60.4031 11.8557 60.411 11.6361V5.81347C60.411 5.08215 60.4489 4.42172 60.7344 3.76129C60.9304 3.2589 61.3922 2.92066 61.9163 2.89564C63.2178 2.89564 63.2053 4.3681 63.1955 5.52487C63.1947 5.62243 63.1939 5.71774 63.1939 5.80974V11.6846C63.219 11.8731 63.3712 12.016 63.5553 12.0242H65.6081C65.8028 12.0284 65.9704 11.8832 66.0003 11.6846V4.87693C66.0003 3.83031 66.0003 2.37327 65.4672 1.50762C64.8907 0.574807 63.998 0.233398 63.0836 0.233398C61.6741 0.233398 60.8736 0.938603 60.3026 2.41804H60.2628V0.763235C60.2216 0.590241 60.0739 0.466718 59.9014 0.461004H58.0076C57.8075 0.455922 57.637 0.610025 57.6154 0.815472V11.6361C57.618 11.8435 57.7761 12.0133 57.9769 12.0242ZM56.0581 6.34878C56.0581 2.9347 54.4191 0.248201 51.3886 0.248201C48.4359 0.248201 46.7969 2.88992 46.7969 6.23498C46.7969 9.58004 48.416 12.2665 51.3886 12.2665C54.251 12.2665 56.0581 9.64907 56.0581 6.34878ZM49.8075 5.89363C49.8075 4.57277 49.9033 2.45716 51.4086 2.45716C52.0556 2.45716 52.5127 2.75752 52.7422 3.50377C53.0097 4.36755 53.0476 5.46081 53.0476 6.37123C53.0476 7.75925 52.988 10.0353 51.3887 10.0353C49.8069 10.0353 49.8073 7.27572 49.8075 5.93741L49.8075 5.89363ZM11.6264 12.0464H13.6666H13.6684C13.7708 12.0488 13.8699 12.009 13.9439 11.9358C14.0178 11.8627 14.0604 11.7621 14.0623 11.6563V5.9233L14.0623 5.83356C14.0615 4.58699 14.0603 2.93831 15.4719 2.93831C16.7768 2.93831 16.7566 4.38689 16.7403 5.55667C16.7385 5.68284 16.7368 5.80578 16.7368 5.9233V11.6582C16.7403 11.8653 16.8979 12.0346 17.0982 12.0464H19.1438C19.2459 12.0483 19.3446 12.0083 19.4181 11.9352C19.4917 11.862 19.5341 11.7617 19.536 11.6563V5.9233L19.5358 5.787V5.78697C19.5345 5.17955 19.5329 4.35987 19.7275 3.85059C19.926 3.33002 20.4057 2.98151 20.9473 2.96442C21.5382 2.96442 21.9954 3.16964 22.1472 3.89723C22.2247 4.24741 22.2146 5.05921 22.208 5.59753C22.2064 5.72457 22.205 5.83638 22.205 5.9233V11.6582C22.2076 11.8657 22.3657 12.0355 22.5664 12.0464H24.6066C24.709 12.0488 24.8082 12.009 24.8821 11.9358C24.956 11.8627 24.9987 11.7621 25.0006 11.6563V4.83004C25.0006 4.66364 25.0033 4.49358 25.0062 4.32166V4.32163V4.32161V4.32159V4.32157C25.0229 3.3023 25.0406 2.21735 24.4855 1.43835C23.8127 0.554711 22.7305 0.114379 21.6546 0.286426C20.5787 0.458473 19.6762 1.21616 19.2938 2.26855C18.721 0.901048 17.9024 0.264872 16.6446 0.264872C15.3869 0.264872 14.4527 0.901048 13.9575 2.26855H13.9196V0.856273C13.9088 0.654982 13.7531 0.494254 13.5582 0.483149H11.6553C11.4452 0.481006 11.2719 0.652497 11.265 0.869333V11.6899C11.2835 11.8846 11.4371 12.0361 11.6264 12.0464ZM8.07401 12.1282C7.93963 12.2485 7.74651 12.2687 7.59152 12.1786C7.01332 11.6819 6.839 11.4134 6.57131 11.0012L6.57128 11.0011C6.52524 10.9302 6.47644 10.8551 6.42234 10.7737C5.30015 11.9528 4.50684 12.3054 3.05576 12.3054C1.33723 12.3054 0 11.2103 0 9.02006C0 7.30929 0.903537 6.147 2.16849 5.57612C3.10255 5.15295 4.34883 5.02161 5.42629 4.90806L5.42632 4.90805L5.42632 4.90805L5.42633 4.90805L5.42635 4.90805C5.62667 4.88694 5.82115 4.86644 6.00671 4.8448V4.57242C6.00671 4.52042 6.00712 4.46745 6.00753 4.41377C6.0111 3.94934 6.01508 3.43226 5.75914 3.04261C5.50977 2.65456 5.03631 2.49598 4.61346 2.49598C3.83461 2.49598 3.14069 2.90829 2.97083 3.76088C2.9493 3.95976 2.80107 4.11892 2.60941 4.14892L0.646932 3.92692C0.549005 3.91244 0.461107 3.85715 0.403736 3.77395C0.346366 3.69074 0.324538 3.5869 0.343344 3.48663C0.79692 1.00908 2.96541 0.26097 4.90801 0.26097C5.9019 0.26097 7.19938 0.533351 7.98004 1.30945C8.89646 2.19525 8.8908 3.35486 8.8846 4.62211V4.62225V4.62239V4.62254V4.62268V4.62283C8.88409 4.72721 8.88357 4.83233 8.88357 4.93808V8.21971C8.88357 9.10351 9.2012 9.54314 9.53576 10.0062C9.5755 10.0612 9.61548 10.1166 9.6552 10.173C9.78531 10.3596 9.81422 10.5928 9.6552 10.7327C9.23776 11.0928 8.49686 11.7569 8.09027 12.1319L8.07401 12.1282ZM6.01505 6.9907L6.01512 7.09285C6.01583 7.86885 6.01644 8.52688 5.63376 9.22944C5.30849 9.82271 4.79347 10.1884 4.21882 10.1884C3.43636 10.1884 2.97917 9.57272 2.97917 8.65856C2.97917 6.86384 4.53867 6.53735 6.01505 6.53735V6.9907ZM36.2922 9.99899L36.2925 9.99945L36.2928 9.99981C36.3324 10.0546 36.3722 10.1098 36.4118 10.166C36.5491 10.3601 36.5781 10.5877 36.4028 10.7164C35.9853 11.0764 35.2444 11.7425 34.8378 12.1156C34.7026 12.2343 34.5102 12.2536 34.3554 12.1641C33.7747 11.6653 33.6027 11.4008 33.3311 10.9832L33.3307 10.9825C33.2855 10.913 33.2375 10.8391 33.1844 10.7593C32.064 11.9384 31.2653 12.291 29.8196 12.291C28.1011 12.291 26.7638 11.1958 26.7638 9.00748C26.7638 7.29484 27.662 6.13256 28.9414 5.56168C29.8774 5.1369 31.1307 5.00617 32.2113 4.89345L32.2114 4.89344L32.2119 4.89339C32.4077 4.87296 32.598 4.85312 32.7796 4.83222V4.56544C32.7796 4.51447 32.78 4.46256 32.7804 4.40997V4.40937V4.40878V4.40818V4.40758C32.784 3.94296 32.7879 3.42569 32.5302 3.03749C32.2881 2.64944 31.8056 2.489 31.3845 2.489C30.6057 2.489 29.9154 2.9013 29.7437 3.75389C29.7216 3.95249 29.5736 4.11133 29.3823 4.14194L27.4035 3.9218C27.3049 3.90782 27.2162 3.85246 27.1584 3.76877C27.1006 3.68508 27.0788 3.58047 27.0981 3.47964C27.5535 1.00024 29.722 0.253988 31.6646 0.253988C32.6567 0.253988 33.9542 0.526368 34.7366 1.30247C35.655 2.18368 35.6485 3.33431 35.6414 4.59509C35.6408 4.70627 35.6402 4.81831 35.6402 4.9311V8.21459C35.6402 9.09656 35.9577 9.53602 36.2922 9.99899ZM30.9871 10.177C31.56 10.177 32.0768 9.81139 32.4003 9.21999C32.7843 8.51359 32.7839 7.85245 32.7834 7.06676L32.7834 6.98311V6.5279C31.307 6.5279 29.7475 6.85251 29.7475 8.64911C29.7475 9.56139 30.2047 10.177 30.9871 10.177ZM38.1371 0.831942V2.37294C38.1361 2.47865 38.177 2.58019 38.2505 2.65387C38.3239 2.72756 38.4234 2.76695 38.5257 2.76286H42.0386L38.0107 8.73284C37.8268 9.05308 37.74 9.42278 37.7613 9.79438V11.3708C37.7613 11.5984 38.0052 11.8578 38.2383 11.729C40.4599 10.5398 43.1018 10.5349 45.3275 11.716C45.5823 11.8522 45.8226 11.5891 45.8226 11.3615V9.70483C45.8158 9.45152 45.6778 9.22147 45.4612 9.10224C44.2884 8.42129 42.9241 8.22166 41.6338 8.25338L45.1106 3.13039C45.4341 2.67144 45.6148 2.38041 45.6148 2.1584V0.831942C45.6159 0.72657 45.5752 0.625334 45.5021 0.551708C45.4291 0.478081 45.3301 0.438458 45.2281 0.442027H38.5184C38.4163 0.436104 38.3165 0.475147 38.2438 0.549472C38.1712 0.623797 38.1324 0.726441 38.1371 0.831942Z" fill="#BDBDBD"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="amazon-headline-separator container">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <g clip-path="url(#clip0_5898_57143)">
+      <path d="M16.0243 6.89722C11.4952 6.89722 7.79492 10.5975 7.79492 15.1266C7.79492 17.4948 8.831 19.7742 10.5775 21.3135C11.88 22.616 11.7616 25.3986 11.732 25.4282C11.732 25.5762 11.7616 25.6946 11.88 25.813C11.9688 25.9018 12.1168 25.961 12.2353 25.961H19.7838C19.9318 25.961 20.0502 25.9018 20.139 25.813C20.2279 25.7242 20.2871 25.5762 20.2871 25.4282C20.2871 25.3986 20.139 22.616 21.4415 21.3135C21.4711 21.2839 21.5007 21.2543 21.5304 21.2247C23.2473 19.6558 24.2538 17.4356 24.2538 15.1266C24.2538 10.5975 20.5535 6.89722 16.0243 6.89722ZM20.7607 20.5438C20.7311 20.5734 20.6719 20.6326 20.6719 20.6623C19.5174 21.9055 19.3102 23.9481 19.2806 24.925H12.7385C12.7089 23.9481 12.5017 21.8167 11.2584 20.5438C9.68946 19.1821 8.77179 17.1988 8.77179 15.097C8.77179 11.1007 11.9984 7.87409 15.9947 7.87409C19.991 7.87409 23.2177 11.1007 23.2177 15.097C23.2177 17.1988 22.3296 19.1821 20.7607 20.5438Z" fill="#231F20"/>
+      <path d="M15.9954 8.99902C15.729 8.99902 15.4922 9.23584 15.4922 9.50226C15.4922 9.76868 15.729 10.0055 15.9954 10.0055C18.9852 10.0055 21.383 12.4329 21.383 15.3931C21.383 15.6595 21.6198 15.8963 21.8863 15.8963C22.1527 15.8963 22.3895 15.6595 22.3895 15.3931C22.4191 11.8704 19.5477 8.99902 15.9954 8.99902Z" fill="#231F20"/>
+      <path d="M19.2818 26.5237H12.7101C12.0292 26.5237 11.4668 27.0861 11.4668 27.767C11.4668 28.4478 12.0292 29.0103 12.7101 29.0103H19.2522C19.9626 28.9807 20.5251 28.4478 20.5251 27.767C20.5251 27.0861 19.9626 26.5237 19.2818 26.5237ZM19.2818 27.9742H12.7101C12.5917 27.9742 12.4733 27.8854 12.4733 27.7374C12.4733 27.5894 12.5621 27.5006 12.7101 27.5006H19.2522C19.3706 27.5006 19.489 27.5894 19.489 27.7374C19.489 27.8854 19.4002 27.9742 19.2818 27.9742Z" fill="#231F20"/>
+      <path d="M18.3046 29.5134H13.6867C13.0058 29.5134 12.4434 30.0759 12.4434 30.7567C12.4434 31.4376 13.0058 32 13.6867 32H18.3046C18.9854 32 19.5479 31.4376 19.5479 30.7567C19.5479 30.0463 18.9854 29.5134 18.3046 29.5134ZM18.3046 30.9639H13.6867C13.5682 30.9639 13.4498 30.8751 13.4498 30.7271C13.4498 30.5791 13.5386 30.4903 13.6867 30.4903H18.3046C18.423 30.4903 18.5414 30.5791 18.5414 30.7271C18.5414 30.8751 18.423 30.9639 18.3046 30.9639Z" fill="#231F20"/>
+      <path d="M15.9954 4.44033C16.2914 4.44033 16.4987 4.20352 16.4987 3.9371V0.503238C16.4987 0.236818 16.2618 0 15.9954 0C15.729 0 15.4922 0.236818 15.4922 0.503238V3.9371C15.4922 4.20352 15.729 4.44033 15.9954 4.44033Z" fill="#231F20"/>
+      <path d="M24.372 2.54567C24.1352 2.36806 23.8392 2.45686 23.6912 2.66408L21.7966 5.50589C21.619 5.74271 21.6782 6.06833 21.915 6.21635C22.0038 6.27555 22.0927 6.30515 22.1815 6.30515C22.3591 6.30515 22.5071 6.21635 22.5959 6.06833L24.4904 3.22652C24.668 3.01931 24.6088 2.69368 24.372 2.54567Z" fill="#231F20"/>
+      <path d="M9.98507 6.18698C10.0739 6.18698 10.1627 6.15738 10.2515 6.09817C10.4883 5.95016 10.5475 5.62454 10.3995 5.38772L8.56416 2.5163C8.41615 2.27949 8.09052 2.22028 7.85371 2.36829C7.61689 2.5163 7.55768 2.84193 7.70569 3.07875L9.54103 5.95016C9.65944 6.12777 9.80745 6.18698 9.98507 6.18698Z" fill="#231F20"/>
+      <path d="M6.40409 9.32463L3.41426 7.69651C3.17744 7.5781 2.85182 7.6669 2.73341 7.90372C2.5854 8.14054 2.67421 8.46616 2.94063 8.58457L5.93045 10.2127C6.01926 10.2423 6.07846 10.2719 6.16727 10.2719C6.34488 10.2719 6.5225 10.1831 6.6113 10.0055C6.72971 9.76866 6.6409 9.44304 6.40409 9.32463Z" fill="#231F20"/>
+      <path d="M29.2859 7.90372C29.1675 7.6669 28.8419 7.5781 28.605 7.69651L25.5856 9.32463C25.3488 9.44304 25.26 9.76866 25.3784 10.0055C25.4672 10.1831 25.6448 10.2719 25.8224 10.2719C25.9112 10.2719 26 10.2423 26.0592 10.2127L29.0787 8.58457C29.3155 8.46616 29.4043 8.14054 29.2859 7.90372Z" fill="#231F20"/>
+    </g>
+    <defs>
+      <clipPath id="clip0_5898_57143">
+        <rect width="32" height="32" fill="white"/>
+      </clipPath>
+    </defs>
+  </svg>
+<span><strong>How does it work?</strong></span>
+</div>
+
+<section class="oe-text-image oe-text-image-content-position--right oe-text-image-content-mobile-position--bottom"> 
+  <div class="oe-text-image__container container"><div class="oe-text-image__media-wrapper"><img src="//over-easy-shop.myshopify.com/cdn/shop/files/Step_1.png?v=1690782106&amp;width=1300" srcset="//over-easy-shop.myshopify.com/cdn/shop/files/Step_1.png?v=1690782106&amp;width=352 352w, //over-easy-shop.myshopify.com/cdn/shop/files/Step_1.png?v=1690782106&amp;width=832 832w, //over-easy-shop.myshopify.com/cdn/shop/files/Step_1.png?v=1690782106&amp;width=1080 1080w, //over-easy-shop.myshopify.com/cdn/shop/files/Step_1.png?v=1690782106&amp;width=1200 1200w" width="1080" height="720.0" loading="lazy" class="oe-text-image__media">
+      </div><div class="oe-text-image__content-wrapper">
+      <div class="oe-text-image__content"><div style="display: flex; align-items: center;"> <span style="font-size:14px;color:#E8173A">STEP 1</span>{% render 'icon-draw-arrow' %}</div><h3 class="oe-text-image__heading oe-text-image__heading-size--small">Select your products</h3><p class="oe-text-image__text">Start your day right by selecting your favorite flavors from our wide range of breakfast bar options.* </p><p class="oe-text-image__text">*Minimum purchase of two boxes required to qualify for discounts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="oe-text-image oe-text-image-content-position--left oe-text-image-content-mobile-position--bottom">
+  <div class="oe-text-image__container container"><div class="oe-text-image__media-wrapper"><img src="//over-easy-shop.myshopify.com/cdn/shop/files/Step_2.png?v=1690782106&amp;width=1300" srcset="//over-easy-shop.myshopify.com/cdn/shop/files/Step_2.png?v=1690782106&amp;width=352 352w, //over-easy-shop.myshopify.com/cdn/shop/files/Step_2.png?v=1690782106&amp;width=832 832w, //over-easy-shop.myshopify.com/cdn/shop/files/Step_2.png?v=1690782106&amp;width=1200 1200w" width="1200" height="800.0" loading="lazy" class="oe-text-image__media">
+      </div><div class="oe-text-image__content-wrapper">
+      <div class="oe-text-image__content"><div style="display: flex; align-items: center;"> <span style="font-size:14px;color:#E8173A">STEP 2</span>{% render 'icon-draw-arrow' %}</div><h3 class="oe-text-image__heading oe-text-image__heading-size--small">Select your plan</h3><p class="oe-text-image__text">Choose between a convenient one-time purchase or unlock extra savings with our subscription option and save additional 10% with each order.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="oe-text-image oe-text-image-content-position--right oe-text-image-content-mobile-position--bottom">
+  <div class="oe-text-image__container container"><div class="oe-text-image__media-wrapper"><img src="//over-easy-shop.myshopify.com/cdn/shop/files/Step_3.png?v=1690782106&amp;width=1300" srcset="//over-easy-shop.myshopify.com/cdn/shop/files/Step_3.png?v=1690782106&amp;width=352 352w, //over-easy-shop.myshopify.com/cdn/shop/files/Step_3.png?v=1690782106&amp;width=832 832w, //over-easy-shop.myshopify.com/cdn/shop/files/Step_3.png?v=1690782106&amp;width=1080 1080w, //over-easy-shop.myshopify.com/cdn/shop/files/Step_3.png?v=1690782106&amp;width=1200 1200w" width="1080" height="720.0" loading="lazy" class="oe-text-image__media">
+      </div><div class="oe-text-image__content-wrapper">
+      <div class="oe-text-image__content"><div style="display: flex; align-items: center;"> <span style="font-size:14px;color:#E8173A">STEP 3</span>{% render 'icon-draw-arrow' %}</div><h3 class="oe-text-image__heading oe-text-image__heading-size--small">Buy more, save more</h3><p class="oe-text-image__text">Purchase any combination of our breakfast bar products and save up to 25% per order while stocking up on your morning favorites.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="container" style="text-align:center">
+<hr>
+<h1>Start Fresh. Start Today.</h1>
+<a href="https://www.amazon.com/stores/OverEasy/page/379E41AD-D8D3-4221-BF7E-903331D96960" target=”_blank” class="button button--primary button-size--big button-color--red amazon-button" style="white-space: nowrap;">SAVE UP TO 25% WITH BUNDLES {% render 'icon-external-link' %}</a>
+<hr>
+</div>
+
+
+{% schema %}
+{
+  "name": "OE Amazon Bundle",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_overlay",
+      "label": "Use gradient overlay",
+      "default": false
+    }
+  ]
+}
+{% endschema %}
