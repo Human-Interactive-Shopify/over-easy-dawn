@@ -251,7 +251,8 @@
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         <div class="oe-product__actions">
-          {% comment %} <div
+          {% if product.metafields.custom.product_type == 'SingleServing' %}
+          <div
             class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
             {{ block.shopify_attributes }}
           >
@@ -278,7 +279,8 @@
                 {% render 'icon-plus' %}
               </button>
             </quantity-input>
-          </div> {% endcomment %}
+          </div>
+        {% endif %}
           <product-form class="product-form">
             <div class="product-form__error-message-wrapper" role="alert" hidden>
               <svg
@@ -306,7 +308,8 @@
               {% for field in product.metafields.custom.bundle.value %}
                 <input type="hidden" name="properties[{{ field | escape }}]" value="1">
               {% endfor %}
-              {% comment %} <div class="product-form__buttons">
+              {% if product.metafields.custom.product_type == 'SingleServing' %}
+              <div class="product-form__buttons">
                 {%- liquid
                   assign check_against_inventory = true
                   if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
@@ -344,7 +347,8 @@
                     </svg>
                   </div>
                 </button>
-              </div> {% endcomment %}
+              </div>
+            {% endif %}
             {%- endform -%}
           </product-form>
         </div>
