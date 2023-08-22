@@ -2,7 +2,6 @@
   "sections": {
     "d819cd7a-de30-40f9-a32f-3f5fd87c770e": {
       "type": "oe-jumbotron",
-      "disabled": true,
       "blocks": {
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-0": {
           "type": "heading",
@@ -30,6 +29,7 @@
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-1",
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-2"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/OverEasy_Bars.jpg",
         "form_id": "",
@@ -225,7 +225,6 @@
     },
     "oe-benefits": {
       "type": "oe-benefits",
-      "disabled": true,
       "blocks": {
         "40444aef-af53-4520-8094-575ad2ea0700": {
           "type": "benefits",
@@ -266,6 +265,7 @@
         "9d953f82-519a-4622-b8c1-eb9e714934ac",
         "6bbbd805-1770-4d25-9399-b077127ca3a5"
       ],
+      "disabled": true,
       "settings": {
         "headline": "Benefits of Daily Use"
       }
@@ -467,8 +467,8 @@
         "image_ratio": "square",
         "show_secondary_image": false,
         "show_rating": true,
-        "enable_quick_add": true,
-        "enable_add_to_cart": true,
+        "enable_quick_add": false,
+        "enable_add_to_cart": false,
         "enable_buy_it_now": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
