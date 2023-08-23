@@ -68,6 +68,7 @@
               show_quick_add: section.settings.enable_quick_add,
               show_add_to_cart: section.settings.enable_add_to_cart,
               show_buy_it_now: section.settings.enable_buy_it_now,
+              show_amazon_link: section.settings.enable_amazon_link,
               section_id: section.id
             %}
           </li>
@@ -321,6 +322,12 @@
       "id": "enable_quick_add",
       "default": false,
       "label": "t:sections.featured-collection.settings.enable_quick_buy.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_amazon_link",
+      "default": false,
+      "label": "Add Amazon link"
     },
     {
       "type": "checkbox",

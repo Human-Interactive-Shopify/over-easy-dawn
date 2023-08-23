@@ -259,7 +259,6 @@
     },
     "1663281355fa8ec570": {
       "type": "oe-customer-quotes",
-      "disabled": true,
       "blocks": {
         "3064b63c-3bda-4278-ae10-3da08d9d5002": {
           "type": "quote",
@@ -288,6 +287,7 @@
         "b8aceaca-76da-4ac8-9346-75cdfda12de3",
         "82bdc55b-0b95-4e13-bcd9-899321262b7a"
       ],
+      "disabled": true,
       "settings": {
         "headline": "Over 1 Million breakfasts served",
         "sub-headline": ""
@@ -295,7 +295,6 @@
     },
     "1661427940e35b089a": {
       "type": "oe-sources",
-      "disabled": true,
       "blocks": {
         "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
           "type": "source",
@@ -332,6 +331,7 @@
         "9f72aff9-1cbe-4979-bae9-7973f162a636",
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65"
       ],
+      "disabled": true,
       "settings": {
       }
     },
@@ -377,7 +377,6 @@
     },
     "16614278019efa8d2e": {
       "type": "oe-find-us",
-      "disabled": true,
       "blocks": {
         "89145ece-7344-4faa-9891-194a608b4d8d": {
           "type": "merchant",
@@ -438,6 +437,7 @@
         "63312fa2-852f-42bb-8012-299cd60bd2c8",
         "bf2902cc-167f-4385-9c99-7b2ae53e6499"
       ],
+      "disabled": true,
       "settings": {
       }
     }

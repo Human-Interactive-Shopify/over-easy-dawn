@@ -145,7 +145,7 @@
           <div class="quick-add">
             {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
             {%- if card_product.variants.size == 1 -%}
-              <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
+              {% comment %} <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
                 <quantity-input class="quantity">
                   <button class="quantity__button no-js-hidden" name="minus" type="button">
                     <span class="visually-hidden">
@@ -169,7 +169,7 @@
                     {% render 'icon-plus' %}
                   </button>
                 </quantity-input>
-              </div>
+              </div> {% endcomment %}
               <product-form>
                 {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form', onsubmit: 'submitAddToCart();' -%}
                   <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
@@ -239,6 +239,13 @@
                 </div>
               </quick-add-modal>
             {%- endif -%}
+            {%- if show_amazon_link -%}
+              {%- if card_product.metafields.custom.asin -%}
+                <div class="oe-amazon-wrapper" style="text-align: center;">
+                  <a href="https://www.amazon.com/dp/{{ card_product.metafields.custom.asin }}" target=”_blank” class="button button--primary button-size--big button-color--red " style="width: 100%;">Shop now on Amazon</a>
+                </div>
+              {%- endif -%} 
+          {%- endif -%}
           </div>
         {%- endif -%}
 

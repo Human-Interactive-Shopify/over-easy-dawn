@@ -198,7 +198,6 @@
     },
     "oe-benefits": {
       "type": "oe-benefits",
-      "disabled": true,
       "blocks": {
         "40444aef-af53-4520-8094-575ad2ea0700": {
           "type": "benefits",
@@ -239,6 +238,7 @@
         "9d953f82-519a-4622-b8c1-eb9e714934ac",
         "6bbbd805-1770-4d25-9399-b077127ca3a5"
       ],
+      "disabled": true,
       "settings": {
         "headline": "Benefits"
       }

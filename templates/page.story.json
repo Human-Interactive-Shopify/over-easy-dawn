@@ -234,7 +234,6 @@
     },
     "oe-team": {
       "type": "oe-team",
-      "disabled": true,
       "blocks": {
         "team-box": {
           "type": "team-box",
@@ -279,6 +278,7 @@
         "team-box-3",
         "team-box-4"
       ],
+      "disabled": true,
       "settings": {
         "headline": "Meet the Team",
         "text": "Want to join us? Reach out below."
