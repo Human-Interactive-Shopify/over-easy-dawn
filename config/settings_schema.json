@@ -1178,5 +1178,16 @@
         "label": "Message"
       }
     ]
+  },
+  {
+    "name": "Reviews",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "reviews_data",
+        "info": "Copy and paste converted JSON from Okendo reviews csv file.",
+        "label": "Reviews JSON"
+      }
+    ]
   }
 ]
