@@ -7,9 +7,16 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "1d80daa0-bbb4-413b-a10f-d2f16f4e575a": {
+      "type": "oe-reviews",
+      "settings": {
+        "use_manual": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1d80daa0-bbb4-413b-a10f-d2f16f4e575a"
   ]
 }
