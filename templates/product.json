@@ -192,6 +192,7 @@
     "16631570203f45fb2a": {
       "type": "oe-reviews",
       "settings": {
+        "use_manual": true
       }
     }
   },
