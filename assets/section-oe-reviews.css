@@ -57,6 +57,9 @@
   width: 75%;
   flex: 1 0 auto;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
