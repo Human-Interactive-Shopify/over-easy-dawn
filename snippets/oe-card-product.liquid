@@ -33,12 +33,11 @@
     <div class="card
       card--{{ settings.card_style }}
       {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
-      {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
       {% if extend_height %} card--extend-height{% endif %}
       {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}"
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
-      <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+      <div class="card__inner {% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}" style="background-color:{{card_product.metafields.custom.product_color}};--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
         {%- if card_product.featured_media -%}
           <div class="card__media">
             <div class="media media--transparent media--hover-effect">
@@ -242,7 +241,7 @@
             {%- if show_amazon_link -%}
               {%- if card_product.metafields.custom.asin -%}
                 <div class="oe-amazon-wrapper" style="text-align: center;">
-                  <a href="https://www.amazon.com/dp/{{ card_product.metafields.custom.asin }}" target=”_blank” class="button button--primary button-size--big button-color--red " style="width: 100%;">Shop on Amazon</a>
+                  <a href="https://www.amazon.com/dp/{{ card_product.metafields.custom.asin }}" target=”_blank” class="button button--primary button-size--big button-color--white " style="width: 100%;">Shop on Amazon</a>
                 </div>
               {%- endif -%} 
           {%- endif -%}
@@ -266,11 +265,10 @@
       card--{{ settings.card_style }}
       card--text
       {% if extend_height %} card--extend-height{% endif %}
-      {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
       {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}"
       style="--ratio-percent: 100%;"
     >
-      <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if settings.card_style == 'standard' %} ratio{% endif %}" style="background-color:{{card_product.metafields.sf_oe.product_color}}; --ratio-percent: 100%;">
+      <div class="card__inner {% if settings.card_style == 'standard' %} ratio{% endif %}" style="background-color:{{card_product.metafields.sf_oe.product_color}}; --ratio-percent: 100%;">
         <div class="card__content">
           <div class="card__information">
             <h6 class="card__heading">

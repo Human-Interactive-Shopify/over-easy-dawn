@@ -1,7 +1,7 @@
 <section class="FindUs section-{{ section.id }}" data-section-name="Find Us">
   <div class="FindUs-wrapper">
-    <h2 class="desktop">&#9135;&#9135;&#9135;&#9135; &nbsp; Find us here &nbsp; &#9135;&#9135;&#9135;&#9135;</h2>
-    <h2 class="mobile">&#9135;&#9135;&#9135;&#9135; &nbsp; Find us here! &nbsp; &#9135;&#9135;&#9135;&#9135;</h2>
+    {% comment %} <h2 class="desktop">&#9135;&#9135;&#9135;&#9135; &nbsp; Find us here &nbsp; &#9135;&#9135;&#9135;&#9135;</h2>
+    <h2 class="mobile">&#9135;&#9135;&#9135;&#9135; &nbsp; Find us here! &nbsp; &#9135;&#9135;&#9135;&#9135;</h2> {% endcomment %}
     <div class="FindUs-scroller">
       <div class="FindUs-outer-wrap">
         {% for block in section.blocks %}
@@ -32,12 +32,11 @@
 
 <style>
   .FindUs {
-    background-color: var(--oe-color-grey-200);
   }
   .FindUs-wrapper {
     margin: 0 auto;
     text-align: center;
-    padding: 24px 0;
+    padding: 60px 0;
     overflow-x: hidden;
   }
   .FindUs-wrapper > h2 {

@@ -151,8 +151,8 @@
 .card__heading {
   margin-top: 4px;
   margin-bottom: 0;
-  font-family: Gopher;
-  font-weight: 700;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .card__heading:last-child {

@@ -5,7 +5,7 @@
     "gradient_accent_1": "",
     "colors_accent_2": "{{ shop.brand.colors.secondary[0].background }}",
     "gradient_accent_2": "",
-    "colors_text": "#3a3a3a",
+    "colors_text": "#141414",
     "colors_outline_button_labels": "#171717",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
@@ -120,7 +120,6 @@
             "settings": {
               "text": "Over Easy is donating 100% of profits from overeasyfoods.com to Children of Fallen Patriots Foundation through Sunday 2\/11",
               "text_alignment": "center",
-              "color_scheme": "accent-1",
               "link": ""
             }
           },
@@ -130,7 +129,6 @@
             "settings": {
               "text": "4th of July Sale! Shop 30% OFF Breakfast Shakes while supplies last!",
               "text_alignment": "center",
-              "color_scheme": "accent-2",
               "link": ""
             }
           },
@@ -139,7 +137,6 @@
             "settings": {
               "text": "All orders are now completed on Amazon to provide easier shopping and faster shipping!",
               "text_alignment": "center",
-              "color_scheme": "accent-1",
               "link": "https:\/\/www.amazon.com\/Variety-Breakfast-Natural-Ingredient-Protein\/dp\/B08VZH13QQ\/ref=sr_1_1_sspa?crid=2WX6L21BYNBME&keywords=over+easy&qid=1689688129&rdc=1&sprefix=%2Caps%2C111&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
             }
           }
@@ -155,7 +152,7 @@
       "oe-header": {
         "type": "oe-header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/OE_logo.png",
+          "logo": "shopify:\/\/shop_images\/Logo_f64f5ef2-adef-4d94-ae6c-f80ce1bb49eb.png",
           "menu": "wip-dawn-menu",
           "enable_sticky_header": true,
           "show_search": true,
@@ -223,11 +220,11 @@
           "715bbd1e-b638-4fac-9dc4-ece475427abe"
         ],
         "settings": {
-          "color_scheme": "red",
+          "color_scheme": "yellow",
           "newsletter_enable": true,
-          "newsletter_heading": "Get More from Your Mornings",
+          "newsletter_heading": "JOIN OUR NEWSLETTER",
           "show_social": true,
-          "footer_image": "shopify:\/\/shop_images\/PB_Render_72ppi.png"
+          "footer_image": "shopify:\/\/shop_images\/BOP.png"
         }
       },
       "main-password-header": {

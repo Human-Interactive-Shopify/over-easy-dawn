@@ -12,10 +12,14 @@
     background-color: var(--oe-color-black);
   }
 
+  .oe-jumbotron-background--yellow {
+    background-color: #FDB515;
+  }
+
   .oe-jumbotron__container {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
   }
 
   .oe-jumbotron__media-wrapper {
@@ -39,7 +43,8 @@
     flex-direction: column;
     max-width: 580px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     position: relative;
     z-index: 2;
   }
@@ -92,8 +97,7 @@
   .oe-jumbotron__heading {
     margin: 0;
     padding-bottom: 24px;
-    font-weight: 500;
-    font-size: 40px;
+    font-size: 80px;
     line-height: 120%;
     color: inherit;
   }
@@ -269,8 +273,7 @@
     }
     
     .oe-jumbotron__heading {
-      font-weight: 500;
-      font-size: 55px;
+      font-size: 110px;
       line-height: 120%;
     }
 
@@ -435,8 +438,8 @@
       "id": "background_color_scheme",
       "options": [
         {
-          "value": "red",
-          "label": "Red"
+          "value": "yellow",
+          "label": "Yellow"
         },
         {
           "value": "black",
@@ -447,7 +450,7 @@
           "label": "White"
         }
       ],
-      "default": "red",
+      "default": "yellow",
       "label": "Background color"
     },
     {
@@ -455,8 +458,8 @@
       "id": "button_color_scheme",
       "options": [
         {
-          "value": "red",
-          "label": "Red"
+          "value": "cocoa",
+          "label": "Cocoa"
         },
         {
           "value": "black",
@@ -467,7 +470,7 @@
           "label": "White"
         }
       ],
-      "default": "red",
+      "default": "cocoa",
       "label": "Button color"
     },
     {

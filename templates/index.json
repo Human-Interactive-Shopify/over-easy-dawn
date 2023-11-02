@@ -6,12 +6,13 @@
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-0": {
           "type": "heading",
           "settings": {
-            "heading": "Clean Oatmeal Bars",
-            "heading_size": "medium"
+            "heading": "PURE SIMPLE EASY",
+            "heading_size": "default"
           }
         },
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-1": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Made With Real & Simple Ingredients"
           }
@@ -29,15 +30,14 @@
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-1",
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-2"
       ],
-      "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/OverEasy_Bars.jpg",
+        "image": "shopify:\/\/shop_images\/Peanut_Butter_Dark_Chocolate.png",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
-        "background_color_scheme": "white",
-        "button_color_scheme": "red",
-        "text_color_scheme": "black"
+        "background_color_scheme": "yellow",
+        "button_color_scheme": "cocoa",
+        "text_color_scheme": "white"
       }
     },
     "oe-hero-banner": {
@@ -68,6 +68,7 @@
         "9f31ef22-ad2a-4d6f-ab16-a7f0bb434bd6",
         "55e5f5f7-e248-43c1-920c-2bcd3e022d02"
       ],
+      "disabled": true,
       "custom_css": [
         ".banner__heading,.banner__text {text-shadow: 4px 4px 4px #0000001a;}"
       ],
@@ -83,7 +84,159 @@
         "mobile_content_alignment": "center",
         "content_size": "medium",
         "color_scheme": "white",
-        "button_color_scheme": "red"
+        "button_color_scheme": "cocoa"
+      }
+    },
+    "oe-ingredients": {
+      "type": "oe-ingredients",
+      "blocks": {
+        "037943ff-e6f2-4e31-9264-a51271ab8477": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "egg",
+            "heading": "CAGE-FREE EGG WHITES"
+          }
+        },
+        "e070b7a8-8707-47da-8b33-42d31fcaea9e": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "oats",
+            "heading": "ORGANIC<br>OATS"
+          }
+        },
+        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "glutten-free",
+            "heading": "GLUTEN<br>FREE"
+          }
+        },
+        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "soy-free",
+            "heading": "NO<br>SOY"
+          }
+        },
+        "d5d8f806-116e-42df-bed2-516e6faaee78": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "dairy-free",
+            "heading": "NO<br>DAIRY"
+          }
+        },
+        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d": {
+          "type": "ingredients",
+          "settings": {
+            "icon": "no-preservatives",
+            "heading": "NO PRESERVATIVES"
+          }
+        },
+        "96229dcb-86af-47fa-8c8d-28417e98b443": {
+          "type": "ingredients",
+          "disabled": true,
+          "settings": {
+            "icon": "no-palm-oil",
+            "heading": "NO<br>PALM OIL"
+          }
+        }
+      },
+      "block_order": [
+        "037943ff-e6f2-4e31-9264-a51271ab8477",
+        "e070b7a8-8707-47da-8b33-42d31fcaea9e",
+        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1",
+        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7",
+        "d5d8f806-116e-42df-bed2-516e6faaee78",
+        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d",
+        "96229dcb-86af-47fa-8c8d-28417e98b443"
+      ],
+      "settings": {
+        "headline": "Made With Pure & Simple Ingredients",
+        "background_color": "grey-100"
+      }
+    },
+    "oe-jumbotron": {
+      "type": "oe-jumbotron",
+      "blocks": {
+        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
+          "type": "heading",
+          "settings": {
+            "heading": "DELICIOUS NUTRITIOUS CLEAN",
+            "heading_size": "small"
+          }
+        },
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
+          "type": "text",
+          "settings": {
+            "text": "Over Easy's naturally delicious oat bars pack powerful nutrition to provide sustained energy that'll have you feelin' your oats all day long."
+          }
+        },
+        "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "disabled": true,
+          "settings": {
+            "text": "Gluten-Free Oats + Fiber Blend"
+          }
+        },
+        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "disabled": true,
+          "settings": {
+            "text": "Cage-Free Egg White Protein"
+          }
+        },
+        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "disabled": true,
+          "settings": {
+            "text": "Sustained Energy Without The Crash"
+          }
+        },
+        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193": {
+          "type": "list_item",
+          "disabled": true,
+          "settings": {
+            "text": "No Gluten, Dairy, or Soy"
+          }
+        },
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "LEARN MORE",
+            "button_link_1": "shopify:\/\/pages\/our-story"
+          }
+        },
+        "ba805c69-004b-47cb-a9f7-f9bd28410b5a": {
+          "type": "eye-catcher",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>25% OFF <\/strong><br\/>on shakes<\/p><p>right now!<\/p>",
+            "is_offset": false,
+            "position": "top-right",
+            "shape": "spikes",
+            "color": "red",
+            "text_color": "white"
+          }
+        }
+      },
+      "block_order": [
+        "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
+        "c59113f4-bd26-4777-8e39-c7b3feaf3193",
+        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
+        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
+        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
+        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81",
+        "ba805c69-004b-47cb-a9f7-f9bd28410b5a"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/BArs_5207549e-429a-41fc-b25c-08863ef34a22.png",
+        "form_id": "",
+        "desktop_content_position": "left",
+        "mobile_content_position": "bottom",
+        "background_color_scheme": "white",
+        "button_color_scheme": "cocoa",
+        "text_color_scheme": "black"
       }
     },
     "1661427940e35b089a": {
@@ -143,84 +296,41 @@
       "settings": {
       }
     },
-    "oe-jumbotron": {
-      "type": "oe-jumbotron",
+    "oe-featured-collections": {
+      "type": "oe-featured-collections",
       "blocks": {
-        "7cff6e7a-e90c-4fb9-9d42-476226636238": {
-          "type": "heading",
+        "d0937394-2916-4718-bf42-04d77c58060a": {
+          "type": "featured-collection",
           "settings": {
-            "heading": "Your Tastebuds Will Thank Us",
-            "heading_size": "small"
+            "collection": "breakfast-bars",
+            "bg_color": "#F2A900",
+            "button_label": "Shop now"
           }
         },
-        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
-          "type": "text",
+        "cc47b51b-9d1c-43fc-96ec-bcb30f596641": {
+          "type": "featured-collection",
           "settings": {
-            "text": "Made from wholesome and nutrient dense ingredients, our products have been designed to give your body exactly what it needs to start the day right, every morning."
+            "collection": "minis",
+            "bg_color": "#00B39A",
+            "button_label": "Shop now"
           }
         },
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
-          "type": "list_item",
+        "65b62c2d-2238-4120-8e65-ba4820b7ff28": {
+          "type": "featured-collection",
           "settings": {
-            "text": "Gluten-Free Oats + Fiber Blend"
-          }
-        },
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Cage-Free Egg White Protein"
-          }
-        },
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "Sustained Energy Without The Crash"
-          }
-        },
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "settings": {
-            "text": "No Gluten, Dairy, or Soy"
-          }
-        },
-        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "LEARN MORE",
-            "button_link_1": "shopify:\/\/pages\/our-story"
-          }
-        },
-        "ba805c69-004b-47cb-a9f7-f9bd28410b5a": {
-          "type": "eye-catcher",
-          "disabled": true,
-          "settings": {
-            "text": "<p><strong>25% OFF <\/strong><br\/>on shakes<\/p><p>right now!<\/p>",
-            "is_offset": false,
-            "position": "top-right",
-            "shape": "spikes",
-            "color": "red",
-            "text_color": "white"
+            "collection": "bundle-builder",
+            "bg_color": "#9C26C1",
+            "button_label": "Build now"
           }
         }
       },
       "block_order": [
-        "7cff6e7a-e90c-4fb9-9d42-476226636238",
-        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193",
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
-        "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81",
-        "ba805c69-004b-47cb-a9f7-f9bd28410b5a"
+        "d0937394-2916-4718-bf42-04d77c58060a",
+        "cc47b51b-9d1c-43fc-96ec-bcb30f596641",
+        "65b62c2d-2238-4120-8e65-ba4820b7ff28"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/OE-Taste.jpg",
-        "form_id": "",
-        "desktop_content_position": "left",
-        "mobile_content_position": "bottom",
-        "background_color_scheme": "white",
-        "button_color_scheme": "red",
-        "text_color_scheme": "black"
+        "headline": ""
       }
     },
     "oe-benefits": {
@@ -307,107 +417,6 @@
       "settings": {
       }
     },
-    "oe-featured-collections": {
-      "type": "oe-featured-collections",
-      "blocks": {
-        "d0937394-2916-4718-bf42-04d77c58060a": {
-          "type": "featured-collection",
-          "settings": {
-            "collection": "breakfast-bars",
-            "button_label": "Shop now"
-          }
-        },
-        "cc47b51b-9d1c-43fc-96ec-bcb30f596641": {
-          "type": "featured-collection",
-          "settings": {
-            "collection": "minis",
-            "button_label": "Shop now"
-          }
-        },
-        "65b62c2d-2238-4120-8e65-ba4820b7ff28": {
-          "type": "featured-collection",
-          "settings": {
-            "collection": "bundle-builder",
-            "button_label": "Build now"
-          }
-        }
-      },
-      "block_order": [
-        "d0937394-2916-4718-bf42-04d77c58060a",
-        "cc47b51b-9d1c-43fc-96ec-bcb30f596641",
-        "65b62c2d-2238-4120-8e65-ba4820b7ff28"
-      ],
-      "settings": {
-        "headline": ""
-      }
-    },
-    "oe-ingredients": {
-      "type": "oe-ingredients",
-      "blocks": {
-        "037943ff-e6f2-4e31-9264-a51271ab8477": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "egg",
-            "heading": "CAGE-FREE EGG WHITES"
-          }
-        },
-        "e070b7a8-8707-47da-8b33-42d31fcaea9e": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "oats",
-            "heading": "ORGANIC<br>OATS"
-          }
-        },
-        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "glutten-free",
-            "heading": "GLUTEN<br>FREE"
-          }
-        },
-        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "soy-free",
-            "heading": "NO<br>SOY"
-          }
-        },
-        "d5d8f806-116e-42df-bed2-516e6faaee78": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "dairy-free",
-            "heading": "NO<br>DAIRY"
-          }
-        },
-        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "no-preservatives",
-            "heading": "NO PRESERVATIVES"
-          }
-        },
-        "96229dcb-86af-47fa-8c8d-28417e98b443": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "no-palm-oil",
-            "heading": "NO<br>PALM OIL"
-          }
-        }
-      },
-      "block_order": [
-        "037943ff-e6f2-4e31-9264-a51271ab8477",
-        "e070b7a8-8707-47da-8b33-42d31fcaea9e",
-        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1",
-        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7",
-        "d5d8f806-116e-42df-bed2-516e6faaee78",
-        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d",
-        "96229dcb-86af-47fa-8c8d-28417e98b443"
-      ],
-      "settings": {
-        "headline": "Clean Ingredients. Made with Care.",
-        "background_color": "grey-100"
-      }
-    },
     "oe-testimonials": {
       "type": "oe-testimonials",
       "blocks": {
@@ -451,8 +460,8 @@
     "oe-featured_collection": {
       "type": "oe-featured-collection",
       "settings": {
-        "title": "Bestsellers",
-        "heading_size": "h0",
+        "title": "SHOP OUR BESTSELLERS",
+        "heading_size": "h3",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -473,8 +482,8 @@
         "enable_buy_it_now": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 28,
-        "padding_bottom": 32
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "1663281355fa8ec570": {
@@ -508,7 +517,7 @@
         "82bdc55b-0b95-4e13-bcd9-899321262b7a"
       ],
       "settings": {
-        "headline": "Over 1 Million Breakfasts Served",
+        "headline": "Don’t take it from us",
         "sub-headline": ""
       }
     },
@@ -571,6 +580,7 @@
     },
     "16636132874ba6f16e": {
       "type": "instafeed",
+      "disabled": true,
       "settings": {
         "heading_size": 28,
         "feed_width": 100,
@@ -581,12 +591,12 @@
   "order": [
     "d819cd7a-de30-40f9-a32f-3f5fd87c770e",
     "oe-hero-banner",
-    "1661427940e35b089a",
+    "oe-ingredients",
     "oe-jumbotron",
+    "1661427940e35b089a",
+    "oe-featured-collections",
     "oe-benefits",
     "1661427940e35b089b",
-    "oe-featured-collections",
-    "oe-ingredients",
     "oe-testimonials",
     "oe-featured_collection",
     "1663281355fa8ec570",

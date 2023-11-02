@@ -1,6 +1,6 @@
 <section class="Press section-{{ section.id }}" data-section-name="Sources">
   <div class="Press-wrapper">
-    <h2>&#9135;&#9135;&#9135;&#9135; &nbsp; As Seen On &nbsp; &#9135;&#9135;&#9135;&#9135;</h2>
+    {% comment %} <h2>&#9135;&#9135;&#9135;&#9135; &nbsp; As Seen On &nbsp; &#9135;&#9135;&#9135;&#9135;</h2> {% endcomment %}
     <div class="slider-custom-quotes Press-slider">
       {% for block in section.blocks %}
         <div class="Press-inner-wrap">
@@ -19,7 +19,6 @@
 
 <style>
   .Press {
-    background-color: var(--oe-color-grey-100);
     overflow-x: hidden;
   }
   .Press-wrapper {

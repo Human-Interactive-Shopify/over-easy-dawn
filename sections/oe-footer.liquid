@@ -19,8 +19,8 @@
     padding: 40px 0;
   }
 
-  .footer-color--red {
-    background-color: var(--oe-color-red);
+  .footer-color--yellow {
+    background-color: #FDB515;
   }
 
   .footer-color--white {
@@ -30,16 +30,16 @@
   .footer-color--black {
     background-color: var(--oe-color-black);
   }
-  .footer-color--red .footer__block--menu {
+  .footer-color--yellow .footer__block--menu {
     border-color: var(--oe-color-white);
   }
 
-  .footer-color--red .footer__block-heading,
-  .footer-color--red .footer__block-heading-wrapper svg ,
-  .footer-color--red .footer__social-list-link,
-  .footer-color--red .oe-checkbox__label,
-  .footer-color--red .newsletter-form__message,
-  .footer-color--red .footer__block-link-list-link {
+  .footer-color--yellow .footer__block-heading,
+  .footer-color--yellow .footer__block-heading-wrapper svg ,
+  .footer-color--yellow .footer__social-list-link,
+  .footer-color--yellow .oe-checkbox__label,
+  .footer-color--yellow .newsletter-form__message,
+  .footer-color--yellow .footer__block-link-list-link {
     color: var(--oe-color-white);
   }
   .footer-color--white .footer__block--menu {
@@ -92,7 +92,7 @@
 
   .footer__block-heading {
     margin: 0;
-    font-weight: 500;
+
     font-size: 18px;
     line-height: 23px;
     text-transform: uppercase;
@@ -104,8 +104,8 @@
   }
 
   .footer__block-newsletter .footer__block-heading {
-    font-weight: 500;
-    font-size: 25px;
+
+    font-size: 24px;
     line-height: 120%;
     margin-bottom: 16px;
     white-space: unset;
@@ -178,7 +178,7 @@
   @media screen and (min-width: 990px) {
     .footer {
       position: relative;
-      padding: 64px 0;
+      padding: 104px 0;
       overflow: hidden;
     }
 
@@ -212,7 +212,7 @@
     }
 
     .footer__block-newsletter .footer__block-heading {
-      font-size: 44px;
+      font-size: 28px;
     }
 
     .footer__block-heading-wrapper svg {
@@ -259,9 +259,36 @@
       transform: translate(-40%, 30%);
     }
   }
+
+  .custom-shape-divider-top-1698358020 {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1698358020 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 40px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1698358020 .shape-fill {
+    fill: #FFFFFF;
+}
 {%- endstyle -%}
 
 <footer class="footer footer-color--{{ section.settings.color_scheme }}">
+  <div class="custom-shape-divider-top-1698358020">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+    </svg>
+</div>
   {%- if template.name != 'index' -%}
   <div class="footer__gallery">
     {%- for block in section.blocks -%}
@@ -529,8 +556,8 @@
       "id": "color_scheme",
       "options": [
         {
-          "value": "red",
-          "label": "Red"
+          "value": "yellow",
+          "label": "Yellow"
         },
         {
           "value": "white",
@@ -541,7 +568,7 @@
           "label": "Black"
         }
       ],
-      "default": "red",
+      "default": "yellow",
       "label": "Background color"
     },
     {
