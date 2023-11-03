@@ -1,14 +1,14 @@
 .oe-product__section {
-  background-color: var(--oe-color-grey-100);
+  background-color: #F8F3E7;
   padding: 0 0 40px;
 }
 
 .oe-product__title {
-  font-weight: 500;
+  font-weight: 800;
   font-size: 20px;
   line-height: 140%;
   margin: 0;
-  color: var(--oe-color-black);
+  color: #593E41;
 }
 
 .oe-product__content {
@@ -41,6 +41,7 @@
   display: block;
   text-align: center;
   padding: 10px 12px;
+  border-radius: 8px;
   font-weight: 500;
   font-size: 12px;
   line-height: 160%;
@@ -88,7 +89,7 @@
 }
 
 .oe-product__variations-list-item.is-active {
-  background-color: var(--oe-color-red);
+  background-color: #FDB515;
   color: var(--oe-color-white);
   font-weight: 700;
 }
@@ -221,7 +222,7 @@
   font-size: 14px;
   line-height: 160%;
   text-transform: uppercase;
-  color: var(--oe-color-black);
+  color: #3A3A3A;
 }
 
 .oe-product__meta-item:not(:first-child) {
@@ -242,7 +243,7 @@
 }
 
 .oe-product__meta-item a {
-  color: var(--oe-color-black);
+  color: #3A3A3A;
 }
 
 .rating-count {
@@ -432,7 +433,7 @@
     font-size: 14px;
     line-height: 160%;
     text-transform: uppercase;
-    color: var(--oe-color-black);
+    color: #3A3A3A;
     display: flex;
     gap: 5px;
   }

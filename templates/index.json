@@ -94,42 +94,42 @@
           "type": "ingredients",
           "settings": {
             "icon": "egg",
-            "heading": "CAGE-FREE EGG WHITES"
+            "heading": "CINNAMON"
           }
         },
         "e070b7a8-8707-47da-8b33-42d31fcaea9e": {
           "type": "ingredients",
           "settings": {
             "icon": "oats",
-            "heading": "ORGANIC<br>OATS"
+            "heading": "OATS"
           }
         },
         "bd1cf9c3-d9c7-45a1-818d-97561a1981e1": {
           "type": "ingredients",
           "settings": {
             "icon": "glutten-free",
-            "heading": "GLUTEN<br>FREE"
+            "heading": "NUT BUTTER"
           }
         },
         "8ee23ecf-27d8-4496-a6f7-b046b799ebb7": {
           "type": "ingredients",
           "settings": {
             "icon": "soy-free",
-            "heading": "NO<br>SOY"
+            "heading": "VANILLA"
           }
         },
         "d5d8f806-116e-42df-bed2-516e6faaee78": {
           "type": "ingredients",
           "settings": {
             "icon": "dairy-free",
-            "heading": "NO<br>DAIRY"
+            "heading": "NUTS"
           }
         },
         "c9e77f48-f92c-49c0-aa1d-9954bedbc01d": {
           "type": "ingredients",
           "settings": {
             "icon": "no-preservatives",
-            "heading": "NO PRESERVATIVES"
+            "heading": "HONEY"
           }
         },
         "96229dcb-86af-47fa-8c8d-28417e98b443": {
@@ -162,7 +162,7 @@
           "type": "heading",
           "settings": {
             "heading": "DELICIOUS NUTRITIOUS CLEAN",
-            "heading_size": "small"
+            "heading_size": "medium"
           }
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
@@ -230,13 +230,13 @@
         "ba805c69-004b-47cb-a9f7-f9bd28410b5a"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/BArs_5207549e-429a-41fc-b25c-08863ef34a22.png",
+        "image": "shopify:\/\/shop_images\/Bars_c7fa572f-67e1-4d0e-9435-db2ca46ea2b4.png",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
-        "background_color_scheme": "white",
+        "background_color_scheme": "green",
         "button_color_scheme": "cocoa",
-        "text_color_scheme": "black"
+        "text_color_scheme": "white"
       }
     },
     "1661427940e35b089a": {

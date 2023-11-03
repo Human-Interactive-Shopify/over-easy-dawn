@@ -4,12 +4,14 @@
     <div class="slider-custom-quotes Press-slider">
       {% for block in section.blocks %}
         <div class="Press-inner-wrap">
+          <div class="Press-circle_bg">
           <div class="Press-text-wrap">
             <p class="text-center lg:text-left">{{ block.settings.text }}</p>
           </div>
           <div class="Press-img-wrap">
             <img width="240" height="80" loading="lazy" src="{{ block.settings.source_image | image_url: width: 500 }}">
           </div>
+        </div>
         </div>
       {% endfor %}
     </div>
@@ -53,6 +55,15 @@
     margin-right: 0;
   }
 
+  .Press-circle_bg {
+  height:160px;
+  width: 160px;
+  background-color: #F8F3E7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+  }
+
   .Press-img-wrap {
     width: 200px;
   }
@@ -69,9 +80,8 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    color: #3A3A3A;
-    
-    background: var(--oe-color-grey-100);
+    color: #593E41;
+    {% comment %} background: var(--oe-color-grey-100); {% endcomment %}
     width: 100%;
     height: 100%;
     display: flex;
@@ -99,17 +109,22 @@
       padding-bottom: 0;
       border: none;
     }
-    .Press-text-wrap {
-      margin-bottom: 0;
-      max-width: 280px;
-      margin-top: 0;
-      position:absolute;
-      font-size: 22px;
+    .Press-circle_bg:hover .Press-img-wrap {
       opacity:0;
+      transition: opacity 0.5s;
     }
-    .Press-text-wrap:hover {
+    .Press-circle_bg:hover .Press-text-wrap {
       opacity:1;
       transition: opacity 0.5s;
+    }
+    .Press-text-wrap {
+      margin-bottom: 0;
+      max-width: 160px;
+      margin-top: 0;
+      position:absolute;
+      font-size: 16px;
+      font-weight: 700;
+      opacity:0;
     }
   }
   .page-entry-offer .Press-wrapper {
