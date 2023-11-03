@@ -56,7 +56,7 @@
 
 .rating-star::before {
   content: '★★★★★';
-  background: #FB471F;
+  background: #FDB515;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

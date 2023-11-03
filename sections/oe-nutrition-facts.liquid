@@ -111,17 +111,17 @@
 
     .product-nutrition-facts {
         padding: 64px 0 64px 0;
-        background-color: #EEEEEE;
     }
     .product-nutrition-pack-heading {
         font-size: 36px;
-        font-weight: 400;
+        font-weight: 800;
         line-height: 1.2;
-        color: #171717;
+        color: #FFFFFF;
         letter-spacing: 0.05em;
         text-align: center;
         margin-bottom: 16px;
         margin-top: 0;
+        text-transform:uppercase;
       }
       .product-nutrition-pack-description {
         color: var(--text-dark-refresh);
@@ -148,7 +148,7 @@
         display: block;
         width: 22px;
         height: 2px;
-        background: #3A3A3A;
+        background: #FFFFFF;
       }
       .product-nutrition-pack-top {
         display: flex;
@@ -163,17 +163,17 @@
         flex-grow: 1;
       }
       .product-nutrition-pack-top-heading {
-        font-family: Roquefort;
-        color: #171717;
+        color: #FFFFFF;
         font-size: 18px;
-        font-weight: 400;
+        font-weight: 800;
         letter-spacing: .05em;
         line-height: 1.2;
         margin-bottom: .5rem;
       }
       .product-nutrition-pack-top-bags {
         font-size: 18px;
-        font-weight: 500;
+        color: #FFFFFF;
+        font-weight: 800;
         letter-spacing: .05em;
       }
       .product-nutrition-pack-top-image-wrap {
@@ -196,7 +196,7 @@
         display: block;
         width: 22px;
         height: 2px;
-        background: #3A3A3A;
+        background: #FFFFFF;
         position: absolute;
         transform: rotate(90deg) translateY(-1px);
         transform-origin: center;
@@ -226,25 +226,34 @@
       .product-nutrition-pack-main .nutrition-info-description {
         font-size: 14px;
         font-weight: 500;
-        color: #171717;
+        color: #FFFFFF;
       }
       .nutrition-info .nutrition-info-props {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-family: 'Druk';
+        color: #ffffff;
       }
       .nutrition-info .nutrition-info-props .m2-valprop-val {
         font-size: 28px;
         margin-bottom: .5rem;
         text-transform: lowercase;
+        font-family: 'Druk';
+        color: #ffffff;
       }
       .nutrition-info .nutrition-info-props .m2-valprop-name {
         font-size: 18px;
-        font-weight: normal;
+        font-weight: 400;
+        font-family: Acumin;
       }
       .nutrition-info .m2-valprop-el {
         margin-bottom: 0;
         text-align: center;
+        height: 120px;
+        width: 120px;
+        border: 1px solid #ffffff;
+        border-radius: 32px;
       }
       .page-product-shakes .nutrition-info .m2-valprop-el {
         align-self: flex-start;
@@ -330,7 +339,7 @@
         assign isBundleProduct = true
     endunless
   -%}
-<section class="product-nutrition-facts" id="product-nutrition">
+<section class="product-nutrition-facts" id="product-nutrition" style="background-color:{{product.metafields.custom.product_color}};">
     <div class="product-nutrition-inner container">
         <div class="product-nutrition-pack-intro">
         <h2 class="product-nutrition-pack-heading">Nutrition Facts</h2>

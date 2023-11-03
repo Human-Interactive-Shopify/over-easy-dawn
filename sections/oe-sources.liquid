@@ -59,9 +59,10 @@
   height:160px;
   width: 160px;
   background-color: #F8F3E7;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   }
 
   .Press-img-wrap {
@@ -87,6 +88,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  @media (max-width: 1279px) {
+    .Press {
+     background-color: #F8F3E7 ;
+    }
+    .Press-circle_bg {
+      height: 200px;
+      width: 200px;
+    }
   }
   @media (min-width: 1280px) {
 
@@ -116,6 +126,9 @@
     .Press-circle_bg:hover .Press-text-wrap {
       opacity:1;
       transition: opacity 0.5s;
+    }
+    .Press-circle_bg {
+      flex-direction: row;
     }
     .Press-text-wrap {
       margin-bottom: 0;
