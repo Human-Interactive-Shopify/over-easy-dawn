@@ -2,14 +2,15 @@
   "sections": {
     "oe-main-contact": {
       "type": "oe-main-contact",
-      "settings": {}
+      "settings": {
+        "show_general_service_contact": true,
+        "general_service_contact": "hello@overeasyfoods.com",
+        "show_wholesale_contact": true,
+        "wholesale_contact": "orders@overeasyfoods.com"
+      }
     },
     "oe-contact-form": {
       "type": "oe-contact-form",
-      "settings": {
-        "background_color": "orange",
-        "content_align": "flex-start"
-      },
       "blocks": {
         "form-heading": {
           "type": "heading",
@@ -20,7 +21,11 @@
       },
       "block_order": [
         "form-heading"
-      ]
+      ],
+      "settings": {
+        "background_color": "teal",
+        "content_align": "flex-start"
+      }
     }
   },
   "order": [

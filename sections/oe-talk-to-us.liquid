@@ -12,7 +12,8 @@
   }
 
   .oe-talk-to-us {
-    padding: 40px 0 0;
+    padding: 40px 0 40px;
+    position: relative;
   }
 
   .oe-talk-to-us__container {
@@ -23,10 +24,7 @@
 
   .oe-talk-to-us__media-wrapper {
     width: 100%;
-    position: relative;
-    padding-top: 64%;
     margin: 0;
-    border-radius: 5px;
     overflow: hidden;
   }
 
@@ -52,8 +50,7 @@
     align-items: center;
     position: relative;
     z-index: 2;
-    transform: translateY(-40px);
-    border-radius: 5px;
+    border-radius: 16px;
     padding: 40px 24px;
     background-color: var(--oe-color-white);
     text-align: center;
@@ -61,22 +58,22 @@
 
   .oe-talk-to-us__heading {
     margin: 0 0 12px;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 32px;
     line-height: 120%;
-    color: var(--oe-color-black);
+    color: var(--oe-color-cocoa);
   }
   
   .oe-talk-to-us__text {
     font-size: 14px;
     line-height: 160%;
-    color: var(--oe-color-black);
+    color: var(--oe-color-cocoa);
     margin: 0 0 24px;
   }
 
   @media screen and (min-width: 990px) {
     .oe-talk-to-us {
-      padding: 80px 0;
+      padding: 164px 0;
     }
 
     .oe-talk-to-us__container {
@@ -86,15 +83,12 @@
 
     .oe-talk-to-us__content {
       order: 1;
-      transform: translateX(80px);
       width: 500px;
-      padding: 64px 115px;
+      padding: 64px 64px;
     }
 
     .oe-talk-to-us__media-wrapper {
-      padding-top: calc(50% * 0.64);
-      width: 60%;
-      order: 2;
+      width: 100%;
     }
     
     .oe-talk-to-us__heading {
@@ -108,18 +102,18 @@
 {%- endstyle -%}
 
 <div class="oe-talk-to-us oe-talk-to-us-background--{{ section.settings.background_color_scheme }}">
+  {%- if section.settings.image != blank -%}
+    <div class="oe-talk-to-us__media-wrapper">
+      {{ section.settings.image | image_url: width: 1600 | image_tag:
+        loading: 'lazy',
+        width: 1600,
+        height: 648,
+        class: "oe-talk-to-us__media",
+        alt: section.settings.image.alt | escape
+      }}
+    </div>
+  {%- endif -%}
   <div class="oe-talk-to-us__container container">
-    {%- if section.settings.image != blank -%}
-      <div class="oe-talk-to-us__media-wrapper">
-        {{ section.settings.image | image_url: width: 1100 | image_tag:
-          loading: 'lazy',
-          width: 750,
-          height: 440,
-          class: "oe-talk-to-us__media",
-          alt: section.settings.image.alt | escape
-        }}
-      </div>
-    {%- endif -%}
     <div class="oe-talk-to-us__content">
       <h2 class="oe-talk-to-us__heading">{{ section.settings.heading | escape }}</h2>
       <p class="oe-talk-to-us__text">{{ section.settings.text | escape }}</p>

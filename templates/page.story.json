@@ -274,8 +274,8 @@
     "oe-talk-to-us": {
       "type": "oe-talk-to-us",
       "settings": {
-        "image": "shopify:\/\/shop_images\/7fb9f3476474be64ca2401849299c01e.jpg",
-        "heading": "Talk to Us",
+        "image": "shopify:\/\/shop_images\/Contact.jpg",
+        "heading": "TALK TO US",
         "text": "We’d love to hear from you!",
         "link": "shopify:\/\/pages\/contact-us",
         "background_color_scheme": "black"

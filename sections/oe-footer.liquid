@@ -256,7 +256,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      transform: translate(-40%, 30%);
+      transform: translate(-16%, 28%);
     }
   }
 
@@ -480,10 +480,10 @@
     {%- endif -%}
   </div>
   {%- if section.settings.footer_image != blank -%}
-    {{ section.settings.footer_image | image_url: width: 300 | image_tag:
+    {{ section.settings.footer_image | image_url: width: 206 | image_tag:
       loading: 'lazy',
       width: section.settings.image.width,
-      height: 300,
+      height: 206,
       class: "footer__image",
       alt: section.settings.image.alt | escape
     }}
