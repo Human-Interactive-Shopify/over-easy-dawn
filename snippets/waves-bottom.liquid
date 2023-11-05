@@ -1,5 +1,5 @@
 {%- style -%}
-.waves-bottom {
+.waves-bottom-{{ section.id }} {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -8,18 +8,18 @@
     line-height: 0;
 }
 
-.waves-bottom svg {
+.waves-bottom-{{ section.id }} svg {
     position: relative;
     display: block;
     height: 40px;
 }
 
-.waves-bottom .shape-fill {
+.waves-bottom-{{ section.id }} .shape-fill {
   fill: var(--oe-color-{{ section.settings.bottom_wave_color }});
 }
 {%- endstyle -%}
 
-<div class="waves-bottom">
+<div class="waves-bottom-{{ section.id }}">
   <svg width="2400" height="40" viewBox="0 0 2400 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_15_165)">
     <path d="M400 0C254.545 0 145.455 40 0 40H400V0Z" class="shape-fill"/>

@@ -1,27 +1,25 @@
 {%- style -%}
-.waves-top-{{ section.id }} {
+.waves-footer {
     position: absolute;
-    top: 0;
+    top: -40px;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg);
 }
 
-.waves-top-{{ section.id }} svg {
+.waves-footer svg {
     position: relative;
     display: block;
     height: 40px;
-    transform: rotateY(180deg);
 }
 
-.waves-top-{{ section.id }} .shape-fill {
-    fill: var(--oe-color-{{ section.settings.top_wave_color }});
+.waves-footer .shape-fill {
+  fill: var(--oe-color-yellow);
 }
 {%- endstyle -%}
 
-<div class="waves-top-{{ section.id }}">
+<div class="waves-footer">
   <svg width="2400" height="40" viewBox="0 0 2400 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_15_165)">
     <path d="M400 0C254.545 0 145.455 40 0 40H400V0Z" class="shape-fill"/>

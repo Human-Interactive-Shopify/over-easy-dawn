@@ -580,6 +580,10 @@
         "63312fa2-852f-42bb-8012-299cd60bd2c8"
       ],
       "settings": {
+        "show_top_wave": false,
+        "top_wave_color": "white",
+        "show_bottom_wave": true,
+        "bottom_wave_color": "yellow"
       }
     },
     "16636132874ba6f16e": {
