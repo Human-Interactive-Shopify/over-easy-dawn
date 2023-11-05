@@ -582,7 +582,7 @@
       "settings": {
         "show_top_wave": false,
         "top_wave_color": "white",
-        "show_bottom_wave": true,
+        "show_bottom_wave": false,
         "bottom_wave_color": "yellow"
       }
     },
