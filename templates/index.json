@@ -37,7 +37,11 @@
         "mobile_content_position": "bottom",
         "background_color_scheme": "yellow",
         "button_color_scheme": "cocoa",
-        "text_color_scheme": "white"
+        "text_color_scheme": "white",
+        "show_top_wave": false,
+        "top_wave_color": "white",
+        "show_bottom_wave": false,
+        "bottom_wave_color": "white"
       }
     },
     "oe-hero-banner": {
@@ -236,7 +240,11 @@
         "mobile_content_position": "bottom",
         "background_color_scheme": "green",
         "button_color_scheme": "cocoa",
-        "text_color_scheme": "white"
+        "text_color_scheme": "white",
+        "show_top_wave": true,
+        "top_wave_color": "white",
+        "show_bottom_wave": true,
+        "bottom_wave_color": "oat"
       }
     },
     "1661427940e35b089a": {
@@ -423,7 +431,7 @@
         "66dc171b-c8b1-44d6-bf0a-974a99e7839a": {
           "type": "testimonials",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cef37185be75484ffc422dd0a86d4ad0.jpg",
+            "image": "shopify:\/\/shop_images\/Adam.jpg",
             "text": "When I first tried Over Easy, I absolutely loved the taste and was surprised to look at how clean and simple the ingredients were... All of my teammates love the bars, too.",
             "name": "Adam Thielen",
             "position": "NFL Wide Receiver, MN Vikings"

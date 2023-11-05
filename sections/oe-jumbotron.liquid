@@ -1,5 +1,9 @@
 {%- style -%}
 
+.oe-jumbotron {
+  position: relative;
+}
+
   .oe-jumbotron-background--red {
     background-color: var(--oe-color-red);
   }
@@ -328,6 +332,9 @@
 {%- endstyle -%}
 
 <div class="oe-jumbotron oe-jumbotron-background--{{ section.settings.background_color_scheme }} oe-jumbotron-content-position--{{ section.settings.desktop_content_position }} oe-jumbotron-content-mobile-position--{{ section.settings.mobile_content_position }}" data-section-name="Jumbotron">
+  {% if section.settings.show_top_wave %}
+    {% render 'waves-top', wave_color: section.settings.top_wave_color %}
+   {% endif %}
   <div class="oe-jumbotron__container container">
     {%- if section.settings.image != blank -%}
       <div class="oe-jumbotron__media-wrapper">
@@ -389,6 +396,9 @@
     </div>
     {%- endif -%}
   </div>
+  {% if section.settings.show_bottom_wave %}
+    {% render 'waves-bottom', wave_color: section.settings.bottom_wave_color %}
+  {% endif %}
 </div>
 
 {% schema %}
@@ -500,6 +510,58 @@
       ],
       "default": "white",
       "label": "Content color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_top_wave",
+      "label": "Show top wave",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "top_wave_color",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "oat",
+          "label": "Oat"
+        },
+        {
+          "value": "yellow",
+          "label": "Yellow"
+        }
+      ],
+      "default": "white",
+      "label": "Top wave color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_wave",
+      "label": "Show bottom wave",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "bottom_wave_color",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "oat",
+          "label": "Oat"
+        },
+        {
+          "value": "yellow",
+          "label": "Yellow"
+        }
+      ],
+      "default": "white",
+      "label": "Bottom wave color"
     }
   ],
   "blocks": [
