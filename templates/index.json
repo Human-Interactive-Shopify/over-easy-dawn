@@ -156,7 +156,7 @@
       ],
       "settings": {
         "headline": "Made With Pure & Simple Ingredients",
-        "background_color": "grey-100"
+        "background_color": "white"
       }
     },
     "oe-jumbotron": {
@@ -244,7 +244,7 @@
         "show_top_wave": true,
         "top_wave_color": "white",
         "show_bottom_wave": true,
-        "bottom_wave_color": "oat"
+        "bottom_wave_color": "white"
       }
     },
     "1661427940e35b089a": {
