@@ -1,0 +1,38 @@
+{%- style -%}
+.waves-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.waves-bottom svg {
+    position: relative;
+    display: block;
+    height: 40px;
+}
+
+.waves-bottom .shape-fill {
+  fill: var(--oe-color-{{ section.settings.bottom_wave_color }});
+}
+{%- endstyle -%}
+
+<div class="waves-bottom">
+  <svg width="2400" height="40" viewBox="0 0 2400 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_15_165)">
+    <path d="M400 0C254.545 0 145.455 40 0 40H400V0Z" class="shape-fill"/>
+    <path d="M400 0C545.455 0 654.545 40 800 40H400V0Z" class="shape-fill"/>
+    <path d="M1200 0C1054.55 0 945.455 40 800 40H1200V0Z" class="shape-fill"/>
+    <path d="M1200 0C1345.45 0 1454.55 40 1600 40H1200V0Z" class="shape-fill"/>
+    <path d="M2000 0C1854.55 0 1745.45 40 1600 40H2000V0Z" class="shape-fill"/>
+    <path d="M2000 0C2145.45 0 2254.55 40 2400 40H2000V0Z" class="shape-fill"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_15_165">
+    <rect width="2400" height="40" class="shape-fill"/>
+    </clipPath>
+    </defs>
+  </svg>
+</div>
