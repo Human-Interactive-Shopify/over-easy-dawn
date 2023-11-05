@@ -39,6 +39,7 @@
         "mobile_font_size": 25,
         "max_width": 1300,
         "color_scheme": "cocoa",
+        "background_color_scheme": "white",
         "use_border": true
       }
     },
@@ -132,15 +133,19 @@
     },
     "oe-heading-2": {
       "type": "oe-heading",
+      "custom_css": [
+
+      ],
       "settings": {
-        "heading": "\"We believe that delicious and nutritious food with pure and simple ingredients is the foundation for a healthy and happy life.”",
+        "heading": "\"WE BELIEVE THAT DELICIOUS AND NUTRITIOUS FOOD WITH PURE AND SIMPLE INGREDIENTS IS THE FOUNDATION FOR A HEALTHY AND HAPPY LIFE.”",
         "desktop_align": "center",
         "mobile_align": "center",
         "level": 3,
         "desktop_font_size": 35,
         "mobile_font_size": 22,
-        "max_width": 1100,
+        "max_width": 920,
         "color_scheme": "cocoa",
+        "background_color_scheme": "oat",
         "use_border": false
       }
     },

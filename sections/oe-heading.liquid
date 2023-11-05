@@ -1,10 +1,11 @@
 {%- style -%}
-  .oe-heading-{{ section.id }} {
+  .oe-heading-{{ section.id }}  {
     color: var(--oe-color-{{ section.settings.color_scheme }});
     text-align: {{ section.settings.mobile_align }};
     font-size: {{ section.settings.mobile_font_size }}px;
     line-height: 1.2;
     margin: 0;
+
     {% if section.settings.use_border%}
       display: block;
       padding-bottom: 16px;
@@ -12,13 +13,13 @@
       {% endif %} 
   }
   
-  .oe-heading-{{ section.id }}__section {
+  .oe-heading-{{ section.id }}__section .container{
     max-width: {{ section.settings.max_width }}px;
     padding: 40px 0;
   }
 
   @media screen and (min-width: 990px) {
-    .oe-heading-{{ section.id }} {
+    .oe-heading-{{ section.id }}{
       text-align: {{ section.settings.desktop_align }};
       font-size: {{ section.settings.desktop_font_size }}px;
 
@@ -26,20 +27,47 @@
         padding-bottom: 32px;
       {% endif %}
     }
+
+    .oe-heading-{{ section.id }} {
+      {% if section.settings.use_border%}
+        padding-bottom: 32px;
+      {% endif %}
+    }
     
-    .oe-heading-{{ section.id }}__section {
+    .oe-heading-{{ section.id }}__section .container{
       max-width: {{ section.settings.max_width }}px;
       padding: 80px 0;
     }
 
     
   }
+  .oe-heading-background--white {
+    background-color: var(--oe-color-white);
+  }
+  .oe-heading-background--oat {
+    background-color: var(--oe-color-oat);
+  }
+
+  .oe-heading-background--yellow {
+    background-color: var(--oe-color-yellow);
+  }
+
+  .oe-heading-background--flamingo {
+    background-color: var(--oe-color-flamingo);
+  }
+
+  .oe-heading-background--purple {
+    background-color: var(--oe-color-purple);
+  }
 {%- endstyle -%}
 
-<section class="oe-heading-{{ section.id }}__section container">
-  <h{{ section.settings.level }} class="oe-heading-{{ section.id }}">
-    {{ section.settings.heading }}
-  </h{{ section.settings.level }}>
+<section class="oe-heading-{{ section.id }}__section oe-heading-background--{{ section.settings.background_color_scheme }}">
+  <div class="container"> 
+    <h{{ section.settings.level }} class="oe-heading-{{ section.id }}">
+      {{ section.settings.heading }}
+    </h{{ section.settings.level }}>
+  </div>
+
 </section>
 
 {% schema %}
@@ -154,6 +182,34 @@
       ],
       "default": "black",
       "label": "Color"
+    },
+    {
+      "type": "select",
+      "id": "background_color_scheme",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "oat",
+          "label": "Oat"
+        },
+        {
+          "value": "yellow",
+          "label": "Yellow"
+        },
+        {
+          "value": "flamingo",
+          "label": "Flamingo"
+        },
+        {
+          "value": "purple",
+          "label": "Purple"
+        }
+      ],
+      "default": "white",
+      "label": "Background color"
     },
     {
       "type": "checkbox",
