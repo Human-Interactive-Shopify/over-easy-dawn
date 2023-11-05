@@ -6,7 +6,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Our Story"
+            "heading": "OUR STORY"
           }
         }
       },
@@ -14,15 +14,16 @@
         "heading"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/def2f61ef9de7e06a383eac52e3778fb.jpg",
-        "use_overlay": true,
+        "image": "shopify:\/\/shop_images\/Family.jpg",
+        "use_overlay": false,
         "use_image_as_thumbnail": false,
         "use_video": false,
         "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/6bd87ee546254860ab0fab9106b33f13.mp4",
-        "desktop_content_position": "center",
+        "desktop_content_position": "bottom",
         "desktop_content_alignment": "center",
         "mobile_content_position": "center",
         "mobile_content_alignment": "center",
+        "content_size": "default",
         "color_scheme": "white",
         "button_color_scheme": "red"
       }
@@ -30,14 +31,14 @@
     "oe-heading-1": {
       "type": "oe-heading",
       "settings": {
-        "heading": "Welcome to Over Easy",
+        "heading": "WELCOME TO OVER EASY",
         "desktop_align": "left",
         "mobile_align": "left",
         "level": 2,
-        "desktop_font_size": 55,
+        "desktop_font_size": 48,
         "mobile_font_size": 25,
         "max_width": 1300,
-        "color_scheme": "black",
+        "color_scheme": "cocoa",
         "use_border": true
       }
     },
@@ -54,7 +55,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "As a former athlete and Army Captain, living a healthy and active life wasn’t just my passion, it was my job. But today, as a father, husband, and entrepreneur, I know full well that staying fit doesn’t always come easy. One day we feel like we have everything under control, then a couple late nights and skipped meals later, we’re picking up the pieces and starting over. Day 1, again and again."
+            "text": "As a former athlete and Army Captain, living a healthy and active life wasn’t just my passion, it was my job. But today, as a busy father, husband, and entrepreneur, I know that staying fit and eating healthy is tougher than it sounds. I started Over Easy to give families like mine and yours a healthy snack bar made from simple ingredients that truly tastes delicious."
           }
         }
       },
@@ -74,30 +75,23 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "It starts at breakfast",
+            "heading": "PURE & SIMPLE INGREDIENTS",
             "heading_size": "small"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Breakfast is more than just a meal - it’s the fuel that sets the tone for how we’re going to feel the rest of the day. But traditional breakfast foods are often loaded with sugar, artificial ingredients, and are little more than dessert in disguise."
-          }
-        },
-        "text-2": {
-          "type": "text",
-          "settings": {
-            "text": "That’s why we work with the best food scientists and dietitians to create healthy, convenient, and delicious breakfast foods built on functional and complete nutrition. A healthy start has never tasted so good."
+            "text": "Our soft and chewy oat bars are made from premium ingredients like organic gluten-free oats, all-natural nut butter, and protein from cage-free egg whites. They’re sweetened only with pure honey – no artificial sweeteners, oils, or gums. Everything you’d want in a delicious and nutritious snack bar, and nothing else."
           }
         }
       },
       "block_order": [
         "heading",
-        "text",
-        "text-2"
+        "text"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Breakfast.jpg",
+        "image": "shopify:\/\/shop_images\/BarCloseup.jpg",
         "desktop_content_position": "right",
         "mobile_content_position": "bottom"
       }
@@ -108,20 +102,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Healthy morning. Healthy life.",
+            "heading": "MADE TO FUEL YOUR DAY",
             "heading_size": "small"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "At Over Easy, we believe that good nutrition and healthy mornings are fundamental to a healthy and happy life, so we’re here to serve as the first step you take every morning on your personal wellness journey."
-          }
-        },
-        "text-2": {
-          "type": "text",
-          "settings": {
-            "text": "Whether you’re a 5am warrior or simply looking for a better morning routine, start here. Welcome to Over Easy."
+            "text": "At Over Easy, we believe that good food should fuel your body and put a smile on your face. So we’ve put years into perfecting our recipes with the best chefs, dietitians, and food scientists to give your body the nourishment it needs with a taste you’ll crave. Whether you’re looking for a boost of energy before a morning run or a convenient snack to beat the 2 pm slump, start here. And keep it easy."
           }
         },
         "text-3": {
@@ -134,11 +122,10 @@
       "block_order": [
         "heading",
         "text",
-        "text-2",
         "text-3"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Athletic.jpg",
+        "image": "shopify:\/\/shop_images\/FeelYourOats.jpg",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom"
       }
@@ -146,14 +133,14 @@
     "oe-heading-2": {
       "type": "oe-heading",
       "settings": {
-        "heading": "\"We believe that good nutrition and healthy mornings are fundamental to a healthy and happy life\"",
+        "heading": "\"We believe that delicious and nutritious food with pure and simple ingredients is the foundation for a healthy and happy life.”",
         "desktop_align": "center",
         "mobile_align": "center",
         "level": 3,
         "desktop_font_size": 35,
         "mobile_font_size": 22,
         "max_width": 1100,
-        "color_scheme": "red",
+        "color_scheme": "cocoa",
         "use_border": false
       }
     },
@@ -163,7 +150,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Made for everyone, trusted by the best.",
+            "heading": "MADE FOR EVERYONE, TRUSTED BY THE BEST.",
             "heading_size": "medium"
           }
         },
@@ -186,11 +173,11 @@
         "text-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/61c4b0fa36c20bc2e79e090b2681563e.jpg",
+        "image": "shopify:\/\/shop_images\/Player.jpg",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
-        "background_color_scheme": "red",
+        "background_color_scheme": "teal",
         "button_color_scheme": "red",
         "text_color_scheme": "white"
       }
@@ -201,22 +188,22 @@
         "box": {
           "type": "box",
           "settings": {
-            "heading": "Clean Ingredients",
-            "text": "All our products are made with clean and wholesome ingredients, and are free from artificial flavors, colors, and preservatives. We’re always dairy free, soy free, and gluten free. Only the best, every time."
+            "heading": "PURE & SIMPLE INGREDIENTS",
+            "text": "Our oat bars are made with pure and simple ingredients and are free from artificial flavors, colors, and preservatives. We’re always dairy free, soy free, and gluten free. Only the best, every time."
           }
         },
         "box-2": {
           "type": "box",
           "settings": {
-            "heading": "Complete Nutrition",
-            "text": "Everything you need to start your day, and nothing you don’t. Complex carbs for energy, clean protein for lean muscle, collagen for your hair, skin, and nails, and fiber and vitamins for gut and immunity support."
+            "heading": "POWERFUL NUTRITION",
+            "text": "Everything you need to start your day, and nothing you don’t. Complex carbs for energy, clean protein for lean muscle, and fiber for a healthy gut."
           }
         },
         "box-3": {
           "type": "box",
           "settings": {
-            "heading": "Delicious Taste",
-            "text": "Rule #1 - food is meant to be enjoyed, so we will never release a product that isn’t downright delicious. No protein grittiness, no weird aftertaste, nothing to “get used to.” Simply delicious, from the first taste to the last."
+            "heading": "DELICIOUS TASTE",
+            "text": "Rule #1 - food is meant to be enjoyed, so we’ll never make a product that isn’t downright delicious. No protein grittiness, no weird aftertaste, nothing to get used to. Simply delicious, from the first taste to the last."
           }
         }
       },
@@ -226,10 +213,10 @@
         "box-3"
       ],
       "settings": {
-        "main_headline": "You don’t take shortcuts. Neither do we.",
-        "text": "Real Food. Made with Purpose.",
-        "secondary_headline": "Start Fresh. Start Today.",
-        "button_page": "shopify:\/\/products\/strawberry-breakfast-shake"
+        "main_headline": "OUR PROMISE",
+        "text": "",
+        "secondary_headline": "LET'S GET CRACKING!",
+        "button_page": "shopify:\/\/products\/peanut-butter-breakfast-bar"
       }
     },
     "oe-team": {
