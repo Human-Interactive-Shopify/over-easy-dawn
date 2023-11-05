@@ -46,9 +46,20 @@
   .oe-why-over-easy__list-wrapper {
     display: flex;
   }
+
+  .oe-why-over-easy__list-item-background--yellow {
+    background-color: var(--oe-color-yellow);
+  }
+
+  .oe-why-over-easy__list-item-background--flamingo {
+    background-color: var(--oe-color-flamingo);
+  }
+
+  .oe-why-over-easy__list-item-background--purple {
+    background-color: var(--oe-color-purple);
+  }
   
   .oe-why-over-easy__list-item {
-    background-color: var(--oe-color-white);
     max-width: 90%;
     border-radius: 5px;
     text-decoration: none;
@@ -57,7 +68,6 @@
     margin: 0 12px;
     display: flex;
     flex-direction: column;
-    border-bottom: 10px solid #171717;
     box-shadow: 18px 51px 22px rgba(0, 0, 0, 0.01), 10px 29px 18px rgba(0, 0, 0, 0.05), 5px 13px 13px rgba(0, 0, 0, 0.09), 1px 3px 7px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
   }
@@ -71,18 +81,17 @@
   
   .oe-why-over-easy__list-item-text {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 160%;
-    color: var(--oe-color-copy);
+    color: var(--oe-color-white);
     margin: 0 0 24px;
   }
 
   .oe-why-over-easy__list-item-title {
-    text-align: center;
-    font-weight: 500;
-    font-size: 22px;
+    font-weight: 800;
+    font-size: 24px;
     line-height: 120%;
-    color: var(--oe-color-black);
+    color: var(--oe-color-white);
     margin: 0 0 40px;
   }
 
@@ -108,14 +117,14 @@
   
   @media screen and (min-width: 750px) {
     .oe-why-over-easy {
-      padding: 40px 0 75px;
+      padding: 100px 0 80px;
       
     }
 
     .oe-why-over-easy__title {
       font-size: 56px;
       line-height: 120%;
-      margin: 0 0 24px;
+      margin: 0 0 36px;
     }
     
     .oe-why-over-easy__text {
@@ -164,7 +173,7 @@
     }
 
     .oe-why-over-easy__list-item-title {
-      font-weight: 400;
+      font-weight: 800;
       font-size: 22px;
       line-height: 120%;
       margin: 0 0 16px;
@@ -188,13 +197,13 @@
     {%- if section.settings.text != blank -%}
       <p class="oe-why-over-easy__text">{{ section.settings.text }}</p>
     {%- endif -%}
-    <hr class="oe-why-over-easy__divider oe-why-over-easy__divider--small">
+    {% comment %} <hr class="oe-why-over-easy__divider oe-why-over-easy__divider--small"> {% endcomment %}
     <div class="oe-why-over-easy__list js-why-over-easy-slider">
       <div class="oe-why-over-easy__list-wrapper js-why-over-easy-slider-wrapper">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'box' -%}
-              <div class="oe-why-over-easy__list-item">
+              <div class="oe-why-over-easy__list-item oe-why-over-easy__list-item-background--{{ block.settings.background_color_scheme }}">
                 <div class="oe-why-over-easy__list-item-content">
                   <h3 class="oe-why-over-easy__list-item-title">{{ block.settings.heading }}</h3>
                   <p class="oe-why-over-easy__list-item-text">{{ block.settings.text }}</p>
@@ -278,6 +287,26 @@
           "id": "text",
           "default": "All our products are made with clean and wholesome ingredients, and are free from artificial flavors, colors, and preservatives.",
           "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "background_color_scheme",
+          "options": [
+            {
+              "value": "yellow",
+              "label": "Yellow"
+            },
+            {
+              "value": "flamingo",
+              "label": "Flamingo"
+            },
+            {
+              "value": "purple",
+              "label": "Purple"
+            }
+          ],
+          "default": "yellow",
+          "label": "Background color"
         }
       ]
     }

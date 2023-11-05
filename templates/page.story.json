@@ -189,21 +189,24 @@
           "type": "box",
           "settings": {
             "heading": "PURE & SIMPLE INGREDIENTS",
-            "text": "Our oat bars are made with pure and simple ingredients and are free from artificial flavors, colors, and preservatives. We’re always dairy free, soy free, and gluten free. Only the best, every time."
+            "text": "Our oat bars are made with pure and simple ingredients and are free from artificial flavors, colors, and preservatives. We’re always dairy free, soy free, and gluten free. Only the best, every time.",
+            "background_color_scheme": "yellow"
           }
         },
         "box-2": {
           "type": "box",
           "settings": {
             "heading": "POWERFUL NUTRITION",
-            "text": "Everything you need to start your day, and nothing you don’t. Complex carbs for energy, clean protein for lean muscle, and fiber for a healthy gut."
+            "text": "Everything you need to start your day, and nothing you don’t. Complex carbs for energy, clean protein for lean muscle, and fiber for a healthy gut.",
+            "background_color_scheme": "flamingo"
           }
         },
         "box-3": {
           "type": "box",
           "settings": {
             "heading": "DELICIOUS TASTE",
-            "text": "Rule #1 - food is meant to be enjoyed, so we’ll never make a product that isn’t downright delicious. No protein grittiness, no weird aftertaste, nothing to get used to. Simply delicious, from the first taste to the last."
+            "text": "Rule #1 - food is meant to be enjoyed, so we’ll never make a product that isn’t downright delicious. No protein grittiness, no weird aftertaste, nothing to get used to. Simply delicious, from the first taste to the last.",
+            "background_color_scheme": "purple"
           }
         }
       },
