@@ -1386,19 +1386,21 @@ button.shopify-payment-button__button--unbranded {
   justify-content: center;
   align-items: center;
   border: 0;
-  padding: 0 3rem;
+  padding: 1rem 8rem;
   cursor: pointer;
-  font: inherit;
-  font-size: 1.5rem;
+  font-family: 'Druk';
+  font-size: 3.6rem;
   text-decoration: none;
   color: rgb(var(--color-button-text));
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  border-radius: 8px;
+  background-color: var(--oe-color-cocoa);
+  text-transform: uppercase;
 }
 
-.shopify-challenge__button:before,
+/* .shopify-challenge__button:before,
 .customer button:before,
 .shopify-payment-button__button--unbranded:before,
 .shopify-payment-button [role="button"]:before,
@@ -1410,7 +1412,7 @@ button.shopify-payment-button__button--unbranded {
   bottom: 0;
   left: 0;
   z-index: -1;
-  border-radius: var(--buttons-radius-outset);
+  border-radius: 8px;
   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
 
@@ -1424,9 +1426,9 @@ button.shopify-payment-button__button--unbranded {
   bottom: var(--buttons-border-width);
   left: var(--buttons-border-width);
   z-index: 1;
-  border-radius: var(--buttons-radius);
+  border-radius: 8px;
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+    0 0 0 var(--buttons-border-width) var(--oe-color-cocoa);
   transition: box-shadow var(--duration-short) ease;
 }
 
@@ -1435,8 +1437,8 @@ button.shopify-payment-button__button--unbranded {
 .shopify-payment-button__button--unbranded:hover::after {
   --border-offset: 1.3px;
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
-}
+    0 0 0 calc(var(--buttons-border-width) + 1px) var(--oe-color-cocoa);
+} */
 
 .shopify-payment-button__button--unbranded:focus-visible,
 .shopify-payment-button [role="button"]:focus-visible,
@@ -1461,7 +1463,7 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 1.5rem;
+  font-size: 3.6rem;
   letter-spacing: 0.1rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }
@@ -1707,7 +1709,7 @@ details[open] > .share-button__fallback {
   min-height: calc(var(--inputs-border-width) * 2);
   min-width: calc(7rem + (var(--inputs-border-width) * 2));
   position: relative;
-  border: 0;
+  border: 1px solid #BDBDBD;
 }
 
 
@@ -1792,7 +1794,6 @@ details[open] > .share-button__fallback {
     font-size var(--duration-short) ease;
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0.1rem;
-  line-height: 1.5;
 }
 
 @media screen and (min-width: 750px) {
