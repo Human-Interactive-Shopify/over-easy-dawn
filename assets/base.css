@@ -2478,7 +2478,7 @@ details[open] .modal-overlay::after {
   width: 100vw;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--oe-color-red);
+  background-color: var(--oe-color-yellow);
 }
 
 @media screen and (min-width: 750px) {

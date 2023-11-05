@@ -6,7 +6,7 @@
 }
 
 .search__input {
-  padding: 18px 32px 14px var(--oe-search-left-offset);
+  padding: 14px 32px 14px var(--oe-search-left-offset);
   border: 1px solid var(--oe-color-grey-400);
   border-radius: 5px;
   width: 100%;
@@ -46,7 +46,7 @@
   position: absolute;
   top: 50%;
   left: var(--oe-search-left-offset);
-  transform: translateY(-50%);
+  transform: translateY(-40%);
   transition: transform 0.2s ease-in-out;
   transform-origin: top left;
   pointer-events: none;
