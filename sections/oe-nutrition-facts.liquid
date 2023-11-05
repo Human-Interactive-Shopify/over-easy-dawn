@@ -339,7 +339,7 @@
         assign isBundleProduct = true
     endunless
   -%}
-<section class="product-nutrition-facts" id="product-nutrition" style="background-color:{{product.metafields.custom.product_color}};">
+<section class="product-nutrition-facts" id="product-nutrition" style="background-color:{{product.metafields.custom.product_color}}; position: relative;">
     <div class="product-nutrition-inner container">
         <div class="product-nutrition-pack-intro">
         <h2 class="product-nutrition-pack-heading">Nutrition Facts</h2>
@@ -412,6 +412,7 @@
         });
         </script>
     </div>
+    {% render 'waves-nutrition' %}
 </section>
 
   {% schema %}

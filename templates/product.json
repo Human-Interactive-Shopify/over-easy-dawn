@@ -71,47 +71,6 @@
         "text_color_scheme": "black"
       }
     },
-    "16632686971a8b65e4": {
-      "type": "oe-customer-quotes",
-      "blocks": {
-        "b1afe1ab-5065-411e-afed-c907d6856b5b": {
-          "type": "quote",
-          "settings": {
-            "text": "\"I can confidently say that these are the best bars I've ever tried! Awesome product!\"",
-            "customer": "Emily P."
-          }
-        },
-        "cf879779-9667-414e-a98b-40a845c88911": {
-          "type": "quote",
-          "settings": {
-            "text": "\"These are VERY tasty and I absolutely love the ingredient makeup!\"",
-            "customer": "Erin S."
-          }
-        },
-        "324e6dd1-c3de-4e97-97cf-92c58f916ca4": {
-          "type": "quote",
-          "settings": {
-            "text": "\"As a dietician, I'm a huge fan of healthy carbs, especially whole grains like oats. They also taste delicious!\"",
-            "customer": "Adrienne D."
-          }
-        }
-      },
-      "block_order": [
-        "b1afe1ab-5065-411e-afed-c907d6856b5b",
-        "cf879779-9667-414e-a98b-40a845c88911",
-        "324e6dd1-c3de-4e97-97cf-92c58f916ca4"
-      ],
-      "settings": {
-        "headline": "DON'T TAKE IT FROM US",
-        "sub-headline": "",
-        "wave_color": "yellow"
-      }
-    },
-    "1663186300c28e5e47": {
-      "type": "oe-nutrition-facts",
-      "settings": {
-      }
-    },
     "oe-ingredients": {
       "type": "oe-ingredients",
       "blocks": {
@@ -179,6 +138,50 @@
         "background_color": "white"
       }
     },
+    "16632686971a8b65e4": {
+      "type": "oe-customer-quotes",
+      "blocks": {
+        "b1afe1ab-5065-411e-afed-c907d6856b5b": {
+          "type": "quote",
+          "settings": {
+            "text": "\"I can confidently say that these are the best bars I've ever tried! Awesome product!\"",
+            "customer": "Emily P."
+          }
+        },
+        "cf879779-9667-414e-a98b-40a845c88911": {
+          "type": "quote",
+          "settings": {
+            "text": "\"These are VERY tasty and I absolutely love the ingredient makeup!\"",
+            "customer": "Erin S."
+          }
+        },
+        "324e6dd1-c3de-4e97-97cf-92c58f916ca4": {
+          "type": "quote",
+          "settings": {
+            "text": "\"As a dietician, I'm a huge fan of healthy carbs, especially whole grains like oats. They also taste delicious!\"",
+            "customer": "Adrienne D."
+          }
+        }
+      },
+      "block_order": [
+        "b1afe1ab-5065-411e-afed-c907d6856b5b",
+        "cf879779-9667-414e-a98b-40a845c88911",
+        "324e6dd1-c3de-4e97-97cf-92c58f916ca4"
+      ],
+      "settings": {
+        "headline": "DON'T TAKE IT FROM US",
+        "sub-headline": "",
+        "show_top_wave": false,
+        "top_wave_color": "white",
+        "show_bottom_wave": false,
+        "bottom_wave_color": "white"
+      }
+    },
+    "1663186300c28e5e47": {
+      "type": "oe-nutrition-facts",
+      "settings": {
+      }
+    },
     "16631556027bfa8473": {
       "type": "oe-comparison-chart",
       "disabled": true,
@@ -200,9 +203,9 @@
   "order": [
     "main",
     "oe-jumbotron",
+    "oe-ingredients",
     "16632686971a8b65e4",
     "1663186300c28e5e47",
-    "oe-ingredients",
     "16631556027bfa8473",
     "16631570203f45fb2a"
   ]
