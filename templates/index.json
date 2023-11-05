@@ -518,7 +518,11 @@
       ],
       "settings": {
         "headline": "Don’t take it from us",
-        "sub-headline": ""
+        "sub-headline": "",
+        "show_top_wave": true,
+        "top_wave_color": "white",
+        "show_bottom_wave": true,
+        "bottom_wave_color": "white"
       }
     },
     "16614278019efa8d2e": {

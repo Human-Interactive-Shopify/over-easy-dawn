@@ -103,7 +103,8 @@
       ],
       "settings": {
         "headline": "DON'T TAKE IT FROM US",
-        "sub-headline": ""
+        "sub-headline": "",
+        "wave_color": "yellow"
       }
     },
     "1663186300c28e5e47": {
