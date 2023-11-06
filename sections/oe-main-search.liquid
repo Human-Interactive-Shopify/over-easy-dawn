@@ -365,7 +365,7 @@
         </div>
         <div class="template-search__related js-related section-{{ section.id }}">
           <h3 class="template-search__related-title">Suggested</h3>
-          <div class="template-search__related-tabs js-related-tabs">
+          {% comment %} <div class="template-search__related-tabs js-related-tabs">
             {% if section.settings.show_latest_products %}
               <button class="template-search__related-tab js-related-tab" data-tab-id="search-latest-products">
                 Products
@@ -381,7 +381,7 @@
                 Blog
               </button>
             {% endif %}
-          </div>
+          </div> {% endcomment %}
           {% if section.settings.show_latest_products %}
             <div id="search-latest-products" class="template-search__related-list-wrapper template-search__related-list-wrapper--tabs is-active js-latest-product-slider">
               <div class="template-search__related-list">
