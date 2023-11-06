@@ -134,6 +134,7 @@
           },
           "6f9d4f89-aa20-42df-9e99-6b23b188d4d7": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "All orders are now completed on Amazon to provide easier shopping and faster shipping!",
               "text_alignment": "center",
