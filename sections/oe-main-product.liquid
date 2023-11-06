@@ -46,7 +46,12 @@
       <ul class="oe-product__mobile-links-list">
         {%- for childLink in section.settings.mobile_links.links -%}
           <li>
+            {%- if childLink.type == 'collection_link' -%}
+              {% assign firstProduct = collections[childLink.object.handle].products | first %}
+                <a href="{{ firstProduct.url }}" class="oe-product__mobile-link {% if childLink.current %} oe-product__mobile-link--active{% endif %}">
+           {%- else -%}
             <a href="{{ childLink.url }}" class="oe-product__mobile-link {% if childLink.current %} oe-product__mobile-link--active{% endif %}">
+           {%- endif -%}
               <div class="oe-product__mobile-link-image-wrapper">
                 {%- if childLink.type == 'collection_link' or childLink.type == 'article_link' -%}
                   {%- if childLink.object.image != blank -%}
