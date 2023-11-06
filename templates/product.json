@@ -18,36 +18,41 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Your Tastebuds Will Thank Us",
-            "heading_size": "small"
+            "heading": "Made with pure & simple ingredients",
+            "heading_size": "medium"
           }
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Made from wholesome and nutrient dense ingredients, our products have been designed to give your body exactly what it needs to start the day right, every morning."
           }
         },
         "list-item-1": {
           "type": "list_item",
+          "disabled": true,
           "settings": {
             "text": "Organic Oats & Fiber Blend"
           }
         },
         "list-item-2": {
           "type": "list_item",
+          "disabled": true,
           "settings": {
             "text": "Cage-Free Egg White Protein"
           }
         },
         "list-item-3": {
           "type": "list_item",
+          "disabled": true,
           "settings": {
             "text": "Sustained Energy Without The Crash"
           }
         },
         "list-item-4": {
           "type": "list_item",
+          "disabled": true,
           "settings": {
             "text": "No Gluten, Dairy, or Soy"
           }
@@ -62,17 +67,17 @@
         "list-item-4"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/OE-Taste.jpg",
+        "image": "shopify:\/\/shop_images\/3Bars_slim3.jpg",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
         "button_color_scheme": "red",
-        "text_color_scheme": "black",
-        "show_top_wave": false,
-        "top_wave_color": "white",
-        "show_bottom_wave": false,
-        "bottom_wave_color": "white"
+        "text_color_scheme": "cocoa",
+        "show_top_wave": true,
+        "top_wave_color": "oat",
+        "show_bottom_wave": true,
+        "bottom_wave_color": "oat"
       }
     },
     "oe-ingredients": {
@@ -137,6 +142,7 @@
         "c9e77f48-f92c-49c0-aa1d-9954bedbc01d",
         "96229dcb-86af-47fa-8c8d-28417e98b443"
       ],
+      "disabled": true,
       "settings": {
         "headline": "Clean Ingredients. Made with Care.",
         "background_color": "white"
