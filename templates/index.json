@@ -155,43 +155,21 @@
       "blocks": {
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "DELICIOUS NUTRITIOUS CLEAN",
             "heading_size": "medium"
+          }
+        },
+        "2b0e34ad-5e8a-4a6d-89cd-c5cda0a25715": {
+          "type": "wavy_headline",
+          "settings": {
           }
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
           "settings": {
             "text": "Over Easy's naturally delicious oat bars pack powerful nutrition to provide sustained energy that'll have you feelin' your oats all day long."
-          }
-        },
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "disabled": true,
-          "settings": {
-            "text": "Gluten-Free Oats + Fiber Blend"
-          }
-        },
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "disabled": true,
-          "settings": {
-            "text": "Cage-Free Egg White Protein"
-          }
-        },
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "disabled": true,
-          "settings": {
-            "text": "Sustained Energy Without The Crash"
-          }
-        },
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "disabled": true,
-          "settings": {
-            "text": "No Gluten, Dairy, or Soy"
           }
         },
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
@@ -216,13 +194,14 @@
       },
       "block_order": [
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "2b0e34ad-5e8a-4a6d-89cd-c5cda0a25715",
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193",
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81",
         "ba805c69-004b-47cb-a9f7-f9bd28410b5a"
+      ],
+      "custom_css": [
+        ".oe-jumbotron__content .button {margin-bottom: 4rem;}",
+        ".oe-jumbotron__media {z-index: 20;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Bars_c7fa572f-67e1-4d0e-9435-db2ca46ea2b4.png",

@@ -328,6 +328,9 @@
     .oe-jumbotron-content-position--right .oe-jumbotron__klaviyo-wrapper {
       order: 1;
     }
+    .oe-jumbotron-wavy {
+    margin: 40px 0;
+  }
   }
 
   .oe-jumbotron-ingredients__list {
@@ -350,6 +353,13 @@
 
   .oe-jumbotron-ingredients__list-item-title {
 
+  }
+
+  .oe-jumbotron-wavy {
+    margin: 20px 0;
+  }
+  .oe-jumbotron-wavy svg {
+    width: 100%;
   }
 {%- endstyle -%}
 
@@ -404,6 +414,8 @@
               <p class="oe-jumbotron__text">{{ block.settings.text | escape }}</p>
             {%- when 'list_item' -%}
               <div class="oe-jumbotron__list-item">{% render 'icon-list-item' %}{{ block.settings.text | escape }}</div>
+            {%- when 'wavy_headline' -%}
+              <div class="oe-jumbotron-wavy">{% render 'wavy-headline' %}</div>
             {%- when 'ingredients' -%}
               <div class="oe-jumbotron-ingredients__list">
 
@@ -700,6 +712,10 @@
     {
       "type": "ingredients",
       "name": "Ingredients"
+    },
+    {
+      "type": "wavy_headline",
+      "name": "Wavy headline"
     },
     {
       "type": "buttons",
