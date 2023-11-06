@@ -329,6 +329,28 @@
       order: 1;
     }
   }
+
+  .oe-jumbotron-ingredients__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .oe-jumbotron-ingredients__list-item {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .oe-jumbotron-ingredients__list-item-icon {
+    width:80px;
+  }
+
+  .oe-jumbotron-ingredients__list-item-title {
+
+  }
 {%- endstyle -%}
 
 <div class="oe-jumbotron oe-jumbotron-background--{{ section.settings.background_color_scheme }} oe-jumbotron-content-position--{{ section.settings.desktop_content_position }} oe-jumbotron-content-mobile-position--{{ section.settings.mobile_content_position }}" data-section-name="Jumbotron">
@@ -382,6 +404,59 @@
               <p class="oe-jumbotron__text">{{ block.settings.text | escape }}</p>
             {%- when 'list_item' -%}
               <div class="oe-jumbotron__list-item">{% render 'icon-list-item' %}{{ block.settings.text | escape }}</div>
+            {%- when 'ingredients' -%}
+              <div class="oe-jumbotron-ingredients__list">
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-egg' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">CAGE-FREE EGG WHITES</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-oats' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">ORGANIC OATS</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-glutten-free' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">GLUTEN<br>FREE</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-soy-free' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">SOY<br>FREE</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-dairy-free' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">DAIRY<br>FREE</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-no-preservatives' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">NO PRESERVATIVES</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-no-palm-oil' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title"> NO SEED<br>OILS</span>
+                  </div>
+
+              </div>
             {%- when 'buttons' -%}
               {%- if block.settings.button_label_1 != blank -%}
                 {% render 'button', href: block.settings.button_link_1 , variation: 'primary', color: section.settings.button_color_scheme , size: 'big', label: block.settings.button_label_1 %}
@@ -621,6 +696,10 @@
           "label": "Text"
         }
       ]
+    },
+    {
+      "type": "ingredients",
+      "name": "Ingredients"
     },
     {
       "type": "buttons",

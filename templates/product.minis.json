@@ -21,10 +21,16 @@
             "heading": "Made with pure & simple ingredients",
             "heading_size": "small"
           }
+        },
+        "4c59410c-f6e1-4b7e-8d68-ee342afae201": {
+          "type": "ingredients",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "7cff6e7a-e90c-4fb9-9d42-476226636238"
+        "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "4c59410c-f6e1-4b7e-8d68-ee342afae201"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/3Bars_slim3.jpg",
@@ -146,7 +152,6 @@
         "c9e77f48-f92c-49c0-aa1d-9954bedbc01d",
         "96229dcb-86af-47fa-8c8d-28417e98b443"
       ],
-      "disabled": true,
       "settings": {
         "headline": "Clean Ingredients. Made with Care.",
         "background_color": "white"

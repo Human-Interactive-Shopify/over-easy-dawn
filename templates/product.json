@@ -22,6 +22,11 @@
             "heading_size": "medium"
           }
         },
+        "cbac0899-11d5-43d3-9b10-e5ee8f25f0d6": {
+          "type": "ingredients",
+          "settings": {
+          }
+        },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
           "disabled": true,
@@ -60,6 +65,7 @@
       },
       "block_order": [
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "cbac0899-11d5-43d3-9b10-e5ee8f25f0d6",
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
         "list-item-1",
         "list-item-2",
