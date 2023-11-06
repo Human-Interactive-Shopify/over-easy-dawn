@@ -164,7 +164,7 @@
           "type": "heading",
           "settings": {
             "heading": "MADE FOR EVERYONE, TRUSTED BY THE BEST.",
-            "heading_size": "medium"
+            "heading_size": "small"
           }
         },
         "text": {
@@ -176,7 +176,7 @@
         "text-2": {
           "type": "text",
           "settings": {
-            "text": "Today, we are committed to helping everyone enjoy a better start to their day through delicious and complete nutrition breakfast foods."
+            "text": "Today, we are committed to helping everyone enjoy a better start to their day through delicious oat bars made with pure and simple ingredients."
           }
         }
       },
@@ -185,8 +185,11 @@
         "text",
         "text-2"
       ],
+      "custom_css": [
+        ".oe-jumbotron__content {text-align: left;}"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Player.jpg",
+        "image": "shopify:\/\/shop_images\/Adam_Story.jpg",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
