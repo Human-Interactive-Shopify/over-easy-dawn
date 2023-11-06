@@ -1,0 +1,198 @@
+{%- style -%}
+
+  .oe-ingredients {
+    background-color: var(--oe-ingredients-background-color, --oe-color-grey-100);
+    padding: 72px 0 24px 0;
+  }
+  
+  .oe-ingredients__container {
+    padding: 0;
+  }
+
+  .oe-ingredients__title {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    line-height: 120%;
+    padding-bottom: 34px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  /* .oe-ingredients__title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background-color: var(--oe-color-grey-400);
+  } */
+
+  .oe-ingredients__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .oe-ingredients__list-item {
+    width: 33%;
+    padding: 24px 12px;
+  }
+  
+  .oe-ingredients__list-item-img img {
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .oe-ingredients__list-item-title {
+    color: #593E41;
+    text-align: center;
+    margin: 8px 0 0;
+    font-weight:700;
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .oe-ingredients__list-item:nth-of-type(7) {
+    display: none;
+  }
+  
+  @media screen and (min-width: 750px) {
+    .oe-ingredients {
+      
+    }
+
+    .oe-ingredients__title {
+      font-size: 35px;
+      line-height: 120%;
+      background-color: var(--oe-ingredients-background-color, --oe-color-grey-100);
+      margin-bottom: 8px;
+      padding-bottom: 0;
+    }
+    
+    .oe-ingredients__title span {
+      background-color: var(--oe-ingredients-background-color, --oe-color-grey-100);
+      position: relative;
+      z-index: 2;
+      padding: 0 48px;
+    }
+    
+    /* .oe-ingredients__title::before {
+      width: 100%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    } */
+
+    .oe-ingredients__list-item {
+      width: calc(100% / 8);
+      padding: 32px 12px;
+    }
+
+    .oe-ingredients__list-item:nth-of-type(7) {
+      display: block;
+    }
+
+    .oe-ingredients__list-item-title {
+      font-size: 20px;
+      line-height: 160%;
+      text-transform: uppercase;
+      margin: 16px 0 0;
+    }
+  }
+{%- endstyle -%}
+
+<div class="oe-ingredients" id="product-ingredients" data-section-name="Ingredients">
+  <style>
+    .oe-ingredients {
+      --oe-ingredients-background-color: var(--oe-color-{{ section.settings.background_color }});
+    }
+  </style>
+  <div class="oe-ingredients__container container">
+    {%- if section.settings.headline != blank -%}
+    <h3 class="oe-ingredients__title"><span>{{ section.settings.headline }}</span></h3>
+    <div class="oe-ingredients__list">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'ingredients' -%}
+            <div class="oe-ingredients__list-item">
+              <div class="oe-ingredients__list-item-img">
+                {{ block.settings.ingredient_image.src | image_url: width: 360 | image_tag:
+                  loading: 'lazy',
+                  width: block.settings.ingredient_image.width,
+                  height: block.settings.ingredient_image.height,
+                  alt: block.settings.collection.image.alt | escape
+                }}
+              </div>
+              <p class="oe-ingredients__list-item-title">{{ block.settings.heading }}</p>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "OE Ingredients Img",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "default": "Only the Best Ingredients",
+      "label": "Headline"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "grey-100",
+          "label": "Grey"
+        }
+      ],
+      "default": "grey-100",
+      "label": "Section background color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredients",
+      "name": "Ingredients",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "ingredient_image",
+          "label": "Ingredient Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Ingredient",
+          "label": "Heading"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "OE Ingredients Img",
+      "blocks": [
+        {
+          "type": "ingredients"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
