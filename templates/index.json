@@ -202,7 +202,7 @@
       "custom_css": [
         ".oe-jumbotron__content .button {margin-bottom: 4rem;}",
         ".oe-jumbotron__media {z-index: 20; transform: scale(1.2);}",
-        ".oe-jumbotron__container {overflow: visible;}"
+        "@media screen and (max-width: 749px) {.oe-jumbotron__media {transform: scale(1.2) translateY(24px); }}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/OE_Bars_-_Shadow.png",
