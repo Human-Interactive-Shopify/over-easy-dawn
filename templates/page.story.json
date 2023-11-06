@@ -40,7 +40,11 @@
         "max_width": 1300,
         "color_scheme": "cocoa",
         "background_color_scheme": "white",
-        "use_border": true
+        "use_border": true,
+        "show_top_wave": false,
+        "top_wave_color": "white",
+        "show_bottom_wave": false,
+        "bottom_wave_color": "white"
       }
     },
     "oe-text-image-1": {
@@ -146,7 +150,11 @@
         "max_width": 920,
         "color_scheme": "cocoa",
         "background_color_scheme": "oat",
-        "use_border": false
+        "use_border": false,
+        "show_top_wave": true,
+        "top_wave_color": "white",
+        "show_bottom_wave": false,
+        "bottom_wave_color": "yellow"
       }
     },
     "oe-jumbotron": {
@@ -184,7 +192,11 @@
         "mobile_content_position": "bottom",
         "background_color_scheme": "teal",
         "button_color_scheme": "red",
-        "text_color_scheme": "white"
+        "text_color_scheme": "white",
+        "show_top_wave": false,
+        "top_wave_color": "white",
+        "show_bottom_wave": false,
+        "bottom_wave_color": "white"
       }
     },
     "oe-why-over-easy": {

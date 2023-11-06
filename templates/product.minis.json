@@ -68,7 +68,11 @@
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
         "button_color_scheme": "red",
-        "text_color_scheme": "black"
+        "text_color_scheme": "black",
+        "show_top_wave": false,
+        "top_wave_color": "white",
+        "show_bottom_wave": false,
+        "bottom_wave_color": "white"
       }
     },
     "16632686971a8b65e4": {
@@ -102,12 +106,12 @@
         "324e6dd1-c3de-4e97-97cf-92c58f916ca4"
       ],
       "settings": {
-        "headline": "Over 1 Million breakfasts served",
+        "headline": "DON'T TAKE IT FROM US",
         "sub-headline": "",
         "show_top_wave": false,
         "top_wave_color": "white",
         "show_bottom_wave": false,
-        "bottom_wave_color": "white"
+        "bottom_wave_color": "yellow"
       }
     },
     "1663186300c28e5e47": {
@@ -193,6 +197,15 @@
         "cta_text": ""
       }
     },
+    "56a42cf9-79dd-4399-bc3e-e47addb63434": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- style -%}\n.oe-value-builder {\n  padding: 12px 24px;\n  background-color: var(--oe-color-yellow);\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n\n.oe-value-builder__message {\n  color: var(--oe-color-white);\n  font-size: 14px;\n  line-height: 160%;\n  text-align: center;\n}\n\n@media screen and (min-width: 750px) {\n  .oe-value-builder {\n    padding: 12px 24px;\n  }  \n\n}\n{%- endstyle -%}\n\n<section id=\"{{ id }}\" class=\"oe-value-builder\">\n    <p class=\"oe-value-builder__message\">\n      <a href=\"\/products\/pick-your-own-bundle\" style=\"display:block; text-transform:uppercase; color:#FFFFFF; font-weight: 700;\">Save up to 25% with bundles &#8594;<\/a>\n    <\/p>\n<\/section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "16631570203f45fb2a": {
       "type": "oe-reviews",
       "settings": {
@@ -207,6 +220,7 @@
     "1663186300c28e5e47",
     "oe-ingredients",
     "16631556027bfa8473",
+    "56a42cf9-79dd-4399-bc3e-e47addb63434",
     "16631570203f45fb2a"
   ]
 }

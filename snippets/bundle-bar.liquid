@@ -1,4 +1,27 @@
-{{ 'component-value-builder.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+.oe-value-builder {
+  padding: 12px 24px;
+  background-color: var(--oe-color-oat);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.oe-value-builder__message {
+  color: var(--oe-color-white);
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+}
+
+@media screen and (min-width: 750px) {
+  .oe-value-builder {
+    padding: 12px 24px;
+  }  
+
+}
+{%- endstyle -%}
 
 <section id="{{ id }}" class="oe-value-builder">
     <p class="oe-value-builder__message">

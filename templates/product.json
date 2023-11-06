@@ -68,7 +68,11 @@
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
         "button_color_scheme": "red",
-        "text_color_scheme": "black"
+        "text_color_scheme": "black",
+        "show_top_wave": false,
+        "top_wave_color": "white",
+        "show_bottom_wave": false,
+        "bottom_wave_color": "white"
       }
     },
     "oe-ingredients": {
@@ -182,6 +186,15 @@
       "settings": {
       }
     },
+    "113b4bb6-08e1-4bd5-8538-5ffcfdfa745d": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- style -%}\n.oe-value-builder {\n  padding: 12px 24px;\n  background-color: var(--oe-color-oat);\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n\n.oe-value-builder__message {\n  color: var(--oe-color-white);\n  font-size: 14px;\n  line-height: 160%;\n  text-align: center;\n}\n\n@media screen and (min-width: 750px) {\n  .oe-value-builder {\n    padding: 12px 24px;\n  }  \n\n}\n{%- endstyle -%}\n\n<section id=\"{{ id }}\" class=\"oe-value-builder\">\n    <p class=\"oe-value-builder__message\">\n      <a href=\"\/products\/pick-your-own-bundle\" style=\"display:block; text-transform:uppercase; color:#593e41; font-weight: 700;\">Save up to 25% with bundles &#8594;<\/a>\n    <\/p>\n<\/section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "16631556027bfa8473": {
       "type": "oe-comparison-chart",
       "disabled": true,
@@ -206,6 +219,7 @@
     "oe-ingredients",
     "16632686971a8b65e4",
     "1663186300c28e5e47",
+    "113b4bb6-08e1-4bd5-8538-5ffcfdfa745d",
     "16631556027bfa8473",
     "16631570203f45fb2a"
   ]

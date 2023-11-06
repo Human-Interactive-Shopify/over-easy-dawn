@@ -1,10 +1,11 @@
 {%- style -%}
-  .oe-heading-{{ section.id }}  {
+  .oe-heading-{{ section.id }}__section  {
     color: var(--oe-color-{{ section.settings.color_scheme }});
     text-align: {{ section.settings.mobile_align }};
     font-size: {{ section.settings.mobile_font_size }}px;
     line-height: 1.2;
     margin: 0;
+    position: relative;
 
     {% if section.settings.use_border%}
       display: block;
@@ -62,12 +63,17 @@
 {%- endstyle -%}
 
 <section class="oe-heading-{{ section.id }}__section oe-heading-background--{{ section.settings.background_color_scheme }}">
+  {% if section.settings.show_top_wave %}
+    {% render 'waves-top', wave_color: section.settings.top_wave_color %}
+   {% endif %}
   <div class="container"> 
     <h{{ section.settings.level }} class="oe-heading-{{ section.id }}">
       {{ section.settings.heading }}
     </h{{ section.settings.level }}>
   </div>
-
+  {% if section.settings.show_bottom_wave %}
+    {% render 'waves-bottom', wave_color: section.settings.bottom_wave_color %}
+  {% endif %}
 </section>
 
 {% schema %}
@@ -216,6 +222,58 @@
       "id": "use_border",
       "label": "Show border",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_top_wave",
+      "label": "Show top wave",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "top_wave_color",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "oat",
+          "label": "Oat"
+        },
+        {
+          "value": "yellow",
+          "label": "Yellow"
+        }
+      ],
+      "default": "white",
+      "label": "Top wave color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_wave",
+      "label": "Show bottom wave",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "bottom_wave_color",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "oat",
+          "label": "Oat"
+        },
+        {
+          "value": "yellow",
+          "label": "Yellow"
+        }
+      ],
+      "default": "white",
+      "label": "Bottom wave color"
     }
   ],
   "presets": [
