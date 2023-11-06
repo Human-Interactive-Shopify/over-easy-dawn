@@ -221,15 +221,9 @@
     "1661427940e35b089a": {
       "type": "oe-sources",
       "blocks": {
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/FirstTake_c7cb4148-59c8-4290-a399-379dd7a8920b.png",
-            "text": "First Take talk show"
-          }
-        },
         "ecb02dc7-d49e-49c8-8ff8-125d1ac97835": {
           "type": "source",
+          "disabled": true,
           "settings": {
             "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
             "text": "\"Top Pick - Best Breakfast Bars 2022\""
@@ -237,6 +231,7 @@
         },
         "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
           "type": "source",
+          "disabled": true,
           "settings": {
             "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
             "text": "\"Helping to make breakfast easy\""
@@ -244,9 +239,17 @@
         },
         "9f72aff9-1cbe-4979-bae9-7973f162a636": {
           "type": "source",
+          "disabled": true,
           "settings": {
             "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
             "text": "\"The perfect grab-and-go meal\""
+          }
+        },
+        "8755f214-723f-46f9-bf5b-ed89b2fe300b": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/Today2x.png",
+            "text": "\"Love Over Easy bars. They're great and they're packed with protein!\""
           }
         },
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
@@ -256,21 +259,53 @@
             "text": "\"Enough fiber & protein to keep hunger at arm's length\""
           }
         },
+        "33e64d67-3909-4adb-a6a0-b036f7a7db56": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/healthline2x.png",
+            "text": "\"Made with just 8 simple ingredients and lightly sweetened with honey\""
+          }
+        },
+        "c6021440-e9ac-4987-9c07-9b19e59444d6": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/verywellfit.png",
+            "text": "\"They taste good and will keep you full for hours!\""
+          }
+        },
+        "a5ef40e5-7db0-4cd9-babd-914d37378154": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/prevention.png",
+            "text": "\"A filling alternative to breakfast\""
+          }
+        },
         "99073ae9-0c94-475a-95ab-8172c2ba02d7": {
           "type": "source",
           "settings": {
             "source_image": "shopify:\/\/shop_images\/ThePatMCafee.png",
             "text": "The Pat McAfee Show"
           }
+        },
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/FirstTake_c7cb4148-59c8-4290-a399-379dd7a8920b.png",
+            "text": "First Take talk show"
+          }
         }
       },
       "block_order": [
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
         "ecb02dc7-d49e-49c8-8ff8-125d1ac97835",
         "89d3e7b6-137d-40a5-88a6-2b279d2766db",
         "9f72aff9-1cbe-4979-bae9-7973f162a636",
+        "8755f214-723f-46f9-bf5b-ed89b2fe300b",
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65",
-        "99073ae9-0c94-475a-95ab-8172c2ba02d7"
+        "33e64d67-3909-4adb-a6a0-b036f7a7db56",
+        "c6021440-e9ac-4987-9c07-9b19e59444d6",
+        "a5ef40e5-7db0-4cd9-babd-914d37378154",
+        "99073ae9-0c94-475a-95ab-8172c2ba02d7",
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb"
       ],
       "settings": {
       }
