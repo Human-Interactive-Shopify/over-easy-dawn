@@ -1,9 +1,5 @@
 {%- style -%}
   .oe-heading-{{ section.id }}__section  {
-    color: var(--oe-color-{{ section.settings.color_scheme }});
-    text-align: {{ section.settings.mobile_align }};
-    font-size: {{ section.settings.mobile_font_size }}px;
-    line-height: 1.2;
     margin: 0;
     position: relative;
 
@@ -12,6 +8,13 @@
       padding-bottom: 16px;
       border-bottom: 1px solid var(--oe-color-grey-200);
       {% endif %} 
+  }
+
+  .oe-heading-{{ section.id }}  {
+    color: var(--oe-color-{{ section.settings.color_scheme }});
+    text-align: {{ section.settings.mobile_align }};
+    font-size: {{ section.settings.mobile_font_size }}px;
+    line-height: 1.2;
   }
   
   .oe-heading-{{ section.id }}__section .container{
