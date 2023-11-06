@@ -303,7 +303,7 @@
 }
 
 .oe-product__mobile-link--active .oe-product__mobile-link-image-wrapper {
-  background-color: var(--oe-color-red);
+  background-color: var(--oe-color-yellow);
 }
 
 .oe-product__mobile-link-image {
