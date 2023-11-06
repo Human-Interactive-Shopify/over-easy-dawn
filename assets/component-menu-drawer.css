@@ -49,8 +49,8 @@
 
 .header__menu-drawer-utility-links {
   display: flex;
-  height: 80px;
-  background-color: var(--oe-color-red);
+  height: 88px;
+  background-color: var(--oe-color-yellow);
 }
 .header__menu-drawer-utility-links > * {
   flex: 1;

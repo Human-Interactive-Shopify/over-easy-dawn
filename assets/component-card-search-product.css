@@ -1,10 +1,10 @@
 .oe-card-search-product {
-  background-color: var(--oe-color-grey-200);
+  background-color: #ffffff;
   width: 100%;
-  box-shadow: 15px 63px 26px rgba(0, 0, 0, 0.01), 9px 35px 22px rgba(0, 0, 0, 0.05), 4px 16px 16px rgba(0, 0, 0, 0.09), 1px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  box-shadow: 0px 8.1516px 14.1767px 0px rgba(0, 0, 0, 0.06), 0px 16.79076px 29.20132px 0px rgba(0, 0, 0, 0.08), 0px 46px 80px 0px rgba(0, 0, 0, 0.11);
+  border-radius: 16px;
   text-decoration: none;
-  padding: 8px;
+  padding: 24px;
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
 }
 
 .oe-card-search-product__content {
-  padding: 50px 8px 24px;
+  padding: 24px 0px 0px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -26,6 +26,8 @@
   width: 100%;
   padding-top: 100%;
   position: relative;
+  background-color: var(--oe-color-oat);
+  border-radius: 4px;
 }
 
 .oe-card-search-product__image {
@@ -51,10 +53,10 @@
 }
 
 .oe-card-search-product__title {
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 800;
+  font-size: 24px;
   line-height: 120%;
-  color: var(--oe-color-black);
+  color: var(--oe-color-cocoa);
   margin: 0 0 12px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -86,20 +88,18 @@
 }
 
 .oe-card-search-product--small .oe-card-search-product__button {
-  padding: 12px 0;
-  font-size: 14px;
-  line-height: 18px;
+  padding: 14px 0;
+  font-size: 32px;
+  line-height: 1;
 }
 
 @media screen and (min-width: 750px) {
-  .oe-card-search-product {
-    box-shadow: none;
-    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  .oe-card-search-product button{
+    transition: transform 0.2s ease-in-out;
   }
   
-  .oe-card-search-product:hover {
-    transform: translateY(-16px);
-    box-shadow: 15px 63px 26px rgba(0, 0, 0, 0.01), 9px 35px 22px rgba(0, 0, 0, 0.05), 4px 16px 16px rgba(0, 0, 0, 0.09), 1px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  .oe-card-search-product:hover button {
+    transform: translateY(-8px);
   }
 
   .oe-card-search-product__image-wrapper {
@@ -109,7 +109,7 @@
   }
 
   .oe-card-search-product__content {
-    padding: 32px 24px 24px;
+    padding: 16px 0px 0px;
   }
 
   .oe-card-search-product__text {
@@ -120,9 +120,10 @@
   }
 
   .oe-card-search-product__title {
-    font-weight: 400;
+    font-weight: 800;
     font-size: 22px;
     line-height: 120%;
     margin: 0 0 16px;
+    text-transform: uppercase;
   }
 }

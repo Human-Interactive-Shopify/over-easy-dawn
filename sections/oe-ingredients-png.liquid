@@ -12,7 +12,7 @@
   .oe-ingredients__title {
     position: relative;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 120%;
     padding-bottom: 34px;
     margin: 0;
@@ -42,18 +42,19 @@
     padding: 24px 12px;
   }
   
-  .oe-ingredients__list-item-icon {
-    width: 64px;
-    height: 64px;
+  .oe-ingredients__list-item-img img {
+    width: 120px;
+    height: auto;
     margin: 0 auto;
+    display: flex;
   }
   
   .oe-ingredients__list-item-title {
+    color: #593E41;
     text-align: center;
     margin: 8px 0 0;
-    font-weight: 700;
-    color: #593E41;
-    font-size: 14px;
+    font-weight:700;
+    font-size: 16px;
     line-height: 120%;
   }
 
@@ -120,25 +121,13 @@
         {%- case block.type -%}
           {%- when 'ingredients' -%}
             <div class="oe-ingredients__list-item">
-              <div class="oe-ingredients__list-item-icon">
-                {% liquid 
-                  case block.settings.icon
-                   when 'soy-free' 
-                      render 'icon-soy-free' 
-                   when 'dairy-free' 
-                      render 'icon-dairy-free' 
-                   when 'egg' 
-                      render 'icon-egg' 
-                   when 'glutten-free' 
-                      render 'icon-glutten-free' 
-                   when 'no-palm-oil' 
-                      render 'icon-no-palm-oil' 
-                   when 'no-preservatives' 
-                      render 'icon-no-preservatives' 
-                   when 'oats' 
-                      render 'icon-oats' 
-                 endcase 
-                %}
+              <div class="oe-ingredients__list-item-img">
+                {{ block.settings.ingredient_image.src | image_url: width: 360 | image_tag:
+                  loading: 'lazy',
+                  width: block.settings.ingredient_image.width,
+                  height: block.settings.ingredient_image.height,
+                  alt: block.settings.collection.image.alt | escape
+                }}
               </div>
               <p class="oe-ingredients__list-item-title">{{ block.settings.heading }}</p>
             </div>
@@ -151,7 +140,7 @@
 
 {% schema %}
 {
-  "name": "OE Ingredients",
+  "name": "OE Ingredients Img",
   "settings": [
     {
       "type": "text",
@@ -182,45 +171,14 @@
       "name": "Ingredients",
       "settings": [
         {
-          "type": "select",
-          "id": "icon",
-          "options": [
-            {
-              "value": "dairy-free",
-              "label": "Dairy free"
-            },
-            {
-              "value": "egg",
-              "label": "Egg"
-            },
-            {
-              "value": "no-palm-oil",
-              "label": "No palm oil"
-            },
-            {
-              "value": "no-preservatives",
-              "label": "No preservatives"
-            },
-            {
-              "value": "oats",
-              "label": "Oats"
-            },
-            {
-              "value": "soy-free",
-              "label": "Soy free"
-            },
-            {
-              "value": "glutten-free",
-              "label": "Glutten free"
-            }
-          ],
-          "default": "egg",
-          "label": "Icon"
+          "type": "image_picker",
+          "id": "ingredient_image",
+          "label": "Ingredient Image"
         },
         {
           "type": "text",
           "id": "heading",
-          "default": "ORGANIC OATS",
+          "default": "Ingredient",
           "label": "Heading"
         }
       ]
@@ -228,7 +186,7 @@
   ],
   "presets": [
     {
-      "name": "OE Ingredients",
+      "name": "OE Ingredients Img",
       "blocks": [
         {
           "type": "ingredients"

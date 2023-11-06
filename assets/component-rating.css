@@ -56,11 +56,7 @@
 
 .rating-star::before {
   content: '★★★★★';
-  background: linear-gradient(
-    90deg,
-    var(--color-main-star-color, var(--oe-color-red)) var(--percent),
-    rgba(var(--color-foreground), 0.15) var(--percent)
-  );
+  background: #FDB515;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

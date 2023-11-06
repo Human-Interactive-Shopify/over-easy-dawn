@@ -43,7 +43,6 @@
     width: 100%;
     padding-top: 100%;
     position: relative;
-    background-color: var(--oe-color-white);
   }
 
   .oe-featured-collections__list-item-image {
@@ -77,6 +76,7 @@
   .oe-featured-collections__list-item-button {
     width: 100%;
     margin-top: auto;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
   }
 
   .oe-featured-collections__list-pagination {
@@ -122,8 +122,8 @@
       transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
     }
 
-    .oe-featured-collections__list-item:hover {
-      transform: translateY(-16px);
+    .oe-featured-collections__list-item:hover .oe-featured-collections__list-item-button{
+      transform: translateY(-8px);
       box-shadow: 15px 63px 26px rgba(0, 0, 0, 0.01), 9px 35px 22px rgba(0, 0, 0, 0.05), 4px 16px 16px rgba(0, 0, 0, 0.09), 1px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
     }
     

@@ -1,3 +1,17 @@
+{% comment %} {% style %}
+{%- if template == "product" -%}
+.oe-value-builder {
+  margin-top:20px;
+  }
+
+@media screen and (min-width: 750px) {
+  .oe-value-builder {
+    margin-top:40px;
+  }
+}
+{%- endif -%}
+{% endstyle %} {% endcomment %}
+
 {% if section.settings.use_manual != true %}
   <section class="okendo-reviews" data-section-name="Okendo reviews" id="product-reviews">
     <div class="okendo-reviews__container container">
@@ -10,7 +24,9 @@
   {{ 'section-oe-reviews.css' | asset_url | stylesheet_tag }}
 
   {% assign reviews = settings.reviews_data %}
-
+{% comment %}   {%- if template == "product" or "minis" -%}
+    {% render 'bundle-bar' %}
+  {%- endif -%} {% endcomment %}
   <section id="{{ section.id }}" class="oe-reviews__section">
     <div class="oe-reviews container">
       <div class="oe-reviews__list"></div>

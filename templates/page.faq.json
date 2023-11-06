@@ -59,14 +59,26 @@
         "form-heading",
         "form-link"
       ],
+      "disabled": true,
       "settings": {
         "background_color": "orange",
         "content_align": "center"
+      }
+    },
+    "c010ea56-aae3-4ed4-b245-705695e2469d": {
+      "type": "oe-talk-to-us",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Contact.jpg",
+        "heading": "Talk to Us",
+        "text": "We’d love to hear from you!",
+        "link": "",
+        "background_color_scheme": "black"
       }
     }
   },
   "order": [
     "main",
-    "oe-contact-form"
+    "oe-contact-form",
+    "c010ea56-aae3-4ed4-b245-705695e2469d"
   ]
 }

@@ -1,4 +1,7 @@
 <section class="FindUs section-{{ section.id }}" data-section-name="Find Us">
+  {% if section.settings.show_top_wave %}
+    {% render 'waves-top', wave_color: section.settings.top_wave_color %}
+   {% endif %}
   <div class="FindUs-wrapper">
     {% comment %} <h2 class="desktop">&#9135;&#9135;&#9135;&#9135; &nbsp; Find us here &nbsp; &#9135;&#9135;&#9135;&#9135;</h2>
     <h2 class="mobile">&#9135;&#9135;&#9135;&#9135; &nbsp; Find us here! &nbsp; &#9135;&#9135;&#9135;&#9135;</h2> {% endcomment %}
@@ -28,10 +31,14 @@
     </div>
     <a href="/pages/stores" class="button button--primary button-size--big button-color--black">Store locator</a>
   </div>
+  {% if section.settings.show_bottom_wave %}
+    {% render 'waves-bottom', wave_color: section.settings.bottom_wave_color %}
+  {% endif %}
 </section>
 
 <style>
   .FindUs {
+    position: relative;
   }
   .FindUs-wrapper {
     margin: 0 auto;
@@ -125,6 +132,60 @@
 {% schema %}
   {
     "name": "OE Find Us",
+    "settings": [
+      {
+      "type": "checkbox",
+      "id": "show_top_wave",
+      "label": "Show top wave",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "top_wave_color",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "oat",
+          "label": "Oat"
+        },
+        {
+          "value": "yellow",
+          "label": "Yellow"
+        }
+      ],
+      "default": "white",
+      "label": "Top wave color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_wave",
+      "label": "Show bottom wave",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "bottom_wave_color",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "oat",
+          "label": "Oat"
+        },
+        {
+          "value": "yellow",
+          "label": "Yellow"
+        }
+      ],
+      "default": "white",
+      "label": "Bottom wave color"
+    }
+    ],
     "blocks": [
       {
         "name": "OE Find Us",

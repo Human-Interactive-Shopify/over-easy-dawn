@@ -37,7 +37,7 @@
 @media screen and (min-width: 750px) {
   .predictive-search {
     width: 100%;
-    padding: 24px 64px 48px;
+    padding: 24px 64px 24px;
   }
 
   .header predictive-search {
@@ -59,6 +59,7 @@ predictive-search[loading] .predictive-search {
   justify-content: space-between;
   align-items: center;
   color: var(--oe-color-copy-light);
+  margin: 0;
 }
 
 predictive-search .spinner {

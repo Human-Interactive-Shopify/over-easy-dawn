@@ -6,8 +6,8 @@
         "show_related_products": true,
         "related_products_title": "You Might Also Like...",
         "collection": "home-page-bars",
-        "show_latest_products": false,
-        "latest_products_collection": "",
+        "show_latest_products": true,
+        "latest_products_collection": "home-page-bars",
         "show_faq": false,
         "show_latest_blogs": false
       }
@@ -46,7 +46,10 @@
         "b1eebb32-06b4-460e-9195-1b5209bb52b8",
         "e22893bb-770d-4828-8f44-5cc137941ae7"
       ],
-      "settings": {}
+      "settings": {
+        "title": "FAQs",
+        "subtitle": "We got you covered."
+      }
     }
   },
   "order": [

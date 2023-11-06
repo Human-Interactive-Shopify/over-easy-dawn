@@ -31,18 +31,19 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 32px;
-  height: 26px;
+  width: 50px;
+  height: 37px;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.2s ease-in-out;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 140%;
+  font-size: 24px;
+  line-height: 1;
+  padding-top: 4px;
 }
 
 a.pagination__item:hover {
-  background-color: var(--oe-color-red);
+  background-color: #593E41;
   color: var(--oe-color-white);
 }
 
@@ -51,7 +52,7 @@ a.pagination__item:hover {
 }
 
 .pagination__item--current {
-  background-color: var(--oe-color-red);
+  background-color: #593E41;
   color: var(--oe-color-white);
 }
 

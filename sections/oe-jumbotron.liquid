@@ -1,5 +1,9 @@
 {%- style -%}
 
+.oe-jumbotron {
+  position: relative;
+}
+
   .oe-jumbotron-background--red {
     background-color: var(--oe-color-red);
   }
@@ -8,8 +12,12 @@
     background-color: var(--oe-color-white);
   }
 
-  .oe-jumbotron-background--black {
-    background-color: var(--oe-color-black);
+  .oe-jumbotron-background--green {
+    background-color: #4EAE06;
+  }
+
+  .oe-jumbotron-background--teal {
+    background-color: #00B39A;
   }
 
   .oe-jumbotron-background--yellow {
@@ -49,8 +57,8 @@
     z-index: 2;
   }
 
-  .oe-jumbotron__content-color--red {
-    color: var(--oe-color-red);
+  .oe-jumbotron__content-color--cocoa {
+    color: var(--oe-color-cocoa);
   }
 
   .oe-jumbotron__content-color--white {
@@ -103,12 +111,12 @@
   }
 
   .oe-jumbotron__heading-size--small {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 140%;
   }
   
   .oe-jumbotron__heading-size--medium {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 140%;
   }
   
@@ -278,18 +286,18 @@
     }
 
     .oe-jumbotron__heading-size--small {
-      font-size: 32px;
+      font-size: 36px;
       line-height: 120%;
     }
     
     .oe-jumbotron__heading-size--medium {
-      font-size: 45px;
+      font-size: 40px;
       line-height: 120%;
     }
     
     .oe-jumbotron__text {
       font-weight: 400;
-      font-size: 18px;
+      font-size: 22px;
       line-height: 160%;
     }
 
@@ -320,10 +328,45 @@
     .oe-jumbotron-content-position--right .oe-jumbotron__klaviyo-wrapper {
       order: 1;
     }
+    .oe-jumbotron-wavy {
+    margin: 40px 0;
+  }
+  }
+
+  .oe-jumbotron-ingredients__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .oe-jumbotron-ingredients__list-item {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .oe-jumbotron-ingredients__list-item-icon {
+    width:80px;
+  }
+
+  .oe-jumbotron-ingredients__list-item-title {
+
+  }
+
+  .oe-jumbotron-wavy {
+    margin: 20px 0;
+  }
+  .oe-jumbotron-wavy svg {
+    width: 100%;
   }
 {%- endstyle -%}
 
 <div class="oe-jumbotron oe-jumbotron-background--{{ section.settings.background_color_scheme }} oe-jumbotron-content-position--{{ section.settings.desktop_content_position }} oe-jumbotron-content-mobile-position--{{ section.settings.mobile_content_position }}" data-section-name="Jumbotron">
+  {% if section.settings.show_top_wave %}
+    {% render 'waves-top', wave_color: section.settings.top_wave_color %}
+   {% endif %}
   <div class="oe-jumbotron__container container">
     {%- if section.settings.image != blank -%}
       <div class="oe-jumbotron__media-wrapper">
@@ -371,6 +414,61 @@
               <p class="oe-jumbotron__text">{{ block.settings.text | escape }}</p>
             {%- when 'list_item' -%}
               <div class="oe-jumbotron__list-item">{% render 'icon-list-item' %}{{ block.settings.text | escape }}</div>
+            {%- when 'wavy_headline' -%}
+              <div class="oe-jumbotron-wavy">{% render 'wavy-headline' %}</div>
+            {%- when 'ingredients' -%}
+              <div class="oe-jumbotron-ingredients__list">
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-egg' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">CAGE-FREE EGG WHITES</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-oats' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">ORGANIC OATS</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-glutten-free' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">GLUTEN<br>FREE</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-soy-free' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">SOY<br>FREE</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-dairy-free' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">DAIRY<br>FREE</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-no-preservatives' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title">NO PRESERVATIVES</span>
+                  </div>
+
+                  <div class="oe-jumbotron-ingredients__list-item">
+                    <div class="oe-jumbotron-ingredients__list-item-icon">
+                      {% render 'icon-no-palm-oil' %}
+                    </div>
+                    <span class="oe-jumbotron-ingredients__list-item-title"> NO SEED<br>OILS</span>
+                  </div>
+
+              </div>
             {%- when 'buttons' -%}
               {%- if block.settings.button_label_1 != blank -%}
                 {% render 'button', href: block.settings.button_link_1 , variation: 'primary', color: section.settings.button_color_scheme , size: 'big', label: block.settings.button_label_1 %}
@@ -385,6 +483,9 @@
     </div>
     {%- endif -%}
   </div>
+  {% if section.settings.show_bottom_wave %}
+    {% render 'waves-bottom', wave_color: section.settings.bottom_wave_color %}
+  {% endif %}
 </div>
 
 {% schema %}
@@ -442,8 +543,12 @@
           "label": "Yellow"
         },
         {
-          "value": "black",
-          "label": "Black"
+          "value": "green",
+          "label": "Green"
+        },
+        {
+          "value": "teal",
+          "label": "Teal"
         },
         {
           "value": "white",
@@ -478,8 +583,8 @@
       "id": "text_color_scheme",
       "options": [
         {
-          "value": "red",
-          "label": "Red"
+          "value": "cocoa",
+          "label": "Cocoa"
         },
         {
           "value": "black",
@@ -492,6 +597,58 @@
       ],
       "default": "white",
       "label": "Content color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_top_wave",
+      "label": "Show top wave",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "top_wave_color",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "oat",
+          "label": "Oat"
+        },
+        {
+          "value": "yellow",
+          "label": "Yellow"
+        }
+      ],
+      "default": "white",
+      "label": "Top wave color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_wave",
+      "label": "Show bottom wave",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "bottom_wave_color",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "oat",
+          "label": "Oat"
+        },
+        {
+          "value": "yellow",
+          "label": "Yellow"
+        }
+      ],
+      "default": "white",
+      "label": "Bottom wave color"
     }
   ],
   "blocks": [
@@ -551,6 +708,14 @@
           "label": "Text"
         }
       ]
+    },
+    {
+      "type": "ingredients",
+      "name": "Ingredients"
+    },
+    {
+      "type": "wavy_headline",
+      "name": "Wavy headline"
     },
     {
       "type": "buttons",

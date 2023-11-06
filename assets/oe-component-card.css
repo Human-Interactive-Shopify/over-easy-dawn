@@ -3,6 +3,8 @@
   height: 100%;
   position: relative;
   text-decoration: none;
+  padding: 16px;
+  border-radius: 8px;
 }
 
 .card {
@@ -153,6 +155,9 @@
   margin-bottom: 0;
   font-weight: 800;
   text-transform: uppercase;
+  color:#fff;
+  font-size: 22px;
+  min-height: 58px;
 }
 
 .card__heading:last-child {
@@ -292,11 +297,11 @@
 
 .card-information > * {
   line-height: calc(1 + 0.4 / var(--font-body-scale));
-  color: rgb(var(--color-foreground));
+  color: #fff;
 }
 
 .card-information > .price {
-  color: rgb(var(--color-foreground));
+  color: #fff;
 }
 
 .card-information > .rating {

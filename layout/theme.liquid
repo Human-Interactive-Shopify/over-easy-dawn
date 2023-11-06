@@ -87,7 +87,7 @@
       }
       @font-face {
           font-family: "Acumin";
-          src: url("{{ 'Acumin-Black.woff2' | asset_url }}") format("woff2");
+          src: url("{{ 'Acumin-Wide-Black.woff2' | asset_url }}") format("woff2");
           font-weight: 800;
           font-style: normal;
           font-display: swap;
@@ -134,8 +134,15 @@
         --oe-color-copy-lighter: #888888;
         --oe-color-grey-100: #F5F5F5;
         --oe-color-grey-200: #EEEEEE;
-        --oe-color-grey-300: #E0E0E0;;
+        --oe-color-grey-300: #E0E0E0;
         --oe-color-grey-400: #BDBDBD;
+        --oe-color-yellow: #FDB515;
+        --oe-color-cocoa: #593E41;
+        --oe-color-oat: #F8F3E7;
+        --oe-color-teal: #00B39A;
+        --oe-color-purple: #9C26C1;
+        --oe-color-flamingo: #e85633;
+
 
         --oe-gutter: 16px;
         --oe-clear-search-image-url: url('{{ 'icon-accordion-plus.svg' | asset_url }}');
@@ -336,8 +343,9 @@
 
     {% section 'announcement-bar' %}
     {% section 'oe-header' %}
-    <main id="MainContent" class="content-for-layout focus-none page-{{ template | replace: '.', '-' }}" role="main" tabindex="-1">
+    <main id="MainContent" class="content-for-layout focus-none page-{{ template | replace: '.', '-' }}" role="main" tabindex="-1" style="position:relative;">
       {{ content_for_layout }}
+      {% render 'waves-footer' %}
     </main>
 
     {% section 'oe-footer' %}

@@ -1,7 +1,7 @@
 .oe-accordion {
   margin-bottom: 32px;
   padding-bottom: 16px;
-  border-bottom: 1px solid var(--oe-color-copy);
+  border-bottom: 1px solid #593E41;
   display: block;
 }
 
@@ -22,7 +22,7 @@
   font-size: 14px;
   line-height: 130%;
   text-transform: capitalize;
-  color: var(--oe-color-copy);
+  color: #593E41;
   margin: 0;
 }
 

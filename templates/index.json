@@ -31,13 +31,76 @@
         "template--14361845268546__d819cd7a-de30-40f9-a32f-3f5fd87c770e-1678966740e07a253e-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Peanut_Butter_Dark_Chocolate.png",
+        "image": "shopify:\/\/shop_images\/Peanut_Butter_Dark_Chocolate_2_343a1e62-4edd-4203-8445-7237cec46e70.png",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "yellow",
         "button_color_scheme": "cocoa",
-        "text_color_scheme": "white"
+        "text_color_scheme": "white",
+        "show_top_wave": false,
+        "top_wave_color": "white",
+        "show_bottom_wave": false,
+        "bottom_wave_color": "white"
+      }
+    },
+    "049cd01a-00bb-401a-bf06-d90f8c65b7f2": {
+      "type": "oe-ingredients-png",
+      "blocks": {
+        "template--14747789819970__049cd01a-00bb-401a-bf06-d90f8c65b7f2-ingredients-1": {
+          "type": "ingredients",
+          "settings": {
+            "ingredient_image": "shopify:\/\/shop_images\/Cinnamon_Sticks.png",
+            "heading": "CINNAMON"
+          }
+        },
+        "ba04fad6-fec5-46d8-b65e-9db45706a396": {
+          "type": "ingredients",
+          "settings": {
+            "ingredient_image": "shopify:\/\/shop_images\/Oats_21b3e534-6588-45a2-98db-b41a58c231ba.png",
+            "heading": "OATS"
+          }
+        },
+        "c5e26886-cdbd-4056-a4cf-c1b43274d5e9": {
+          "type": "ingredients",
+          "settings": {
+            "ingredient_image": "shopify:\/\/shop_images\/Peanut_Butter.png",
+            "heading": "NUT BUTTER"
+          }
+        },
+        "3eb55dbc-4c79-447b-be76-ba4d4ad148cb": {
+          "type": "ingredients",
+          "settings": {
+            "ingredient_image": "shopify:\/\/shop_images\/Vanilla_4c1f6196-f719-4475-85cb-df1293d13fe0.png",
+            "heading": "VANILLA"
+          }
+        },
+        "067247da-6060-47e6-8adc-aef01f2ee69d": {
+          "type": "ingredients",
+          "settings": {
+            "ingredient_image": "shopify:\/\/shop_images\/Peanut_1.png",
+            "heading": "NUTS"
+          }
+        },
+        "e7823d99-6071-4433-81c4-8c4dfa4430f6": {
+          "type": "ingredients",
+          "settings": {
+            "ingredient_image": "shopify:\/\/shop_images\/Honey.png",
+            "heading": "HONEY"
+          }
+        }
+      },
+      "block_order": [
+        "template--14747789819970__049cd01a-00bb-401a-bf06-d90f8c65b7f2-ingredients-1",
+        "ba04fad6-fec5-46d8-b65e-9db45706a396",
+        "c5e26886-cdbd-4056-a4cf-c1b43274d5e9",
+        "3eb55dbc-4c79-447b-be76-ba4d4ad148cb",
+        "067247da-6060-47e6-8adc-aef01f2ee69d",
+        "e7823d99-6071-4433-81c4-8c4dfa4430f6"
+      ],
+      "settings": {
+        "headline": "Made With Pure & Simple Ingredients",
+        "background_color": "white"
       }
     },
     "oe-hero-banner": {
@@ -87,116 +150,26 @@
         "button_color_scheme": "cocoa"
       }
     },
-    "oe-ingredients": {
-      "type": "oe-ingredients",
-      "blocks": {
-        "037943ff-e6f2-4e31-9264-a51271ab8477": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "egg",
-            "heading": "CAGE-FREE EGG WHITES"
-          }
-        },
-        "e070b7a8-8707-47da-8b33-42d31fcaea9e": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "oats",
-            "heading": "ORGANIC<br>OATS"
-          }
-        },
-        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "glutten-free",
-            "heading": "GLUTEN<br>FREE"
-          }
-        },
-        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "soy-free",
-            "heading": "NO<br>SOY"
-          }
-        },
-        "d5d8f806-116e-42df-bed2-516e6faaee78": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "dairy-free",
-            "heading": "NO<br>DAIRY"
-          }
-        },
-        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d": {
-          "type": "ingredients",
-          "settings": {
-            "icon": "no-preservatives",
-            "heading": "NO PRESERVATIVES"
-          }
-        },
-        "96229dcb-86af-47fa-8c8d-28417e98b443": {
-          "type": "ingredients",
-          "disabled": true,
-          "settings": {
-            "icon": "no-palm-oil",
-            "heading": "NO<br>PALM OIL"
-          }
-        }
-      },
-      "block_order": [
-        "037943ff-e6f2-4e31-9264-a51271ab8477",
-        "e070b7a8-8707-47da-8b33-42d31fcaea9e",
-        "bd1cf9c3-d9c7-45a1-818d-97561a1981e1",
-        "8ee23ecf-27d8-4496-a6f7-b046b799ebb7",
-        "d5d8f806-116e-42df-bed2-516e6faaee78",
-        "c9e77f48-f92c-49c0-aa1d-9954bedbc01d",
-        "96229dcb-86af-47fa-8c8d-28417e98b443"
-      ],
-      "settings": {
-        "headline": "Made With Pure & Simple Ingredients",
-        "background_color": "grey-100"
-      }
-    },
     "oe-jumbotron": {
       "type": "oe-jumbotron",
       "blocks": {
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "DELICIOUS NUTRITIOUS CLEAN",
-            "heading_size": "small"
+            "heading_size": "medium"
+          }
+        },
+        "2b0e34ad-5e8a-4a6d-89cd-c5cda0a25715": {
+          "type": "wavy_headline",
+          "settings": {
           }
         },
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
           "type": "text",
           "settings": {
             "text": "Over Easy's naturally delicious oat bars pack powerful nutrition to provide sustained energy that'll have you feelin' your oats all day long."
-          }
-        },
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "disabled": true,
-          "settings": {
-            "text": "Gluten-Free Oats + Fiber Blend"
-          }
-        },
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "disabled": true,
-          "settings": {
-            "text": "Cage-Free Egg White Protein"
-          }
-        },
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "disabled": true,
-          "settings": {
-            "text": "Sustained Energy Without The Crash"
-          }
-        },
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193": {
-          "type": "list_item",
-          "disabled": true,
-          "settings": {
-            "text": "No Gluten, Dairy, or Soy"
           }
         },
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81": {
@@ -221,36 +194,36 @@
       },
       "block_order": [
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
+        "2b0e34ad-5e8a-4a6d-89cd-c5cda0a25715",
         "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
-        "c59113f4-bd26-4777-8e39-c7b3feaf3193",
-        "c59113f4-bd26-477ew7-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47qw77-8e39-c7b3feaf3193",
-        "c59113f4-bd26-47rc77-8e39-c7b3feaf3193",
         "9f477b3a-45a3-4dfd-a315-608b8wr9a18f81",
         "ba805c69-004b-47cb-a9f7-f9bd28410b5a"
       ],
+      "custom_css": [
+        ".oe-jumbotron__content .button {margin-bottom: 4rem;}",
+        ".oe-jumbotron__media {z-index: 20; transform: scale(1.2);}",
+        ".oe-jumbotron__container {overflow: visible;}"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/BArs_5207549e-429a-41fc-b25c-08863ef34a22.png",
+        "image": "shopify:\/\/shop_images\/OE_Bars_-_Shadow.png",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
-        "background_color_scheme": "white",
+        "background_color_scheme": "green",
         "button_color_scheme": "cocoa",
-        "text_color_scheme": "black"
+        "text_color_scheme": "white",
+        "show_top_wave": true,
+        "top_wave_color": "white",
+        "show_bottom_wave": true,
+        "bottom_wave_color": "white"
       }
     },
     "1661427940e35b089a": {
       "type": "oe-sources",
       "blocks": {
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/FirstTake_c7cb4148-59c8-4290-a399-379dd7a8920b.png",
-            "text": "First Take talk show"
-          }
-        },
         "ecb02dc7-d49e-49c8-8ff8-125d1ac97835": {
           "type": "source",
+          "disabled": true,
           "settings": {
             "source_image": "shopify:\/\/shop_images\/bestcovery-logo.png",
             "text": "\"Top Pick - Best Breakfast Bars 2022\""
@@ -258,6 +231,7 @@
         },
         "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
           "type": "source",
+          "disabled": true,
           "settings": {
             "source_image": "shopify:\/\/shop_images\/6am-health-logo.png",
             "text": "\"Helping to make breakfast easy\""
@@ -265,9 +239,17 @@
         },
         "9f72aff9-1cbe-4979-bae9-7973f162a636": {
           "type": "source",
+          "disabled": true,
           "settings": {
             "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
             "text": "\"The perfect grab-and-go meal\""
+          }
+        },
+        "8755f214-723f-46f9-bf5b-ed89b2fe300b": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/Today2x.png",
+            "text": "\"Love Over Easy bars. They're great and they're packed with protein!\""
           }
         },
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65": {
@@ -277,21 +259,53 @@
             "text": "\"Enough fiber & protein to keep hunger at arm's length\""
           }
         },
+        "33e64d67-3909-4adb-a6a0-b036f7a7db56": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/healthline2x.png",
+            "text": "\"Made with just 8 simple ingredients and lightly sweetened with honey\""
+          }
+        },
+        "c6021440-e9ac-4987-9c07-9b19e59444d6": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/verywellfit.png",
+            "text": "\"They taste good and will keep you full for hours!\""
+          }
+        },
+        "a5ef40e5-7db0-4cd9-babd-914d37378154": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/prevention.png",
+            "text": "\"A filling alternative to breakfast\""
+          }
+        },
         "99073ae9-0c94-475a-95ab-8172c2ba02d7": {
           "type": "source",
           "settings": {
             "source_image": "shopify:\/\/shop_images\/ThePatMCafee.png",
             "text": "The Pat McAfee Show"
           }
+        },
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/FirstTake_c7cb4148-59c8-4290-a399-379dd7a8920b.png",
+            "text": "First Take talk show"
+          }
         }
       },
       "block_order": [
-        "096f850d-ce30-4c92-8e9b-8d7af405bffb",
         "ecb02dc7-d49e-49c8-8ff8-125d1ac97835",
         "89d3e7b6-137d-40a5-88a6-2b279d2766db",
         "9f72aff9-1cbe-4979-bae9-7973f162a636",
+        "8755f214-723f-46f9-bf5b-ed89b2fe300b",
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65",
-        "99073ae9-0c94-475a-95ab-8172c2ba02d7"
+        "33e64d67-3909-4adb-a6a0-b036f7a7db56",
+        "c6021440-e9ac-4987-9c07-9b19e59444d6",
+        "a5ef40e5-7db0-4cd9-babd-914d37378154",
+        "99073ae9-0c94-475a-95ab-8172c2ba02d7",
+        "096f850d-ce30-4c92-8e9b-8d7af405bffb"
       ],
       "settings": {
       }
@@ -383,16 +397,10 @@
     "1661427940e35b089b": {
       "type": "oe-sponsorship",
       "blocks": {
-        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
+        "c698cb9f-7c67-4979-871a-e994525bab48": {
           "type": "source",
           "settings": {
-            "source_image": "shopify:\/\/shop_images\/RoseBowl.png"
-          }
-        },
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
-          "type": "source",
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/LAMarathon_17f9bd4c-d5c5-4949-9f21-a42eef36f642.png"
+            "source_image": "shopify:\/\/shop_images\/SantaMonica.png"
           }
         },
         "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
@@ -401,18 +409,24 @@
             "source_image": "shopify:\/\/shop_images\/ClevelandMarathon.png"
           }
         },
-        "c698cb9f-7c67-4979-871a-e994525bab48": {
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db": {
           "type": "source",
           "settings": {
-            "source_image": "shopify:\/\/shop_images\/SantaMonica.png"
+            "source_image": "shopify:\/\/shop_images\/LAMarathon_17f9bd4c-d5c5-4949-9f21-a42eef36f642.png"
+          }
+        },
+        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/RoseBowl.png"
           }
         }
       },
       "block_order": [
-        "9f72aff9-1cbe-4979-bae9-7973f162a636",
-        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
+        "c698cb9f-7c67-4979-871a-e994525bab48",
         "096f850d-ce30-4c92-8e9b-8d7af405bffb",
-        "c698cb9f-7c67-4979-871a-e994525bab48"
+        "89d3e7b6-137d-40a5-88a6-2b279d2766db",
+        "9f72aff9-1cbe-4979-bae9-7973f162a636"
       ],
       "settings": {
       }
@@ -423,10 +437,10 @@
         "66dc171b-c8b1-44d6-bf0a-974a99e7839a": {
           "type": "testimonials",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cef37185be75484ffc422dd0a86d4ad0.jpg",
+            "image": "shopify:\/\/shop_images\/Adam.jpg",
             "text": "When I first tried Over Easy, I absolutely loved the taste and was surprised to look at how clean and simple the ingredients were... All of my teammates love the bars, too.",
             "name": "Adam Thielen",
-            "position": "NFL Wide Receiver, MN Vikings"
+            "position": "NFL Wide Receiver, Carolina Panthers"
           }
         },
         "d92c32c8-7744-40ba-a781-6c0e360b8608": {
@@ -518,7 +532,11 @@
       ],
       "settings": {
         "headline": "Don’t take it from us",
-        "sub-headline": ""
+        "sub-headline": "",
+        "show_top_wave": true,
+        "top_wave_color": "white",
+        "show_bottom_wave": true,
+        "bottom_wave_color": "white"
       }
     },
     "16614278019efa8d2e": {
@@ -528,7 +546,7 @@
           "type": "merchant",
           "settings": {
             "merchant_image": "shopify:\/\/shop_images\/whole-foods.png",
-            "is_small": true
+            "is_small": false
           }
         },
         "2c013d01-a847-4746-a8d6-b860d381d285": {
@@ -542,6 +560,13 @@
           "type": "merchant",
           "settings": {
             "merchant_image": "shopify:\/\/shop_images\/sheetz_36c7737c-78d0-4ef4-88f9-61513e4462a6.png",
+            "is_small": false
+          }
+        },
+        "b6214075-96f7-49ec-8f6f-68c6c49fc1d1": {
+          "type": "merchant",
+          "settings": {
+            "merchant_image": "shopify:\/\/shop_images\/Sprouts_s.png",
             "is_small": false
           }
         },
@@ -571,11 +596,16 @@
         "89145ece-7344-4faa-9891-194a608b4d8d",
         "2c013d01-a847-4746-a8d6-b860d381d285",
         "cb254a99-dee7-4801-9dde-e197538d5d70",
+        "b6214075-96f7-49ec-8f6f-68c6c49fc1d1",
         "445bbc91-f25a-4dc1-b842-de698fac7990",
         "443f75cd-5bd3-49a4-a554-11c1086ce550",
         "63312fa2-852f-42bb-8012-299cd60bd2c8"
       ],
       "settings": {
+        "show_top_wave": false,
+        "top_wave_color": "white",
+        "show_bottom_wave": false,
+        "bottom_wave_color": "yellow"
       }
     },
     "16636132874ba6f16e": {
@@ -590,8 +620,8 @@
   },
   "order": [
     "d819cd7a-de30-40f9-a32f-3f5fd87c770e",
+    "049cd01a-00bb-401a-bf06-d90f8c65b7f2",
     "oe-hero-banner",
-    "oe-ingredients",
     "oe-jumbotron",
     "1661427940e35b089a",
     "oe-featured-collections",

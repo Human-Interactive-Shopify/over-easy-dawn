@@ -1,6 +1,6 @@
 .oe-value-builder {
   padding: 12px 24px;
-  background-color: var(--oe-color-red);
+  background-color: var(--oe-color-oat);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,7 +93,6 @@
 @media screen and (min-width: 750px) {
   .oe-value-builder {
     padding: 12px 24px;
-    background-color: var(--oe-color-red);
   }
   
   .oe-value-builder__heading {

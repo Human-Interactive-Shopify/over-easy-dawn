@@ -18,57 +18,32 @@
         "7cff6e7a-e90c-4fb9-9d42-476226636238": {
           "type": "heading",
           "settings": {
-            "heading": "Your Tastebuds Will Thank Us",
+            "heading": "Made with pure & simple ingredients",
             "heading_size": "small"
           }
         },
-        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12": {
-          "type": "text",
+        "4c59410c-f6e1-4b7e-8d68-ee342afae201": {
+          "type": "ingredients",
           "settings": {
-            "text": "Made from wholesome and nutrient dense ingredients, our products have been designed to give your body exactly what it needs to start the day right, every morning."
-          }
-        },
-        "list-item-1": {
-          "type": "list_item",
-          "settings": {
-            "text": "Organic Oats & Fiber Blend"
-          }
-        },
-        "list-item-2": {
-          "type": "list_item",
-          "settings": {
-            "text": "Cage-Free Egg White Protein"
-          }
-        },
-        "list-item-3": {
-          "type": "list_item",
-          "settings": {
-            "text": "Sustained Energy Without The Crash"
-          }
-        },
-        "list-item-4": {
-          "type": "list_item",
-          "settings": {
-            "text": "No Gluten, Dairy, or Soy"
           }
         }
       },
       "block_order": [
         "7cff6e7a-e90c-4fb9-9d42-476226636238",
-        "d4be3a06-8f6b-436a-b0b5-bb0a76f13c12",
-        "list-item-1",
-        "list-item-2",
-        "list-item-3",
-        "list-item-4"
+        "4c59410c-f6e1-4b7e-8d68-ee342afae201"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/OE-Taste.jpg",
+        "image": "shopify:\/\/shop_images\/3Bars_slim3.jpg",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
         "background_color_scheme": "white",
         "button_color_scheme": "red",
-        "text_color_scheme": "black"
+        "text_color_scheme": "cocoa",
+        "show_top_wave": true,
+        "top_wave_color": "oat",
+        "show_bottom_wave": true,
+        "bottom_wave_color": "oat"
       }
     },
     "16632686971a8b65e4": {
@@ -102,8 +77,12 @@
         "324e6dd1-c3de-4e97-97cf-92c58f916ca4"
       ],
       "settings": {
-        "headline": "Over 1 Million breakfasts served",
-        "sub-headline": ""
+        "headline": "DON'T TAKE IT FROM US",
+        "sub-headline": "",
+        "show_top_wave": false,
+        "top_wave_color": "white",
+        "show_bottom_wave": false,
+        "bottom_wave_color": "yellow"
       }
     },
     "1663186300c28e5e47": {
@@ -173,6 +152,7 @@
         "c9e77f48-f92c-49c0-aa1d-9954bedbc01d",
         "96229dcb-86af-47fa-8c8d-28417e98b443"
       ],
+      "disabled": true,
       "settings": {
         "headline": "Clean Ingredients. Made with Care.",
         "background_color": "white"
@@ -181,16 +161,26 @@
     "16631556027bfa8473": {
       "type": "oe-comparison-chart",
       "settings": {
-        "title_desktop": "Our Bars are Head and Shoulders Above the Competition!",
-        "title_mobile": "Above the Competition!",
-        "image_desktop": "shopify:\/\/shop_images\/oe_comparison_table.png",
+        "title_desktop": "BETTER THAN THE COMPETITION",
+        "title_mobile": "BETTER THAN THE COMPETITION",
+        "image_desktop": "shopify:\/\/shop_images\/Table_6a3a0934-2158-4a71-99e2-b823dcaab88b.png",
         "cta_url": "",
         "cta_text": ""
+      }
+    },
+    "56a42cf9-79dd-4399-bc3e-e47addb63434": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- style -%}\n.oe-value-builder {\n  padding: 12px 24px;\n  background-color: var(--oe-color-yellow);\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n\n.oe-value-builder__message {\n  color: var(--oe-color-white);\n  font-size: 14px;\n  line-height: 160%;\n  text-align: center;\n}\n\n@media screen and (min-width: 750px) {\n  .oe-value-builder {\n    padding: 12px 24px;\n  }  \n\n}\n{%- endstyle -%}\n\n<section id=\"{{ id }}\" class=\"oe-value-builder\">\n    <p class=\"oe-value-builder__message\">\n      <a href=\"\/products\/pick-your-own-bundle\" style=\"display:block; text-transform:uppercase; color:#FFFFFF; font-weight: 700;\">Save up to 25% with bundles &#8594;<\/a>\n    <\/p>\n<\/section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "16631570203f45fb2a": {
       "type": "oe-reviews",
       "settings": {
+        "use_manual": true
       }
     }
   },
@@ -201,6 +191,7 @@
     "1663186300c28e5e47",
     "oe-ingredients",
     "16631556027bfa8473",
+    "56a42cf9-79dd-4399-bc3e-e47addb63434",
     "16631570203f45fb2a"
   ]
 }
