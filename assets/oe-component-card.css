@@ -157,6 +157,7 @@
   text-transform: uppercase;
   color:#fff;
   font-size: 22px;
+  min-height: 58px;
 }
 
 .card__heading:last-child {
