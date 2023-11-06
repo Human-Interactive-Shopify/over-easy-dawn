@@ -55,7 +55,7 @@
   }
   
   .collection__slider-pagination-bullet.is-active {
-    background-color: var(--oe-color-red);
+    background-color: var(--oe-color-yellow);
   }
 
 .collection .slider-buttons {

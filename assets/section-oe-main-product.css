@@ -197,7 +197,7 @@
 }
 
 .oe-product__slider-pagination-bullet.is-active {
-  background-color: var(--oe-color-red);
+  background-color: var(--oe-color-yellow);
   transform: scale(1.2);
 }
 
