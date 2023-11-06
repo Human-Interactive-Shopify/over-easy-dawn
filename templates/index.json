@@ -201,10 +201,11 @@
       ],
       "custom_css": [
         ".oe-jumbotron__content .button {margin-bottom: 4rem;}",
-        ".oe-jumbotron__media {z-index: 20;}"
+        ".oe-jumbotron__media {z-index: 20; transform: scale(1.2);}",
+        ".oe-jumbotron__container {overflow: visible;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Bars_c7fa572f-67e1-4d0e-9435-db2ca46ea2b4.png",
+        "image": "shopify:\/\/shop_images\/OE_Bars_-_Shadow.png",
         "form_id": "",
         "desktop_content_position": "left",
         "mobile_content_position": "bottom",
