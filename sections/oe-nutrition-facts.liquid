@@ -274,11 +274,22 @@
           max-width: 80px;
           object-fit: contain;
       }
-      @media (max-width: 1023px) {
+      .nutrition-info-ingredients {
+        display: flex;
+        text-align: center;
+    }
+
+    @media (max-width: 1023px) {
         .product-nutrition-pack-main .nutrition-info-content {
           max-width: none;
         }
+        .nutrition-info-ingredients {
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 3rem;
+        }
       }
+
       @media (min-width: 1024px) {
         .product-nutrition-pack-heading {
           font-size: 55px;
@@ -310,12 +321,12 @@
         .nutrition-info #ingredients img {
           width: 100%;
         }
-      }
-      .nutrition-info-ingredients {
-        display: flex;
-        text-align: center;
+
+        .nutrition-info-ingredients {
         justify-content: space-between;
-    }
+      }
+      }
+
     .nutrition-info-facts {
         display: flex;
         align-items: center;
