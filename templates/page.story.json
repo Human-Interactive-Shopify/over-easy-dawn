@@ -141,11 +141,11 @@
 
       ],
       "settings": {
-        "heading": "\"WE BELIEVE THAT DELICIOUS AND NUTRITIOUS FOOD WITH PURE AND SIMPLE INGREDIENTS IS THE FOUNDATION FOR A HEALTHY AND HAPPY LIFE.”",
+        "heading": "\"WE BELIEVE THAT A HEALTHY & HAPPY LIFE STARTS WITH DELICIOUS FOOD MADE WITH PURE AND SIMPLE INGREDIENTS.”",
         "desktop_align": "center",
         "mobile_align": "center",
         "level": 3,
-        "desktop_font_size": 28,
+        "desktop_font_size": 32,
         "mobile_font_size": 18,
         "max_width": 920,
         "color_scheme": "cocoa",
