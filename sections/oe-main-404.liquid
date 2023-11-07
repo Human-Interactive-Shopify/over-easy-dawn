@@ -5,7 +5,7 @@
   }
 
   .page-template-404__text {
-    color: var(--oe-color-cocoa);
+    color: #666666;
     font-size: 24px;
   }
 
@@ -17,6 +17,7 @@
     align-items: center;
     padding: 6px 12px;
     font-weight: 800;
+    line-height: 1.2;
     gap: 12px;
     text-transform: uppercase;
   }
@@ -29,20 +30,20 @@
   }
 
   .page-template-404__content a {
-    color: var(--oe-color-red);
+    color: var(--oe-color-yellow);
   }
 
   .page-template-404__title {
     font-size: 28px;
     line-height: 120%;
     color: var(--oe-color-cocoa);
-    margin: 8px 0 16px;
+    margin: 24px 0 4px;
     font-weight: 800;
     text-transform: uppercase;
     }
   
   .page-template-404__search {
-    margin-top: 32px;
+    margin-top: 48px;
     width: 100%;
   }
   
@@ -53,6 +54,11 @@
   .page-template-404__illustration img{
     width: 100%;
     height: auto;
+  }
+
+  .page-template-404__search .predictive-search {
+    display: none !important;
+  
   }
 
   @media screen and (min-width: 750px) {
@@ -80,7 +86,7 @@
       font-size: 48px;
       line-height: 120%;
       color: var(--oe-color-cocoa);
-      margin: 16px 0 24px;
+      margin: 36px 0 4px;
     }
 
     .page-template-404__alert {  
@@ -109,9 +115,9 @@
     <h1 class="page-template-404__title">
       {{ 'templates.404.title' | t }}
     </h1>
-    <p class="page-template-404__text">
-      {{ 'templates.404.subtext' | t }}
-    </p>
+    <span class="page-template-404__text">
+      Ooops! It seems that this page doesn’t exist in the known universe. No worries, head back <a href="/">home</a> or keep exploring our site:
+    </span>
     {%- if section.settings.show_search -%}
       <div class="page-template-404__search">
         {%- if settings.predictive_search_enabled -%}

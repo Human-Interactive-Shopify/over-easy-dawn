@@ -145,7 +145,7 @@
         "desktop_align": "center",
         "mobile_align": "center",
         "level": 3,
-        "desktop_font_size": 32,
+        "desktop_font_size": 24,
         "mobile_font_size": 18,
         "max_width": 920,
         "color_scheme": "cocoa",

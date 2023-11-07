@@ -217,7 +217,7 @@
     },
     "404": {
       "title": "Page not found",
-      "subtext": "Ooops! It seems that this page doesn’t exist in the known universe. No worries, head back home or keep exploring our site:"
+      "subtext": "Ooops! It seems that this page doesn’t exist in the known universe. No worries, head back <a href=\"{{ link }}\">home</a> or keep exploring our site:"
     }
   },
   "sections": {

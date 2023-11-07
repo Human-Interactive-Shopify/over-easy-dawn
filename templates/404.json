@@ -3,7 +3,7 @@
     "oe-main": {
       "type": "oe-main-404",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Illustration.png",
+        "image": "shopify:\/\/shop_images\/404_1.5.png",
         "show_search": true
       }
     }
