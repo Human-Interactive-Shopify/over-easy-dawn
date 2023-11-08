@@ -284,14 +284,14 @@
           "type": "source",
           "settings": {
             "source_image": "shopify:\/\/shop_images\/ThePatMCafee.png",
-            "text": "The Pat McAfee Show"
+            "text": "\"My family loves it! We throw it to the kids on the go\""
           }
         },
         "096f850d-ce30-4c92-8e9b-8d7af405bffb": {
           "type": "source",
           "settings": {
             "source_image": "shopify:\/\/shop_images\/FirstTake_c7cb4148-59c8-4290-a399-379dd7a8920b.png",
-            "text": "First Take talk show"
+            "text": "ESPN First Take with Adam Thielen"
           }
         }
       },
