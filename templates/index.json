@@ -237,14 +237,6 @@
             "text": "\"Helping to make breakfast easy\""
           }
         },
-        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
-          "type": "source",
-          "disabled": true,
-          "settings": {
-            "source_image": "shopify:\/\/shop_images\/moms-meat-logo.png",
-            "text": "\"The perfect grab-and-go meal\""
-          }
-        },
         "8755f214-723f-46f9-bf5b-ed89b2fe300b": {
           "type": "source",
           "settings": {
@@ -257,6 +249,13 @@
           "settings": {
             "source_image": "shopify:\/\/shop_images\/womens-running-logo.png",
             "text": "\"Enough fiber & protein to keep hunger at arm's length\""
+          }
+        },
+        "9f72aff9-1cbe-4979-bae9-7973f162a636": {
+          "type": "source",
+          "settings": {
+            "source_image": "shopify:\/\/shop_images\/MensJournal.png",
+            "text": "\"Delicious and filled with plenty of protein and fiber to give you lots of extra energy.\""
           }
         },
         "33e64d67-3909-4adb-a6a0-b036f7a7db56": {
@@ -298,9 +297,9 @@
       "block_order": [
         "ecb02dc7-d49e-49c8-8ff8-125d1ac97835",
         "89d3e7b6-137d-40a5-88a6-2b279d2766db",
-        "9f72aff9-1cbe-4979-bae9-7973f162a636",
         "8755f214-723f-46f9-bf5b-ed89b2fe300b",
         "71fce1dc-2acd-4ae4-9371-8ca44a82fa65",
+        "9f72aff9-1cbe-4979-bae9-7973f162a636",
         "33e64d67-3909-4adb-a6a0-b036f7a7db56",
         "c6021440-e9ac-4987-9c07-9b19e59444d6",
         "a5ef40e5-7db0-4cd9-babd-914d37378154",
