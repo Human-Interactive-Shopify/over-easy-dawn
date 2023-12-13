@@ -331,6 +331,7 @@
         },
         "65b62c2d-2238-4120-8e65-ba4820b7ff28": {
           "type": "featured-collection",
+          "disabled": true,
           "settings": {
             "collection": "bundle-builder",
             "bg_color": "#9C26C1",
