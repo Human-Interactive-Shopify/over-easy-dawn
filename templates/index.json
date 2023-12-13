@@ -344,6 +344,9 @@
         "cc47b51b-9d1c-43fc-96ec-bcb30f596641",
         "65b62c2d-2238-4120-8e65-ba4820b7ff28"
       ],
+      "custom_css": [
+        ".container {max-width: 840px;}"
+      ],
       "settings": {
         "headline": ""
       }
