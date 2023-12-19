@@ -170,6 +170,7 @@
     },
     "56a42cf9-79dd-4399-bc3e-e47addb63434": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{%- style -%}\n.oe-value-builder {\n  padding: 12px 24px;\n  background-color: var(--oe-color-yellow);\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n\n.oe-value-builder__message {\n  color: var(--oe-color-white);\n  font-size: 14px;\n  line-height: 160%;\n  text-align: center;\n}\n\n@media screen and (min-width: 750px) {\n  .oe-value-builder {\n    padding: 12px 24px;\n  }  \n\n}\n{%- endstyle -%}\n\n<section id=\"{{ id }}\" class=\"oe-value-builder\">\n    <p class=\"oe-value-builder__message\">\n      <a href=\"\/products\/pick-your-own-bundle\" style=\"display:block; text-transform:uppercase; color:#FFFFFF; font-weight: 700;\">Save up to 25% with bundles &#8594;<\/a>\n    <\/p>\n<\/section>",
         "color_scheme": "background-1",
